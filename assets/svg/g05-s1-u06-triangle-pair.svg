@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="320" viewBox="0 0 560 320" role="img">
+  <defs>
+    <marker id="arTP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8f2419"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="560" height="320" fill="#fffdf8"/>
+  <text x="280" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">两个完全一样的三角形，旋转 180° 拼成平行四边形</text>
+
+  <!-- 左：一个三角形 -->
+  <polygon points="40,220 200,220 120,120" fill="#f5ddd8" stroke="#8f2419" stroke-width="2"/>
+  <line x1="120" y1="120" x2="120" y2="220" stroke="#8f2419" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <path d="M120,208 L132,208 L132,220" fill="none" stroke="#8f2419" stroke-width="1.2"/>
+  <text x="106" y="176" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#8f2419">h</text>
+
+  <g stroke="#c0392b" stroke-width="1.4" fill="none">
+    <line x1="40" y1="236" x2="200" y2="236"/>
+    <line x1="40" y1="230" x2="40" y2="242"/>
+    <line x1="200" y1="230" x2="200" y2="242"/>
+  </g>
+  <text x="120" y="256" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">底 a</text>
+  <text x="120" y="278" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">一个三角形</text>
+
+  <!-- 箭头 -->
+  <line x1="214" y1="172" x2="272" y2="172" stroke="#8f2419" stroke-width="1.6" marker-end="url(#arTP)"/>
+  <text x="243" y="152" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#8f2419">旋转 180°</text>
+  <text x="243" y="196" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#17181c">再拼上去</text>
+
+  <!-- 右：拼成的平行四边形 -->
+  <polygon points="290,220 450,220 370,120" fill="#f5ddd8" stroke="#17181c" stroke-width="1.6"/>
+  <polygon points="450,220 530,120 370,120" fill="#efe2cf" stroke="#17181c" stroke-width="1.6"/>
+  <polygon points="290,220 450,220 530,120 370,120" fill="none" stroke="#17181c" stroke-width="2"/>
+  <line x1="450" y1="220" x2="370" y2="120" stroke="#9a8f7d" stroke-width="1.4" stroke-dasharray="5 4"/>
+
+  <line x1="370" y1="120" x2="370" y2="220" stroke="#8f2419" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <path d="M370,208 L382,208 L382,220" fill="none" stroke="#8f2419" stroke-width="1.2"/>
+  <text x="356" y="176" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#8f2419">h</text>
+
+  <g stroke="#c0392b" stroke-width="1.4" fill="none">
+    <line x1="290" y1="236" x2="450" y2="236"/>
+    <line x1="290" y1="230" x2="290" y2="242"/>
+    <line x1="450" y1="230" x2="450" y2="242"/>
+  </g>
+  <text x="370" y="256" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">底 a</text>
+  <text x="410" y="278" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">平行四边形：两块一样大</text>
+
+  <rect x="16" y="288" width="528" height="26" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="280" y="306" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12.5" fill="#8f2419">平行四边形 a × h，一个三角形只占一半：S = a × h ÷ 2</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img">
+  <rect x="0" y="0" width="640" height="360" fill="#fffdf8"/>
+  <text x="320" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">八个方向只说个大概，说准位置要「方向 + 角度 + 距离」</text>
+
+  <!-- 左：八个方向 -->
+  <circle cx="150" cy="178" r="95" fill="none" stroke="#cfc3ae" stroke-width="1"/>
+  <line x1="150" y1="178" x2="205" y2="123" stroke="#cfc3ae" stroke-width="1"/>
+  <line x1="150" y1="178" x2="228" y2="178" stroke="#cfc3ae" stroke-width="1"/>
+  <line x1="150" y1="178" x2="205" y2="233" stroke="#cfc3ae" stroke-width="1"/>
+  <line x1="150" y1="178" x2="150" y2="256" stroke="#cfc3ae" stroke-width="1"/>
+  <line x1="150" y1="178" x2="95" y2="233" stroke="#cfc3ae" stroke-width="1"/>
+  <line x1="150" y1="178" x2="72" y2="178" stroke="#cfc3ae" stroke-width="1"/>
+  <line x1="150" y1="178" x2="95" y2="123" stroke="#cfc3ae" stroke-width="1"/>
+  <line x1="150" y1="178" x2="150" y2="100" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="150,88 145,100 155,100" fill="#c0392b"/>
+  <circle cx="150" cy="178" r="4" fill="#17181c"/>
+
+  <text x="150" y="78" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" font-weight="bold" fill="#8f2419">北</text>
+  <text x="224" y="112" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">东北</text>
+  <text x="250" y="182" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" font-weight="bold" fill="#17181c">东</text>
+  <text x="224" y="252" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">东南</text>
+  <text x="150" y="290" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" font-weight="bold" fill="#17181c">南</text>
+  <text x="76" y="252" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">西南</text>
+  <text x="50" y="182" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" font-weight="bold" fill="#17181c">西</text>
+  <text x="76" y="112" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">西北</text>
+  <text x="150" y="318" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#5a5b60">八个方向：每两个正方向之间再劈一半</text>
+
+  <!-- 右：基准不同 -->
+  <line x1="410" y1="262" x2="410" y2="96" stroke="#9a9b9f" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="410" y1="262" x2="592" y2="262" stroke="#9a9b9f" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="410" y="88" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#5a5b60">正北</text>
+  <text x="600" y="266" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#5a5b60">正东</text>
+
+  <!-- 北偏东 30° -->
+  <line x1="410" y1="262" x2="485" y2="132" stroke="#c0392b" stroke-width="2.2"/>
+  <path d="M410 192 A70 70 0 0 1 445 201.4" fill="none" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="428" y="212" font-family="'Noto Serif SC',serif" font-size="10" fill="#8f2419">30°</text>
+  <text x="492" y="124" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#8f2419">北偏东 30°</text>
+  <text x="492" y="140" font-family="'Noto Serif SC',serif" font-size="10" fill="#5a5b60">距离 5 千米</text>
+  <circle cx="485" cy="132" r="3.5" fill="#c0392b"/>
+
+  <!-- 东偏北 30° -->
+  <line x1="410" y1="262" x2="540" y2="187" stroke="#2f6f5e" stroke-width="2.2"/>
+  <path d="M480 262 A70 70 0 0 0 470.6 227" fill="none" stroke="#2f6f5e" stroke-width="1.4"/>
+  <text x="476" y="248" font-family="'Noto Serif SC',serif" font-size="10" fill="#2f6f5e">30°</text>
+  <text x="546" y="192" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#2f6f5e">东偏北 30°</text>
+  <circle cx="540" cy="187" r="3.5" fill="#2f6f5e"/>
+
+  <circle cx="410" cy="262" r="4.5" fill="#17181c"/>
+  <text x="396" y="284" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#5a5b60">观测点</text>
+
+  <text x="498" y="326" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#17181c">同是「偏 30°」，基准不同，两条射线相差 30°</text>
+
+  <text x="320" y="348" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#5a5b60">量角器的 0 刻度要靠住正北，往东读出的度数，才是「北偏东」的那个角</text>
+</svg>

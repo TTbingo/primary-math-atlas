@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img">
+  <rect x="0" y="0" width="480" height="280" fill="#fffdf8"/>
+  <text x="240" y="22" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">48 ÷ 2：先分整捆（十），再分单根（一）</text>
+
+  <!-- 上方：48 根小棒 -->
+  <text x="24" y="46" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">48 根 = 4 个十 + 8 个一</text>
+
+  <g transform="translate(30,56)">
+    <rect x="-1" y="0" width="24" height="54" rx="3" fill="#efe4cd" stroke="#c9bda3"/>
+    <line x1="5" y1="6" x2="5" y2="48" stroke="#b9a888" stroke-width="1"/>
+    <line x1="11" y1="6" x2="11" y2="48" stroke="#b9a888" stroke-width="1"/>
+    <line x1="17" y1="6" x2="17" y2="48" stroke="#b9a888" stroke-width="1"/>
+    <rect x="-1" y="22" width="24" height="6" fill="#c0533f" opacity="0.85"/>
+  </g>
+  <g transform="translate(58,56)">
+    <rect x="-1" y="0" width="24" height="54" rx="3" fill="#efe4cd" stroke="#c9bda3"/>
+    <line x1="5" y1="6" x2="5" y2="48" stroke="#b9a888" stroke-width="1"/>
+    <line x1="11" y1="6" x2="11" y2="48" stroke="#b9a888" stroke-width="1"/>
+    <line x1="17" y1="6" x2="17" y2="48" stroke="#b9a888" stroke-width="1"/>
+    <rect x="-1" y="22" width="24" height="6" fill="#c0533f" opacity="0.85"/>
+  </g>
+  <g transform="translate(86,56)">
+    <rect x="-1" y="0" width="24" height="54" rx="3" fill="#efe4cd" stroke="#c9bda3"/>
+    <line x1="5" y1="6" x2="5" y2="48" stroke="#b9a888" stroke-width="1"/>
+    <line x1="11" y1="6" x2="11" y2="48" stroke="#b9a888" stroke-width="1"/>
+    <line x1="17" y1="6" x2="17" y2="48" stroke="#b9a888" stroke-width="1"/>
+    <rect x="-1" y="22" width="24" height="6" fill="#c0533f" opacity="0.85"/>
+  </g>
+  <g transform="translate(114,56)">
+    <rect x="-1" y="0" width="24" height="54" rx="3" fill="#efe4cd" stroke="#c9bda3"/>
+    <line x1="5" y1="6" x2="5" y2="48" stroke="#b9a888" stroke-width="1"/>
+    <line x1="11" y1="6" x2="11" y2="48" stroke="#b9a888" stroke-width="1"/>
+    <line x1="17" y1="6" x2="17" y2="48" stroke="#b9a888" stroke-width="1"/>
+    <rect x="-1" y="22" width="24" height="6" fill="#c0533f" opacity="0.85"/>
+  </g>
+
+  <g fill="#cbb894" stroke="#b9a888" stroke-width="0.6">
+    <rect x="150" y="62" width="3" height="44"/>
+    <rect x="160" y="62" width="3" height="44"/>
+    <rect x="170" y="62" width="3" height="44"/>
+    <rect x="180" y="62" width="3" height="44"/>
+    <rect x="190" y="62" width="3" height="44"/>
+    <rect x="200" y="62" width="3" height="44"/>
+    <rect x="210" y="62" width="3" height="44"/>
+    <rect x="220" y="62" width="3" height="44"/>
+  </g>
+
+  <!-- 分成两份的箭头 -->
+  <g stroke="#8f2419" stroke-width="1.4" fill="none">
+    <path d="M120 118 C 120 138, 90 132, 86 148" marker-end="url(#ar)"/>
+    <path d="M360 118 C 360 138, 300 132, 296 148" marker-end="url(#ar)"/>
+  </g>
+  <defs>
+    <marker id="ar" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#8f2419"/>
+    </marker>
+  </defs>
+  <text x="240" y="132" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">平均分成 2 份</text>
+
+  <!-- 左：第一份 -->
+  <g transform="translate(40,152)">
+    <rect x="-6" y="-6" width="140" height="70" rx="4" fill="#f7f1e6" stroke="#cfc3ae"/>
+    <g transform="translate(4,4)">
+      <rect x="-1" y="0" width="24" height="46" rx="3" fill="#efe4cd" stroke="#c9bda3"/>
+      <line x1="5" y1="5" x2="5" y2="41" stroke="#b9a888" stroke-width="1"/>
+      <line x1="11" y1="5" x2="11" y2="41" stroke="#b9a888" stroke-width="1"/>
+      <line x1="17" y1="5" x2="17" y2="41" stroke="#b9a888" stroke-width="1"/>
+      <rect x="-1" y="18" width="24" height="5" fill="#c0533f" opacity="0.85"/>
+    </g>
+    <g transform="translate(32,4)">
+      <rect x="-1" y="0" width="24" height="46" rx="3" fill="#efe4cd" stroke="#c9bda3"/>
+      <line x1="5" y1="5" x2="5" y2="41" stroke="#b9a888" stroke-width="1"/>
+      <line x1="11" y1="5" x2="11" y2="41" stroke="#b9a888" stroke-width="1"/>
+      <line x1="17" y1="5" x2="17" y2="41" stroke="#b9a888" stroke-width="1"/>
+      <rect x="-1" y="18" width="24" height="5" fill="#c0533f" opacity="0.85"/>
+    </g>
+    <g fill="#cbb894" stroke="#b9a888" stroke-width="0.6">
+      <rect x="70" y="8" width="3" height="38"/>
+      <rect x="79" y="8" width="3" height="38"/>
+      <rect x="88" y="8" width="3" height="38"/>
+      <rect x="97" y="8" width="3" height="38"/>
+    </g>
+  </g>
+  <text x="110" y="238" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">第一份：2 个十 + 4 个一</text>
+
+  <!-- 右：第二份 -->
+  <g transform="translate(280,152)">
+    <rect x="-6" y="-6" width="140" height="70" rx="4" fill="#f7f1e6" stroke="#cfc3ae"/>
+    <g transform="translate(4,4)">
+      <rect x="-1" y="0" width="24" height="46" rx="3" fill="#efe4cd" stroke="#c9bda3"/>
+      <line x1="5" y1="5" x2="5" y2="41" stroke="#b9a888" stroke-width="1"/>
+      <line x1="11" y1="5" x2="11" y2="41" stroke="#b9a888" stroke-width="1"/>
+      <line x1="17" y1="5" x2="17" y2="41" stroke="#b9a888" stroke-width="1"/>
+      <rect x="-1" y="18" width="24" height="5" fill="#c0533f" opacity="0.85"/>
+    </g>
+    <g transform="translate(32,4)">
+      <rect x="-1" y="0" width="24" height="46" rx="3" fill="#efe4cd" stroke="#c9bda3"/>
+      <line x1="5" y1="5" x2="5" y2="41" stroke="#b9a888" stroke-width="1"/>
+      <line x1="11" y1="5" x2="11" y2="41" stroke="#b9a888" stroke-width="1"/>
+      <line x1="17" y1="5" x2="17" y2="41" stroke="#b9a888" stroke-width="1"/>
+      <rect x="-1" y="18" width="24" height="5" fill="#c0533f" opacity="0.85"/>
+    </g>
+    <g fill="#cbb894" stroke="#b9a888" stroke-width="0.6">
+      <rect x="70" y="8" width="3" height="38"/>
+      <rect x="79" y="8" width="3" height="38"/>
+      <rect x="88" y="8" width="3" height="38"/>
+      <rect x="97" y="8" width="3" height="38"/>
+    </g>
+  </g>
+  <text x="350" y="238" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">第二份：2 个十 + 4 个一</text>
+
+  <!-- 底部：竖式两步 -->
+  <rect x="24" y="248" width="212" height="26" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="130" y="266" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">十位：4 ÷ 2 = 2（每份 2 个十）</text>
+  <rect x="244" y="248" width="212" height="26" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="350" y="266" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">个位：8 ÷ 2 = 4（每份 4 个一）</text>
+</svg>

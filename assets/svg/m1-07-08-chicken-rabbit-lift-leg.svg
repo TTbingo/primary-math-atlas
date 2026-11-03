@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="390" viewBox="0 0 520 390" role="img" aria-label="鸡兔同笼抬脚法示意图">
+  <rect x="0" y="0" width="520" height="390" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">抬脚法：大家一起抬起 2 只脚</text>
+
+  <!-- 上排：5 只鸡 + 3 只兔 -->
+  <g stroke-linecap="round">
+    <!-- 鸡 1~5 -->
+    <g>
+      <circle cx="80" cy="96" r="11" fill="#f7e7cd" stroke="#b08a5a" stroke-width="1.5"/>
+      <line x1="76" y1="107" x2="76" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="84" y1="107" x2="84" y2="128" stroke="#8a7a66" stroke-width="2"/>
+    </g>
+    <g>
+      <circle cx="130" cy="96" r="11" fill="#f7e7cd" stroke="#b08a5a" stroke-width="1.5"/>
+      <line x1="126" y1="107" x2="126" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="134" y1="107" x2="134" y2="128" stroke="#8a7a66" stroke-width="2"/>
+    </g>
+    <g>
+      <circle cx="180" cy="96" r="11" fill="#f7e7cd" stroke="#b08a5a" stroke-width="1.5"/>
+      <line x1="176" y1="107" x2="176" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="184" y1="107" x2="184" y2="128" stroke="#8a7a66" stroke-width="2"/>
+    </g>
+    <g>
+      <circle cx="230" cy="96" r="11" fill="#f7e7cd" stroke="#b08a5a" stroke-width="1.5"/>
+      <line x1="226" y1="107" x2="226" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="234" y1="107" x2="234" y2="128" stroke="#8a7a66" stroke-width="2"/>
+    </g>
+    <g>
+      <circle cx="280" cy="96" r="11" fill="#f7e7cd" stroke="#b08a5a" stroke-width="1.5"/>
+      <line x1="276" y1="107" x2="276" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="284" y1="107" x2="284" y2="128" stroke="#8a7a66" stroke-width="2"/>
+    </g>
+    <!-- 兔 1~3 -->
+    <g>
+      <line x1="325" y1="86" x2="321" y2="70" stroke="#8f2419" stroke-width="2.5"/>
+      <line x1="335" y1="86" x2="339" y2="70" stroke="#8f2419" stroke-width="2.5"/>
+      <circle cx="330" cy="96" r="11" fill="#efe6d8" stroke="#8f2419" stroke-width="1.5"/>
+      <line x1="323" y1="107" x2="323" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="327" y1="107" x2="327" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="333" y1="107" x2="333" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="337" y1="107" x2="337" y2="128" stroke="#8a7a66" stroke-width="2"/>
+    </g>
+    <g>
+      <line x1="375" y1="86" x2="371" y2="70" stroke="#8f2419" stroke-width="2.5"/>
+      <line x1="385" y1="86" x2="389" y2="70" stroke="#8f2419" stroke-width="2.5"/>
+      <circle cx="380" cy="96" r="11" fill="#efe6d8" stroke="#8f2419" stroke-width="1.5"/>
+      <line x1="373" y1="107" x2="373" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="377" y1="107" x2="377" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="383" y1="107" x2="383" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="387" y1="107" x2="387" y2="128" stroke="#8a7a66" stroke-width="2"/>
+    </g>
+    <g>
+      <line x1="425" y1="86" x2="421" y2="70" stroke="#8f2419" stroke-width="2.5"/>
+      <line x1="435" y1="86" x2="439" y2="70" stroke="#8f2419" stroke-width="2.5"/>
+      <circle cx="430" cy="96" r="11" fill="#efe6d8" stroke="#8f2419" stroke-width="1.5"/>
+      <line x1="423" y1="107" x2="423" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="427" y1="107" x2="427" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="433" y1="107" x2="433" y2="128" stroke="#8a7a66" stroke-width="2"/>
+      <line x1="437" y1="107" x2="437" y2="128" stroke="#8a7a66" stroke-width="2"/>
+    </g>
+  </g>
+  <text x="260" y="150" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">8 个头、22 只脚（5 只鸡 + 3 只兔）</text>
+
+  <!-- 中间动作 -->
+  <text x="260" y="172" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">全体抬起 2 只脚，共抬走 16 只</text>
+  <line x1="40" y1="180" x2="480" y2="180" stroke="#e3d8c4" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="260" y1="186" x2="260" y2="208" stroke="#b9b0a0" stroke-width="1.5"/>
+  <path d="M260 214 L254 204 L266 204 Z" fill="#b9b0a0"/>
+
+  <!-- 下排：鸡坐下，兔剩 2 只脚 -->
+  <g stroke-linecap="round">
+    <g>
+      <ellipse cx="80" cy="258" rx="10" ry="3" fill="#efe6d8" stroke="#b08a5a" stroke-width="1.2"/>
+      <circle cx="80" cy="248" r="11" fill="#f7e7cd" stroke="#b08a5a" stroke-width="1.5"/>
+    </g>
+    <g>
+      <ellipse cx="130" cy="258" rx="10" ry="3" fill="#efe6d8" stroke="#b08a5a" stroke-width="1.2"/>
+      <circle cx="130" cy="248" r="11" fill="#f7e7cd" stroke="#b08a5a" stroke-width="1.5"/>
+    </g>
+    <g>
+      <ellipse cx="180" cy="258" rx="10" ry="3" fill="#efe6d8" stroke="#b08a5a" stroke-width="1.2"/>
+      <circle cx="180" cy="248" r="11" fill="#f7e7cd" stroke="#b08a5a" stroke-width="1.5"/>
+    </g>
+    <g>
+      <ellipse cx="230" cy="258" rx="10" ry="3" fill="#efe6d8" stroke="#b08a5a" stroke-width="1.2"/>
+      <circle cx="230" cy="248" r="11" fill="#f7e7cd" stroke="#b08a5a" stroke-width="1.5"/>
+    </g>
+    <g>
+      <ellipse cx="280" cy="258" rx="10" ry="3" fill="#efe6d8" stroke="#b08a5a" stroke-width="1.2"/>
+      <circle cx="280" cy="248" r="11" fill="#f7e7cd" stroke="#b08a5a" stroke-width="1.5"/>
+    </g>
+    <g>
+      <line x1="325" y1="238" x2="321" y2="222" stroke="#8f2419" stroke-width="2.5"/>
+      <line x1="335" y1="238" x2="339" y2="222" stroke="#8f2419" stroke-width="2.5"/>
+      <circle cx="330" cy="248" r="11" fill="#efe6d8" stroke="#8f2419" stroke-width="1.5"/>
+      <line x1="327" y1="259" x2="327" y2="276" stroke="#8f2419" stroke-width="2"/>
+      <line x1="333" y1="259" x2="333" y2="276" stroke="#8f2419" stroke-width="2"/>
+    </g>
+    <g>
+      <line x1="375" y1="238" x2="371" y2="222" stroke="#8f2419" stroke-width="2.5"/>
+      <line x1="385" y1="238" x2="389" y2="222" stroke="#8f2419" stroke-width="2.5"/>
+      <circle cx="380" cy="248" r="11" fill="#efe6d8" stroke="#8f2419" stroke-width="1.5"/>
+      <line x1="377" y1="259" x2="377" y2="276" stroke="#8f2419" stroke-width="2"/>
+      <line x1="383" y1="259" x2="383" y2="276" stroke="#8f2419" stroke-width="2"/>
+    </g>
+    <g>
+      <line x1="425" y1="238" x2="421" y2="222" stroke="#8f2419" stroke-width="2.5"/>
+      <line x1="435" y1="238" x2="439" y2="222" stroke="#8f2419" stroke-width="2.5"/>
+      <circle cx="430" cy="248" r="11" fill="#efe6d8" stroke="#8f2419" stroke-width="1.5"/>
+      <line x1="427" y1="259" x2="427" y2="276" stroke="#8f2419" stroke-width="2"/>
+      <line x1="433" y1="259" x2="433" y2="276" stroke="#8f2419" stroke-width="2"/>
+    </g>
+  </g>
+  <text x="260" y="300" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">地上还剩 6 只脚，全是兔的（每只兔留下 2 只）</text>
+
+  <rect x="60" y="318" width="400" height="44" rx="6" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="260" y="346" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#8f2419">6 ÷ 2 = 3 只兔，8 − 3 = 5 只鸡</text>
+</svg>

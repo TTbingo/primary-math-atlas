@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="300" viewBox="0 0 540 300" role="img">
+  <rect x="0" y="0" width="540" height="300" fill="#fffdf8"/>
+  <text x="270.0" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">体积公式是数出来的：每层 15 个，摞 2 层</text>
+  <polygon points="44.0,132.0 174.0,132.0 216.0,102.0 86.0,102.0" fill="#f6ecdd" stroke="none"/>
+  <polygon points="174.0,132.0 174.0,184.0 216.0,154.0 216.0,102.0" fill="#f3e6d6" stroke="none"/>
+  <polygon points="44.0,132.0 174.0,132.0 174.0,184.0 44.0,184.0" fill="#fdf6e8" stroke="none"/>
+  <g stroke="#cfc3ae" stroke-width="0.9">
+    <line x1="70" y1="132" x2="70" y2="184"/>
+    <line x1="96" y1="132" x2="96" y2="184"/>
+    <line x1="122" y1="132" x2="122" y2="184"/>
+    <line x1="148" y1="132" x2="148" y2="184"/>
+    <line x1="44" y1="158" x2="174" y2="158"/>
+    <line x1="70" y1="132" x2="112" y2="102"/>
+    <line x1="96" y1="132" x2="138" y2="102"/>
+    <line x1="122" y1="132" x2="164" y2="102"/>
+    <line x1="148" y1="132" x2="190" y2="102"/>
+    <line x1="58.0" y1="122.0" x2="188.0" y2="122.0"/>
+    <line x1="72.0" y1="112.0" x2="202.0" y2="112.0"/>
+    <line x1="188.0" y1="122.0" x2="188.0" y2="174.0"/>
+    <line x1="202.0" y1="112.0" x2="202.0" y2="164.0"/>
+    <line x1="174" y1="158" x2="216" y2="128"/>
+  </g>
+  <g fill="none" stroke="#17181c" stroke-width="1.8">
+    <polygon points="44.0,132.0 174.0,132.0 174.0,184.0 44.0,184.0"/>
+    <polygon points="44.0,132.0 174.0,132.0 216.0,102.0 86.0,102.0"/>
+    <polygon points="174.0,132.0 174.0,184.0 216.0,154.0 216.0,102.0"/>
+  </g>
+  <text x="109.0" y="208" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8b5e34">长 5 厘米</text>
+  <text x="36" y="162.0" text-anchor="end" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#2b6cb0">高 2</text>
+  <text x="226" y="132.0" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#4a7c59">宽 3</text>
+  <text x="130.0" y="94" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#8a8578">每小格 = 1 个棱长 1 厘米的小正方体</text>
+  <rect x="298" y="58" width="220" height="146" fill="#fdf6e8" stroke="#cfc3ae" stroke-width="1"/>
+  <text x="314" y="88" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">每层：5 × 3 = 15 个</text>
+  <text x="314" y="118" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">共 2 层：15 × 2 = 30 个</text>
+  <text x="314" y="156" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">V = 长 × 宽 × 高</text>
+  <text x="314" y="182" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#c0392b">= 5 × 3 × 2 = 30 立方厘米</text>
+  <line x1="310" y1="134" x2="506" y2="134" stroke="#cfc3ae" stroke-width="0.8"/>
+  <text x="270" y="248" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#555962">体积量的是「装得下多少个 1 立方厘米」，所以单位是 cm³</text>
+  <text x="270" y="270" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#c0392b">正方体是长宽高相等的长方体：V = 棱长 × 棱长 × 棱长</text>
+  <text x="270" y="290" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8a8578">别把体积和表面积搞混：一个量里面，一个量外面</text>
+</svg>

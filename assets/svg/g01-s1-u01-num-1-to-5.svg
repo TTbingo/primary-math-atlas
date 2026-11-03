@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="240" viewBox="0 0 480 240" role="img">
+  <rect x="0" y="0" width="480" height="240" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">一个对着一个数，数到最后一个是几，就是几个</text>
+
+  <!-- 第 1 行：1 -->
+  <rect x="40" y="34" width="32" height="28" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="56" y="54" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="16" fill="#8f2419">1</text>
+  <circle cx="110" cy="48" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+
+  <!-- 第 2 行：2 -->
+  <rect x="40" y="66" width="32" height="28" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="56" y="86" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="16" fill="#8f2419">2</text>
+  <circle cx="110" cy="80" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <circle cx="134" cy="80" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <text x="240" y="86" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">2 比 1 多 1 个</text>
+
+  <!-- 第 3 行：3 -->
+  <rect x="40" y="98" width="32" height="28" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="56" y="118" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="16" fill="#8f2419">3</text>
+  <circle cx="110" cy="112" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <circle cx="134" cy="112" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <circle cx="158" cy="112" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <text x="240" y="118" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">3 比 2 多 1 个</text>
+
+  <!-- 第 4 行：4 -->
+  <rect x="40" y="130" width="32" height="28" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="56" y="150" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="16" fill="#8f2419">4</text>
+  <circle cx="110" cy="144" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <circle cx="134" cy="144" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <circle cx="158" cy="144" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <circle cx="182" cy="144" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <text x="240" y="150" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">4 比 3 多 1 个</text>
+
+  <!-- 第 5 行：5 -->
+  <rect x="40" y="162" width="32" height="28" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="56" y="182" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="16" fill="#8f2419">5</text>
+  <circle cx="110" cy="176" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <circle cx="134" cy="176" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <circle cx="158" cy="176" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <circle cx="182" cy="176" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <circle cx="206" cy="176" r="9" fill="#f3e2c7" stroke="#b98a52" stroke-width="1.5"/>
+  <text x="240" y="182" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">5 比 4 多 1 个</text>
+
+  <!-- 底部说明 -->
+  <rect x="300" y="200" width="160" height="32" rx="4" fill="#f3ede2" stroke="#cfc3ae"/>
+  <text x="380" y="221" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#8f2419">1、2、3、4、5 排好队</text>
+</svg>

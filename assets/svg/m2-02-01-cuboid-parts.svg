@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="290" viewBox="0 0 540 290" role="img">
+  <rect x="0" y="0" width="540" height="290" fill="#fffdf8"/>
+  <text x="270.0" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">长方体的面、棱、顶点</text>
+  <polygon points="64.0,108.0 184.0,108.0 220.0,84.0 100.0,84.0" fill="#f6ecdd" stroke="none"/>
+  <polygon points="184.0,108.0 184.0,180.0 220.0,156.0 220.0,84.0" fill="#f3e6d6" stroke="none"/>
+  <polygon points="64.0,108.0 184.0,108.0 184.0,180.0 64.0,180.0" fill="#fdf6e8" stroke="none"/>
+  <g fill="none" stroke-width="1.4" stroke-dasharray="5 3">
+    <line x1="64" y1="180" x2="100" y2="156" stroke="#4a7c59"/>
+    <line x1="100" y1="156" x2="220" y2="156" stroke="#8b5e34"/>
+    <line x1="100" y1="156" x2="100" y2="84" stroke="#2b6cb0"/>
+  </g>
+  <g fill="none" stroke-width="2.2">
+    <!-- 长（棕）4 条：后下那条被挡住，画在虚线组 -->
+    <line x1="64" y1="108" x2="184" y2="108" stroke="#8b5e34"/>
+    <line x1="184" y1="180" x2="64" y2="180" stroke="#8b5e34"/>
+    <line x1="100" y1="84" x2="220" y2="84" stroke="#8b5e34"/>
+    <!-- 宽（绿）4 条：左下那条被挡住，画在虚线组 -->
+    <line x1="64" y1="108" x2="100" y2="84" stroke="#4a7c59"/>
+    <line x1="184" y1="108" x2="220" y2="84" stroke="#4a7c59"/>
+    <line x1="184" y1="180" x2="220" y2="156" stroke="#4a7c59"/>
+    <!-- 高（蓝）4 条：后左那条被挡住，画在虚线组 -->
+    <line x1="64" y1="108" x2="64" y2="180" stroke="#2b6cb0"/>
+    <line x1="184" y1="108" x2="184" y2="180" stroke="#2b6cb0"/>
+    <line x1="220" y1="84" x2="220" y2="156" stroke="#2b6cb0"/>
+  </g>
+  <g fill="#17181c">
+    <circle cx="64" cy="108" r="3"/>
+    <circle cx="184" cy="108" r="3"/>
+    <circle cx="184" cy="180" r="3"/>
+    <circle cx="64" cy="180" r="3"/>
+    <circle cx="100" cy="84" r="3"/>
+    <circle cx="220" cy="84" r="3"/>
+    <circle cx="220" cy="156" r="3"/>
+    <circle cx="100" cy="156" r="3"/>
+  </g>
+  <text x="124.0" y="202" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8b5e34">长 8 厘米</text>
+  <text x="56" y="148.0" text-anchor="end" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#2b6cb0">高 5 厘米</text>
+  <text x="230" y="124.0" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#4a7c59">宽 4 厘米</text>
+  <rect x="300" y="60" width="222" height="176" fill="#fdf6e8" stroke="#cfc3ae" stroke-width="1"/>
+  <text x="316" y="88" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">面　6 个</text>
+  <text x="316" y="108" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#555962">相对的两个完全相同，共 3 对</text>
+  <text x="316" y="142" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">棱　12 条</text>
+  <text x="316" y="162" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#555962">长棕、宽绿、高蓝，各 4 条</text>
+  <text x="316" y="196" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">顶点　8 个</text>
+  <text x="316" y="216" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#555962">长宽高相交处就是顶点</text>
+  <line x1="312" y1="120" x2="508" y2="120" stroke="#cfc3ae" stroke-width="0.8"/>
+  <line x1="312" y1="176" x2="508" y2="176" stroke="#cfc3ae" stroke-width="0.8"/>
+  <text x="270" y="282" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#555962">正方体是长、宽、高都相等的长方体，面棱顶点的数量完全一样</text>
+</svg>

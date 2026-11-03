@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img">
+  <rect x="0" y="0" width="480" height="280" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">端点个数不一样，能不能量出长度也不一样</text>
+
+  <!-- 线段：2 个端点 -->
+  <text x="24" y="64" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#8f2419">线段</text>
+  <line x1="110" y1="60" x2="390" y2="60" stroke="#17181c" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="110" cy="60" r="5.5" fill="#8f2419"/>
+  <circle cx="390" cy="60" r="5.5" fill="#8f2419"/>
+  <text x="250" y="82" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">2 个端点 · 两头都到头 → 能量出长度</text>
+  <text x="250" y="99" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#8f2419">尺子从左边红点量到右边红点，读得出几厘米</text>
+
+  <!-- 射线：1 个端点 + 右箭头 -->
+  <text x="24" y="132" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#8f2419">射线</text>
+  <line x1="110" y1="128" x2="378" y2="128" stroke="#17181c" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="110" cy="128" r="5.5" fill="#8f2419"/>
+  <polygon points="396,128 376,120 376,136" fill="#8f2419"/>
+  <text x="250" y="150" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">1 个端点 · 一头无限延伸 → 量不出长度</text>
+  <text x="250" y="167" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#8f2419">手电筒的光：从灯口出发，另一头永远走不到</text>
+
+  <!-- 直线：两端都是箭头，无端点 -->
+  <text x="24" y="200" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#8f2419">直线</text>
+  <line x1="122" y1="196" x2="378" y2="196" stroke="#17181c" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="104,196 124,188 124,204" fill="#8f2419"/>
+  <polygon points="396,196 376,188 376,204" fill="#8f2419"/>
+  <text x="250" y="218" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">0 个端点 · 两头都无限延伸 → 量不出长度</text>
+
+  <!-- 底部：两点之间线段最短 -->
+  <rect x="20" y="232" width="440" height="40" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="32" y="250" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">两点之间，线段最短</text>
+  <text x="32" y="266" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">这条直直的线段，长度就是两点间的距离</text>
+  <circle cx="322" cy="252" r="4" fill="#8f2419"/>
+  <circle cx="428" cy="252" r="4" fill="#8f2419"/>
+  <line x1="322" y1="252" x2="428" y2="252" stroke="#8f2419" stroke-width="2.5"/>
+  <path d="M322,252 Q375,282 428,252" fill="none" stroke="#9a8f7d" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="375" y="268" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10" fill="#17181c">绕弯更长</text>
+</svg>

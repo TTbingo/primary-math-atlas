@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>四舍五入与近似数 · 小学数学知识点图谱</title>
+<meta name="description" content="近似数离准确数很近但不是它；四舍五入到哪一位，就看它的下一位，五入要进一、四舍全去掉。">
+<script>(function () {
+  try {
+    var s = localStorage.getItem('mathsite:theme') || 'auto';
+    var t = (s === 'auto')
+      ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      : s;
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+</script>
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/print.css">
+<link rel="stylesheet" href="../../assets/katex/katex.min.css">
+
+</head>
+<body class="page-point" data-depth="2">
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <button class="drawer-btn" id="drawer-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+  <a class="site-title" href="../../index.html">小学数学知识点图谱</a>
+  <div class="topbar-right">
+    <button class="search-btn" id="search-btn" aria-label="搜索">搜索 <kbd>Ctrl K</kbd></button>
+    <button class="theme-btn" id="theme-btn" aria-label="切换主题" title="切换主题">◐</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-inner"><nav class="side-nav" aria-label="模块目录"><details class="side-group" open><summary><a href="../../m1/index.html">数与代数</a><span class="side-n">77</span></summary><ul><li class="side-term"><a href="../../t/m1-01/index.html">数的意义和性质</a></li><li class="side-term"><a href="../../t/m1-02/index.html">数的读写</a></li><li class="side-term"><a href="../../t/m1-03/index.html" aria-current="page">数的改写与近似数</a></li><li><ul class="side-sub"><li class="side-item"><a href="../../points/m1-03-01-rounding/index.html" aria-current="page">四舍五入与近似数</a></li><li class="side-item"><a href="../../points/m1-03-02-rewrite-wan-yi/index.html">改写成「万」「亿」作单位</a></li><li class="side-item"><a href="../../points/m1-03-03-fraction-forms/index.html">假分数、带分数与整数的互化</a></li><li class="side-item"><a href="../../points/m1-03-04-decimal-fraction-percent-convert/index.html">小数、分数、百分数的互化</a></li></ul></li><li class="side-term"><a href="../../t/m1-04/index.html">比较大小</a></li><li class="side-term"><a href="../../t/m1-05/index.html">因数、倍数、质数、合数</a></li><li class="side-term"><a href="../../t/m1-06/index.html">数的运算</a></li><li class="side-term"><a href="../../t/m1-07/index.html">解决问题</a></li><li class="side-term"><a href="../../t/m1-08/index.html">式与方程</a></li><li class="side-term"><a href="../../t/m1-09/index.html">比和比例</a></li></ul></details><details class="side-group" ><summary><a href="../../m2/index.html">图形与几何</a><span class="side-n">40</span></summary><ul><li class="side-term"><a href="../../t/m2-01/index.html">图形的认识与测量</a></li><li class="side-term"><a href="../../t/m2-02/index.html">立体图形</a></li><li class="side-term"><a href="../../t/m2-03/index.html">图形的变换与运动</a></li><li class="side-term"><a href="../../t/m2-04/index.html">图形与位置</a></li></ul></details><details class="side-group" ><summary><a href="../../m3/index.html">统计与概率</a><span class="side-n">9</span></summary><ul><li class="side-term"><a href="../../t/m3-01/index.html">数据的收集与整理</a></li><li class="side-term"><a href="../../t/m3-02/index.html">统计图</a></li><li class="side-term"><a href="../../t/m3-03/index.html">平均数</a></li><li class="side-term"><a href="../../t/m3-04/index.html">可能性</a></li></ul></details><details class="side-group" ><summary><a href="../../m4/index.html">数学思考</a><span class="side-n">10</span></summary><ul><li class="side-term"><a href="../../t/m4-01/index.html">数学思想和方法</a></li><li class="side-term"><a href="../../t/m4-02/index.html">探索规律</a></li><li class="side-term"><a href="../../t/m4-03/index.html">计数方法</a></li><li class="side-term"><a href="../../t/m4-04/index.html">抽屉原理</a></li></ul></details></nav></div>
+  </aside>
+  <div class="sidebar-mask" id="sidebar-mask" hidden></div>
+
+  <div class="main-pane">
+    <main id="main"><div class="panel panel-h1"><h1 id="_top">四舍五入与近似数</h1><div class="point-meta"><span class="badge">数与代数</span><span class="badge">数的改写与近似数</span><span class="badge">课标：掌握</span><span class="badge badge-scope">课标必达</span></div><p class="point-summary">近似数离准确数很近但不是它；四舍五入到哪一位，就看它的下一位，五入要进一、四舍全去掉。</p></div><div class="panel panel-body"><section class="block overview"><table class="kv"><tbody><tr><th>所属主题</th><td><a href="../../t/m1-03/index.html">数的改写与近似数</a></td></tr><tr><th>所属模块</th><td><a href="../../m1/index.html">数与代数</a></td></tr><tr><th>课标学段</th><td>第二学段（3~4年级）</td></tr><tr><th>前置知识</th><td><a href="../../points/m1-01-05-big-number/index.html">亿以内数的认识与读写</a>、<a href="../../points/m1-01-07-decimal-meaning/index.html">小数的意义和性质</a></td></tr><tr><th>核心素养</th><td><span class="badge">数感</span><span class="badge">运算能力</span><span class="badge">应用意识</span></td></tr></tbody></table></section><section class="block std"><h2>课标要求</h2><table class="kv"><tbody><tr><th>数与代数·数与运算</th><td><p>在具体情境中，认识万以上的数，了解十进制计数法；探索并掌握多位数的乘除法，感悟从未知到已知的转化（例8）。</p><div class="std-loc">印刷第 20 页&#12288;行为动词：<span class="badge">掌握</span></div></td></tr><tr><th>数与代数·数与运算</th><td><p>结合具体情境探索并理解小数和分数的意义，感悟计数单位；会进行小数、分数的转化，进一步发展数感和符号意识。</p><div class="std-loc">印刷第 23 页&#12288;行为动词：<span class="badge">理解</span></div></td></tr></tbody></table></section><section class="block sec-explanation" id="explanation"><h2 class="sec-h">说明</h2><p>量身高量出 1.436 米，报给医生时只说 1.44 米；电子秤上苹果显示 0.678 千克，小票上打的是 0.68 千克。这些和真实数值很接近、又不完全相等的数，叫作<strong>近似数</strong>；原来那个真实的数叫<strong>准确数</strong>。近似数不是算错了，而是按需要把尾数处理掉，图的是好读、好用。</p><p>处理尾数最常用的办法是<strong>四舍五入</strong>：把数<strong>精确到某一位</strong>，就把这一位后面的数字全部丢掉。丢掉的部分如果最高位是 0、1、2、3、4，就原样保留，叫「四舍」；如果是 5、6、7、8、9，就在保留部分的末位上加 1，叫「五入」。</p><p><strong>一条规则管住全部：四舍五入到哪一位，就看它的下一位。</strong> 精确到百分位，看千分位；精确到个位，看十分位；精确到万位，看千位。只看一位，不看后面一长串。3.746 精确到百分位，看千分位上的 6，进一，得 3.75；3.742 精确到百分位，看千分位上的 2，舍去，得 3.74。前三位一模一样，结局却不同，全由那一位「裁判」说了算。</p><p><strong>求近似数和改写是两件事。</strong> 把 380000 写成「38 万」，一个数字都没变，中间用<strong>等号</strong>；把 384000 精确到万位写成「38 万」，数值变了，必须用<strong>约等号</strong>。凡是动过尾数，就不能再写等号。</p><p>同一个准确数可以取不同的精确度：精确到十分位、百分位、千分位，得到的近似数一个比一个更贴近原数。所以做题时要把「精确到哪一位」看清楚，题目换了位数，答案就跟着换。</p></section><section class="block sec-scenarios" id="scenarios"><h2 class="sec-h">使用场景</h2><p><strong>体检记录</strong>：身高、体重、视力都只记到某一位，1.436 米记成 1.44 米，没人会记到毫米以下。</p><p><strong>超市称重</strong>：电子秤内部算到克，价签只标到 0.01 千克，两头用的就是近似数。</p><p><strong>统计公报</strong>：一座城市常住人口 1287 万人，这个「万」后面其实还有零头，只报到万位。</p><p><strong>里程与面积</strong>：地铁线路长 37.68 千米、小区占地 3.6 万平方米，都是取到某一位的近似值。</p></section><section class="block sec-cautions" id="cautions"><h2 class="sec-h">注意点</h2><p><strong>只看下一位，不看整串尾数</strong>。把 3.849 精确到十分位，看的只是百分位上的 4，后面那个 9 不参加判断。</p><p><strong>连续进位要补 0</strong>。9.96 精确到十分位，百分位 6 进一，十分位的 9 加 1 变成 10，结果是 10.0，不是 9.1。</p><p><strong>近似数末尾的 0 不能随便删</strong>。3.90 表示精确到百分位，写成 3.9 就变成精确到十分位，精确度被偷偷改了。</p><p><strong>不是所有场合都用四舍五入</strong>。装东西的箱子、坐车的座位，宁可多算一个，用「进一法」；做衣服的布料只算够用的整段，用「去尾法」。取哪种要由情境决定。</p></section><section class="block sec-why" id="why"><h2 class="sec-h">为什么是这样</h2><div class="why"><div class="why-steps"><p class="why-label">算理推导</p><ol><li><p>先在数轴上理解「精确到某一位」：精确到 0.1，就是把数轴每 0.1 切成一小段，每个数都要住进离它最近的那一段端点。</p></li><li><p>每段的正中间是分界线。要精确到 0.1，3.8 和 3.9 之间的中点就是 3.85；比中点小的数离 3.8 更近，比中点大的数离 3.9 更近。</p></li><li><p>而「比 3.85 小还是大」，只看第一位小数就够了：0、1、2、3、4 说明还没走到中点，归左边；5、6、7、8、9 说明已经过了中点，归右边。这就是「看下一位」的来历。</p></li><li><p>正好落在中点上的数，也就是尾数恰为 5 的那个，怎么办？这是一个约定问题。大家统一规定归右边，这样每个数都有唯一的去处，不会出现有的数没人收、有的数被两家抢。</p></li><li><p>同样的道理往上走：精确到万位，就把数轴每 10000 切一段，分界线落在千位上，所以看千位；精确到百分位，分界线落在千分位上，所以看千分位。</p></li></ol></div><div class="why-exp"><p class="why-label">动手实验</p><p>剪一条 0 到 1 的数轴纸条，每 0.1 画一道刻度和一个小格子。做 0.62、0.65、0.68 三张卡片，分别放进「最近的格子」，你会发现 0.65 正好卡在格子的边界上，必须靠一条额外规定才能决定去处。再用电子秤称同一个苹果三次，可能显示 0.183、0.186 千克，把三个读数都精确到 0.01 千克，看哪一次进位、哪一次舍去。</p></div></div></section><section class="block sec-examples" id="examples"><h2 class="sec-h">按场景的例题</h2><div class="example"><p class="ex-head"><strong>例 1（场景：计量与估算）</strong>&#12288;<span class="ex-ctx">体检量身高</span></p><p class="ex-q">小丁身高 1.436 米。精确到百分位约是多少米？精确到十分位约是多少米？</p><p class="ex-s"><strong>解：</strong>精确到百分位看千分位上的 6，进一得 1.44；精确到十分位看百分位上的 3，舍去得 1.4。</p><p class="ex-a"><strong>答：</strong>精确到百分位约 1.44 米，精确到十分位约 1.4 米。</p></div><div class="example"><p class="ex-head"><strong>例 2（场景：购物消费）</strong>&#12288;<span class="ex-ctx">超市买苹果</span></p><p class="ex-q">电子秤显示苹果重 2.678 千克，价签按 0.01 千克记录，应记成多少千克？如果按 0.1 千克记录呢？</p><p class="ex-s"><strong>解：</strong>按 0.01 千克记，看千分位 8，进一得 2.68；按 0.1 千克记，看百分位 7，进一得 2.7。</p><p class="ex-a"><strong>答：</strong>分别记作 2.68 千克和 2.7 千克。</p></div><div class="example"><p class="ex-head"><strong>例 3（场景：校园生活）</strong>&#12288;<span class="ex-ctx">统计全校人数</span></p><p class="ex-q">某小学共有学生 1876 人。精确到百位约多少人？精确到千位约多少人？</p><p class="ex-s"><strong>解：</strong>精确到百位看十位上的 7，进一，百位的 8 加 1 得 9，约为 1900；精确到千位看百位上的 8，进一，约为 2000。</p><p class="ex-a"><strong>答：</strong>精确到百位约 1900 人，精确到千位约 2000 人。</p></div><div class="example"><p class="ex-head"><strong>例 4（场景：行程出行）</strong>&#12288;<span class="ex-ctx">查地铁线路长度</span></p><p class="ex-q">一条地铁线全长 37.68 千米。精确到十分位约多少千米？精确到个位约多少千米？</p><p class="ex-s"><strong>解：</strong>精确到十分位看百分位 8，进一得 37.7；精确到个位看十分位 6，进一得 38。</p><p class="ex-a"><strong>答：</strong>约 37.7 千米，精确到个位约 38 千米。</p></div></section><section class="block sec-inferences" id="inferences"><h2 class="sec-h">常用推论</h2><ul class="items"><li><p>精确到某一位，结果就保留到那一位，那一位后面的数字不再写出，整数部分缺位的地方用 0 占位。</p></li><li><p>保留部分的末位是 9 又要进一时，9 变成 0 并向前一位进 1，所以 9.96 精确到十分位是 10.0。</p></li><li><p>精确到十分位看百分位，精确到百分位看千分位，精确到万位看千位——判断用的那一位永远只有一位。</p></li><li><p>近似数末尾的 0 表示精确度：3.90 与 3.9 数值相等，但精确到的位数不同。</p></li><li><p>同一个准确数，精确到的位数越高，近似数就越接近它；精确到个位与精确到百分位，误差可以相差 100 倍。</p></li></ul></section><section class="block sec-pitfalls" id="pitfalls"><h2 class="sec-h">易错点</h2><div class="pitfall"><p class="pf-w"><span class="pf-tag">错</span>把 3.849 精确到十分位，看到后面还有 49，觉得「快满一百了」就进一，写成 3.9。</p><p class="pf-y"><span class="pf-tag">为什么错</span>四舍五入只由下一位决定。这里要看的是百分位上的 4，千分位上的 9 根本没有投票权。</p><p class="pf-r"><span class="pf-tag">正确</span>看百分位 4，舍去，3.849 ≈ 3.8。</p></div><div class="pitfall"><p class="pf-w"><span class="pf-tag">错</span>把 384000 精确到万位，写成 384000 = 38 万。</p><p class="pf-y"><span class="pf-tag">为什么错</span>数值已经被改动过了，不能用等号。等号只留给改写这种一个数都不变的操作。</p><p class="pf-r"><span class="pf-tag">正确</span>384000 ≈ 38 万。</p></div><div class="pitfall"><p class="pf-w"><span class="pf-tag">错</span>把 9.96 精确到十分位，写成 9.1。</p><p class="pf-y"><span class="pf-tag">为什么错</span>百分位 6 要进一，而十分位本身是 9，加 1 得 10，必须向前进一位，同时这一位写 0。</p><p class="pf-r"><span class="pf-tag">正确</span>9.96 ≈ 10.0，末尾的 0 要保留。</p></div></section><section class="block sec-intuition" id="intuition"><h2 class="sec-h">直观理解</h2><p>四舍五入像给数安排旅馆房间：楼层已经被切成一段一段，每个数都住进离自己最近的那一段。走到半路之前，尾数 0 到 4，就退回下一层；走过半路，尾数 5 到 9，就上楼。正好站在楼梯口的那一个，大家约定一律上楼，免得它无家可归。</p><div class="rhyme"><p>近似数，不算错，尾数多了要打磨。
+先看精确到哪位，再看它的下一位。
+零一二三四舍去，五六七八九进一。
+改写等号值不变，求近似数写约等。</p></div></section><section class="block sec-related" id="related"><h2 class="sec-h">关联知识点</h2><div class="rel-group"><p class="rel-label">本知识点指向</p><ul><li><a href="../../points/m1-03-02-rewrite-wan-yi/index.html">改写成「万」「亿」作单位</a><span class="rel-note">对照：改写用等号、求近似用约等号，两件事必须分清</span></li><li><a href="../../points/m1-06-30-estimation/index.html">估算</a><span class="rel-note">后续：估算里把数看成整十整百，用的就是近似数的想法</span></li><li><a href="../../points/m1-01-05-big-number/index.html">亿以内数的认识与读写</a><span class="rel-note">前置：先认识数位顺序表，才知道万位在哪里、该看哪一位</span></li></ul></div><div class="rel-group"><p class="rel-label">指向本知识点</p><ul><li><a href="../../points/m1-03-02-rewrite-wan-yi/index.html">改写成「万」「亿」作单位</a><span class="rel-note">对照：改写保持数值不变，求近似数会改动尾数，符号也不一样</span></li></ul></div></section><nav class="pager"><div><a class="pager-link" href="../../points/m1-02-02-decimal-fraction-read-write/index.html"><span class="pager-dir">上一页</span><span class="pager-t">小数、分数、百分数的读写</span></a></div><div><a class="pager-link pager-next" href="../../points/m1-03-02-rewrite-wan-yi/index.html"><span class="pager-dir">下一页</span><span class="pager-t">改写成「万」「亿」作单位</span></a></div></nav><div class="done-bar"><label class="done-toggle"><input type="checkbox" class="done-cb" data-id="m1-03-01-rounding"> 标记为已学</label></div></div></main>
+  </div>
+
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#std">课标要求</a></li><li class="toc-l2"><a href="#explanation">说明</a></li><li class="toc-l2"><a href="#scenarios">使用场景</a></li><li class="toc-l2"><a href="#cautions">注意点</a></li><li class="toc-l2"><a href="#why">为什么是这样</a></li><li class="toc-l2"><a href="#examples">按场景的例题</a></li><li class="toc-l2"><a href="#inferences">常用推论</a></li><li class="toc-l2"><a href="#pitfalls">易错点</a></li><li class="toc-l2"><a href="#intuition">直观理解</a></li><li class="toc-l2"><a href="#related">关联知识点</a></li></ul></nav></aside>
+</div>
+
+<div class="search-modal" id="search-modal" hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索">
+    <div class="search-head">
+      <input type="search" id="search-input" placeholder="搜索知识点、关键词…" autocomplete="off">
+      <button class="search-close" id="search-close" aria-label="关闭">✕</button>
+    </div>
+    <ul class="search-results" id="search-results"></ul>
+    <p class="search-tip">输入关键词，回车打开第一条</p>
+  </div>
+</div>
+
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../assets/js/katex-render.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/drawer.js"></script>
+<script src="../../assets/js/toc.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/progress.js"></script>
+</body>
+</html>

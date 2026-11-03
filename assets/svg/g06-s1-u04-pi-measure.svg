@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="320" viewBox="0 0 560 320" role="img">
+  <rect x="0" y="0" width="560" height="320" fill="#fffdf8"/>
+  <text x="280" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">把周长拉直，都是 3 个直径再多一点点</text>
+
+  <!-- 小圆 -->
+  <circle cx="110" cy="96" r="34" fill="#f9eae6" stroke="#b98c81" stroke-width="1.6"/>
+  <line x1="76" y1="96" x2="144" y2="96" stroke="#8f2419" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <circle cx="110" cy="96" r="2" fill="#17181c"/>
+  <text x="110" y="88" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">直径 d = 68</text>
+
+  <!-- 大圆 -->
+  <circle cx="420" cy="96" r="40" fill="#f9eae6" stroke="#b98c81" stroke-width="1.6"/>
+  <line x1="380" y1="96" x2="460" y2="96" stroke="#8f2419" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <circle cx="420" cy="96" r="2" fill="#17181c"/>
+  <text x="420" y="88" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">直径 d = 80</text>
+
+  <!-- 拉直的周长：小圆 -->
+  <text x="126" y="144" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">周长拉直 = 3 个直径 + 一小截</text>
+  <g stroke="#b98c81" stroke-width="1">
+    <rect x="20" y="152" width="68" height="22" fill="#e2a99d"/>
+    <rect x="88" y="152" width="68" height="22" fill="#f6ddd8"/>
+    <rect x="156" y="152" width="68" height="22" fill="#e2a99d"/>
+    <rect x="224" y="152" width="9.5" height="22" fill="#8f2419"/>
+    <rect x="20" y="152" width="213.5" height="22" fill="none" stroke="#8f2419" stroke-width="1.4"/>
+  </g>
+
+  <!-- 拉直的周长：大圆 -->
+  <g stroke="#b98c81" stroke-width="1">
+    <rect x="300" y="152" width="80" height="22" fill="#e2a99d"/>
+    <rect x="380" y="152" width="80" height="22" fill="#f6ddd8"/>
+    <rect x="460" y="152" width="80" height="22" fill="#e2a99d"/>
+    <rect x="540" y="152" width="11.2" height="22" fill="#8f2419"/>
+    <rect x="300" y="152" width="251.2" height="22" fill="none" stroke="#8f2419" stroke-width="1.4"/>
+  </g>
+
+  <text x="126" y="196" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#17181c">周长约 214 毫米，直径 68 毫米</text>
+  <text x="126" y="214" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">214 ÷ 68 ≈ 3.15</text>
+  <text x="426" y="196" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#17181c">周长约 251 毫米，直径 80 毫米</text>
+  <text x="426" y="214" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">251 ÷ 80 ≈ 3.14</text>
+
+  <text x="280" y="240" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#17181c">都是「周长 ÷ 直径 ≈ 3.14」——圆大圆小，这个倍数不变，就叫圆周率 π</text>
+
+  <rect x="16" y="256" width="528" height="44" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="280" y="275" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">C = πd　或　C = 2πr　（π ≈ 3.14）</text>
+  <text x="280" y="292" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#17181c">π 是无限不循环小数，3.14 只是计算时取的近似值</text>
+</svg>

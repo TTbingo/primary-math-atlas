@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="326" viewBox="0 0 580 326" role="img">
+  <rect x="0" y="0" width="580" height="326" fill="#fffdf8"/>
+  <text x="290.0" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">圆柱侧面展开是长方形，圆锥侧面展开是扇形</text>
+  <text x="95" y="46" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">圆柱</text>
+  <path d="M 43 74 A 52 15 0 0 1 147 74 L 147 158 A 52 15 0 0 1 43 158 Z" fill="#f6ecdd" stroke="#17181c" stroke-width="1.8"/>
+  <ellipse cx="95" cy="74" rx="52" ry="15" fill="#fdf6e8" stroke="#17181c" stroke-width="1.8"/>
+  <path d="M 43 158 A 52 15 0 0 0 147 158" fill="none" stroke="#17181c" stroke-width="1.8"/>
+  <line x1="162" y1="74" x2="162" y2="158" stroke="#c0392b" stroke-width="1.3"/>
+  <line x1="156" y1="74" x2="168" y2="74" stroke="#c0392b" stroke-width="1.3"/>
+  <line x1="156" y1="158" x2="168" y2="158" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="172" y="120.0" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#c0392b">高</text>
+  <line x1="196" y1="116" x2="238" y2="116" stroke="#8a8578" stroke-width="1.4"/>
+  <path d="M 238 116 L 230 112 M 238 116 L 230 120" fill="none" stroke="#8a8578" stroke-width="1.4"/>
+  <!-- 长方形：长 = 底面周长 2×3.14×52 ≈ 326，宽 = 高 84 -->
+  <rect x="248" y="74" width="326" height="84" fill="#f3ead6" stroke="#17181c" stroke-width="1.8"/>
+  <text x="411" y="66" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#555962">长 = 底面周长，宽 = 高</text>
+  <text x="411" y="180" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">侧面展开成长方形</text>
+  <text x="95" y="184" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">圆锥</text>
+  <!-- 底面半径 40、高 80，母线 √(40²+80²) ≈ 89.4 -->
+  <path d="M 95 202 L 55 282 A 40 12 0 0 0 135 282 Z" fill="#f6ecdd" stroke="#17181c" stroke-width="1.8"/>
+  <circle cx="95" cy="202" r="3.6" fill="#c0392b"/>
+  <text x="105" y="206" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#c0392b">顶点</text>
+  <line x1="95" y1="208" x2="95" y2="282" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="87" y="245.0" text-anchor="end" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#c0392b">高</text>
+  <line x1="196" y1="246" x2="238" y2="246" stroke="#8a8578" stroke-width="1.4"/>
+  <path d="M 238 246 L 230 242 M 238 246 L 230 250" fill="none" stroke="#8a8578" stroke-width="1.4"/>
+  <!-- 扇形：半径 = 母线 89.4，圆心角 360×40÷89.4 ≈ 161°，弧长 = 2×3.14×40 ≈ 251 -->
+  <path d="M 330 275 L 241.8 260.2 A 89.4 89.4 0 0 1 418.2 260.2 Z" fill="#f3ead6" stroke="#17181c" stroke-width="1.8"/>
+  <circle cx="330" cy="275" r="2.6" fill="#17181c"/>
+  <text x="330" y="306" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">侧面展开成扇形</text>
+</svg>

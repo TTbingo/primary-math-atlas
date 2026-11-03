@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300" role="img">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8f2419"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="480" height="300" fill="#fffdf8"/>
+  <text x="240" y="22" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">移多补少：四个人跳绳，平均每人 120 下</text>
+
+  <!-- 坐标轴 -->
+  <line x1="62" y1="52" x2="62" y2="238" stroke="#17181c" stroke-width="1.2"/>
+  <line x1="62" y1="238" x2="446" y2="238" stroke="#17181c" stroke-width="1.2"/>
+  <text x="54" y="242" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">0</text>
+  <text x="54" y="188" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">50</text>
+  <text x="54" y="138" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">100</text>
+  <text x="54" y="88" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">150</text>
+  <text x="30" y="60" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">下</text>
+
+  <!-- 四根柱子 -->
+  <rect x="98" y="88" width="44" height="150" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <rect x="176" y="108" width="44" height="130" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <rect x="254" y="148" width="44" height="90" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <rect x="332" y="128" width="44" height="110" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <text x="120" y="80" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">150</text>
+  <text x="198" y="100" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">130</text>
+  <text x="276" y="140" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">90</text>
+  <text x="354" y="120" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">110</text>
+  <text x="120" y="256" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">甲</text>
+  <text x="198" y="256" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">乙</text>
+  <text x="276" y="256" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">丙</text>
+  <text x="354" y="256" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">丁</text>
+
+  <!-- 平均线 -->
+  <line x1="62" y1="118" x2="446" y2="118" stroke="#8f2419" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="440" y="112" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">平均 120</text>
+
+  <!-- 移多补少箭头 -->
+  <path d="M126,86 C168,58 214,86 248,142" fill="none" stroke="#8f2419" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="160" y="66" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">移 30 给丙</text>
+  <path d="M204,106 C238,96 282,104 326,124" fill="none" stroke="#8f2419" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="262" y="96" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">移 10 给丁</text>
+
+  <!-- 结果说明 -->
+  <text x="240" y="282" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#7a7266">四根柱子削平补齐后都在 120 这条线上，谁也没有正好跳 120 下</text>
+</svg>

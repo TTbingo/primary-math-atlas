@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="240" viewBox="0 0 480 240" role="img">
+  <rect x="0" y="0" width="480" height="240" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">11 颗糖，每 3 颗装一袋</text>
+
+  <!-- 袋子 1 -->
+  <g>
+    <rect x="26" y="42" width="62" height="106" rx="10" fill="#fdf3e3" stroke="#cfc3ae"/>
+    <circle cx="57" cy="66" r="10" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M47 66 L41 60 L41 72 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M67 66 L73 60 L73 72 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <circle cx="57" cy="95" r="10" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M47 95 L41 89 L41 101 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M67 95 L73 89 L73 101 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <circle cx="57" cy="124" r="10" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M47 124 L41 118 L41 130 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M67 124 L73 118 L73 130 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <text x="57" y="164" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">第 1 袋</text>
+  </g>
+
+  <!-- 袋子 2 -->
+  <g>
+    <rect x="102" y="42" width="62" height="106" rx="10" fill="#fdf3e3" stroke="#cfc3ae"/>
+    <circle cx="133" cy="66" r="10" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M123 66 L117 60 L117 72 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M143 66 L149 60 L149 72 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <circle cx="133" cy="95" r="10" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M123 95 L117 89 L117 101 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M143 95 L149 89 L149 101 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <circle cx="133" cy="124" r="10" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M123 124 L117 118 L117 130 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M143 124 L149 118 L149 130 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <text x="133" y="164" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">第 2 袋</text>
+  </g>
+
+  <!-- 袋子 3 -->
+  <g>
+    <rect x="178" y="42" width="62" height="106" rx="10" fill="#fdf3e3" stroke="#cfc3ae"/>
+    <circle cx="209" cy="66" r="10" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M199 66 L193 60 L193 72 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M219 66 L225 60 L225 72 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <circle cx="209" cy="95" r="10" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M199 95 L193 89 L193 101 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M219 95 L225 89 L225 101 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <circle cx="209" cy="124" r="10" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M199 124 L193 118 L193 130 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M219 124 L225 118 L225 130 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <text x="209" y="164" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">第 3 袋</text>
+  </g>
+
+  <!-- 分隔 -->
+  <line x1="258" y1="42" x2="258" y2="160" stroke="#cfc3ae" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- 剩下的 2 颗 -->
+  <g>
+    <circle cx="306" cy="80" r="10" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M296 80 L290 74 L290 86 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M316 80 L322 74 L322 86 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <circle cx="306" cy="120" r="10" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M296 120 L290 114 L290 126 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <path d="M316 120 L322 114 L322 126 Z" fill="#e8b04b" stroke="#a9731f"/>
+    <text x="352" y="86" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#8f2419">还剩 2 颗</text>
+    <text x="352" y="108" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">不到 3 颗，</text>
+    <text x="352" y="128" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">装不成第 4 袋</text>
+  </g>
+
+  <!-- 算式带 -->
+  <rect x="26" y="188" width="196" height="36" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="124" y="212" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="15" fill="#8f2419">11 ÷ 3 = 3（袋）…… 2（颗）</text>
+  <rect x="238" y="188" width="216" height="36" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="346" y="212" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="15" fill="#8f2419">验算：3 × 3 + 2 = 11</text>
+</svg>

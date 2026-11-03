@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img">
+  <defs>
+    <marker id="arTR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8f2419"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="520" height="300" fill="#fffdf8"/>
+  <text x="260" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">平移说方向和距离，旋转说中心、方向和角度</text>
+
+  <!-- 左：平移 -->
+  <rect x="16" y="38" width="232" height="178" rx="4" fill="#ffffff" stroke="#cfc3ae"/>
+  <text x="28" y="58" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">平移：整体沿直线滑动</text>
+
+  <g stroke="#e4dccd" stroke-width="1" fill="none">
+    <line x1="44" y1="72" x2="170" y2="72"/><line x1="44" y1="90" x2="170" y2="90"/>
+    <line x1="44" y1="108" x2="170" y2="108"/><line x1="44" y1="126" x2="170" y2="126"/>
+    <line x1="44" y1="144" x2="170" y2="144"/>
+    <line x1="44" y1="72" x2="44" y2="144"/><line x1="62" y1="72" x2="62" y2="144"/>
+    <line x1="80" y1="72" x2="80" y2="144"/><line x1="98" y1="72" x2="98" y2="144"/>
+    <line x1="116" y1="72" x2="116" y2="144"/><line x1="134" y1="72" x2="134" y2="144"/>
+    <line x1="152" y1="72" x2="152" y2="144"/><line x1="170" y1="72" x2="170" y2="144"/>
+  </g>
+
+  <polygon points="44,144 80,144 44,108" fill="none" stroke="#9a8f7d" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="34" y="104" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#9a8f7d">A</text>
+
+  <polygon points="98,144 134,144 98,108" fill="#f5ddd8" stroke="#8f2419" stroke-width="2"/>
+  <text x="88" y="104" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#8f2419">A′</text>
+
+  <line x1="56" y1="162" x2="110" y2="162" stroke="#8f2419" stroke-width="1.8" marker-end="url(#arTR)"/>
+  <text x="83" y="180" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#8f2419">向右平移 3 格</text>
+  <text x="30" y="204" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">每个点都走 3 格，朝向不变</text>
+
+  <!-- 右：旋转 -->
+  <rect x="264" y="38" width="240" height="178" rx="4" fill="#ffffff" stroke="#cfc3ae"/>
+  <text x="276" y="58" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">旋转：绕一个点转动</text>
+
+  <polygon points="380,142 440,142 440,112" fill="none" stroke="#9a8f7d" stroke-width="2" stroke-dasharray="5 4"/>
+  <polygon points="380,142 380,202 410,202" fill="#f5ddd8" stroke="#8f2419" stroke-width="2"/>
+
+  <path d="M420,142 A40,40 0 0 1 380,182" fill="none" stroke="#8f2419" stroke-width="1.8" marker-end="url(#arTR)"/>
+  <text x="446" y="160" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#8f2419">顺时针</text>
+  <text x="446" y="175" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#8f2419">90°</text>
+
+  <circle cx="380" cy="142" r="4" fill="#8f2419"/>
+  <text x="366" y="138" text-anchor="end" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">O</text>
+  <text x="296" y="146" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">旋转中心</text>
+  <text x="296" y="162" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">不能换</text>
+  <text x="276" y="206" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">绕点 O 转，横边变竖边</text>
+
+  <!-- 底部对照 -->
+  <rect x="16" y="228" width="488" height="58" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="30" y="252" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">平移：方向 + 距离，缺一个就说不清搬到哪儿</text>
+  <text x="30" y="274" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">旋转：旋转中心 + 方向 + 角度；两种运动形状大小都不变</text>
+</svg>

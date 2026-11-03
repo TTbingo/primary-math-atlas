@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img">
+  <rect x="0" y="0" width="480" height="280" fill="#fffdf8"/>
+  <text x="240" y="22" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">角的大小只看张开，不看边画多长</text>
+
+  <!-- 左：边长短不同、张开相同 -->
+  <rect x="16" y="36" width="222" height="168" rx="4" fill="#ffffff" stroke="#cfc3ae"/>
+  <text x="127" y="56" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">边画得一短一长，张开一样</text>
+
+  <!-- 短边角 -->
+  <line x1="50" y1="160" x2="112" y2="160" stroke="#17181c" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="50" y1="160" x2="90" y2="115" stroke="#17181c" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="50" cy="160" r="4" fill="#8f2419"/>
+  <path d="M72,160 A22,22 0 0 0 64.7,143.7" fill="none" stroke="#8f2419" stroke-width="2"/>
+  <text x="64" y="180" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">短边</text>
+
+  <!-- 长边角，同一个张开角度 -->
+  <line x1="140" y1="160" x2="228" y2="160" stroke="#17181c" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="140" y1="160" x2="210" y2="81" stroke="#17181c" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="140" cy="160" r="4" fill="#8f2419"/>
+  <path d="M162,160 A22,22 0 0 0 154.7,143.7" fill="none" stroke="#8f2419" stroke-width="2"/>
+  <text x="176" y="180" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">长边</text>
+
+  <text x="127" y="197" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">两段弧一样 → 两个角一样大</text>
+
+  <!-- 右：活动角，边长不变、张开变大 -->
+  <rect x="242" y="36" width="222" height="168" rx="4" fill="#ffffff" stroke="#cfc3ae"/>
+  <text x="353" y="56" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">边长不变，把一条边往外拨</text>
+
+  <!-- 固定边 -->
+  <line x1="290" y1="160" x2="450" y2="160" stroke="#17181c" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="290" cy="160" r="4.5" fill="#8f2419"/>
+
+  <!-- 收拢的边（虚线） -->
+  <line x1="290" y1="160" x2="382.2" y2="119.7" stroke="#9a8f7d" stroke-width="2" stroke-dasharray="5 4" stroke-linecap="round"/>
+  <path d="M320,160 A30,30 0 0 0 317.5,148" fill="none" stroke="#9a8f7d" stroke-width="2"/>
+  <text x="352" y="150" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#9a8f7d">收拢 · 角小</text>
+
+  <!-- 张开的边（实线红） -->
+  <line x1="290" y1="160" x2="335" y2="70" stroke="#8f2419" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M320,160 A30,30 0 0 0 303.4,133.2" fill="none" stroke="#8f2419" stroke-width="2"/>
+  <text x="262" y="86" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#8f2419">张开 · 角大</text>
+
+  <text x="353" y="197" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">拨得越开，角才越大</text>
+
+  <!-- 底部：比大小的方法 -->
+  <rect x="16" y="214" width="448" height="56" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="30" y="236" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">比大小：顶点对齐、一条边对齐，看另一条边谁张得更开</text>
+  <text x="30" y="256" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">角的边是射线，本来就没有长度可量；把边画长画短，角一点不变</text>
+</svg>
