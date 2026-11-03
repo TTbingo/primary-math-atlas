@@ -111,7 +111,7 @@
 
   <!-- 底部：竖式两步 -->
   <rect x="24" y="248" width="212" height="26" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
-  <text x="130" y="266" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">先分十位：4 个十 → 每份 2 个十（2 写十位）</text>
+  <text x="130" y="266" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">十位：4 ÷ 2 = 2（每份 2 个十）</text>
   <rect x="244" y="248" width="212" height="26" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
-  <text x="350" y="266" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">再分个位：8 个一 → 每份 4 个一（4 写个位）</text>
+  <text x="350" y="266" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">个位：8 ÷ 2 = 4（每份 4 个一）</text>
 </svg>

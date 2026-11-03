@@ -27,9 +27,18 @@ def main():
     msg = sys.argv[1] if len(sys.argv) > 1 else "site: 更新静态站点"
     n_src = sum(len(f) for _, _, f in os.walk(DIST))
 
+    # 只清空内容，保留 .git（否则每次都是全新的孤儿提交）
     if os.path.isdir(WORK):
-        shutil.rmtree(WORK, ignore_errors=True)
-    os.makedirs(WORK, exist_ok=True)
+        for name in os.listdir(WORK):
+            if name == ".git":
+                continue
+            p = os.path.join(WORK, name)
+            if os.path.isdir(p):
+                shutil.rmtree(p, ignore_errors=True)
+            else:
+                os.remove(p)
+    else:
+        os.makedirs(WORK, exist_ok=True)
     shutil.copytree(DIST, WORK, dirs_exist_ok=True)
     open(os.path.join(WORK, ".nojekyll"), "w").close()
 
@@ -37,6 +46,8 @@ def main():
     if not is_repo:
         run(["git", "init", "-q", "-b", BRANCH], WORK)
         run(["git", "remote", "add", "origin", REMOTE], WORK)
+    run(["git", "config", "user.name", "TTbingo"], WORK)
+    run(["git", "config", "user.email", "TTbingo@users.noreply.github.com"], WORK)
     run(["git", "add", "-A"], WORK)
     r = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=WORK)
     if r.returncode == 0:

@@ -17,7 +17,7 @@
     <text x="40" y="136" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">百位</text>
     <text x="160" y="136" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">十位</text>
     <text x="280" y="136" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">个位</text>
-    <text x="160" y="158" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">从右边数起：第一位个位，第二位十位，第三位百位</text>
+    <text x="160" y="152" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">从右边数起：第一位个位，第二位十位，第三位百位</text>
   </g>
 
   <!-- 公式带 -->

@@ -19,9 +19,9 @@
 
   <!-- 141 的拆解 -->
   <text x="240" y="120" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">141 = 100 + 40 + 1</text>
-  <text x="240" y="144" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">= (99 + 1) + (39 + 1) + 1</text>
-  <text x="240" y="168" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">= 99 + 39 + (1 + 4 + 1)</text>
+  <text x="240" y="144" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">= (99 + 1) + (36 + 4) + 1</text>
+  <text x="240" y="168" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">= 99 + 36 + (1 + 4 + 1)</text>
 
-  <text x="240" y="196" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">99、39 都是 3 的倍数，只要看 1 + 4 + 1 = 6</text>
+  <text x="240" y="196" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">99、36 都是 3 的倍数，只要看 1 + 4 + 1 = 6</text>
   <text x="240" y="218" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">6 是 3 的倍数，所以 141 是 3 的倍数</text>
 </svg>

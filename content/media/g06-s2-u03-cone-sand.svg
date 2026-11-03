@@ -6,48 +6,49 @@
   </defs>
   <rect x="0" y="0" width="560" height="320" fill="#fffdf8"/>
   <text x="280" y="24" text-anchor="middle" font-size="15" fill="#17181c">等底等高的圆锥装满沙，往圆柱里倒：倒 3 次正好装满</text>
+  <text x="280" y="44" text-anchor="middle" font-size="11" fill="#7a7266">圆锥和圆柱底面半径都是 28、高都是 60（同底同高）</text>
 
-  <!-- 第 1 次 -->
+  <!-- 第 1 次：液面只到 1/3 高 -->
   <g>
-    <path d="M115,84 L130,50 L145,84 Z" fill="#f5ddd8" stroke="#17181c" stroke-width="1.6"/>
-    <ellipse cx="130" cy="84" rx="15" ry="5" fill="#e6cfae" stroke="#17181c" stroke-width="1.4"/>
-    <path d="M130,94 L130,106" fill="none" stroke="#8f2419" stroke-width="1.8" marker-end="url(#arPour)"/>
-    <path d="M92,240 L92,112 A38,10 0 0 0 168,112 L168,240 Z" fill="#fdfdfb" stroke="none"/>
-    <path d="M92,197 L92,240 A38,10 0 0 0 168,240 L168,197 Z" fill="#e6cfae" stroke="none"/>
-    <ellipse cx="130" cy="197" rx="36" ry="9" fill="#ddc39c" stroke="none"/>
-    <path d="M92,112 L92,240 A38,10 0 0 0 168,240 L168,112" fill="none" stroke="#17181c" stroke-width="2"/>
-    <ellipse cx="130" cy="112" rx="38" ry="10" fill="none" stroke="#17181c" stroke-width="2"/>
-    <text x="130" y="262" text-anchor="middle" font-size="11.5" fill="#17181c">倒第 1 次</text>
-    <text x="130" y="280" text-anchor="middle" font-size="12" fill="#8f2419">只到 1/3 高</text>
+    <path d="M102,138 L130,78 L158,138 Z" fill="#f5ddd8" stroke="#17181c" stroke-width="1.6"/>
+    <ellipse cx="130" cy="138" rx="28" ry="7" fill="#e6cfae" stroke="#17181c" stroke-width="1.4"/>
+    <path d="M130,148 L130,164" fill="none" stroke="#8f2419" stroke-width="1.8" marker-end="url(#arPour)"/>
+    <path d="M102,168 L102,228 A28,7 0 0 0 158,228 L158,168 Z" fill="#fdfdfb" stroke="none"/>
+    <path d="M102,208 L102,228 A28,7 0 0 0 158,228 L158,208 Z" fill="#e6cfae" stroke="none"/>
+    <ellipse cx="130" cy="208" rx="28" ry="7" fill="#ddc39c" stroke="none"/>
+    <path d="M102,168 L102,228 A28,7 0 0 0 158,228 L158,168" fill="none" stroke="#17181c" stroke-width="2"/>
+    <ellipse cx="130" cy="168" rx="28" ry="7" fill="none" stroke="#17181c" stroke-width="2"/>
+    <text x="130" y="246" text-anchor="middle" font-size="11.5" fill="#17181c">倒第 1 次</text>
+    <text x="130" y="264" text-anchor="middle" font-size="12" fill="#8f2419">只到 1/3 高</text>
   </g>
 
-  <!-- 第 2 次 -->
+  <!-- 第 2 次：液面到 2/3 高 -->
   <g>
-    <path d="M265,84 L280,50 L295,84 Z" fill="#f5ddd8" stroke="#17181c" stroke-width="1.6"/>
-    <ellipse cx="280" cy="84" rx="15" ry="5" fill="#e6cfae" stroke="#17181c" stroke-width="1.4"/>
-    <path d="M280,94 L280,106" fill="none" stroke="#8f2419" stroke-width="1.8" marker-end="url(#arPour)"/>
-    <path d="M242,240 L242,112 A38,10 0 0 0 318,112 L318,240 Z" fill="#fdfdfb" stroke="none"/>
-    <path d="M242,155 L242,240 A38,10 0 0 0 318,240 L318,155 Z" fill="#e6cfae" stroke="none"/>
-    <ellipse cx="280" cy="155" rx="36" ry="9" fill="#ddc39c" stroke="none"/>
-    <path d="M242,112 L242,240 A38,10 0 0 0 318,240 L318,112" fill="none" stroke="#17181c" stroke-width="2"/>
-    <ellipse cx="280" cy="112" rx="38" ry="10" fill="none" stroke="#17181c" stroke-width="2"/>
-    <text x="280" y="262" text-anchor="middle" font-size="11.5" fill="#17181c">倒第 2 次</text>
-    <text x="280" y="280" text-anchor="middle" font-size="12" fill="#8f2419">到 2/3 高</text>
+    <path d="M252,138 L280,78 L308,138 Z" fill="#f5ddd8" stroke="#17181c" stroke-width="1.6"/>
+    <ellipse cx="280" cy="138" rx="28" ry="7" fill="#e6cfae" stroke="#17181c" stroke-width="1.4"/>
+    <path d="M280,148 L280,164" fill="none" stroke="#8f2419" stroke-width="1.8" marker-end="url(#arPour)"/>
+    <path d="M252,168 L252,228 A28,7 0 0 0 308,228 L308,168 Z" fill="#fdfdfb" stroke="none"/>
+    <path d="M252,188 L252,228 A28,7 0 0 0 308,228 L308,188 Z" fill="#e6cfae" stroke="none"/>
+    <ellipse cx="280" cy="188" rx="28" ry="7" fill="#ddc39c" stroke="none"/>
+    <path d="M252,168 L252,228 A28,7 0 0 0 308,228 L308,168" fill="none" stroke="#17181c" stroke-width="2"/>
+    <ellipse cx="280" cy="168" rx="28" ry="7" fill="none" stroke="#17181c" stroke-width="2"/>
+    <text x="280" y="246" text-anchor="middle" font-size="11.5" fill="#17181c">倒第 2 次</text>
+    <text x="280" y="264" text-anchor="middle" font-size="12" fill="#8f2419">到 2/3 高</text>
   </g>
 
-  <!-- 第 3 次 -->
+  <!-- 第 3 次：正好装满 -->
   <g>
-    <path d="M415,84 L430,50 L445,84 Z" fill="#f5ddd8" stroke="#17181c" stroke-width="1.6"/>
-    <ellipse cx="430" cy="84" rx="15" ry="5" fill="#e6cfae" stroke="#17181c" stroke-width="1.4"/>
-    <path d="M430,94 L430,106" fill="none" stroke="#8f2419" stroke-width="1.8" marker-end="url(#arPour)"/>
-    <path d="M392,240 L392,112 A38,10 0 0 0 468,112 L468,240 Z" fill="#e6cfae" stroke="none"/>
-    <ellipse cx="430" cy="112" rx="36" ry="9" fill="#ddc39c" stroke="none"/>
-    <path d="M392,112 L392,240 A38,10 0 0 0 468,240 L468,112" fill="none" stroke="#17181c" stroke-width="2"/>
-    <ellipse cx="430" cy="112" rx="38" ry="10" fill="none" stroke="#17181c" stroke-width="2"/>
-    <text x="430" y="262" text-anchor="middle" font-size="11.5" fill="#17181c">倒第 3 次</text>
-    <text x="430" y="280" text-anchor="middle" font-size="12" fill="#8f2419">正好装满</text>
+    <path d="M402,138 L430,78 L458,138 Z" fill="#f5ddd8" stroke="#17181c" stroke-width="1.6"/>
+    <ellipse cx="430" cy="138" rx="28" ry="7" fill="#e6cfae" stroke="#17181c" stroke-width="1.4"/>
+    <path d="M430,148 L430,164" fill="none" stroke="#8f2419" stroke-width="1.8" marker-end="url(#arPour)"/>
+    <path d="M402,168 L402,228 A28,7 0 0 0 458,228 L458,168 Z" fill="#e6cfae" stroke="none"/>
+    <ellipse cx="430" cy="168" rx="28" ry="7" fill="#ddc39c" stroke="none"/>
+    <path d="M402,168 L402,228 A28,7 0 0 0 458,228 L458,168" fill="none" stroke="#17181c" stroke-width="2"/>
+    <ellipse cx="430" cy="168" rx="28" ry="7" fill="none" stroke="#17181c" stroke-width="2"/>
+    <text x="430" y="246" text-anchor="middle" font-size="11.5" fill="#17181c">倒第 3 次</text>
+    <text x="430" y="264" text-anchor="middle" font-size="12" fill="#8f2419">正好装满</text>
   </g>
 
-  <rect x="16" y="292" width="528" height="24" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
-  <text x="280" y="309" text-anchor="middle" font-size="13" fill="#8f2419">3 个圆锥 = 1 个圆柱　→　V锥 = 1/3 × S × h = 1/3 πr²h</text>
+  <rect x="16" y="282" width="528" height="24" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="280" y="299" text-anchor="middle" font-size="13" fill="#8f2419">3 个圆锥 = 1 个圆柱　→　V锥 = 1/3 × S × h = 1/3 πr²h</text>
 </svg>

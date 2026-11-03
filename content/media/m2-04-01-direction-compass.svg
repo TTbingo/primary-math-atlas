@@ -49,7 +49,7 @@
   <circle cx="410" cy="262" r="4.5" fill="#17181c"/>
   <text x="396" y="284" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#5a5b60">观测点</text>
 
-  <text x="498" y="326" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#17181c">同是「偏 30°」，基准不同，两条射线相差 60°</text>
+  <text x="498" y="326" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#17181c">同是「偏 30°」，基准不同，两条射线相差 30°</text>
 
   <text x="320" y="348" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#5a5b60">量角器的 0 刻度要靠住正北，往东读出的度数，才是「北偏东」的那个角</text>
 </svg>

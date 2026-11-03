@@ -20,12 +20,14 @@
   <text x="232" y="136" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">直角三角形</text>
   <text x="232" y="152" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">有一个角是直角</text>
 
-  <!-- 钝角三角形 -->
-  <polygon points="326,116 428,116 344,58" fill="#f7f2e6" stroke="#17181c" stroke-width="1.6"/>
-  <path d="M338,64 A13,13 0 0 1 352,62" fill="none" stroke="#8f2419" stroke-width="1.2"/>
-  <path d="M418,116 A10,10 0 0 1 420,109" fill="none" stroke="#8f2419" stroke-width="1.2"/>
-  <text x="377" y="136" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">钝角三角形</text>
-  <text x="377" y="152" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">有一个角是钝角</text>
+  <!-- 钝角三角形：钝角在左下顶点（约 107°） -->
+  <polygon points="312,58 430,116 330,116" fill="#f7f2e6" stroke="#17181c" stroke-width="1.6"/>
+  <path d="M325.85,102.63 A14,14 0 0 1 344,116" fill="none" stroke="#8f2419" stroke-width="1.2"/>
+  <text x="355" y="101" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">钝角</text>
+  <path d="M320.97,62.41 A10,10 0 0 1 314.97,67.56" fill="none" stroke="#8f2419" stroke-width="1.2"/>
+  <path d="M420,116 A10,10 0 0 0 421.03,111.59" fill="none" stroke="#8f2419" stroke-width="1.2"/>
+  <text x="370" y="136" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">钝角三角形</text>
+  <text x="370" y="152" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">有一个角是钝角</text>
 
   <line x1="24" y1="168" x2="456" y2="168" stroke="#cfc3ae" stroke-width="1" stroke-dasharray="4 4"/>
 

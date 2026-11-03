@@ -15,7 +15,7 @@
   <polygon points="146.0,178.0 186.0,178.0 186.0,218.0 146.0,218.0" fill="#f3ece0" stroke="#17181c" stroke-width="1.3"/>
   <line x1="220" y1="150" x2="172" y2="168" stroke="#c0392b" stroke-width="1.3"/>
   <path d="M 172 168 L 180 166 M 172 168 L 176 175" fill="none" stroke="#c0392b" stroke-width="1.3"/>
-  <text x="224" y="146" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#c0392b">后面还藏着 1 个</text>
+  <text x="130" y="140" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#c0392b">后面还藏着 1 个</text>
   <text x="106" y="242" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#555962">从前面看</text>
   <text x="56" y="202.0" text-anchor="end" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#555962">从左看</text>
   <line x1="58" y1="198.0" x2="74" y2="198.0" stroke="#8a8578" stroke-width="1.2"/>

@@ -18,10 +18,10 @@
   </g>
   <g font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c" text-anchor="middle">
     <text x="60" y="99">1 分米</text>
-    <text x="140" y="99">0.2</text>
-    <text x="220" y="99">0.4</text>
-    <text x="300" y="99">0.6</text>
-    <text x="380" y="99">0.8</text>
+    <text x="120" y="99">0.2</text>
+    <text x="200" y="99">0.4</text>
+    <text x="280" y="99">0.6</text>
+    <text x="360" y="99">0.8</text>
     <text x="440" y="99">1 米</text>
   </g>
   <line x1="60" y1="86" x2="60" y2="104" stroke="#8f2419" stroke-width="1.2"/>
@@ -62,8 +62,8 @@
     <rect x="246" y="198" width="60" height="24" fill="#ffffff" stroke="#cfc3ae"/>
     <text x="276" y="215">0</text>
   </g>
-  <text x="318" y="191" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">1.35 米 = 1 米 3 分米 5 厘米</text>
-  <text x="318" y="215" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">12.50 元 = 12 元 5 角</text>
+  <text x="312" y="191" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">1.35 米 = 1 米 3 分米 5 厘米</text>
+  <text x="312" y="215" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">12.50 元 = 12 元 5 角</text>
 
   <!-- 底部：价签与身高 -->
   <rect x="40" y="236" width="190" height="44" rx="5" fill="#f7e2dc" stroke="#cfc3ae"/>

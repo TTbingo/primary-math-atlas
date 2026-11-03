@@ -22,10 +22,10 @@
   <text x="510" y="160" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">等腰三角形 · 1 条</text>
 
   <!-- ④ 等边三角形：3 条 -->
-  <polygon points="110,200 80,260 140,260" fill="#f2ecdc" stroke="#bfa578" stroke-width="1.4"/>
-  <line x1="110" y1="186" x2="110" y2="274" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="6 4"/>
-  <line x1="74" y1="263" x2="131" y2="232" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="6 4"/>
-  <line x1="146" y1="263" x2="89" y2="232" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <polygon points="110,208 80,260 140,260" fill="#f2ecdc" stroke="#bfa578" stroke-width="1.4"/>
+  <line x1="110" y1="190" x2="110" y2="278" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <line x1="66.5" y1="267.8" x2="138.5" y2="226.2" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <line x1="153.5" y1="267.8" x2="81.5" y2="241.8" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="6 4"/>
   <text x="110" y="292" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">等边三角形 · 3 条</text>
 
   <!-- ⑤ 等腰梯形：1 条 -->

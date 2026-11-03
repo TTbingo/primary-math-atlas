@@ -34,7 +34,7 @@
     <text x="62" y="82">18</text>
     <text x="62" y="63">20</text>
   </g>
-  <text x="46" y="56" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">人</text>
+  <text x="62" y="44" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">人</text>
 
   <!-- 直条 -->
   <rect x="107" y="136" width="46" height="114" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>

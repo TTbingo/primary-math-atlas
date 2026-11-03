@@ -24,7 +24,7 @@
     <text x="70" y="101">8000</text>
     <text x="70" y="63">10000</text>
   </g>
-  <text x="44" y="56" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">步</text>
+  <text x="70" y="44" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">步</text>
 
   <!-- 折线 -->
   <polyline points="100,170.2 156.7,153.1 213.3,177.8 270,130.3 326.7,113.2 383.3,77.1 440,86.6"
