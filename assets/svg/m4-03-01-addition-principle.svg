@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img">
+  <rect x="0" y="0" width="520" height="300" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">从家到学校，有几类走法？</text>
+  <rect x="40" y="70" width="180" height="120" rx="3" fill="#f7f2e6" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="130.0" y="134.0" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c"></text>
+  <text x="130" y="96" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12.5" fill="#17181c">第 1 类：坐公交</text>
+  <rect x="300" y="70" width="180" height="120" rx="3" fill="#f7f2e6" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="390.0" y="134.0" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c"></text>
+  <text x="390" y="96" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12.5" fill="#17181c">第 2 类：走路</text>
+  <rect x="70" y="122" width="60" height="42" rx="4" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="100" y="148" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">路线 1</text>
+  <rect x="150" y="122" width="60" height="42" rx="4" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="180" y="148" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">路线 2</text>
+  <rect x="318" y="122" width="46" height="42" rx="4" fill="#cfe0d0" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="341" y="148" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10" fill="#17181c">路线 1</text>
+  <rect x="372" y="122" width="46" height="42" rx="4" fill="#cfe0d0" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="395" y="148" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10" fill="#17181c">路线 2</text>
+  <rect x="426" y="122" width="46" height="42" rx="4" fill="#cfe0d0" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="449" y="148" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10" fill="#17181c">路线 3</text>
+  <text x="260" y="140" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="16" fill="#8f2419">或</text>
+  <text x="260" y="224" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="16" fill="#8f2419">2 + 3 = 5（种）</text>
+  <text x="260" y="258" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">每一类办法都能单独把这件事做完，就把各类的种数相加</text>
+  <text x="260" y="284" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#8f2419">和分步计数区分开：分类用加法，分步用乘法</text>
+</svg>

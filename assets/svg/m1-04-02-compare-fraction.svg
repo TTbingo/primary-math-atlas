@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img">
+  <rect x="0" y="0" width="520" height="300" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">2/5 和 3/7，哪个大？</text>
+  <rect x="40" y="72" width="80" height="42" fill="#e8dcc4" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="120" y="72" width="80" height="42" fill="#e8dcc4" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="200" y="72" width="80" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="280" y="72" width="80" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="360" y="72" width="80" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <text x="465" y="99" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">2/5</text>
+  <rect x="40" y="132" width="57.1" height="42" fill="#cfe0d0" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="97.1" y="132" width="57.1" height="42" fill="#cfe0d0" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="154.3" y="132" width="57.1" height="42" fill="#cfe0d0" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="211.4" y="132" width="57.1" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="268.6" y="132" width="57.1" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="325.7" y="132" width="57.1" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="382.9" y="132" width="57.1" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <text x="465" y="159" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">3/7</text>
+  <text x="260" y="204" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">分母不同，每一份不一样大，不好直接比</text>
+  <text x="260" y="232" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">通分：2/5 = 14/35，3/7 = 15/35</text>
+  <text x="260" y="260" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#8f2419">15/35 &gt; 14/35，所以 3/7 &gt; 2/5</text>
+  <text x="260" y="288" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">先化成同分母再比分子；也可以化成小数比</text>
+</svg>

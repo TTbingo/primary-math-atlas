@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img">
+  <rect x="0" y="0" width="520" height="300" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">40 个球按 2 : 3 分给两个班</text>
+  <rect x="40" y="80" width="88" height="52" fill="#e8dcc4" stroke="#17181c" stroke-width="1.2"/>
+  <text x="84.0" y="112" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">1 份</text>
+  <rect x="128" y="80" width="88" height="52" fill="#e8dcc4" stroke="#17181c" stroke-width="1.2"/>
+  <text x="172.0" y="112" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">1 份</text>
+  <rect x="216" y="80" width="88" height="52" fill="#cfe0d0" stroke="#17181c" stroke-width="1.2"/>
+  <text x="260.0" y="112" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">1 份</text>
+  <rect x="304" y="80" width="88" height="52" fill="#cfe0d0" stroke="#17181c" stroke-width="1.2"/>
+  <text x="348.0" y="112" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">1 份</text>
+  <rect x="392" y="80" width="88" height="52" fill="#cfe0d0" stroke="#17181c" stroke-width="1.2"/>
+  <text x="436.0" y="112" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">1 份</text>
+  <text x="128" y="68" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">一班 2 份</text>
+  <text x="352" y="68" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">二班 3 份</text>
+  <text x="260" y="166" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">总份数：2 + 3 = 5</text>
+  <text x="260" y="194" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">每份：40 ÷ 5 = 8（个）</text>
+  <text x="260" y="222" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#8f2419">一班 8 × 2 = 16 个，二班 8 × 3 = 24 个</text>
+  <text x="260" y="254" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">先求总份数，再求一份是多少，最后分别乘各自的份数</text>
+  <text x="260" y="280" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#8f2419">检验：16 + 24 = 40，且 16 : 24 = 2 : 3</text>
+</svg>
