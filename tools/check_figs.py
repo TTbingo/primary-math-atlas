@@ -19,9 +19,14 @@ JS = r"""
   const H = vb.height || svg.height.baseVal.value;
   const out = {w: W, h: H, oob: [], overlap: [], tri: [], right: [], err: []};
 
-  // 用 CTM 把 bbox 变换到 viewBox 坐标系，否则 <g transform> 内的元素会被误判
+  // 用「根逆 × 元素 CTM」把 bbox 变换到 viewBox 用户坐标系。
+  // 直接用 getCTM 会把 Chrome 对独立 SVG 文档的 fit 缩放（如 1.7 倍）算进去，
+  // 导致 520x360 这类尺寸的图被误判为整张越界；<g transform> 的平移仍会保留。
+  const rm = svg.getCTM();
+  const rootInv = rm ? rm.inverse() : null;
   const bb = el => { try {
-    const b = el.getBBox(); const m = el.getCTM(); if (!m) return null;
+    const b = el.getBBox(); let m = el.getCTM(); if (!m) return null;
+    if (rootInv) m = rootInv.multiply(m);
     const pts = [[b.x, b.y], [b.x + b.width, b.y],
                  [b.x, b.y + b.height], [b.x + b.width, b.y + b.height]]
       .map(([x, y]) => [m.a * x + m.c * y + m.e, m.b * x + m.d * y + m.f]);

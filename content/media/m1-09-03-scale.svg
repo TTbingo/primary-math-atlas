@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="320" viewBox="0 0 520 320" role="img">
+  <rect x="0" y="0" width="520" height="320" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">图上 5 厘米，实际有多远？</text>
+  <line x1="60" y1="110" x2="310" y2="110" stroke="#c0392b" stroke-width="3"/>
+  <line x1="60" y1="100" x2="60" y2="120" stroke="#c0392b" stroke-width="2"/>
+  <line x1="310" y1="100" x2="310" y2="120" stroke="#c0392b" stroke-width="2"/>
+  <text x="185" y="94" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12.5" fill="#8f2419">图上 5 厘米</text>
+  <text x="185" y="146" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#7a7266">× 20000</text>
+  <line x1="60" y1="196" x2="460" y2="196" stroke="#2b6cb0" stroke-width="3"/>
+  <line x1="60" y1="186" x2="60" y2="206" stroke="#2b6cb0" stroke-width="2"/>
+  <line x1="460" y1="186" x2="460" y2="206" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="260" y="222" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12.5" fill="#2b6cb0">实际 100000 厘米 = 1 千米</text>
+  <rect x="350" y="54" width="150" height="34" rx="3" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="425.0" y="75.0" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">比例尺 1 : 20000</text>
+  <text x="260" y="252" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12.5" fill="#7a7266">比例尺 = 图上距离 : 实际距离</text>
+  <text x="260" y="276" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">图上 1 厘米代表实际 20000 厘米，也就是 200 米</text>
+  <text x="260" y="290" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#8f2419">算之前先统一单位：1 千米 = 100000 厘米</text>
+  <text x="260" y="312" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#7a7266">示意图：两条线段不按同一比例画，真实长度相差 20000 倍</text>
+</svg>

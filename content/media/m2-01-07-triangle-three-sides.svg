@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360" role="img">
+  <rect x="0" y="0" width="520" height="360" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">三根小棒，能不能围成一个三角形？</text>
+  <line x1="120" y1="154" x2="270" y2="154" stroke="#17181c" stroke-width="2"/>
+  <path d="M 238.8,137.3 A 120,120 0 0 0 1.2,137.3" fill="none" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <path d="M 359.1,141.5 A 90,90 0 0 0 180.9,141.5" fill="none" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <polygon points="120,154 270,154 216,82" fill="#f2ecdc" stroke="#17181c" stroke-width="1.8"/>
+  <text x="195" y="172" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">5 厘米</text>
+  <text x="158" y="126" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">4 厘米</text>
+  <text x="248" y="126" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">3 厘米</text>
+  <text x="195" y="208" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12.5" fill="#8f2419">较短两根 3 + 4 = 7，比 5 长，围得起来</text>
+  <text x="195" y="228" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">3 + 4 &gt; 5，能围成三角形</text>
+  <line x1="150" y1="290" x2="330" y2="290" stroke="#17181c" stroke-width="2"/>
+  <path d="M 239.7,282.2 A 90,90 0 0 0 60.3,282.2" fill="none" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <path d="M 389.8,284.8 A 60,60 0 0 0 270.2,284.8" fill="none" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="240" y1="290" x2="270" y2="290" stroke="#8f2419" stroke-width="2"/>
+  <text x="255" y="278" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">还差 1 厘米</text>
+  <text x="240" y="310" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12.5" fill="#8f2419">2 + 3 = 5，还不到 6，两根短的加起来都不够长</text>
+  <text x="240" y="330" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">2 + 3 &lt; 6，围不成三角形</text>
+  <text x="260" y="352" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">只要最短的两边加起来比第三边长，就能围成三角形</text>
+</svg>
