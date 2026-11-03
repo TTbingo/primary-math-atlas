@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="264" viewBox="0 0 520 264" role="img">
+  <rect width="520" height="264" fill="#fffdf8"/>
+  <defs>
+    <marker id="ar-meet" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#8f2419"/>
+    </marker>
+    <marker id="ab-meet" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2f5d8a"/>
+    </marker>
+  </defs>
+
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">相遇：两人一起走，速度要相加</text>
+
+  <!-- 两地之间的路 -->
+  <line x1="56" y1="116" x2="464" y2="116" stroke="#17181c" stroke-width="2"/>
+  <line x1="56" y1="108" x2="56" y2="124" stroke="#17181c" stroke-width="2"/>
+  <line x1="464" y1="108" x2="464" y2="124" stroke="#17181c" stroke-width="2"/>
+  <circle cx="56" cy="116" r="4" fill="#8f2419"/>
+  <circle cx="464" cy="116" r="4" fill="#2f5d8a"/>
+
+  <!-- 甲从左边出发，乙从右边出发，箭头相对 -->
+  <line x1="70" y1="92" x2="212" y2="92" stroke="#8f2419" stroke-width="2" marker-end="url(#ar-meet)"/>
+  <text x="70" y="80" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">甲 70 米/分</text>
+  <line x1="450" y1="92" x2="308" y2="92" stroke="#2f5d8a" stroke-width="2" marker-end="url(#ab-meet)"/>
+  <text x="450" y="80" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="13" fill="#2f5d8a">乙 60 米/分</text>
+
+  <!-- 总路程 -->
+  <line x1="56" y1="150" x2="464" y2="150" stroke="#8a8578" stroke-width="1"/>
+  <line x1="56" y1="144" x2="56" y2="156" stroke="#8a8578" stroke-width="1"/>
+  <line x1="464" y1="144" x2="464" y2="156" stroke="#8a8578" stroke-width="1"/>
+  <text x="260" y="170" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">两地相距 520 米</text>
+
+  <text x="260" y="198" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#8f2419">每过 1 分，两人靠近 70 + 60 = 130（米）</text>
+
+  <rect x="86" y="212" width="348" height="36" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="260" y="236" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="15" fill="#8f2419">520 ÷ (70 + 60) = 4（分）</text>
+</svg>

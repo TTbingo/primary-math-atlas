@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "id": "g04-s2-u02-mixed-ops-and-laws",
+  "type": "unit",
+  "term": "g04-s2",
+  "unit_no": 2,
+  "title": "混合运算和运算律",
+  "slug": "mixed-ops-and-laws",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s2-na-3",
+    "std-s2-na-4"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g04-s2-u02-p01-add-laws",
+    "g04-s2-u02-p02-mult-laws"
+  ],
+  "summary": "认识加法、乘法的交换律、结合律和乘法分配律，学会用字母表示运算律，并用它们做简便计算。"
+}

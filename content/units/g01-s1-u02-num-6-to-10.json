@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "g01-s1-u02-num-6-to-10",
+  "type": "unit",
+  "term": "g01-s1",
+  "unit_no": 2,
+  "title": "6~10的认识和加、减法",
+  "slug": "num-6-to-10",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的认识",
+  "standard_ids": [
+    "std-s1-na-1",
+    "std-s1-na-4"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

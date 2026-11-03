@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g05-s1-u01-observe-composites",
+  "type": "unit",
+  "term": "g05-s1",
+  "unit_no": 1,
+  "title": "观察简单组合体",
+  "slug": "observe-composites",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "图形的认识",
+  "standard_ids": [
+    "std-s2-geo-6"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

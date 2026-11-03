@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="240" viewBox="0 0 480 240" role="img">
+  <rect x="0" y="0" width="480" height="240" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">计数器上拨出 43</text>
+
+  <!-- 计数器：底座 + 三根杆（百位、十位、个位） -->
+  <g transform="translate(80,44)">
+    <line x1="40" y1="0" x2="40" y2="100" stroke="#8f2419" stroke-width="2"/>
+    <line x1="160" y1="0" x2="160" y2="100" stroke="#8f2419" stroke-width="2"/>
+    <line x1="280" y1="0" x2="280" y2="100" stroke="#8f2419" stroke-width="2"/>
+    <rect x="10" y="-6" width="300" height="8" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+    <g fill="#f5ddd8" stroke="#8f2419" stroke-width="1.5">
+      <circle cx="160" cy="18" r="9"/><circle cx="160" cy="38" r="9"/><circle cx="160" cy="58" r="9"/><circle cx="160" cy="78" r="9"/>
+      <circle cx="280" cy="18" r="9"/><circle cx="280" cy="38" r="9"/><circle cx="280" cy="58" r="9"/>
+    </g>
+    <text x="40" y="30" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#cfc3ae">0 颗</text>
+    <rect x="-10" y="100" width="340" height="16" rx="8" fill="#f5ddd8" stroke="#cfc3ae"/>
+    <text x="40" y="136" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">百位</text>
+    <text x="160" y="136" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">十位</text>
+    <text x="280" y="136" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">个位</text>
+    <text x="160" y="158" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">从右边数起：第一位个位，第二位十位，第三位百位</text>
+  </g>
+
+  <!-- 公式带 -->
+  <rect x="80" y="200" width="320" height="30" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="240" y="220" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">十位 4 颗 = 40　个位 3 颗 = 3　40 + 3 = 43</text>
+</svg>

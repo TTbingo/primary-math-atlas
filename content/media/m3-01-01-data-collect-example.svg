@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="300" viewBox="0 0 560 300" role="img">
+  <rect x="0" y="0" width="560" height="300" fill="#fffdf8"/>
+  <text x="280" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">同一批 12 个学具，换一种分法，每一类的数量就变了</text>
+
+  <!-- 左：按颜色分 -->
+  <text x="140" y="48" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">按颜色分</text>
+  <rect x="95" y="58" width="90" height="28" rx="4" fill="#f3ece0" stroke="#b9a888" stroke-width="1"/>
+  <text x="140" y="77" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">12 个学具</text>
+  <line x1="140" y1="86" x2="60" y2="146" stroke="#b9a888" stroke-width="1"/>
+  <line x1="140" y1="86" x2="140" y2="146" stroke="#b9a888" stroke-width="1"/>
+  <line x1="140" y1="86" x2="220" y2="146" stroke="#b9a888" stroke-width="1"/>
+  <rect x="22" y="146" width="76" height="30" rx="4" fill="#fbeaea" stroke="#c98a86" stroke-width="1"/>
+  <text x="60" y="166" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">红色 5 个</text>
+  <rect x="102" y="146" width="76" height="30" rx="4" fill="#fdf3dd" stroke="#c9b184" stroke-width="1"/>
+  <text x="140" y="166" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a5b1f">黄色 4 个</text>
+  <rect x="182" y="146" width="76" height="30" rx="4" fill="#e9eef7" stroke="#8d9dc0" stroke-width="1"/>
+  <text x="220" y="166" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#33456b">蓝色 3 个</text>
+  <text x="140" y="200" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">5 + 4 + 3 = 12</text>
+
+  <!-- 中缝 -->
+  <line x1="280" y1="40" x2="280" y2="212" stroke="#b9a888" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- 右：按形状分 -->
+  <text x="420" y="48" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">按形状分</text>
+  <rect x="375" y="58" width="90" height="28" rx="4" fill="#f3ece0" stroke="#b9a888" stroke-width="1"/>
+  <text x="420" y="77" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">12 个学具</text>
+  <line x1="420" y1="86" x2="340" y2="146" stroke="#b9a888" stroke-width="1"/>
+  <line x1="420" y1="86" x2="420" y2="146" stroke="#b9a888" stroke-width="1"/>
+  <line x1="420" y1="86" x2="500" y2="146" stroke="#b9a888" stroke-width="1"/>
+  <rect x="302" y="146" width="76" height="30" rx="4" fill="#f3ece0" stroke="#b9a888" stroke-width="1"/>
+  <text x="340" y="166" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">圆形 6 个</text>
+  <rect x="382" y="146" width="76" height="30" rx="4" fill="#f3ece0" stroke="#b9a888" stroke-width="1"/>
+  <text x="420" y="166" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">方形 4 个</text>
+  <rect x="462" y="146" width="76" height="30" rx="4" fill="#f3ece0" stroke="#b9a888" stroke-width="1"/>
+  <text x="500" y="166" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">三角 2 个</text>
+  <text x="420" y="200" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">6 + 4 + 2 = 12</text>
+
+  <!-- 结论 -->
+  <text x="280" y="248" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">两棵树的「每一类」都不一样，可加起来都是 12 个</text>
+  <text x="280" y="274" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">分类标准可以不同，但必须不重不漏：每个学具只进一个格子</text>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "id": "g06-s2-u03-cylinder-and-cone",
+  "type": "unit",
+  "term": "g06-s2",
+  "unit_no": 3,
+  "title": "圆柱和圆锥",
+  "slug": "cylinder-and-cone",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "测量",
+  "standard_ids": [
+    "std-s3-geo-5"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g06-s2-u03-p01-cylinder-surface",
+    "g06-s2-u03-p02-cylinder-volume",
+    "g06-s2-u03-p03-cone-volume"
+  ],
+  "summary": "圆柱的侧面展开成长方形求出表面积，切拼成长方体求出体积，再用等底等高的装沙实验得到圆锥体积是圆柱的三分之一。"
+}

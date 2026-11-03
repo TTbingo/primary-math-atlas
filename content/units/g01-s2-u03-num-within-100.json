@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "g01-s2-u03-num-within-100",
+  "type": "unit",
+  "term": "g01-s2",
+  "unit_no": 3,
+  "title": "100以内数的认识",
+  "slug": "num-within-100",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的认识",
+  "standard_ids": [
+    "std-s1-na-1",
+    "std-s1-na-2"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g01-s2-u03-p01-num-composition-100"
+  ],
+  "summary": "认识 100 以内的数：10 根捆一捆，用几个十和几个一组成两位数，认识个位、十位、百位。"
+}

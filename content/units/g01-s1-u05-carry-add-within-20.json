@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g01-s1-u05-carry-add-within-20",
+  "type": "unit",
+  "term": "g01-s1",
+  "unit_no": 5,
+  "title": "20以内的进位加法",
+  "slug": "carry-add-within-20",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s1-na-4"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g01-s1-u05-p01-carry-add-9"
+  ],
+  "summary": "从 9 加几入手学凑十法：先拿 1 个把 9 凑成一捆十，再把剩下的加上去。"
+}

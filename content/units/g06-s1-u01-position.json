@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "g06-s1-u01-position",
+  "type": "unit",
+  "term": "g06-s1",
+  "unit_no": 1,
+  "title": "确定位置",
+  "slug": "position",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "图形位置及运动",
+  "standard_ids": [
+    "std-s3-geo-8",
+    "std-s3-geo-9"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g06-s1-u01-p01-position-number-pair"
+  ],
+  "summary": ""
+}

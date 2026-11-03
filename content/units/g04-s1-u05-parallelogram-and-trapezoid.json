@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "id": "g04-s1-u05-parallelogram-and-trapezoid",
+  "type": "unit",
+  "term": "g04-s1",
+  "unit_no": 5,
+  "title": "平行四边形和梯形",
+  "slug": "parallelogram-and-trapezoid",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "图形的认识",
+  "standard_ids": [
+    "std-s2-geo-1",
+    "std-s2-geo-4"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g04-s1-u05-p01-parallel-perpendicular",
+    "g04-s1-u05-p02-parallelogram-trapezoid"
+  ],
+  "summary": "先认识同一平面内两条直线的平行与垂直，再按「几组对边平行」认识平行四边形和梯形，理解稳定性与易变形。"
+}

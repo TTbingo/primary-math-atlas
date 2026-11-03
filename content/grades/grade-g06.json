@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "id": "grade-g06",
+  "type": "grade",
+  "grade": 6,
+  "title": "六年级",
+  "segment": 3,
+  "terms": [
+    {
+      "term": "g06-s1",
+      "label": "上册",
+      "units": [
+        "g06-s1-u01-position",
+        "g06-s1-u02-fraction-multiplication",
+        "g06-s1-u03-fraction-division",
+        "g06-s1-u04-circle",
+        "g06-s1-u05-percentage",
+        "g06-s1-u06-review"
+      ],
+      "activities": [
+        "g06-s1-a00-negative-numbers",
+        "g06-s1-a00-math-in-sports",
+        "g06-s1-a00-water-is-life"
+      ]
+    },
+    {
+      "term": "g06-s2",
+      "label": "下册",
+      "units": [
+        "g06-s2-u01-ratio-and-proportion",
+        "g06-s2-u02-pie-chart",
+        "g06-s2-u03-cylinder-and-cone",
+        "g06-s2-u04-final-review"
+      ],
+      "activities": [
+        "g06-s2-a00-interesting-balance",
+        "g06-s2-a00-campus-map",
+        "g06-s2-a00-healthy-lunch"
+      ]
+    }
+  ]
+}

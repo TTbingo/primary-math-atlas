@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="240" viewBox="0 0 480 240" role="img">
+  <rect x="0" y="0" width="480" height="240" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">正方形是长和宽相等的长方形</text>
+
+  <!-- 左：长方形 5x3 -->
+  <g transform="translate(40,52)">
+    <g stroke="#cfc3ae" stroke-width="1" fill="none">
+      <rect x="0" y="0" width="150" height="90"/>
+      <line x1="30" y1="0" x2="30" y2="90"/><line x1="60" y1="0" x2="60" y2="90"/>
+      <line x1="90" y1="0" x2="90" y2="90"/><line x1="120" y1="0" x2="120" y2="90"/>
+      <line x1="0" y1="30" x2="150" y2="30"/><line x1="0" y1="60" x2="150" y2="60"/>
+    </g>
+    <text x="75" y="112" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">长 5 × 宽 3 = 15 个</text>
+    <text x="75" y="132" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">长和宽不相等</text>
+  </g>
+
+  <!-- 右：正方形 4x4 -->
+  <g transform="translate(290,52)">
+    <g stroke="#cfc3ae" stroke-width="1" fill="none">
+      <rect x="0" y="0" width="120" height="120"/>
+      <line x1="30" y1="0" x2="30" y2="120"/><line x1="60" y1="0" x2="60" y2="120"/>
+      <line x1="90" y1="0" x2="90" y2="120"/>
+      <line x1="0" y1="30" x2="120" y2="30"/><line x1="0" y1="60" x2="120" y2="60"/>
+      <line x1="0" y1="90" x2="120" y2="90"/>
+    </g>
+    <text x="60" y="142" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">边长 4 × 4 = 16 个</text>
+    <text x="60" y="162" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">长 = 宽 = 边长</text>
+  </g>
+
+  <!-- 公式带 -->
+  <rect x="40" y="192" width="180" height="36" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="130" y="215" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="15" fill="#8f2419">长方形 S = 长 × 宽</text>
+  <rect x="250" y="192" width="180" height="36" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="340" y="215" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="15" fill="#8f2419">正方形 S = 边长 × 边长</text>
+</svg>

@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g04-s1-u02-angle-measurement",
+  "type": "unit",
+  "term": "g04-s1",
+  "unit_no": 2,
+  "title": "角的度量",
+  "slug": "angle-measurement",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "测量",
+  "standard_ids": [
+    "std-s2-geo-2"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

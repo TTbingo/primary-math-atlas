@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g04-s1-u03-mult-by-two-digit",
+  "type": "unit",
+  "term": "g04-s1",
+  "unit_no": 3,
+  "title": "多位数乘两位数",
+  "slug": "mult-by-two-digit",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s2-na-1"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g04-s1-u03-p01-mult-2digit"
+  ],
+  "summary": "把两位数拆成整十数和一位数，分两层乘再相加；重点是把第二层积的末位对齐十位。"
+}

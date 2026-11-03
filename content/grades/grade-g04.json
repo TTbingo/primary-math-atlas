@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "id": "grade-g04",
+  "type": "grade",
+  "grade": 4,
+  "title": "四年级",
+  "segment": 2,
+  "terms": [
+    {
+      "term": "g04-s1",
+      "label": "上册",
+      "units": [
+        "g04-s1-u01-num-above-10000",
+        "g04-s1-u02-angle-measurement",
+        "g04-s1-u03-mult-by-two-digit",
+        "g04-s1-u04-add-mult-models",
+        "g04-s1-u05-parallelogram-and-trapezoid",
+        "g04-s1-u06-bar-chart",
+        "g04-s1-u07-review"
+      ],
+      "activities": [
+        "g04-s1-a00-how-big-100m",
+        "g04-s1-a00-treasure-hunt"
+      ]
+    },
+    {
+      "term": "g04-s2",
+      "label": "下册",
+      "units": [
+        "g04-s2-u01-div-by-two-digit",
+        "g04-s2-u02-mixed-ops-and-laws",
+        "g04-s2-u03-triangles",
+        "g04-s2-u04-understanding-decimals",
+        "g04-s2-u05-decimal-add-sub",
+        "g04-s2-u06-average",
+        "g04-s2-u07-review"
+      ],
+      "activities": [
+        "g04-s2-a00-travel-plan"
+      ]
+    }
+  ]
+}

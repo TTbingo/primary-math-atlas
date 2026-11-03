@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="240" viewBox="0 0 480 240" role="img">
+  <rect x="0" y="0" width="480" height="240" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">把两堆推到一起，就是「合起来」</text>
+
+  <defs>
+    <marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#8f2419"/>
+    </marker>
+  </defs>
+
+  <!-- 左：3 个红圆片 -->
+  <g>
+    <rect x="28" y="52" width="112" height="64" rx="6" fill="#fbeae8" stroke="#d9b3ad"/>
+    <circle cx="58" cy="84" r="11" fill="#e8a9a3" stroke="#b0645c" stroke-width="1.5"/>
+    <circle cx="84" cy="84" r="11" fill="#e8a9a3" stroke="#b0645c" stroke-width="1.5"/>
+    <circle cx="110" cy="84" r="11" fill="#e8a9a3" stroke="#b0645c" stroke-width="1.5"/>
+    <text x="84" y="132" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">左边 3 个</text>
+  </g>
+
+  <text x="158" y="92" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="22" fill="#8f2419">+</text>
+
+  <!-- 右：2 个蓝圆片 -->
+  <g>
+    <rect x="178" y="52" width="90" height="64" rx="6" fill="#e9f0f8" stroke="#b3c6d9"/>
+    <circle cx="206" cy="84" r="11" fill="#a8c8e8" stroke="#5b82ad" stroke-width="1.5"/>
+    <circle cx="234" cy="84" r="11" fill="#a8c8e8" stroke="#5b82ad" stroke-width="1.5"/>
+    <text x="223" y="132" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">右边 2 个</text>
+  </g>
+
+  <!-- 推过去的箭头 -->
+  <g stroke="#8f2419" stroke-width="1.6" fill="none" marker-end="url(#ar2)" stroke-dasharray="5 4">
+    <path d="M223,126 C223,150 180,150 150,148"/>
+  </g>
+
+  <text x="286" y="92" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="22" fill="#8f2419">=</text>
+
+  <!-- 合并后：5 个 -->
+  <g>
+    <rect x="304" y="52" width="150" height="64" rx="6" fill="#f3ede2" stroke="#cfc3ae"/>
+    <circle cx="330" cy="84" r="11" fill="#e8a9a3" stroke="#b0645c" stroke-width="1.5"/>
+    <circle cx="356" cy="84" r="11" fill="#e8a9a3" stroke="#b0645c" stroke-width="1.5"/>
+    <circle cx="382" cy="84" r="11" fill="#e8a9a3" stroke="#b0645c" stroke-width="1.5"/>
+    <circle cx="408" cy="84" r="11" fill="#a8c8e8" stroke="#5b82ad" stroke-width="1.5"/>
+    <circle cx="434" cy="84" r="11" fill="#a8c8e8" stroke="#5b82ad" stroke-width="1.5"/>
+    <text x="379" y="132" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">合起来 5 个</text>
+  </g>
+
+  <!-- 底部算式 -->
+  <rect x="40" y="160" width="180" height="62" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="130" y="192" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="20" fill="#8f2419">3 + 2 = 5</text>
+  <text x="130" y="212" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">读作：三加二等于五</text>
+
+  <rect x="240" y="160" width="200" height="62" rx="4" fill="#f3ede2" stroke="#cfc3ae"/>
+  <text x="340" y="188" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">「+」是合起来</text>
+  <text x="340" y="210" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">「=」是两边一样多</text>
+</svg>

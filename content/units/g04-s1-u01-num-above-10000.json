@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g04-s1-u01-num-above-10000",
+  "type": "unit",
+  "term": "g04-s1",
+  "unit_no": 1,
+  "title": "万以上数的认识",
+  "slug": "num-above-10000",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的认识",
+  "standard_ids": [
+    "std-s2-na-1"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g04-s1-u01-p01-big-number"
+  ],
+  "summary": "从「满十进一」认识十万、百万、千万，用四位一级的数位顺序表把亿以内的数读准、写准。"
+}

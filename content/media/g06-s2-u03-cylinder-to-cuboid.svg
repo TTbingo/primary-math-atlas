@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="300" viewBox="0 0 560 300" role="img" font-family="'Noto Serif SC','Songti SC',serif">
+  <defs>
+    <marker id="arCut" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8f2419"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="560" height="300" fill="#fffdf8"/>
+  <text x="280" y="26" text-anchor="middle" font-size="15" fill="#17181c">把圆柱沿半径切成许多小块，一正一反拼成长方体</text>
+
+  <!-- 左：圆柱，顶面画切割线 -->
+  <path d="M52,96 L52,204 A56,15 0 0 0 164,204 L164,96" fill="#fdfdfb"/>
+  <path d="M52,96 L52,204 A56,15 0 0 0 164,204 L164,96" fill="none" stroke="#17181c" stroke-width="2"/>
+  <ellipse cx="108" cy="96" rx="56" ry="15" fill="#f5ddd8" stroke="#17181c" stroke-width="2"/>
+  <!-- 半径切割线 -->
+  <g stroke="#8f2419" stroke-width="1.1" stroke-dasharray="4 3">
+    <line x1="108" y1="96" x2="164" y2="96"/>
+    <line x1="108" y1="96" x2="156.5" y2="88.5"/>
+    <line x1="108" y1="96" x2="136" y2="83"/>
+    <line x1="108" y1="96" x2="108" y2="81"/>
+    <line x1="108" y1="96" x2="80" y2="83"/>
+    <line x1="108" y1="96" x2="59.5" y2="88.5"/>
+    <line x1="108" y1="96" x2="52" y2="96"/>
+    <line x1="108" y1="96" x2="59.5" y2="103.5"/>
+    <line x1="108" y1="96" x2="80" y2="109"/>
+    <line x1="108" y1="96" x2="108" y2="111"/>
+    <line x1="108" y1="96" x2="136" y2="109"/>
+    <line x1="108" y1="96" x2="156.5" y2="103.5"/>
+  </g>
+  <circle cx="108" cy="96" r="2" fill="#8f2419"/>
+  <!-- 竖切线 -->
+  <g stroke="#8f2419" stroke-width="1" stroke-dasharray="4 3" opacity="0.75">
+    <line x1="60" y1="100" x2="60" y2="208"/>
+    <line x1="81" y1="103" x2="81" y2="210"/>
+    <line x1="108" y1="106" x2="108" y2="213"/>
+    <line x1="135" y1="103" x2="135" y2="210"/>
+    <line x1="156" y1="100" x2="156" y2="208"/>
+  </g>
+  <text x="108" y="238" text-anchor="middle" font-size="11.5" fill="#17181c">沿半径竖着切，切成很多扇形柱</text>
+
+  <!-- 箭头 -->
+  <path d="M204,152 L248,152" fill="none" stroke="#8f2419" stroke-width="1.8" marker-end="url(#arCut)"/>
+  <text x="226" y="142" text-anchor="middle" font-size="11" fill="#8f2419">一正一反拼</text>
+
+  <!-- 右：近似长方体，两端锯齿 -->
+  <path d="M300,96 L288,104 L300,112 L288,120 L300,128 L288,136 L300,144 L288,152 L300,160 L288,168 L300,176 L288,184 L300,192 L288,200 L300,208 Z" fill="#f5ddd8" stroke="#17181c" stroke-width="1.4"/>
+  <path d="M470,96 L482,104 L470,112 L482,120 L470,128 L482,136 L470,144 L482,152 L470,160 L482,168 L470,176 L482,184 L470,192 L482,200 L470,208 Z" fill="#f5ddd8" stroke="#17181c" stroke-width="1.4"/>
+  <rect x="300" y="96" width="170" height="112" fill="#fdfdfb" stroke="#17181c" stroke-width="2"/>
+  <text x="385" y="146" text-anchor="middle" font-size="12" fill="#17181c">近似长方体</text>
+  <text x="385" y="168" text-anchor="middle" font-size="11" fill="#8f2419">切得越多，越接近长方体</text>
+
+  <!-- 高 -->
+  <g stroke="#c0392b" stroke-width="1.3" fill="none">
+    <line x1="496" y1="96" x2="496" y2="208"/>
+    <line x1="490" y1="96" x2="502" y2="96"/>
+    <line x1="490" y1="208" x2="502" y2="208"/>
+  </g>
+  <text x="512" y="156" text-anchor="middle" font-size="12" fill="#c0392b" transform="rotate(-90 512 156)">高 h 不变</text>
+  <text x="385" y="232" text-anchor="middle" font-size="11.5" fill="#c0392b">底面积 = 圆柱底面积 S = πr²</text>
+
+  <rect x="16" y="252" width="528" height="34" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="280" y="274" text-anchor="middle" font-size="13" fill="#8f2419">V = 底面积 × 高 = S h = πr²h　（形状变了，体积没变）</text>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "g05-s2-u05-line-chart",
+  "type": "unit",
+  "term": "g05-s2",
+  "unit_no": 5,
+  "title": "折线统计图",
+  "slug": "line-chart",
+  "kind": "unit",
+  "domain": "统计与概率",
+  "chapter": "统计",
+  "standard_ids": [
+    "std-s3-sp-1",
+    "std-s3-sp-2"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

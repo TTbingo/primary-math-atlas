@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g04-s1-a00-treasure-hunt",
+  "type": "unit",
+  "term": "g04-s1",
+  "unit_no": 0,
+  "title": "寻找宝藏",
+  "slug": "treasure-hunt",
+  "kind": "activity",
+  "domain": "综合与实践",
+  "chapter": "综合与实践",
+  "standard_ids": [
+    "std-s2-cp-3"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

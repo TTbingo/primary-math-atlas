@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "g05-s1-u07-probability",
+  "type": "unit",
+  "term": "g05-s1",
+  "unit_no": 7,
+  "title": "可能性",
+  "slug": "probability",
+  "kind": "unit",
+  "domain": "统计与概率",
+  "chapter": "概率",
+  "standard_ids": [
+    "std-s3-sp-6",
+    "std-s3-sp-7"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

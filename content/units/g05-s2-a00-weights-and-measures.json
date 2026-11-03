@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g05-s2-a00-weights-and-measures",
+  "type": "unit",
+  "term": "g05-s2",
+  "unit_no": 0,
+  "title": "度量衡的故事",
+  "slug": "weights-and-measures",
+  "kind": "activity",
+  "domain": "综合与实践",
+  "chapter": "综合与实践",
+  "standard_ids": [
+    "std-s2-cp-4"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

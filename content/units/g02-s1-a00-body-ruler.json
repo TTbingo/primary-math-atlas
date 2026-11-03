@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g02-s1-a00-body-ruler",
+  "type": "unit",
+  "term": "g02-s1",
+  "unit_no": 0,
+  "title": "身体上的尺子",
+  "slug": "body-ruler",
+  "kind": "activity",
+  "domain": "综合与实践",
+  "chapter": "综合与实践",
+  "standard_ids": [
+    "std-s1-cp-5"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

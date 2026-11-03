@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="340" viewBox="0 0 640 340" role="img">
+  <rect x="0" y="0" width="640" height="340" fill="#fffdf8"/>
+  <text x="320" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">同一组数据（四个季度借书量 96、98、97、99 本），两张图两个结论</text>
+
+  <!-- 左：条形图，纵轴从 0 开始 -->
+  <text x="175" y="50" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">条形图 · 纵轴从 0 到 100</text>
+  <line x1="60" y1="70" x2="60" y2="280" stroke="#17181c" stroke-width="1.1"/>
+  <line x1="60" y1="280" x2="290" y2="280" stroke="#17181c" stroke-width="1.1"/>
+  <line x1="60" y1="175" x2="290" y2="175" stroke="#e6ddcc" stroke-width="0.8"/>
+  <line x1="60" y1="70" x2="290" y2="70" stroke="#e6ddcc" stroke-width="0.8"/>
+  <g font-family="'Noto Serif SC',serif" font-size="10" fill="#7a7266" text-anchor="end">
+    <text x="54" y="283">0</text>
+    <text x="54" y="178">50</text>
+    <text x="54" y="73">100</text>
+  </g>
+  <rect x="78" y="78.4" width="34" height="201.6" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <rect x="128" y="74.2" width="34" height="205.8" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <rect x="178" y="76.3" width="34" height="203.7" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <rect x="228" y="72.1" width="34" height="207.9" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <g font-family="'Noto Serif SC',serif" font-size="9.5" fill="#17181c" text-anchor="middle">
+    <text x="95" y="72">96</text>
+    <text x="145" y="68">98</text>
+    <text x="195" y="70">97</text>
+    <text x="245" y="66">99</text>
+  </g>
+  <g font-family="'Noto Serif SC',serif" font-size="9.5" fill="#17181c" text-anchor="middle">
+    <text x="95" y="296">一季度</text>
+    <text x="145" y="296">二季度</text>
+    <text x="195" y="296">三季度</text>
+    <text x="245" y="296">四季度</text>
+  </g>
+  <text x="175" y="324" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#8f2419">读出：四根几乎一样高，基本持平</text>
+
+  <!-- 分隔 -->
+  <line x1="345" y1="40" x2="345" y2="330" stroke="#b9a888" stroke-width="1" stroke-dasharray="5 5"/>
+
+  <!-- 右：折线图，纵轴从 95 开始 -->
+  <text x="480" y="50" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">折线图 · 纵轴从 95 到 100</text>
+  <line x1="400" y1="70" x2="400" y2="280" stroke="#17181c" stroke-width="1.1"/>
+  <line x1="400" y1="280" x2="620" y2="280" stroke="#17181c" stroke-width="1.1"/>
+  <g stroke="#e6ddcc" stroke-width="0.8">
+    <line x1="400" y1="238" x2="620" y2="238"/>
+    <line x1="400" y1="196" x2="620" y2="196"/>
+    <line x1="400" y1="154" x2="620" y2="154"/>
+    <line x1="400" y1="112" x2="620" y2="112"/>
+    <line x1="400" y1="70" x2="620" y2="70"/>
+  </g>
+  <g font-family="'Noto Serif SC',serif" font-size="10" fill="#7a7266" text-anchor="end">
+    <text x="394" y="283">95</text>
+    <text x="394" y="241">96</text>
+    <text x="394" y="199">97</text>
+    <text x="394" y="157">98</text>
+    <text x="394" y="115">99</text>
+    <text x="394" y="73">100</text>
+  </g>
+  <polyline points="425,238 470,154 515,196 560,112" fill="none" stroke="#8f2419" stroke-width="1.8"/>
+  <g fill="#8f2419">
+    <circle cx="425" cy="238" r="3.4"/>
+    <circle cx="470" cy="154" r="3.4"/>
+    <circle cx="515" cy="196" r="3.4"/>
+    <circle cx="560" cy="112" r="3.4"/>
+  </g>
+  <g font-family="'Noto Serif SC',serif" font-size="9.5" fill="#17181c" text-anchor="middle">
+    <text x="425" y="252">96</text>
+    <text x="478" y="150">98</text>
+    <text x="508" y="210">97</text>
+    <text x="568" y="106">99</text>
+  </g>
+  <g font-family="'Noto Serif SC',serif" font-size="9.5" fill="#17181c" text-anchor="middle">
+    <text x="425" y="296">一季度</text>
+    <text x="470" y="296">二季度</text>
+    <text x="515" y="296">三季度</text>
+    <text x="560" y="296">四季度</text>
+  </g>
+  <text x="510" y="324" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#8f2419">读出：一路上升，增长明显</text>
+</svg>

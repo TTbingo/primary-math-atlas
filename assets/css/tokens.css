@@ -1,0 +1,74 @@
+/* 设计令牌 —— 复刻 iduolian.com/hs-math 实测规范 */
+:root,
+[data-theme="light"] {
+  --bg: #faf6ee;
+  --topbar: #f4eee2;
+  --card: #fffdf8;
+  --line-strong: #cfc3ae;
+  --line-weak: #e9dfce;
+  --text: #353841;
+  --text-sub: #555962;
+  --text-faint: #9a948c;
+  --title: #17181c;
+  --accent: #c0392b;
+  --accent-soft: #f5ddd8;
+  --accent-deep: #8f2419;
+  --code-bg: #efe7d8;
+}
+
+[data-theme="dark"] {
+  --bg: #17181c;
+  --topbar: #23262f;
+  --card: #23262f;
+  --line-strong: #353841;
+  --line-weak: #353841;
+  --text: #c1c3c8;
+  --text-sub: #888c96;
+  --text-faint: #6a6d76;
+  --title: #ffffff;
+  --accent: #e05a4b;
+  --accent-soft: #4a1a15;
+  --accent-deep: #f7c4bd;
+  --code-bg: #2b2f38;
+}
+
+:root {
+  --font-body: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-title: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+
+  --fs-body: 16px;
+  --lh-body: 1.75;
+  --lh-title: 1.2;
+  --fs-h1: 42px;
+  --fs-h2: 35px;
+  --fs-h3: 29px;
+  --fs-h4: 24px;
+  --fs-side: 18px;
+  --fs-toc: 13px;
+  --fs-aux: 14px;
+  --fs-sm: 14px;
+  --fs-xs: 13px;
+
+  --radius: 4px;
+  --radius-pill: 999px;
+  --shadow-hover: 0 2px 10px rgba(0, 0, 0, .06);
+
+  --nav-h: 3.5rem;
+  --sidebar-w: 18.75rem;
+  --content-w: 45rem;
+  --pad-x: 1rem;
+  --block-gap: 1.5rem;
+  --content-pad: 1rem;
+}
+
+@media (min-width: 50em) {
+  :root { --nav-h: 4rem; --pad-x: 1.5rem; --content-pad: 1.5rem; }
+}
+
+@media (min-width: 72rem) {
+  :root {
+    --sidebar-w: 16rem;
+    --content-w: clamp(45rem, calc(100vw - 36rem), 62rem);
+  }
+}

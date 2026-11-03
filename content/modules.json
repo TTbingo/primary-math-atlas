@@ -1,0 +1,476 @@
+{
+ "schema": 1,
+ "note": "模块与节的划分依据《小升初数学知识点汇编（四大模块）》；细目参考《小学学霸笔记·数学》",
+ "modules": [
+  {
+   "id": "m1",
+   "no": 1,
+   "title": "数与代数",
+   "short": "数",
+   "desc": "从数数开始，一路走到分数、小数、百分数和负数；再把四则运算、数量关系、方程、比和比例串成一条线。",
+   "strand": "数与运算 · 数量关系"
+  },
+  {
+   "id": "m2",
+   "no": 2,
+   "title": "图形与几何",
+   "short": "形",
+   "desc": "先认图形，再量图形，最后算图形。长度、面积、体积是同一件事在三个维度上的展开。",
+   "strand": "图形的认识与测量 · 图形的位置与运动"
+  },
+  {
+   "id": "m3",
+   "no": 3,
+   "title": "统计与概率",
+   "short": "统",
+   "desc": "把一堆杂乱的数据变成看得懂的图表，用平均数概括整体，用可能性描述说不准的事。",
+   "strand": "数据的收集、整理与表达 · 随机现象发生的可能性"
+  },
+  {
+   "id": "m4",
+   "no": 4,
+   "title": "数学思考",
+   "short": "思",
+   "desc": "转化、数形结合、找规律、计数、抽屉原理——这些不是知识点，是解决问题的底层工具。",
+   "strand": "综合与实践 · 数学思想方法"
+  }
+ ],
+ "topics": [
+  {
+   "id": "m1-01",
+   "module": "m1",
+   "no": 1,
+   "title": "数的意义和性质",
+   "desc": "小学六年会遇到的所有数：整数、小数、分数、百分数、正负数。搞清楚它们各自表示什么、怎么数位、有什么性质。",
+   "standard_ids": [
+    "std-s1-na-1",
+    "std-s2-na-1",
+    "std-s2-na-2",
+    "std-s3-na-1",
+    "std-s3-na-2",
+    "std-s3-cp-1"
+   ],
+   "points": [
+    "m1-01-01-number-classify",
+    "m1-01-02-num-1-to-5",
+    "m1-01-03-num-within-100",
+    "m1-01-04-num-within-10000",
+    "m1-01-05-big-number",
+    "m1-01-06-decimal-position",
+    "m1-01-07-decimal-meaning",
+    "m1-01-08-decimal-intro",
+    "m1-01-09-fraction-meaning",
+    "m1-01-10-fraction-property",
+    "m1-01-11-percentage-meaning",
+    "m1-01-12-positive-negative"
+   ]
+  },
+  {
+   "id": "m1-02",
+   "module": "m1",
+   "no": 2,
+   "title": "数的读写",
+   "desc": "多位数要分级读，小数要一位一位读，分数先读分母再读分子。规则不同，底层都是「这个数字在第几位、表示几个几」。",
+   "standard_ids": [
+    "std-s1-na-1",
+    "std-s2-na-1"
+   ],
+   "points": [
+    "m1-02-01-integer-read-write",
+    "m1-02-02-decimal-fraction-read-write"
+   ]
+  },
+  {
+   "id": "m1-03",
+   "module": "m1",
+   "no": 3,
+   "title": "数的改写与近似数",
+   "desc": "为了读写方便把大数改写成「万」「亿」，为了实际需要取近似值；分数、小数、百分数之间还要能自由互化。",
+   "standard_ids": [
+    "std-s2-na-1",
+    "std-s3-na-2"
+   ],
+   "points": [
+    "m1-03-01-rounding",
+    "m1-03-02-rewrite-wan-yi",
+    "m1-03-03-fraction-forms",
+    "m1-03-04-decimal-fraction-percent-convert"
+   ]
+  },
+  {
+   "id": "m1-04",
+   "module": "m1",
+   "no": 4,
+   "title": "比较大小",
+   "desc": "整数比位数，小数比高位，分数要通分——负数则是绝对值越大反而越小。",
+   "standard_ids": [
+    "std-s1-na-2",
+    "std-s3-na-2"
+   ],
+   "points": [
+    "m1-04-01-compare-integer-decimal",
+    "m1-04-02-compare-fraction",
+    "m1-04-03-compare-negative"
+   ]
+  },
+  {
+   "id": "m1-05",
+   "module": "m1",
+   "no": 5,
+   "title": "因数、倍数、质数、合数",
+   "desc": "研究一个数能被谁整除。2、5、3 的倍数有特征可循，最大公因数和最小公倍数是约分与通分的底座。",
+   "standard_ids": [
+    "std-s3-na-1"
+   ],
+   "points": [
+    "m1-05-01-factors-multiples",
+    "m1-05-02-divisibility-rules",
+    "m1-05-03-prime-composite",
+    "m1-05-04-gcd-lcm"
+   ]
+  },
+  {
+   "id": "m1-06",
+   "module": "m1",
+   "no": 6,
+   "title": "数的运算",
+   "desc": "从 5 以内的加减法到分数四则运算，小学六年的计算全在这里。算理比算法重要：知道为什么这样算，才不会算错。",
+   "standard_ids": [
+    "std-s1-na-3",
+    "std-s1-na-4",
+    "std-s1-na-5",
+    "std-s2-na-3",
+    "std-s2-na-4",
+    "std-s3-na-3",
+    "std-s3-na-4",
+    "std-s3-na-6"
+   ],
+   "points": [
+    "m1-06-01-meaning-of-operations",
+    "m1-06-02-add-within-5",
+    "m1-06-03-sub-within-5",
+    "m1-06-04-carry-add-9",
+    "m1-06-05-borrow-sub-9",
+    "m1-06-06-borrow-sub-methods",
+    "m1-06-07-written-add-sub-2digit",
+    "m1-06-08-written-add-sub-10000",
+    "m1-06-09-intro-multiplication",
+    "m1-06-10-mult-table",
+    "m1-06-11-intro-division",
+    "m1-06-12-division-by-table",
+    "m1-06-13-remainder-meaning",
+    "m1-06-14-remainder-rule",
+    "m1-06-15-mult-1digit",
+    "m1-06-16-mult-2digit",
+    "m1-06-17-div-1digit",
+    "m1-06-18-div-2digit",
+    "m1-06-19-decimal-mult",
+    "m1-06-20-decimal-div",
+    "m1-06-21-fraction-add-sub",
+    "m1-06-22-fraction-mult",
+    "m1-06-23-fraction-div",
+    "m1-06-24-mixed-op-order",
+    "m1-06-25-mixed-op-bracket",
+    "m1-06-26-add-laws",
+    "m1-06-27-mult-laws",
+    "m1-06-28-sub-div-property",
+    "m1-06-29-power",
+    "m1-06-30-estimation"
+   ]
+  },
+  {
+   "id": "m1-07",
+   "module": "m1",
+   "no": 7,
+   "title": "解决问题",
+   "desc": "和差倍、归一、植树、鸡兔同笼、行程、工程、浓度……这些「典型应用题」不是靠背公式，是靠认出它属于哪种数量关系。",
+   "standard_ids": [
+    "std-s1-na-7",
+    "std-s2-na-6",
+    "std-s2-na-8",
+    "std-s2-na-10",
+    "std-s3-na-8",
+    "std-s3-na-10"
+   ],
+   "points": [
+    "m1-07-01-quantity-relations",
+    "m1-07-02-sum-difference",
+    "m1-07-03-sum-multiple",
+    "m1-07-04-difference-multiple",
+    "m1-07-05-normalization",
+    "m1-07-06-total-normalization",
+    "m1-07-07-tree-planting",
+    "m1-07-08-chicken-rabbit",
+    "m1-07-09-surplus-deficit",
+    "m1-07-10-age-problem",
+    "m1-07-11-meeting",
+    "m1-07-12-chasing",
+    "m1-07-13-engineering",
+    "m1-07-14-profit-interest",
+    "m1-07-15-concentration"
+   ]
+  },
+  {
+   "id": "m1-08",
+   "module": "m1",
+   "no": 8,
+   "title": "式与方程",
+   "desc": "用字母代替数，把「不知道的数」也写进算式里。方程是把倒着想变成顺着想。",
+   "standard_ids": [
+    "std-s3-na-5",
+    "std-s3-na-7"
+   ],
+   "points": [
+    "m1-08-01-letters",
+    "m1-08-02-equation-solve",
+    "m1-08-03-equation-word-problem"
+   ]
+  },
+  {
+   "id": "m1-09",
+   "module": "m1",
+   "no": 9,
+   "title": "比和比例",
+   "desc": "比是两个量相除，比例是两个比相等。比例尺、按比例分配、正反比例都从这里长出来。",
+   "standard_ids": [
+    "std-s3-na-8",
+    "std-s3-na-9"
+   ],
+   "points": [
+    "m1-09-01-ratio-meaning",
+    "m1-09-02-proportion",
+    "m1-09-03-scale",
+    "m1-09-04-proportion-allocation"
+   ]
+  },
+  {
+   "id": "m2-01",
+   "module": "m2",
+   "no": 1,
+   "title": "图形的认识与测量",
+   "desc": "从线到角，从三角形到圆，先认特征再量长度、算面积。周长和面积是小学最容易混的一对概念。",
+   "standard_ids": [
+    "std-s1-geo-1",
+    "std-s1-geo-2",
+    "std-s2-geo-1",
+    "std-s2-geo-2",
+    "std-s2-geo-3",
+    "std-s2-geo-4",
+    "std-s2-geo-5",
+    "std-s3-geo-1",
+    "std-s3-geo-2",
+    "std-s3-geo-3"
+   ],
+   "points": [
+    "m2-01-01-lines-ray-segment",
+    "m2-01-02-intro-angles",
+    "m2-01-03-angle-measure",
+    "m2-01-04-parallel-perpendicular",
+    "m2-01-05-triangle-classify",
+    "m2-01-06-triangle-angle-sum",
+    "m2-01-07-triangle-three-sides",
+    "m2-01-08-quadrilateral",
+    "m2-01-09-circle-features",
+    "m2-01-10-sector",
+    "m2-01-11-length-cm-m",
+    "m2-01-12-length-km-mm",
+    "m2-01-13-perimeter",
+    "m2-01-14-rect-perimeter",
+    "m2-01-15-area-and-unit",
+    "m2-01-16-area-unit-convert",
+    "m2-01-17-rect-area",
+    "m2-01-18-area-parallelogram",
+    "m2-01-19-area-triangle",
+    "m2-01-20-area-trapezoid",
+    "m2-01-21-circle-circumference",
+    "m2-01-22-circle-area",
+    "m2-01-23-composite-area",
+    "m2-01-24-irregular-area"
+   ]
+  },
+  {
+   "id": "m2-02",
+   "module": "m2",
+   "no": 2,
+   "title": "立体图形",
+   "desc": "长方体、正方体、圆柱、圆锥。表面积是「包一层皮」，体积是「占多大地方」。",
+   "standard_ids": [
+    "std-s2-geo-6",
+    "std-s3-geo-4",
+    "std-s3-geo-5",
+    "std-s3-geo-6"
+   ],
+   "points": [
+    "m2-02-01-solid-features",
+    "m2-02-02-cylinder-cone-features",
+    "m2-02-03-cuboid-surface",
+    "m2-02-04-cuboid-volume",
+    "m2-02-05-cuboid-volume-formula",
+    "m2-02-06-cylinder-surface",
+    "m2-02-07-cylinder-volume",
+    "m2-02-08-cone-volume",
+    "m2-02-09-observe-object",
+    "m2-02-10-irregular-volume"
+   ]
+  },
+  {
+   "id": "m2-03",
+   "module": "m2",
+   "no": 3,
+   "title": "图形的变换与运动",
+   "desc": "平移、旋转、轴对称、放大缩小。图形动了，但有些东西不变——这就是变换的本质。",
+   "standard_ids": [
+    "std-s2-geo-8",
+    "std-s3-geo-10",
+    "std-s3-geo-11",
+    "std-s3-geo-12"
+   ],
+   "points": [
+    "m2-03-01-axis-symmetry",
+    "m2-03-02-translation-rotation",
+    "m2-03-03-scale-enlarge"
+   ]
+  },
+  {
+   "id": "m2-04",
+   "module": "m2",
+   "no": 4,
+   "title": "图形与位置",
+   "desc": "用方向和距离定位，用有序数对定位，再把路线说清楚。",
+   "standard_ids": [
+    "std-s1-cp-4",
+    "std-s2-cp-3",
+    "std-s3-geo-8",
+    "std-s3-geo-9"
+   ],
+   "points": [
+    "m2-04-01-direction",
+    "m2-04-02-number-pair",
+    "m2-04-03-route-map"
+   ]
+  },
+  {
+   "id": "m3-01",
+   "module": "m3",
+   "no": 1,
+   "title": "数据的收集与整理",
+   "desc": "统计不是先有图表，是先有问题。定主题、设计调查、收集、整理、分析，最后才画成表。",
+   "standard_ids": [
+    "std-s1-sp-1",
+    "std-s2-sp-1",
+    "std-s2-sp-2",
+    "std-s3-sp-1"
+   ],
+   "points": [
+    "m3-01-01-data-collect",
+    "m3-01-02-statistical-table"
+   ]
+  },
+  {
+   "id": "m3-02",
+   "module": "m3",
+   "no": 2,
+   "title": "统计图",
+   "desc": "条形图比多少，折线图看变化，扇形图看占比。选错图，数据就说错话。",
+   "standard_ids": [
+    "std-s2-sp-3",
+    "std-s2-sp-4",
+    "std-s3-sp-2",
+    "std-s3-sp-3"
+   ],
+   "points": [
+    "m3-02-01-bar-chart",
+    "m3-02-02-line-chart",
+    "m3-02-03-pie-chart",
+    "m3-02-04-chart-choice"
+   ]
+  },
+  {
+   "id": "m3-03",
+   "module": "m3",
+   "no": 3,
+   "title": "平均数",
+   "desc": "移多补少得到的那个数。它代表整体水平，但会被极端数据带偏。",
+   "standard_ids": [
+    "std-s2-sp-5",
+    "std-s2-sp-6"
+   ],
+   "points": [
+    "m3-03-01-average"
+   ]
+  },
+  {
+   "id": "m3-04",
+   "module": "m3",
+   "no": 4,
+   "title": "可能性",
+   "desc": "有些事情一定发生，有些事情不可能发生，有些事情说不准——说不准的那些，也有大小之分。",
+   "standard_ids": [
+    "std-s3-sp-6",
+    "std-s3-sp-7"
+   ],
+   "points": [
+    "m3-04-01-certainty",
+    "m3-04-02-possibility"
+   ]
+  },
+  {
+   "id": "m4-01",
+   "module": "m4",
+   "no": 1,
+   "title": "数学思想和方法",
+   "desc": "转化、数形结合、对应、列表、分析、综合。这些方法不写在题目里，但决定了你从哪儿下手。",
+   "standard_ids": [
+    "std-s1-na-8",
+    "std-s2-na-10"
+   ],
+   "points": [
+    "m4-01-01-thinking-methods"
+   ]
+  },
+  {
+   "id": "m4-02",
+   "module": "m4",
+   "no": 2,
+   "title": "探索规律",
+   "desc": "算式里有规律，数列里有规律，周期里有规律，图形里也有规律。找规律就是找「下一个为什么是它」。",
+   "standard_ids": [
+    "std-s1-na-8",
+    "std-s2-na-10"
+   ],
+   "points": [
+    "m4-02-01-pattern-formula",
+    "m4-02-02-pattern-sequence",
+    "m4-02-03-pattern-cycle",
+    "m4-02-04-pattern-figure"
+   ]
+  },
+  {
+   "id": "m4-03",
+   "module": "m4",
+   "no": 3,
+   "title": "计数方法",
+   "desc": "分类用加法，分步用乘法，排队讲顺序，选人不讲顺序。四句话管住小学所有数数问题。",
+   "standard_ids": [
+    "std-s2-na-10"
+   ],
+   "points": [
+    "m4-03-01-addition-principle",
+    "m4-03-02-multiplication-principle",
+    "m4-03-03-permutation-combination"
+   ]
+  },
+  {
+   "id": "m4-04",
+   "module": "m4",
+   "no": 4,
+   "title": "抽屉原理",
+   "desc": "东西比抽屉多，总有一个抽屉里至少放两个。看着简单，用起来要想「最倒霉的情况」。",
+   "standard_ids": [],
+   "points": [
+    "m4-04-01-pigeonhole",
+    "m4-04-02-worst-case"
+   ]
+  }
+ ]
+}

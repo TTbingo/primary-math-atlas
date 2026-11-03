@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "id": "g05-s2-u04-cuboids-and-cubes",
+  "type": "unit",
+  "term": "g05-s2",
+  "unit_no": 4,
+  "title": "长方体和正方体",
+  "slug": "cuboids-and-cubes",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "测量",
+  "standard_ids": [
+    "std-s3-geo-4",
+    "std-s3-geo-5"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g05-s2-u04-p01-cuboid-surface",
+    "g05-s2-u04-p02-cuboid-volume"
+  ],
+  "summary": ""
+}

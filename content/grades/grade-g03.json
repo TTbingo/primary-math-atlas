@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "id": "grade-g03",
+  "type": "grade",
+  "grade": 3,
+  "title": "三年级",
+  "segment": 2,
+  "terms": [
+    {
+      "term": "g03-s1",
+      "label": "上册",
+      "units": [
+        "g03-s1-u01-observe-objects",
+        "g03-s1-u02-mixed-operations",
+        "g03-s1-u03-mm-dm-km",
+        "g03-s1-u04-mult-by-one-digit",
+        "g03-s1-u05-lines-and-angles",
+        "g03-s1-u06-intro-fractions",
+        "g03-s1-u07-review"
+      ],
+      "activities": [
+        "g03-s1-a00-cao-chong-elephant",
+        "g03-s1-a00-digital-coding"
+      ]
+    },
+    {
+      "term": "g03-s2",
+      "label": "下册",
+      "units": [
+        "g03-s2-u01-motion-phenomena",
+        "g03-s2-u02-div-by-one-digit",
+        "g03-s2-u03-rectangle-and-square",
+        "g03-s2-u04-area-of-shapes",
+        "g03-s2-u05-data-collection",
+        "g03-s2-u06-intro-decimals",
+        "g03-s2-u07-review"
+      ],
+      "activities": [
+        "g03-s2-a00-calendar-secrets"
+      ]
+    }
+  ]
+}

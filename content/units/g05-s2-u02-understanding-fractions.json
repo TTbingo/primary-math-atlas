@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "g05-s2-u02-understanding-fractions",
+  "type": "unit",
+  "term": "g05-s2",
+  "unit_no": 2,
+  "title": "分数的认识",
+  "slug": "understanding-fractions",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的认识",
+  "standard_ids": [
+    "std-s3-na-2",
+    "std-s3-na-3"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g05-s2-u02-p01-fraction-meaning"
+  ],
+  "summary": ""
+}

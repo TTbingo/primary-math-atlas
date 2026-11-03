@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g05-s1-a00-tessellation",
+  "type": "unit",
+  "term": "g05-s1",
+  "unit_no": 0,
+  "title": "有趣的密铺",
+  "slug": "tessellation",
+  "kind": "activity",
+  "domain": "综合与实践",
+  "chapter": "综合与实践",
+  "standard_ids": [
+    "std-s3-cp-4"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

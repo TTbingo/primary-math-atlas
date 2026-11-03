@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g06-s1-a00-math-in-sports",
+  "type": "unit",
+  "term": "g06-s1",
+  "unit_no": 0,
+  "title": "体育中的数学",
+  "slug": "math-in-sports",
+  "kind": "activity",
+  "domain": "综合与实践",
+  "chapter": "综合与实践",
+  "standard_ids": [
+    "std-s3-cp-3"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

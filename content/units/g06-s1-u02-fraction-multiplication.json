@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g06-s1-u02-fraction-multiplication",
+  "type": "unit",
+  "term": "g06-s1",
+  "unit_no": 2,
+  "title": "分数乘法",
+  "slug": "fraction-multiplication",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s3-na-4"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g06-s1-u02-p01-fraction-mult"
+  ],
+  "summary": ""
+}

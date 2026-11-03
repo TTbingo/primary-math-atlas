@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g03-s2-u06-intro-decimals",
+  "type": "unit",
+  "term": "g03-s2",
+  "unit_no": 6,
+  "title": "小数的初步认识",
+  "slug": "intro-decimals",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的认识",
+  "standard_ids": [
+    "std-s2-na-2"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g03-s2-u06-p01-intro-decimal-meaning"
+  ],
+  "summary": "小数是十进制分数的另一种写法：0.1 元是 1 角、0.1 米是 1 分米，认识小数点和十分位。"
+}

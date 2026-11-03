@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g05-s2-u03-fraction-add-sub",
+  "type": "unit",
+  "term": "g05-s2",
+  "unit_no": 3,
+  "title": "分数的加法和减法",
+  "slug": "fraction-add-sub",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s3-na-4"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g05-s2-u03-p01-fraction-add-sub"
+  ],
+  "summary": ""
+}

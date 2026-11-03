@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}{{TITLE_SUFFIX}}</title>
+<meta name="description" content="{{DESC}}">
+<script>{{THEME_BOOT}}</script>
+<link rel="stylesheet" href="{{ROOT}}/assets/css/tokens.css">
+<link rel="stylesheet" href="{{ROOT}}/assets/css/layout.css">
+<link rel="stylesheet" href="{{ROOT}}/assets/css/components.css">
+<link rel="stylesheet" href="{{ROOT}}/assets/css/print.css">
+<link rel="stylesheet" href="{{ROOT}}/assets/katex/katex.min.css">
+{{HEAD_EXTRA}}
+</head>
+<body class="{{BODY_CLASS}}" data-depth="{{DEPTH}}">
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <button class="drawer-btn" id="drawer-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+  <a class="site-title" href="{{ROOT}}/index.html">{{SITE_TITLE}}</a>
+  <div class="topbar-right">
+    <button class="search-btn" id="search-btn" aria-label="搜索">搜索 <kbd>Ctrl K</kbd></button>
+    <button class="theme-btn" id="theme-btn" aria-label="切换主题" title="切换主题">◐</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-inner">{{SIDEBAR}}</div>
+  </aside>
+  <div class="sidebar-mask" id="sidebar-mask" hidden></div>
+
+  <div class="main-pane">
+    <main id="main">{{MAIN}}</main>
+  </div>
+
+  <aside class="rightbar" id="rightbar">{{TOC}}</aside>
+</div>
+
+{{SEARCH_MODAL}}
+{{SCRIPTS}}
+</body>
+</html>

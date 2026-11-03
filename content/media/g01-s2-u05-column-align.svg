@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="240" viewBox="0 0 480 240" role="img">
+  <rect x="0" y="0" width="480" height="240" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">竖式对齐：同类才能站到同一列</text>
+
+  <!-- 左：正确 36 + 23 -->
+  <g transform="translate(48,40)">
+    <rect x="52" y="0" width="46" height="132" fill="#f5ddd8" opacity="0.6"/>
+    <text x="28" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">十位</text>
+    <text x="75" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">个位</text>
+    <text x="28" y="48" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="21" fill="#17181c">3</text>
+    <text x="75" y="48" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="21" fill="#17181c">6</text>
+    <text x="28" y="82" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="21" fill="#17181c">2</text>
+    <text x="75" y="82" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="21" fill="#17181c">3</text>
+    <text x="10" y="80" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="20" fill="#17181c">+</text>
+    <line x1="4" y1="92" x2="100" y2="92" stroke="#17181c" stroke-width="1.5"/>
+    <text x="28" y="124" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="21" fill="#17181c">5</text>
+    <text x="75" y="124" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="21" fill="#17181c">9</text>
+    <text x="50" y="164" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">36 + 23 = 59 ✓</text>
+    <text x="50" y="184" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">散根加散根，整捆加整捆</text>
+  </g>
+
+  <!-- 右：错误 5 站到十位 -->
+  <g transform="translate(300,40)">
+    <rect x="52" y="0" width="46" height="132" fill="#f5ddd8" opacity="0.6"/>
+    <text x="28" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">十位</text>
+    <text x="75" y="16" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">个位</text>
+    <text x="28" y="48" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="21" fill="#17181c">2</text>
+    <text x="75" y="48" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="21" fill="#17181c">3</text>
+    <text x="28" y="82" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="21" fill="#8f2419">5</text>
+    <text x="10" y="80" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="20" fill="#17181c">+</text>
+    <line x1="4" y1="92" x2="100" y2="92" stroke="#17181c" stroke-width="1.5"/>
+    <text x="28" y="124" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="21" fill="#8f2419">7</text>
+    <text x="75" y="124" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="21" fill="#17181c">3</text>
+    <text x="50" y="164" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">23 + 5 = 73 ✗</text>
+    <text x="50" y="184" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">5 是 5 个一，却站到了十位</text>
+  </g>
+
+  <line x1="240" y1="40" x2="240" y2="204" stroke="#cfc3ae" stroke-width="1" stroke-dasharray="4 4"/>
+</svg>

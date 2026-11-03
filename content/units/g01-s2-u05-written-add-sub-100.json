@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g01-s2-u05-written-add-sub-100",
+  "type": "unit",
+  "term": "g01-s2",
+  "unit_no": 5,
+  "title": "100以内的笔算加、减法",
+  "slug": "written-add-sub-100",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s1-na-4"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g01-s2-u05-p01-written-add-sub-2digit"
+  ],
+  "summary": "用竖式笔算两位数加减两位数：相同数位对齐，从个位算起，满十进一、退一当十。"
+}

@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g04-s2-u04-understanding-decimals",
+  "type": "unit",
+  "term": "g04-s2",
+  "unit_no": 4,
+  "title": "小数的认识",
+  "slug": "understanding-decimals",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的认识",
+  "standard_ids": [
+    "std-s2-na-2"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g04-s2-u04-p01-decimal-meaning"
+  ],
+  "summary": "从十分位、百分位认识小数的意义，掌握小数的性质和小数点移动引起大小变化的规律。"
+}

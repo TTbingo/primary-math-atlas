@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="352" viewBox="0 0 520 352" role="img" aria-label="盈亏问题两次分配对照图">
+  <rect x="0" y="0" width="520" height="352" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">同一堆糖，两次分法，中间隔了 18 颗</text>
+
+  <!-- 实际糖果总数参考线 -->
+  <line x1="440" y1="74" x2="440" y2="250" stroke="#b9b0a0" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="440" y="66" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8a7a66">实际糖果总数</text>
+
+  <!-- 每人 5 颗：还剩 12 颗 -->
+  <text x="150" y="121" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">每人 5 颗</text>
+  <rect x="160" y="100" width="208" height="32" rx="3" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="368" y="150" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">还剩 12 颗（盈）</text>
+
+  <!-- 每人 8 颗：还差 6 颗 -->
+  <text x="150" y="207" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">每人 8 颗</text>
+  <rect x="160" y="186" width="316" height="32" rx="3" fill="#dfe6dd" stroke="#b6c0b2"/>
+  <text x="476" y="236" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="12" fill="#4a6b57">还差 6 颗（亏）</text>
+
+  <!-- 两次终点之间的距离 = 18 颗 -->
+  <line x1="368" y1="268" x2="476" y2="268" stroke="#8f2419" stroke-width="1.5"/>
+  <line x1="368" y1="262" x2="368" y2="274" stroke="#8f2419" stroke-width="1.5"/>
+  <line x1="476" y1="262" x2="476" y2="274" stroke="#8f2419" stroke-width="1.5"/>
+  <text x="422" y="260" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">12 + 6 = 18 颗</text>
+
+  <text x="260" y="300" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">18 颗 = 每人多分 3 颗 × 6 人</text>
+  <rect x="60" y="312" width="400" height="30" rx="5" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="260" y="332" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">份数 =（盈 + 亏）÷ 分配差 = 18 ÷ 3 = 6 人</text>
+</svg>

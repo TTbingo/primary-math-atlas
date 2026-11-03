@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="290" viewBox="0 0 480 290" role="img">
+  <rect x="0" y="0" width="480" height="290" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">差倍问题：差里只装着 3 个同样的份</text>
+
+  <!-- 上：小数 1 份 -->
+  <text x="100" y="50" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#7a7266">小数 20（1 份）</text>
+  <rect x="60" y="58" width="80" height="24" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <text x="100" y="74" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">1 份</text>
+
+  <!-- 下：大数 4 份，右端对齐左边起，多出 3 份 -->
+  <rect x="60" y="94" width="80" height="24" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <rect x="140" y="94" width="80" height="24" fill="#f6e3dd" stroke="#8f2419" stroke-width="1" stroke-dasharray="4 3"/>
+  <rect x="220" y="94" width="80" height="24" fill="#f6e3dd" stroke="#8f2419" stroke-width="1" stroke-dasharray="4 3"/>
+  <rect x="300" y="94" width="80" height="24" fill="#f6e3dd" stroke="#8f2419" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="100" y="110" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">1 份</text>
+  <text x="180" y="110" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">1 份</text>
+  <text x="260" y="110" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">1 份</text>
+  <text x="340" y="110" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">1 份</text>
+  <text x="392" y="110" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">大数 80</text>
+
+  <!-- 差：括号只括住多出的 3 份 -->
+  <line x1="140" y1="128" x2="380" y2="128" stroke="#8f2419" stroke-width="1.2"/>
+  <line x1="140" y1="122" x2="140" y2="134" stroke="#8f2419" stroke-width="1.2"/>
+  <line x1="380" y1="122" x2="380" y2="134" stroke="#8f2419" stroke-width="1.2"/>
+  <text x="260" y="148" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">差 = 60，正好 3 份</text>
+
+  <text x="240" y="176" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">大数 4 份，小数 1 份，大数比小数多 4 − 1 = 3 份</text>
+  <text x="240" y="198" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">1 份 = 60 ÷ 3 = 20（小数）</text>
+  <text x="240" y="220" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">4 份 = 20 × 4 = 80（大数）</text>
+  <text x="240" y="246" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">60 不是 1 份，也不是 4 份，只能是「倍数 − 1」份</text>
+  <text x="240" y="270" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">验算：80 − 20 = 60，80 ÷ 20 = 4</text>
+</svg>

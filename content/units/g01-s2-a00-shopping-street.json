@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g01-s2-a00-shopping-street",
+  "type": "unit",
+  "term": "g01-s2",
+  "unit_no": 0,
+  "title": "欢乐购物街",
+  "slug": "shopping-street",
+  "kind": "activity",
+  "domain": "综合与实践",
+  "chapter": "综合与实践",
+  "standard_ids": [
+    "std-s1-cp-2"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

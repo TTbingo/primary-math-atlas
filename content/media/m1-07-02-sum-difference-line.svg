@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" role="img">
+  <rect x="0" y="0" width="480" height="320" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">和差问题：和里多装了一个差</text>
+
+  <!-- 上排：小数与大数首尾相接，总长就是和 -->
+  <text x="105" y="48" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#7a7266">小数 11</text>
+  <text x="187" y="48" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#7a7266">大数 36</text>
+  <text x="321" y="48" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">多出的差 25</text>
+  <rect x="64" y="54" width="82" height="24" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <rect x="146" y="54" width="268" height="24" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <rect x="228" y="54" width="186" height="24" fill="#f6e3dd" stroke="#8f2419" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="228" y1="54" x2="228" y2="78" stroke="#b9a888" stroke-width="1"/>
+
+  <!-- 和的括号 -->
+  <line x1="64" y1="92" x2="414" y2="92" stroke="#17181c" stroke-width="1.2"/>
+  <line x1="64" y1="86" x2="64" y2="98" stroke="#17181c" stroke-width="1.2"/>
+  <line x1="414" y1="86" x2="414" y2="98" stroke="#17181c" stroke-width="1.2"/>
+  <text x="239" y="110" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">和 = 47（11 + 36）</text>
+
+  <!-- 下排：把差补给小数 -->
+  <text x="240" y="132" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#7a7266">把差补到小数这一截上，两条线段就一样长了</text>
+  <text x="56" y="159" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">补后</text>
+  <rect x="64" y="142" width="82" height="24" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <rect x="146" y="142" width="268" height="24" fill="#f6e3dd" stroke="#8f2419" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="105" y="158" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#7a7266">11</text>
+  <text x="280" y="158" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">补上 25</text>
+
+  <text x="56" y="197" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">大数</text>
+  <rect x="64" y="180" width="350" height="24" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <text x="239" y="196" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">大数 36</text>
+
+  <!-- 结论 -->
+  <text x="240" y="230" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">和 + 差 = 47 + 25 = 72，正好是两个大数</text>
+  <text x="240" y="252" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">大数 = 72 ÷ 2 = 36</text>
+  <text x="240" y="274" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">小数 = 47 − 36 = 11（也可以 36 − 25 = 11）</text>
+  <text x="240" y="298" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">验算：36 + 11 = 47，36 − 11 = 25</text>
+</svg>

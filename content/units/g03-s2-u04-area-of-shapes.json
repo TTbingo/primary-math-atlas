@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "g03-s2-u04-area-of-shapes",
+  "type": "unit",
+  "term": "g03-s2",
+  "unit_no": 4,
+  "title": "图形的面积",
+  "slug": "area-of-shapes",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "测量",
+  "standard_ids": [
+    "std-s2-geo-3",
+    "std-s2-geo-5"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g03-s2-u04-p01-area-and-unit",
+    "g03-s2-u04-p02-rect-area",
+    "g03-s2-u04-p03-area-unit-convert"
+  ],
+  "summary": "从“铺方格”认识面积和面积单位，推出长方形与正方形的面积公式，再学会面积单位之间的换算。"
+}

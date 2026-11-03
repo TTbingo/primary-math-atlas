@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "g02-s2-u03-num-within-10000",
+  "type": "unit",
+  "term": "g02-s2",
+  "unit_no": 3,
+  "title": "万以内数的认识",
+  "slug": "num-within-10000",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的认识",
+  "standard_ids": [
+    "std-s1-na-1",
+    "std-s1-na-2"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g02-s2-u03-p01-num-10000-rw"
+  ],
+  "summary": "按十进制认识万以内的数：满十个换一个更大的单位，写数时 0 用来占位，读数时末尾的 0 不读、中间的 0 只读一个零。"
+}

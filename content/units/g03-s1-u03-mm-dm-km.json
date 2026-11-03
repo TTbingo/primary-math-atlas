@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g03-s1-u03-mm-dm-km",
+  "type": "unit",
+  "term": "g03-s1",
+  "unit_no": 3,
+  "title": "毫米、分米和千米",
+  "slug": "mm-dm-km",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "测量",
+  "standard_ids": [
+    "std-s2-geo-3"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

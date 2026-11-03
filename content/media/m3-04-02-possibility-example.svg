@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="330" viewBox="0 0 520 330" role="img">
+  <rect x="0" y="0" width="520" height="330" fill="#fffdf8"/>
+  <text x="260" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">两个袋子，摸到红球的可能性一样大吗？</text>
+
+  <!-- A 袋 -->
+  <rect x="50" y="55" width="180" height="160" rx="12" fill="#fdf8ee" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="140" y="80" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#7a7266">A 袋</text>
+  <g>
+    <circle cx="85" cy="118" r="11" fill="#d8544a" stroke="#8f2419" stroke-width="1"/>
+    <circle cx="125" cy="118" r="11" fill="#d8544a" stroke="#8f2419" stroke-width="1"/>
+    <circle cx="165" cy="118" r="11" fill="#d8544a" stroke="#8f2419" stroke-width="1"/>
+    <circle cx="105" cy="160" r="11" fill="#d8544a" stroke="#8f2419" stroke-width="1"/>
+    <circle cx="145" cy="160" r="11" fill="#d8544a" stroke="#8f2419" stroke-width="1"/>
+    <circle cx="185" cy="160" r="11" fill="#e8c56a" stroke="#b08a2e" stroke-width="1"/>
+  </g>
+  <text x="140" y="235" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">红 5 个，黄 1 个</text>
+
+  <!-- B 袋 -->
+  <rect x="270" y="55" width="180" height="160" rx="12" fill="#fdf8ee" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="360" y="80" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#7a7266">B 袋</text>
+  <g>
+    <circle cx="305" cy="118" r="11" fill="#d8544a" stroke="#8f2419" stroke-width="1"/>
+    <circle cx="345" cy="118" r="11" fill="#d8544a" stroke="#8f2419" stroke-width="1"/>
+    <circle cx="385" cy="118" r="11" fill="#e8c56a" stroke="#b08a2e" stroke-width="1"/>
+    <circle cx="325" cy="160" r="11" fill="#d8544a" stroke="#8f2419" stroke-width="1"/>
+    <circle cx="365" cy="160" r="11" fill="#e8c56a" stroke="#b08a2e" stroke-width="1"/>
+    <circle cx="405" cy="160" r="11" fill="#e8c56a" stroke="#b08a2e" stroke-width="1"/>
+  </g>
+  <text x="360" y="235" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">红 3 个，黄 3 个</text>
+
+  <!-- 试验记录 -->
+  <rect x="50" y="252" width="195" height="36" rx="6" fill="#f3ece0" stroke="#b9a888" stroke-width="1"/>
+  <text x="147" y="275" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">A 袋摸 10 次：红 7，黄 3</text>
+  <rect x="270" y="252" width="195" height="36" rx="6" fill="#f3ece0" stroke="#b9a888" stroke-width="1"/>
+  <text x="367" y="275" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">A 袋摸 100 次：红 84，黄 16</text>
+
+  <text x="260" y="310" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#8f2419">A 袋红球多，摸到红球的可能性大——但「大」不等于「一定」</text>
+  <text x="260" y="326" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">摸的次数越多，红黄的比例才越接近 5 比 1</text>
+</svg>

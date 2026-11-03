@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="320" viewBox="0 0 520 320" role="img">
+  <rect x="0" y="0" width="520" height="320" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">一个数定一条线，两个数才定一个点</text>
+
+  <!-- 方格：6 列 × 4 行，格边长 44 -->
+  <g>
+    <rect x="232" y="60" width="44" height="176" fill="#e2a99d" opacity="0.45"/>
+    <rect x="100" y="104" width="264" height="44" fill="#8fb6d4" opacity="0.45"/>
+  </g>
+  <g stroke="#cfc3ae" stroke-width="1" fill="none">
+    <rect x="100" y="60" width="264" height="176"/>
+    <line x1="144" y1="60" x2="144" y2="236"/>
+    <line x1="188" y1="60" x2="188" y2="236"/>
+    <line x1="232" y1="60" x2="232" y2="236"/>
+    <line x1="276" y1="60" x2="276" y2="236"/>
+    <line x1="320" y1="60" x2="320" y2="236"/>
+    <line x1="100" y1="104" x2="364" y2="104"/>
+    <line x1="100" y1="148" x2="364" y2="148"/>
+    <line x1="100" y1="192" x2="364" y2="192"/>
+  </g>
+
+  <!-- 列号 0~5 -->
+  <g font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c" text-anchor="middle">
+    <text x="122" y="252">0</text>
+    <text x="166" y="252">1</text>
+    <text x="210" y="252">2</text>
+    <text x="254" y="252">3</text>
+    <text x="298" y="252">4</text>
+    <text x="342" y="252">5</text>
+  </g>
+  <!-- 行号 0~3（从下往上） -->
+  <g font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c" text-anchor="end">
+    <text x="92" y="218">0</text>
+    <text x="92" y="174">1</text>
+    <text x="92" y="130">2</text>
+    <text x="92" y="86">3</text>
+  </g>
+
+  <!-- 方向箭头 -->
+  <g stroke="#8f2419" stroke-width="1.2" fill="none">
+    <line x1="100" y1="266" x2="364" y2="266"/>
+    <path d="M358,262 L364,266 L358,270"/>
+    <line x1="84" y1="236" x2="84" y2="60"/>
+    <path d="M80,66 L84,60 L88,66"/>
+  </g>
+  <text x="376" y="270" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">列</text>
+  <text x="76" y="52" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419" text-anchor="middle">行</text>
+
+  <!-- 交点 (3,2) -->
+  <circle cx="254" cy="126" r="6" fill="#8f2419" stroke="#fffdf8" stroke-width="2"/>
+  <text x="268" y="118" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">(3, 2)</text>
+
+  <!-- 右侧图例 -->
+  <rect x="378" y="82" width="12" height="12" fill="#e2a99d" opacity="0.7"/>
+  <text x="396" y="93" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#17181c">只给 3：定一整列</text>
+  <rect x="378" y="112" width="12" height="12" fill="#8fb6d4" opacity="0.7"/>
+  <text x="396" y="123" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#17181c">只给 2：定一整行</text>
+  <circle cx="384" cy="146" r="5" fill="#8f2419"/>
+  <text x="396" y="150" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#17181c">两个一起：一个点</text>
+  <text x="378" y="182" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">先看列，再看行；</text>
+  <text x="378" y="200" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">(2, 3) 是另一个点。</text>
+
+  <rect x="16" y="288" width="488" height="24" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="260" y="305" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12.5" fill="#8f2419">数对（列, 行）：竖排是列、横排是行，方格图从 0 起编号</text>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "id": "g03-s1-u05-lines-and-angles",
+  "type": "unit",
+  "term": "g03-s1",
+  "unit_no": 5,
+  "title": "线和角",
+  "slug": "lines-and-angles",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "图形的认识",
+  "standard_ids": [
+    "std-s2-geo-1",
+    "std-s2-geo-2"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g03-s1-u05-p01-lines-ray-segment",
+    "g03-s1-u05-p02-intro-angles"
+  ],
+  "summary": "从端点个数认识线段、射线和直线，再用射线拼出角，弄明白角的大小只由两边张开决定。"
+}

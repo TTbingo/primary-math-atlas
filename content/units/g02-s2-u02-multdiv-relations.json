@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g02-s2-u02-multdiv-relations",
+  "type": "unit",
+  "term": "g02-s2",
+  "unit_no": 2,
+  "title": "数量间的乘除关系",
+  "slug": "multdiv-relations",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "解决问题",
+  "standard_ids": [
+    "std-s1-na-7"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g02-s2-u04-add-sub-within-10000",
+  "type": "unit",
+  "term": "g02-s2",
+  "unit_no": 4,
+  "title": "万以内的加法和减法",
+  "slug": "add-sub-within-10000",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s1-na-4"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g02-s2-u04-p01-add-sub-10000-written"
+  ],
+  "summary": "用竖式算万以内的加减法：相同数位对齐、从个位算起，满十进一、不够减退一当十，中间是 0 的连续退位要当作 9 来算。"
+}

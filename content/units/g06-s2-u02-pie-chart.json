@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "g06-s2-u02-pie-chart",
+  "type": "unit",
+  "term": "g06-s2",
+  "unit_no": 2,
+  "title": "扇形统计图",
+  "slug": "pie-chart",
+  "kind": "unit",
+  "domain": "统计与概率",
+  "chapter": "统计",
+  "standard_ids": [
+    "std-s3-sp-2",
+    "std-s3-sp-3"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g06-s2-u02-p01-pie-chart"
+  ],
+  "summary": "用整个圆表示总数、用扇形表示各部分占总数的百分比，读懂“只看得占比、看不出数量”，并与条形图、折线图分工对照。"
+}

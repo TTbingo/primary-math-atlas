@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="280" viewBox="0 0 480 280" role="img">
+  <rect x="0" y="0" width="480" height="280" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">9 加几：先从「几」里拿 1 根过来，凑成一捆十</text>
+
+  <defs>
+    <marker id="ar4" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#8f2419"/>
+    </marker>
+  </defs>
+
+  <!-- 上面：9 根 + 4 根 -->
+  <g>
+    <g fill="#e2b877" stroke="#a87232" stroke-width="1">
+      <rect x="45" y="48" width="6" height="46" rx="2"/>
+      <rect x="54" y="48" width="6" height="46" rx="2"/>
+      <rect x="63" y="48" width="6" height="46" rx="2"/>
+      <rect x="72" y="48" width="6" height="46" rx="2"/>
+      <rect x="81" y="48" width="6" height="46" rx="2"/>
+      <rect x="90" y="48" width="6" height="46" rx="2"/>
+      <rect x="99" y="48" width="6" height="46" rx="2"/>
+      <rect x="108" y="48" width="6" height="46" rx="2"/>
+      <rect x="117" y="48" width="6" height="46" rx="2"/>
+    </g>
+    <text x="86" y="110" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">9 根</text>
+
+    <text x="142" y="80" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="20" fill="#8f2419">+</text>
+
+    <!-- 4 根：第 1 根要被拿走，用红色标出 -->
+    <rect x="154" y="48" width="6" height="46" rx="2" fill="#e8a9a3" stroke="#b0645c" stroke-width="1.2"/>
+    <g fill="#e2b877" stroke="#a87232" stroke-width="1">
+      <rect x="163" y="48" width="6" height="46" rx="2"/>
+      <rect x="172" y="48" width="6" height="46" rx="2"/>
+      <rect x="181" y="48" width="6" height="46" rx="2"/>
+    </g>
+    <text x="170" y="110" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">4 根</text>
+  </g>
+
+  <!-- 拿 1 根过去的箭头 -->
+  <g stroke="#8f2419" stroke-width="1.6" fill="none" marker-end="url(#ar4)" stroke-dasharray="5 4">
+    <path d="M157,44 C157,32 130,32 127,42"/>
+  </g>
+
+  <text x="250" y="72" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">9 根还差 1 根就是 10 根</text>
+  <text x="250" y="94" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">把 4 分成 1 和 3，拿 1 根过去</text>
+
+  <!-- 下面：凑成一捆十 + 剩下的 3 根 -->
+  <g>
+    <g fill="#e2b877" stroke="#a87232" stroke-width="1">
+      <rect x="45" y="146" width="6" height="46" rx="2"/>
+      <rect x="54" y="146" width="6" height="46" rx="2"/>
+      <rect x="63" y="146" width="6" height="46" rx="2"/>
+      <rect x="72" y="146" width="6" height="46" rx="2"/>
+      <rect x="81" y="146" width="6" height="46" rx="2"/>
+      <rect x="90" y="146" width="6" height="46" rx="2"/>
+      <rect x="99" y="146" width="6" height="46" rx="2"/>
+      <rect x="108" y="146" width="6" height="46" rx="2"/>
+      <rect x="117" y="146" width="6" height="46" rx="2"/>
+      <rect x="126" y="146" width="6" height="46" rx="2"/>
+    </g>
+    <rect x="41" y="162" width="97" height="12" rx="2" fill="#a87232"/>
+    <text x="89" y="212" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">1 捆 = 10 根</text>
+
+    <text x="152" y="180" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="20" fill="#8f2419">+</text>
+
+    <g fill="#e2b877" stroke="#a87232" stroke-width="1">
+      <rect x="168" y="146" width="6" height="46" rx="2"/>
+      <rect x="177" y="146" width="6" height="46" rx="2"/>
+      <rect x="186" y="146" width="6" height="46" rx="2"/>
+    </g>
+    <text x="180" y="212" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">还剩 3 根</text>
+
+    <text x="216" y="180" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="20" fill="#8f2419">=</text>
+    <text x="248" y="184" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="26" fill="#8f2419">13</text>
+    <text x="300" y="176" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">一捆十加 3 根</text>
+    <text x="300" y="196" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">一眼就数出是 13</text>
+  </g>
+
+  <!-- 底部算式 -->
+  <rect x="60" y="232" width="360" height="36" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="240" y="256" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="17" fill="#8f2419">9 + 4 = 9 + 1 + 3 = 10 + 3 = 13</text>
+</svg>

@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g03-s1-u01-observe-objects",
+  "type": "unit",
+  "term": "g03-s1",
+  "unit_no": 1,
+  "title": "观察物体",
+  "slug": "observe-objects",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "图形的认识",
+  "standard_ids": [
+    "std-s2-geo-6"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

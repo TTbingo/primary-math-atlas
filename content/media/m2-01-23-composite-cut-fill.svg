@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="268" viewBox="0 0 560 268" role="img">
+  <rect x="0" y="0" width="560" height="268" fill="#fffdf8"/>
+  <text x="280" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">同一块 L 形菜地：外框 10 米 × 6 米，缺掉 4 米 × 3 米</text>
+
+  <!-- ① 割 -->
+  <text x="30" y="46" font-family="'Noto Serif SC',serif" font-size="12" font-weight="bold" fill="#8f2419">① 割：切成两块相加</text>
+
+  <!-- 左块 6×6 -->
+  <polygon points="30,56 102,56 102,128 30,128" fill="#f2ecdc" stroke="#bfa578" stroke-width="1.2"/>
+  <!-- 右块 4×3 -->
+  <polygon points="102,92 150,92 150,128 102,128" fill="#e8eee9" stroke="#8aa393" stroke-width="1.2"/>
+
+  <!-- 切口 -->
+  <line x1="102" y1="56" x2="102" y2="128" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="5 3"/>
+
+  <text x="60" y="92" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10" fill="#17181c">6×6 = 36</text>
+  <text x="126" y="114" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="9" fill="#17181c">4×3=12</text>
+
+  <!-- 尺寸标注 -->
+  <text x="90" y="146" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="9.5" fill="#5a5b60">10 米</text>
+  <text x="24" y="96" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="9.5" fill="#5a5b60">6 米</text>
+  <text x="126" y="50" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="9" fill="#5a5b60">4 米</text>
+  <text x="154" y="80" font-family="'Noto Serif SC',serif" font-size="9" fill="#5a5b60">3 米</text>
+
+  <text x="90" y="170" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">36 + 12 = 48</text>
+
+  <line x1="280" y1="44" x2="280" y2="196" stroke="#cfc3ae" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- ② 补 -->
+  <text x="316" y="46" font-family="'Noto Serif SC',serif" font-size="12" font-weight="bold" fill="#8f2419">② 补：补齐再减掉缺口</text>
+
+  <polygon points="320,56 392,56 392,92 440,92 440,128 320,128" fill="#f2ecdc" stroke="#bfa578" stroke-width="1.2"/>
+  <!-- 缺口 -->
+  <rect x="392" y="56" width="48" height="36" fill="#f7e2dd" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <!-- 外框虚线 -->
+  <line x1="392" y1="56" x2="392" y2="92" stroke="#c0392b" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="392" y1="56" x2="440" y2="56" stroke="#c0392b" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="440" y1="56" x2="440" y2="128" stroke="#c0392b" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <text x="416" y="76" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="8.5" fill="#8f2419">减去 12</text>
+  <text x="357" y="100" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10" fill="#17181c">10×6 = 60</text>
+
+  <text x="380" y="146" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="9.5" fill="#5a5b60">10 米</text>
+  <text x="314" y="96" text-anchor="end" font-family="'Noto Serif SC',serif" font-size="9.5" fill="#5a5b60">6 米</text>
+
+  <text x="380" y="170" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">60 − 12 = 48</text>
+
+  <text x="280" y="206" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#17181c">割了相加，补了相减，同一块地，答案都是 48 平方米</text>
+  <text x="280" y="232" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#5a5b60">组合图形面积 = 各块之和（割） = 大图形 − 补的部分（补）</text>
+</svg>

@@ -1,0 +1,15 @@
+# 构建产物（走 gh-pages 分支）
+dist/
+
+# 临时/调试产物
+.tmp/
+.shots/
+__pycache__/
+*.pyc
+
+# 旧「年级体系」备份，已由 modules 体系取代
+content/_backup_points_grades/
+
+# 系统
+.DS_Store
+Thumbs.db

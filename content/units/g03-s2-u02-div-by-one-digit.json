@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g03-s2-u02-div-by-one-digit",
+  "type": "unit",
+  "term": "g03-s2",
+  "unit_no": 2,
+  "title": "除数是一位数的除法",
+  "slug": "div-by-one-digit",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s2-na-1"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g03-s2-u02-p01-div-1digit"
+  ],
+  "summary": "用小棒演示 48÷2：从高位除起，每一位分别平均分，理解为什么余数必须比除数小。"
+}

@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "g01-s2-u02-borrow-sub-within-20",
+  "type": "unit",
+  "term": "g01-s2",
+  "unit_no": 2,
+  "title": "20以内的退位减法",
+  "slug": "borrow-sub-within-20",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s1-na-4"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g01-s2-u02-p01-borrow-sub-9",
+    "g01-s2-u02-p02-borrow-sub-methods"
+  ],
+  "summary": "从十几减 9 的破十法入手，学会破十、平十、想加算减多种算法，打通 20 以内所有退位减法。"
+}

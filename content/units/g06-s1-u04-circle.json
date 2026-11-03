@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "g06-s1-u04-circle",
+  "type": "unit",
+  "term": "g06-s1",
+  "unit_no": 4,
+  "title": "圆",
+  "slug": "circle",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "测量",
+  "standard_ids": [
+    "std-s3-geo-2"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g06-s1-u04-p01-circle-circumference",
+    "g06-s1-u04-p02-circle-area"
+  ],
+  "summary": ""
+}

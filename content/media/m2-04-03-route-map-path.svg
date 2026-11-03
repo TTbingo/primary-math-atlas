@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="340" viewBox="0 0 620 340" role="img">
+  <defs>
+    <pattern id="mapdot" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.9" fill="#ddd2ba"/>
+    </pattern>
+    <marker id="tip" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="620" height="340" fill="#fffdf8"/>
+  <rect x="20" y="44" width="580" height="252" fill="url(#mapdot)"/>
+  <text x="300" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">一条路线分三段：每段都说全「从哪儿、往哪走、走多远」</text>
+
+  <!-- 指北针 -->
+  <line x1="562" y1="64" x2="562" y2="104" stroke="#9a9b9f" stroke-width="1"/>
+  <line x1="542" y1="84" x2="582" y2="84" stroke="#9a9b9f" stroke-width="1"/>
+  <polygon points="562,56 557,70 567,70" fill="#8f2419"/>
+  <text x="562" y="50" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10" fill="#8f2419">北</text>
+  <text x="28" y="60" font-family="'Noto Serif SC',serif" font-size="10" fill="#5a5b60">上北下南，左西右东</text>
+
+  <!-- 三段路 -->
+  <line x1="80" y1="280" x2="272" y2="280" stroke="#c0392b" stroke-width="2.2" marker-end="url(#tip)"/>
+  <line x1="280" y1="272" x2="280" y2="152" stroke="#c0392b" stroke-width="2.2" marker-end="url(#tip)"/>
+  <line x1="288" y1="140" x2="392" y2="140" stroke="#c0392b" stroke-width="2.2" marker-end="url(#tip)"/>
+
+  <!-- 地点 -->
+  <circle cx="80" cy="280" r="5" fill="#8f2419"/>
+  <circle cx="280" cy="280" r="5.5" fill="#fffdf8" stroke="#c0392b" stroke-width="2"/>
+  <circle cx="280" cy="140" r="5.5" fill="#fffdf8" stroke="#c0392b" stroke-width="2"/>
+  <circle cx="400" cy="140" r="5" fill="#2f6f5e"/>
+
+  <text x="80" y="302" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">家（起点）</text>
+  <text x="280" y="302" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">书店</text>
+  <text x="280" y="126" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">公园</text>
+  <text x="400" y="124" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#2f6f5e">学校（终点）</text>
+
+  <!-- 每段的说法 -->
+  <rect x="128" y="254" width="104" height="16" fill="#fffdf8"/>
+  <text x="180" y="266" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#8f2419">① 向东 3 千米</text>
+  <rect x="290" y="204" width="94" height="16" fill="#fffdf8"/>
+  <text x="294" y="216" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#8f2419">② 向北 2 千米</text>
+  <rect x="300" y="150" width="108" height="16" fill="#fffdf8"/>
+  <text x="352" y="162" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#8f2419">③ 向东 1.5 千米</text>
+
+  <!-- 转折点提示 -->
+  <text x="296" y="292" font-family="'Noto Serif SC',serif" font-size="9.5" fill="#5a5b60">转折点</text>
+  <text x="296" y="150" font-family="'Noto Serif SC',serif" font-size="9.5" fill="#5a5b60">转折点</text>
+
+  <text x="310" y="324" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10.5" fill="#5a5b60">圆圈是转折点：一到这儿，方向就要改口，把它当成新的出发点重新报一遍</text>
+</svg>

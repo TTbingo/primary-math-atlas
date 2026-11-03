@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "g06-s1-u05-percentage",
+  "type": "unit",
+  "term": "g06-s1",
+  "unit_no": 5,
+  "title": "百分数",
+  "slug": "percentage",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的认识",
+  "standard_ids": [
+    "std-s3-sp-4",
+    "std-s3-sp-5"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g06-s1-u05-p01-percentage-meaning"
+  ],
+  "summary": ""
+}

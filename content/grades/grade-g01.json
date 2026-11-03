@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "id": "grade-g01",
+  "type": "grade",
+  "grade": 1,
+  "title": "一年级",
+  "segment": 1,
+  "terms": [
+    {
+      "term": "g01-s1",
+      "label": "上册",
+      "units": [
+        "g01-s1-u01-num-within-5",
+        "g01-s1-u02-num-6-to-10",
+        "g01-s1-u03-solid-shapes",
+        "g01-s1-u04-num-11-to-20",
+        "g01-s1-u05-carry-add-within-20",
+        "g01-s1-u06-review"
+      ],
+      "activities": [
+        "g01-s1-a00-math-games"
+      ]
+    },
+    {
+      "term": "g01-s2",
+      "label": "下册",
+      "units": [
+        "g01-s2-u01-plane-shapes",
+        "g01-s2-u02-borrow-sub-within-20",
+        "g01-s2-u03-num-within-100",
+        "g01-s2-u04-mental-add-sub-100",
+        "g01-s2-u05-written-add-sub-100",
+        "g01-s2-u06-add-sub-relations",
+        "g01-s2-u07-review"
+      ],
+      "activities": [
+        "g01-s2-a00-shopping-street"
+      ]
+    }
+  ]
+}

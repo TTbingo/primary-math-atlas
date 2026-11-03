@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g06-s1-a00-negative-numbers",
+  "type": "unit",
+  "term": "g06-s1",
+  "unit_no": 0,
+  "title": "生活中的负数",
+  "slug": "negative-numbers",
+  "kind": "activity",
+  "domain": "综合与实践",
+  "chapter": "综合与实践",
+  "standard_ids": [
+    "std-s3-cp-1"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

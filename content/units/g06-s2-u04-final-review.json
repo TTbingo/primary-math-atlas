@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g06-s2-u04-final-review",
+  "type": "unit",
+  "term": "g06-s2",
+  "unit_no": 4,
+  "title": "总复习",
+  "slug": "final-review",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "解决问题",
+  "standard_ids": [
+    "std-s3-na-10"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" role="img">
+  <rect x="0" y="0" width="480" height="320" fill="#fffdf8"/>
+  <text x="240.0" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">长度单位：每上一级，数字就要换一套</text>
+  <rect x="20" y="35" width="130" height="34" rx="3" fill="#f3e6d6" stroke="#17181c" stroke-width="1.4"/>
+  <text x="85" y="57" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">千米 km</text>
+  <text x="190" y="57" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#555962">走约 15 分钟（约 1 千米）</text>
+  <rect x="20" y="85" width="130" height="34" rx="3" fill="#f6ecdd" stroke="#17181c" stroke-width="1.4"/>
+  <text x="85" y="107" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">米 m</text>
+  <text x="190" y="107" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#555962">门高约 2 米</text>
+  <text x="165" y="81.0" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#c0392b">×1000</text>
+  <line x1="165" y1="65.0" x2="165" y2="73.0" stroke="#c0392b" stroke-width="1.2"/>
+  <line x1="165" y1="85.0" x2="165" y2="91.0" stroke="#c0392b" stroke-width="1.2"/>
+  <path d="M 161 87.0 L 165 93.0 L 169 87.0" fill="none" stroke="#c0392b" stroke-width="1.2"/>
+  <rect x="20" y="135" width="130" height="34" rx="3" fill="#f9f2e6" stroke="#17181c" stroke-width="1.4"/>
+  <text x="85" y="157" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">分米 dm</text>
+  <text x="190" y="157" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#555962">手掌宽约 1 分米</text>
+  <text x="165" y="131.0" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#c0392b">×10</text>
+  <line x1="165" y1="115.0" x2="165" y2="123.0" stroke="#c0392b" stroke-width="1.2"/>
+  <line x1="165" y1="135.0" x2="165" y2="141.0" stroke="#c0392b" stroke-width="1.2"/>
+  <path d="M 161 137.0 L 165 143.0 L 169 137.0" fill="none" stroke="#c0392b" stroke-width="1.2"/>
+  <rect x="20" y="185" width="130" height="34" rx="3" fill="#fbf6ec" stroke="#17181c" stroke-width="1.4"/>
+  <text x="85" y="207" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">厘米 cm</text>
+  <text x="190" y="207" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#555962">食指宽约 1 厘米</text>
+  <text x="165" y="181.0" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#c0392b">×10</text>
+  <line x1="165" y1="165.0" x2="165" y2="173.0" stroke="#c0392b" stroke-width="1.2"/>
+  <line x1="165" y1="185.0" x2="165" y2="191.0" stroke="#c0392b" stroke-width="1.2"/>
+  <path d="M 161 187.0 L 165 193.0 L 169 187.0" fill="none" stroke="#c0392b" stroke-width="1.2"/>
+  <rect x="20" y="235" width="130" height="34" rx="3" fill="#fdfaf3" stroke="#17181c" stroke-width="1.4"/>
+  <text x="85" y="257" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">毫米 mm</text>
+  <text x="190" y="257" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#555962">硬币厚约 1 毫米</text>
+  <text x="165" y="231.0" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#c0392b">×10</text>
+  <line x1="165" y1="215.0" x2="165" y2="223.0" stroke="#c0392b" stroke-width="1.2"/>
+  <line x1="165" y1="235.0" x2="165" y2="241.0" stroke="#c0392b" stroke-width="1.2"/>
+  <path d="M 161 237.0 L 165 243.0 L 169 237.0" fill="none" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="20" y="292" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#555962">1 米 = 10 分米 = 100 厘米 = 1000 毫米　｜　1 千米 = 1000 米</text>
+  <text x="20" y="310" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#c0392b">只有千米到米是 1000，其余相邻都是 10</text>
+</svg>

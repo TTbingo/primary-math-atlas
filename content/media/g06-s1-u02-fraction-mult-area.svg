@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="340" viewBox="0 0 560 340" role="img">
+  <rect x="0" y="0" width="560" height="340" fill="#fffdf8"/>
+  <text x="280" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">一张纸先竖着分、再横着分，重叠的小格就是「份的份」</text>
+
+  <!-- 竖着取 2/3 -->
+  <rect x="66" y="68" width="144" height="216" fill="#e2a99d" opacity="0.55"/>
+  <!-- 横着取 3/4 -->
+  <rect x="66" y="68" width="216" height="162" fill="#8fb6d4" opacity="0.42"/>
+
+  <!-- 格线 -->
+  <g stroke="#b98c81" stroke-width="0.9" fill="none">
+    <rect x="66" y="68" width="216" height="216" stroke="#17181c" stroke-width="1.6"/>
+    <line x1="138" y1="68" x2="138" y2="284"/>
+    <line x1="210" y1="68" x2="210" y2="284"/>
+    <line x1="66" y1="122" x2="282" y2="122"/>
+    <line x1="66" y1="176" x2="282" y2="176"/>
+    <line x1="66" y1="230" x2="282" y2="230"/>
+  </g>
+
+  <!-- 顶部括线：竖着 3 份取 2 份 -->
+  <g stroke="#8f2419" stroke-width="1.2" fill="none">
+    <line x1="66" y1="58" x2="210" y2="58"/>
+    <line x1="66" y1="54" x2="66" y2="62"/>
+    <line x1="210" y1="54" x2="210" y2="62"/>
+  </g>
+  <text x="138" y="48" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">竖分 3 份，取 2 份 = 2/3</text>
+
+  <!-- 左侧括线：横着 4 份取 3 份 -->
+  <g stroke="#2d5f86" stroke-width="1.2" fill="none">
+    <line x1="54" y1="68" x2="54" y2="230"/>
+    <line x1="50" y1="68" x2="58" y2="68"/>
+    <line x1="50" y1="230" x2="58" y2="230"/>
+  </g>
+  <text x="42" y="149" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#2d5f86" transform="rotate(-90 42 149)">横分 4 份，取 3 份 = 3/4</text>
+
+  <!-- 右侧说明 -->
+  <text x="302" y="92" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#17181c">竖着平均分成 3 份，取 2 份；</text>
+  <text x="302" y="114" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#17181c">再横着平均分成 4 份，取 3 份。</text>
+  <text x="302" y="150" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#17181c">整张纸被切成 3 × 4 = 12 格</text>
+  <text x="302" y="172" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">（分母相乘，份数被又分了一次）</text>
+  <text x="302" y="204" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#17181c">两次都占到的重叠格：2 × 3 = 6 格</text>
+  <text x="302" y="226" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">（分子相乘，取到的份数又乘一次）</text>
+  <text x="302" y="258" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#17181c">6 格占 12 格的 6/12，约分得 1/2。</text>
+
+  <rect x="16" y="292" width="528" height="40" rx="4" fill="#f5ddd8" stroke="#cfc3ae"/>
+  <text x="280" y="310" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">2/3 × 3/4 = (2×3)/(3×4) = 6/12 = 1/2</text>
+  <text x="280" y="327" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#17181c">分子乘分子，分母乘分母</text>
+</svg>

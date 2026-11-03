@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g02-s1-a00-campus-guide",
+  "type": "unit",
+  "term": "g02-s1",
+  "unit_no": 0,
+  "title": "校园小导游",
+  "slug": "campus-guide",
+  "kind": "activity",
+  "domain": "综合与实践",
+  "chapter": "综合与实践",
+  "standard_ids": [
+    "std-s1-cp-4"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

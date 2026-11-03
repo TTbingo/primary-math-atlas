@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "g05-s1-u04-figure-motion",
+  "type": "unit",
+  "term": "g05-s1",
+  "unit_no": 4,
+  "title": "图形的运动",
+  "slug": "figure-motion",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "图形位置及运动",
+  "standard_ids": [
+    "std-s3-geo-11",
+    "std-s3-geo-12"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g05-s1-u04-p01-translation-rotation"
+  ],
+  "summary": ""
+}

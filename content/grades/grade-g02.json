@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "id": "grade-g02",
+  "type": "grade",
+  "grade": 2,
+  "title": "二年级",
+  "segment": 1,
+  "terms": [
+    {
+      "term": "g02-s1",
+      "label": "上册",
+      "units": [
+        "g02-s1-u01-classification",
+        "g02-s1-u02-mult-table-1-6",
+        "g02-s1-u03-div-table-1-6",
+        "g02-s1-u04-cm-and-m",
+        "g02-s1-u05-multdiv-table-7-9",
+        "g02-s1-u06-review"
+      ],
+      "activities": [
+        "g02-s1-a00-campus-guide",
+        "g02-s1-a00-body-ruler"
+      ]
+    },
+    {
+      "term": "g02-s2",
+      "label": "下册",
+      "units": [
+        "g02-s2-u01-division-with-remainder",
+        "g02-s2-u02-multdiv-relations",
+        "g02-s2-u03-num-within-10000",
+        "g02-s2-u04-add-sub-within-10000",
+        "g02-s2-u05-review"
+      ],
+      "activities": [
+        "g02-s2-a00-where-is-time",
+        "g02-s2-a00-math-comic"
+      ]
+    }
+  ]
+}

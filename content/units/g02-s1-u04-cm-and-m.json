@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g02-s1-u04-cm-and-m",
+  "type": "unit",
+  "term": "g02-s1",
+  "unit_no": 4,
+  "title": "厘米和米",
+  "slug": "cm-and-m",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "测量",
+  "standard_ids": [
+    "std-s1-geo-2"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g02-s1-u04-p01-length-cm-m"
+  ],
+  "summary": ""
+}

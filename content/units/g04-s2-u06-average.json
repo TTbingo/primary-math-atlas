@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "g04-s2-u06-average",
+  "type": "unit",
+  "term": "g04-s2",
+  "unit_no": 6,
+  "title": "平均数",
+  "slug": "average",
+  "kind": "unit",
+  "domain": "统计与概率",
+  "chapter": "统计",
+  "standard_ids": [
+    "std-s2-sp-5",
+    "std-s2-sp-6"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g04-s2-u06-p01-average-meaning"
+  ],
+  "summary": "理解平均数是移多补少后的整体水平，会用「总数 ÷ 份数」求平均数，知道它容易受极端值影响。"
+}

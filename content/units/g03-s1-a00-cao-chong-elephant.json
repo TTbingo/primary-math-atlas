@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g03-s1-a00-cao-chong-elephant",
+  "type": "unit",
+  "term": "g03-s1",
+  "unit_no": 0,
+  "title": "曹冲称象的故事",
+  "slug": "cao-chong-elephant",
+  "kind": "activity",
+  "domain": "综合与实践",
+  "chapter": "综合与实践",
+  "standard_ids": [
+    "std-s2-cp-2"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

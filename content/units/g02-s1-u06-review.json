@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g02-s1-u06-review",
+  "type": "unit",
+  "term": "g02-s1",
+  "unit_no": 6,
+  "title": "复习与关联",
+  "slug": "review",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s1-na-6"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

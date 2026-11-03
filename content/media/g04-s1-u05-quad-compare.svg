@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300" role="img">
+  <rect x="0" y="0" width="480" height="300" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">两组对边平行是平行四边形，只有一组是梯形</text>
+
+  <!-- 左：平行四边形 -->
+  <polygon points="48,62 150,62 196,122 94,122" fill="#f5ddd8" stroke="#8f2419" stroke-width="2"/>
+  <text x="99" y="55" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">∥</text>
+  <text x="145" y="137" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">∥</text>
+  <text x="61" y="98" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">∥</text>
+  <text x="185" y="98" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">∥</text>
+  <text x="122" y="158" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">平行四边形</text>
+  <text x="122" y="176" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10" fill="#17181c">两组对边分别平行，对边相等</text>
+
+  <!-- 右：梯形 -->
+  <polygon points="282,62 402,62 372,122 312,122" fill="#f5ddd8" stroke="#8f2419" stroke-width="2"/>
+  <text x="342" y="55" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">∥</text>
+  <text x="342" y="137" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">∥</text>
+  <text x="342" y="158" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">梯形</text>
+  <text x="342" y="176" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="10" fill="#17181c">只有一组对边平行，另两条叫腰</text>
+
+  <line x1="240" y1="44" x2="240" y2="184" stroke="#cfc3ae" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- 伸缩门 -->
+  <line x1="60" y1="206" x2="420" y2="206" stroke="#cfc3ae" stroke-width="3"/>
+  <line x1="60" y1="252" x2="420" y2="252" stroke="#cfc3ae" stroke-width="3"/>
+  <g stroke="#8f2419" stroke-width="1.6" fill="none">
+    <line x1="60" y1="252" x2="120" y2="206"/><line x1="60" y1="206" x2="120" y2="252"/>
+    <line x1="120" y1="252" x2="180" y2="206"/><line x1="120" y1="206" x2="180" y2="252"/>
+    <line x1="180" y1="252" x2="240" y2="206"/><line x1="180" y1="206" x2="240" y2="252"/>
+    <line x1="240" y1="252" x2="300" y2="206"/><line x1="240" y1="206" x2="300" y2="252"/>
+    <line x1="300" y1="252" x2="360" y2="206"/><line x1="300" y1="206" x2="360" y2="252"/>
+    <line x1="360" y1="252" x2="420" y2="206"/><line x1="360" y1="206" x2="420" y2="252"/>
+  </g>
+  <text x="240" y="278" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">伸缩门：一串平行四边形，推拉时角在变、边长不变</text>
+</svg>

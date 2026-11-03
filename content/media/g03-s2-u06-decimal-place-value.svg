@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="292" viewBox="0 0 480 292" role="img">
+  <rect x="0" y="0" width="480" height="292" fill="#fffdf8"/>
+  <text x="240" y="22" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">小数点左边是整数部分，右边是小数部分</text>
+
+  <!-- 1 米尺分成 10 份 -->
+  <text x="40" y="44" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">把 1 米平均分成 10 份</text>
+  <rect x="40" y="52" width="400" height="30" fill="#ffffff" stroke="#c9bda3"/>
+  <rect x="40" y="52" width="40" height="30" fill="#f7e2dc" stroke="#c9bda3"/>
+  <g stroke="#c9bda3" stroke-width="1">
+    <line x1="120" y1="52" x2="120" y2="82"/>
+    <line x1="160" y1="52" x2="160" y2="82"/>
+    <line x1="200" y1="52" x2="200" y2="82"/>
+    <line x1="240" y1="52" x2="240" y2="82"/>
+    <line x1="280" y1="52" x2="280" y2="82"/>
+    <line x1="320" y1="52" x2="320" y2="82"/>
+    <line x1="360" y1="52" x2="360" y2="82"/>
+    <line x1="400" y1="52" x2="400" y2="82"/>
+  </g>
+  <g font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c" text-anchor="middle">
+    <text x="60" y="99">1 分米</text>
+    <text x="140" y="99">0.2</text>
+    <text x="220" y="99">0.4</text>
+    <text x="300" y="99">0.6</text>
+    <text x="380" y="99">0.8</text>
+    <text x="440" y="99">1 米</text>
+  </g>
+  <line x1="60" y1="86" x2="60" y2="104" stroke="#8f2419" stroke-width="1.2"/>
+  <text x="66" y="118" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">这一份 = 1 分米 = 0.1 米（不够 1 米的部分）</text>
+
+  <!-- 数位顺序表 -->
+  <text x="40" y="142" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">数位顺序表</text>
+  <g font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c" text-anchor="middle">
+    <rect x="40" y="150" width="60" height="24" fill="#efe9dd" stroke="#cfc3ae"/>
+    <text x="70" y="167">十位</text>
+    <rect x="100" y="150" width="60" height="24" fill="#efe9dd" stroke="#cfc3ae"/>
+    <text x="130" y="167">个位</text>
+    <rect x="160" y="150" width="26" height="24" fill="#f5ddd8" stroke="#cfc3ae"/>
+    <text x="173" y="167">·</text>
+    <rect x="186" y="150" width="60" height="24" fill="#f7e2dc" stroke="#cfc3ae"/>
+    <text x="216" y="167">十分位</text>
+    <rect x="246" y="150" width="60" height="24" fill="#f7e2dc" stroke="#cfc3ae"/>
+    <text x="276" y="167">百分位</text>
+
+    <rect x="40" y="174" width="60" height="24" fill="#ffffff" stroke="#cfc3ae"/>
+    <rect x="100" y="174" width="60" height="24" fill="#ffffff" stroke="#cfc3ae"/>
+    <text x="130" y="191">1</text>
+    <rect x="160" y="174" width="26" height="24" fill="#f5ddd8" stroke="#cfc3ae"/>
+    <text x="173" y="191">·</text>
+    <rect x="186" y="174" width="60" height="24" fill="#ffffff" stroke="#cfc3ae"/>
+    <text x="216" y="191">3</text>
+    <rect x="246" y="174" width="60" height="24" fill="#ffffff" stroke="#cfc3ae"/>
+    <text x="276" y="191">5</text>
+
+    <rect x="40" y="198" width="60" height="24" fill="#ffffff" stroke="#cfc3ae"/>
+    <text x="70" y="215">1</text>
+    <rect x="100" y="198" width="60" height="24" fill="#ffffff" stroke="#cfc3ae"/>
+    <text x="130" y="215">2</text>
+    <rect x="160" y="198" width="26" height="24" fill="#f5ddd8" stroke="#cfc3ae"/>
+    <text x="173" y="215">·</text>
+    <rect x="186" y="198" width="60" height="24" fill="#ffffff" stroke="#cfc3ae"/>
+    <text x="216" y="215">5</text>
+    <rect x="246" y="198" width="60" height="24" fill="#ffffff" stroke="#cfc3ae"/>
+    <text x="276" y="215">0</text>
+  </g>
+  <text x="318" y="191" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">1.35 米 = 1 米 3 分米 5 厘米</text>
+  <text x="318" y="215" font-family="'Noto Serif SC',serif" font-size="13" fill="#8f2419">12.50 元 = 12 元 5 角</text>
+
+  <!-- 底部：价签与身高 -->
+  <rect x="40" y="236" width="190" height="44" rx="5" fill="#f7e2dc" stroke="#cfc3ae"/>
+  <text x="56" y="266" font-family="'Noto Serif SC',serif" font-size="20" fill="#8f2419">¥12.50</text>
+  <text x="150" y="265" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">读作：十二点五零</text>
+  <rect x="250" y="236" width="190" height="44" rx="5" fill="#f7f1e6" stroke="#cfc3ae"/>
+  <text x="266" y="266" font-family="'Noto Serif SC',serif" font-size="20" fill="#17181c">1.35 米</text>
+  <text x="352" y="265" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">1 米 3 分米 5 厘米</text>
+</svg>

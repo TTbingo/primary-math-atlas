@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g01-s2-u04-mental-add-sub-100",
+  "type": "unit",
+  "term": "g01-s2",
+  "unit_no": 4,
+  "title": "100以内的口算加、减法",
+  "slug": "mental-add-sub-100",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s1-na-4"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

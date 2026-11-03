@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "g04-s1-u06-bar-chart",
+  "type": "unit",
+  "term": "g04-s1",
+  "unit_no": 6,
+  "title": "条形统计图",
+  "slug": "bar-chart",
+  "kind": "unit",
+  "domain": "统计与概率",
+  "chapter": "统计",
+  "standard_ids": [
+    "std-s2-sp-3",
+    "std-s2-sp-4"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

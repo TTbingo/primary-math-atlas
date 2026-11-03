@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g03-s1-u04-mult-by-one-digit",
+  "type": "unit",
+  "term": "g03-s1",
+  "unit_no": 4,
+  "title": "多位数乘一位数",
+  "slug": "mult-by-one-digit",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s2-na-1"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g03-s1-u04-p01-mult-1digit"
+  ],
+  "summary": "把多位数按数位拆开逐位相乘，理解竖式对齐与进位的算理，而不只是记住写法。"
+}

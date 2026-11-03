@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g03-s2-u03-rectangle-and-square",
+  "type": "unit",
+  "term": "g03-s2",
+  "unit_no": 3,
+  "title": "长方形和正方形",
+  "slug": "rectangle-and-square",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "图形的认识",
+  "standard_ids": [
+    "std-s2-geo-5"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

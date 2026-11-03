@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "g04-s2-u01-div-by-two-digit",
+  "type": "unit",
+  "term": "g04-s2",
+  "unit_no": 1,
+  "title": "除数是两位数的除法",
+  "slug": "div-by-two-digit",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的运算",
+  "standard_ids": [
+    "std-s2-na-1"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g04-s2-u01-p01-div-2digit"
+  ],
+  "summary": "把除数看作接近的整十数试商，学会商大调小、商小调大，并用「商 × 除数 + 余数」验算。"
+}

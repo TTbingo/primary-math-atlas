@@ -1,0 +1,17 @@
+/* 打印：强制浅色（此处是全站唯一允许纯白的地方） */
+@media print {
+  :root, [data-theme="dark"] {
+    --bg: #ffffff; --topbar: #ffffff; --card: #ffffff;
+    --text: #000000; --text-sub: #333333; --title: #000000;
+    --line-strong: #999999; --line-weak: #dddddd;
+    --accent: #b03a2e; --accent-soft: #f2e6e3; --accent-deep: #7b241c;
+  }
+  .topbar, .sidebar, .rightbar, .search-modal, .pager, .done-bar,
+  .chips, .drawer-btn, .skip-link, .sidebar-mask { display: none !important; }
+  .layout { display: block; }
+  main { max-width: none; }
+  .panel { padding: 0 0 1rem; }
+  .block, .example, .fig, .pitfall, .why, .card { break-inside: avoid; }
+  h1, h2, h3 { break-after: avoid; }
+  a { color: #000; text-decoration: underline; }
+}

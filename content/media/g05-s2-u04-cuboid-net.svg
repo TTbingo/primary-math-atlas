@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="240" viewBox="0 0 480 240" role="img">
+  <rect x="0" y="0" width="480" height="240" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">沿棱剪开摊平：6 个面，3 对</text>
+
+  <!-- 展开图：横排四个面 + 上下各一个 -->
+  <!-- 左面 -->
+  <rect x="34" y="92" width="62" height="42" fill="#e8eee9" stroke="#8aa393" stroke-width="1.2"/>
+  <text x="65" y="112" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">左</text>
+  <text x="65" y="126" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="9" fill="#5a5b60">b×h</text>
+
+  <!-- 上面 -->
+  <rect x="96" y="50" width="62" height="42" fill="#f7e7e2" stroke="#c98a7a" stroke-width="1.2"/>
+  <text x="127" y="70" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">上</text>
+  <text x="127" y="84" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="9" fill="#5a5b60">a×b</text>
+
+  <!-- 前面 -->
+  <rect x="96" y="92" width="62" height="42" fill="#f2ecdc" stroke="#bfa578" stroke-width="1.2"/>
+  <text x="127" y="112" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">前</text>
+  <text x="127" y="126" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="9" fill="#5a5b60">a×h</text>
+
+  <!-- 下面 -->
+  <rect x="96" y="134" width="62" height="42" fill="#f7e7e2" stroke="#c98a7a" stroke-width="1.2"/>
+  <text x="127" y="154" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">下</text>
+  <text x="127" y="168" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="9" fill="#5a5b60">a×b</text>
+
+  <!-- 右面 -->
+  <rect x="158" y="92" width="62" height="42" fill="#e8eee9" stroke="#8aa393" stroke-width="1.2"/>
+  <text x="189" y="112" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">右</text>
+  <text x="189" y="126" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="9" fill="#5a5b60">b×h</text>
+
+  <!-- 后面 -->
+  <rect x="220" y="92" width="62" height="42" fill="#f2ecdc" stroke="#bfa578" stroke-width="1.2"/>
+  <text x="251" y="112" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="13" fill="#17181c">后</text>
+  <text x="251" y="126" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="9" fill="#5a5b60">a×h</text>
+
+  <text x="158" y="196" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#5a5b60">颜色相同的两个面，原来贴在一起</text>
+
+  <line x1="300" y1="46" x2="300" y2="200" stroke="#cfc3ae" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- 右侧公式 -->
+  <text x="314" y="72" font-family="'Noto Serif SC',serif" font-size="13" font-weight="bold" fill="#8f2419">6 个面 = 3 对</text>
+  <text x="314" y="100" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">上 = 下 = ab</text>
+  <text x="314" y="122" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">前 = 后 = ah</text>
+  <text x="314" y="144" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">左 = 右 = bh</text>
+  <text x="314" y="176" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">S = 2(ab + ah + bh)</text>
+  <text x="314" y="198" font-family="'Noto Serif SC',serif" font-size="11" fill="#5a5b60">正方体：S = 6a²</text>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "g03-s2-u05-data-collection",
+  "type": "unit",
+  "term": "g03-s2",
+  "unit_no": 5,
+  "title": "数据的收集与整理",
+  "slug": "data-collection",
+  "kind": "unit",
+  "domain": "统计与概率",
+  "chapter": "统计",
+  "standard_ids": [
+    "std-s2-sp-1",
+    "std-s2-sp-2"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

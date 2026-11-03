@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="300" viewBox="0 0 560 300" role="img">
+  <defs>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8f2419"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="560" height="300" fill="#fffdf8"/>
+  <text x="280" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">四、三年级参加兴趣小组人数统计表（单位：人）</text>
+
+  <!-- 表体 -->
+  <rect x="60" y="44" width="430" height="120" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="60" y="44" width="430" height="30" fill="#f3ece0"/>
+  <rect x="410" y="44" width="80" height="120" fill="#faf1e4"/>
+  <rect x="60" y="134" width="430" height="30" fill="#faf1e4"/>
+
+  <!-- 竖线 -->
+  <line x1="170" y1="44" x2="170" y2="164" stroke="#17181c" stroke-width="1"/>
+  <line x1="250" y1="44" x2="250" y2="164" stroke="#17181c" stroke-width="1"/>
+  <line x1="330" y1="44" x2="330" y2="164" stroke="#17181c" stroke-width="1"/>
+  <line x1="410" y1="44" x2="410" y2="164" stroke="#17181c" stroke-width="1"/>
+  <!-- 横线 -->
+  <line x1="60" y1="74" x2="490" y2="74" stroke="#17181c" stroke-width="1"/>
+  <line x1="60" y1="104" x2="490" y2="104" stroke="#17181c" stroke-width="1"/>
+  <line x1="60" y1="134" x2="490" y2="134" stroke="#17181c" stroke-width="1"/>
+
+  <!-- 表头文字 -->
+  <text x="115" y="64" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">年级</text>
+  <text x="210" y="64" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">美术</text>
+  <text x="290" y="64" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">音乐</text>
+  <text x="370" y="64" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">体育</text>
+  <text x="450" y="64" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">合计</text>
+
+  <!-- 三年级 -->
+  <text x="115" y="94" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">三年级</text>
+  <text x="210" y="94" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">18</text>
+  <text x="290" y="94" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">12</text>
+  <text x="370" y="94" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">20</text>
+  <text x="450" y="94" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">50</text>
+
+  <!-- 四年级 -->
+  <text x="115" y="124" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">四年级</text>
+  <text x="210" y="124" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">15</text>
+  <text x="290" y="124" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">14</text>
+  <text x="370" y="124" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#17181c">21</text>
+  <text x="450" y="124" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">50</text>
+
+  <!-- 合计 -->
+  <text x="115" y="154" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">合计</text>
+  <text x="210" y="154" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">33</text>
+  <text x="290" y="154" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">26</text>
+  <text x="370" y="154" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">41</text>
+  <text x="450" y="154" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">100</text>
+
+  <!-- 标注 -->
+  <path d="M492,52 C512,66 514,120 494,144" fill="none" stroke="#8f2419" stroke-width="1.2" marker-end="url(#ar2)"/>
+  <text x="500" y="100" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">合计栏</text>
+
+  <text x="60" y="190" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#7a7266">横着加：18 + 12 + 20 = 50，是三年级的合计；竖着加：18 + 15 = 33，是美术的合计。</text>
+  <text x="60" y="214" font-family="'Noto Serif SC',serif" font-size="11.5" fill="#7a7266">右下角的 100 两个方向都要对得上：50 + 50 = 100，33 + 26 + 41 = 100。</text>
+  <text x="60" y="244" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">合计是表格自带的「对账单」：横竖对不上，就说明有数抄错或漏填了。</text>
+  <text x="60" y="272" font-family="'Noto Serif SC',serif" font-size="11" fill="#7a7266">这是复式统计表：两组共用同一套横标目，才能横着比；左上角那格交代横竖。</text>
+</svg>

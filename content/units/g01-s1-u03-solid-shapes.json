@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g01-s1-u03-solid-shapes",
+  "type": "unit",
+  "term": "g01-s1",
+  "unit_no": 3,
+  "title": "认识立体图形",
+  "slug": "solid-shapes",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "图形的认识",
+  "standard_ids": [
+    "std-s1-geo-1"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

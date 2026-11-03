@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "id": "g06-s2-u01-ratio-and-proportion",
+  "type": "unit",
+  "term": "g06-s2",
+  "unit_no": 1,
+  "title": "比和比例关系",
+  "slug": "ratio-and-proportion",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "比和比例",
+  "standard_ids": [
+    "std-s3-na-8",
+    "std-s3-na-9"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g06-s2-u01-p01-ratio-meaning",
+    "g06-s2-u01-p02-proportion"
+  ],
+  "summary": "从“两个数相除就是比”认识比、比值和比的基本性质，再把两个相等的比组成比例，用“比值一定还是乘积一定”判断正比例与反比例。"
+}

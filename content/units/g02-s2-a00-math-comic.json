@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "g02-s2-a00-math-comic",
+  "type": "unit",
+  "term": "g02-s2",
+  "unit_no": 0,
+  "title": "数学连环画",
+  "slug": "math-comic",
+  "kind": "activity",
+  "domain": "综合与实践",
+  "chapter": "综合与实践",
+  "standard_ids": [
+    "std-s1-cp-6"
+  ],
+  "outline_only": true,
+  "point_ids": [],
+  "summary": ""
+}

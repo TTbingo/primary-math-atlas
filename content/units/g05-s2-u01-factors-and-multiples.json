@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "g05-s2-u01-factors-and-multiples",
+  "type": "unit",
+  "term": "g05-s2",
+  "unit_no": 1,
+  "title": "因数和倍数",
+  "slug": "factors-and-multiples",
+  "kind": "unit",
+  "domain": "数与代数",
+  "chapter": "数的认识",
+  "standard_ids": [
+    "std-s3-na-1"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g05-s2-u01-p01-factors-multiples",
+    "g05-s2-u01-p02-primality"
+  ],
+  "summary": ""
+}

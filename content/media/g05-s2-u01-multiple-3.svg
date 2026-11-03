@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="240" viewBox="0 0 480 240" role="img">
+  <rect x="0" y="0" width="480" height="240" fill="#fffdf8"/>
+  <text x="240" y="24" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#17181c">3 的倍数，为什么看各位数字之和</text>
+
+  <!-- 三块说明牌 -->
+  <rect x="20" y="40" width="136" height="48" rx="6" fill="#f7f1e6" stroke="#cfc3ae" stroke-width="1"/>
+  <text x="88" y="59" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" font-weight="bold" fill="#17181c">2 的倍数</text>
+  <text x="88" y="77" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#5a5b60">看个位 0 2 4 6 8</text>
+
+  <rect x="172" y="40" width="136" height="48" rx="6" fill="#f7f1e6" stroke="#cfc3ae" stroke-width="1"/>
+  <text x="240" y="59" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" font-weight="bold" fill="#17181c">5 的倍数</text>
+  <text x="240" y="77" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#5a5b60">看个位 0 或 5</text>
+
+  <rect x="324" y="40" width="136" height="48" rx="6" fill="#fbf0ec" stroke="#8f2419" stroke-width="1.6"/>
+  <text x="392" y="59" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" font-weight="bold" fill="#8f2419">3 的倍数</text>
+  <text x="392" y="77" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="11" fill="#8f2419">看各位数字之和</text>
+
+  <line x1="20" y1="98" x2="460" y2="98" stroke="#cfc3ae" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- 141 的拆解 -->
+  <text x="240" y="120" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">141 = 100 + 40 + 1</text>
+  <text x="240" y="144" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">= (99 + 1) + (39 + 1) + 1</text>
+  <text x="240" y="168" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="14" fill="#17181c">= 99 + 39 + (1 + 4 + 1)</text>
+
+  <text x="240" y="196" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">99、39 都是 3 的倍数，只要看 1 + 4 + 1 = 6</text>
+  <text x="240" y="218" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="12" fill="#8f2419">6 是 3 的倍数，所以 141 是 3 的倍数</text>
+</svg>

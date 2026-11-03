@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "id": "grade-g05",
+  "type": "grade",
+  "grade": 5,
+  "title": "五年级",
+  "segment": 3,
+  "terms": [
+    {
+      "term": "g05-s1",
+      "label": "上册",
+      "units": [
+        "g05-s1-u01-observe-composites",
+        "g05-s1-u02-decimal-multiplication",
+        "g05-s1-u03-decimal-division",
+        "g05-s1-u04-figure-motion",
+        "g05-s1-u05-letters-for-numbers",
+        "g05-s1-u06-area-of-polygons",
+        "g05-s1-u07-probability",
+        "g05-s1-u08-review"
+      ],
+      "activities": [
+        "g05-s1-a00-tessellation"
+      ]
+    },
+    {
+      "term": "g05-s2",
+      "label": "下册",
+      "units": [
+        "g05-s2-u01-factors-and-multiples",
+        "g05-s2-u02-understanding-fractions",
+        "g05-s2-u03-fraction-add-sub",
+        "g05-s2-u04-cuboids-and-cubes",
+        "g05-s2-u05-line-chart",
+        "g05-s2-u06-review"
+      ],
+      "activities": [
+        "g05-s2-a00-weights-and-measures"
+      ]
+    }
+  ]
+}

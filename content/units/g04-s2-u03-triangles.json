@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "g04-s2-u03-triangles",
+  "type": "unit",
+  "term": "g04-s2",
+  "unit_no": 3,
+  "title": "三角形",
+  "slug": "triangles",
+  "kind": "unit",
+  "domain": "图形与几何",
+  "chapter": "图形的认识",
+  "standard_ids": [
+    "std-s2-geo-4"
+  ],
+  "outline_only": false,
+  "point_ids": [
+    "g04-s2-u03-p01-triangle-classify",
+    "g04-s2-u03-p02-triangle-angle-sum"
+  ],
+  "summary": "认识三角形的边和角，学会按角、按边分类，再用撕角拼平角的实验发现内角和是 180°。"
+}
