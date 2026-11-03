@@ -1,13 +1,16 @@
 """线上站点冒烟验证：检查渲染、公式、搜索索引、站内跳转、控制台报错。
 
-用法: python tools/verify_online.py [BASE_URL]
+用法: python tools/verify_online.py [BASE_URL] [SHARECODE]
 默认 BASE_URL = https://ttbingo.github.io/primary-math-atlas
+带门禁的域名（app.workbuddy.host）需传 SHARECODE，首次访问会种 cookie。
 """
 import sys
 from playwright.sync_api import sync_playwright
 
 BASE = (sys.argv[1] if len(sys.argv) > 1 else
         "https://ttbingo.github.io/primary-math-atlas").rstrip("/")
+CODE = sys.argv[2] if len(sys.argv) > 2 else ""
+ENTRY = BASE + (f"/?sharecode={CODE}" if CODE else "/")
 SHOTS = ".shots"
 
 
@@ -19,7 +22,7 @@ def main():
         pg.on("console", lambda m: errs.append(m.text) if m.type == "error" else None)
         pg.on("pageerror", lambda e: errs.append(str(e)))
 
-        pg.goto(BASE + "/", wait_until="networkidle", timeout=60000)
+        pg.goto(ENTRY, wait_until="networkidle", timeout=60000)
         cards = pg.locator(".mod-card").count()
         idx = pg.evaluate("(window.__SEARCH_INDEX__||[]).length")
         links = pg.locator("a[href]").count()
@@ -54,6 +57,19 @@ def main():
             fails.append(f"残留裸 $ 公式: {bare[:3]}")
         pg.screenshot(path=f"{SHOTS}/gh-point.png", full_page=False)
 
+        # 配图是否真的加载（门禁域名子资源易 403）
+        pg.goto(BASE + "/points/m2-01-05-triangle-classify/", wait_until="networkidle",
+                timeout=60000)
+        bad_img = pg.evaluate(
+            "[...document.images].filter(i=>!i.complete||i.naturalWidth===0)"
+            ".map(i=>i.currentSrc||i.src)")
+        n_img = pg.evaluate("document.images.length")
+        print(f"三角形分类页: 图片={n_img} 加载失败={len(bad_img)}")
+        if n_img == 0:
+            fails.append("配图未出现在页面")
+        if bad_img:
+            fails.append(f"配图加载失败: {bad_img[:2]}")
+
         # 搜索
         pg.keyboard.press("Control+k")
         pg.wait_for_timeout(400)
@@ -66,7 +82,7 @@ def main():
                 fails.append("搜索无结果")
         pg.screenshot(path=f"{SHOTS}/gh-search.png")
 
-        pg.goto(BASE + "/", wait_until="networkidle")
+        pg.goto(ENTRY, wait_until="networkidle")
         pg.screenshot(path=f"{SHOTS}/gh-home.png", full_page=False)
         br.close()
 
