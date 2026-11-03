@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img">
+  <rect x="0" y="0" width="520" height="300" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">同样的长条，分的份数不同，涂色部分一样长</text>
+  <rect x="30" y="62" width="190" height="42" fill="#e8dcc4" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="220" y="62" width="190" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <text x="440" y="89" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="16" fill="#17181c">1/2</text>
+  <text x="30" y="54" text-anchor="start" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">平均分成 2 份，涂 1 份</text>
+  <rect x="30" y="130" width="95" height="42" fill="#e8dcc4" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="125" y="130" width="95" height="42" fill="#e8dcc4" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="220" y="130" width="95" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="315" y="130" width="95" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <text x="440" y="157" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="16" fill="#17181c">2/4</text>
+  <text x="30" y="122" text-anchor="start" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">平均分成 4 份，涂 2 份</text>
+  <rect x="30" y="198" width="47.5" height="42" fill="#e8dcc4" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="77.5" y="198" width="47.5" height="42" fill="#e8dcc4" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="125" y="198" width="47.5" height="42" fill="#e8dcc4" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="172.5" y="198" width="47.5" height="42" fill="#e8dcc4" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="220" y="198" width="47.5" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="267.5" y="198" width="47.5" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="315" y="198" width="47.5" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <rect x="362.5" y="198" width="47.5" height="42" fill="#fffdf8" stroke="#17181c" stroke-width="1.2"/>
+  <text x="440" y="225" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="16" fill="#17181c">4/8</text>
+  <text x="30" y="190" text-anchor="start" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">平均分成 8 份，涂 4 份</text>
+  <text x="260" y="272" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="17" fill="#8f2419">1/2 = 2/4 = 4/8</text>
+  <text x="260" y="294" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">分子、分母同时乘或除以同一个不为 0 的数，分数的大小不变</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img">
+  <rect x="0" y="0" width="520" height="300" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">彩旗按「红 黄 蓝 绿」重复排列</text>
+  <line x1="38" y1="66" x2="38" y2="118" stroke="#7a7266" stroke-width="1.2"/>
+  <path d="M 38,70 L 66,70 L 58,82 L 66,94 L 38,94 Z" fill="#c0392b" stroke="#17181c" stroke-width="0.8"/>
+  <text x="38" y="132" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">1</text>
+  <line x1="78" y1="66" x2="78" y2="118" stroke="#7a7266" stroke-width="1.2"/>
+  <path d="M 78,70 L 106,70 L 98,82 L 106,94 L 78,94 Z" fill="#d9a441" stroke="#17181c" stroke-width="0.8"/>
+  <text x="78" y="132" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">2</text>
+  <line x1="118" y1="66" x2="118" y2="118" stroke="#7a7266" stroke-width="1.2"/>
+  <path d="M 118,70 L 146,70 L 138,82 L 146,94 L 118,94 Z" fill="#2b6cb0" stroke="#17181c" stroke-width="0.8"/>
+  <text x="118" y="132" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">3</text>
+  <line x1="158" y1="66" x2="158" y2="118" stroke="#7a7266" stroke-width="1.2"/>
+  <path d="M 158,70 L 186,70 L 178,82 L 186,94 L 158,94 Z" fill="#4a7c59" stroke="#17181c" stroke-width="0.8"/>
+  <text x="158" y="132" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">4</text>
+  <line x1="198" y1="66" x2="198" y2="118" stroke="#7a7266" stroke-width="1.2"/>
+  <path d="M 198,70 L 226,70 L 218,82 L 226,94 L 198,94 Z" fill="#c0392b" stroke="#17181c" stroke-width="0.8"/>
+  <text x="198" y="132" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">5</text>
+  <line x1="238" y1="66" x2="238" y2="118" stroke="#7a7266" stroke-width="1.2"/>
+  <path d="M 238,70 L 266,70 L 258,82 L 266,94 L 238,94 Z" fill="#d9a441" stroke="#17181c" stroke-width="0.8"/>
+  <text x="238" y="132" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">6</text>
+  <line x1="278" y1="66" x2="278" y2="118" stroke="#7a7266" stroke-width="1.2"/>
+  <path d="M 278,70 L 306,70 L 298,82 L 306,94 L 278,94 Z" fill="#2b6cb0" stroke="#17181c" stroke-width="0.8"/>
+  <text x="278" y="132" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">7</text>
+  <line x1="318" y1="66" x2="318" y2="118" stroke="#7a7266" stroke-width="1.2"/>
+  <path d="M 318,70 L 346,70 L 338,82 L 346,94 L 318,94 Z" fill="#4a7c59" stroke="#17181c" stroke-width="0.8"/>
+  <text x="318" y="132" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">8</text>
+  <line x1="358" y1="66" x2="358" y2="118" stroke="#7a7266" stroke-width="1.2"/>
+  <path d="M 358,70 L 386,70 L 378,82 L 386,94 L 358,94 Z" fill="#c0392b" stroke="#17181c" stroke-width="0.8"/>
+  <text x="358" y="132" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">9</text>
+  <line x1="398" y1="66" x2="398" y2="118" stroke="#7a7266" stroke-width="1.2"/>
+  <path d="M 398,70 L 426,70 L 418,82 L 426,94 L 398,94 Z" fill="#d9a441" stroke="#17181c" stroke-width="0.8"/>
+  <text x="398" y="132" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">10</text>
+  <line x1="438" y1="66" x2="438" y2="118" stroke="#7a7266" stroke-width="1.2"/>
+  <path d="M 438,70 L 466,70 L 458,82 L 466,94 L 438,94 Z" fill="#2b6cb0" stroke="#17181c" stroke-width="0.8"/>
+  <text x="438" y="132" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">11</text>
+  <line x1="478" y1="66" x2="478" y2="118" stroke="#7a7266" stroke-width="1.2"/>
+  <path d="M 478,70 L 506,70 L 498,82 L 506,94 L 478,94 Z" fill="#4a7c59" stroke="#17181c" stroke-width="0.8"/>
+  <text x="478" y="132" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">12</text>
+  <rect x="28" y="58" width="160" height="82" rx="4" fill="none" stroke="#8f2419" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text x="108" y="156" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#8f2419">一组 4 面</text>
+  <text x="260" y="190" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#8f2419">第 14 面是什么颜色？14 ÷ 4 = 3 … 2</text>
+  <text x="260" y="218" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12.5" fill="#17181c">余 2 → 是一组里的第 2 面 → 黄色</text>
+  <text x="260" y="246" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">余 0 就是一组里的最后一面</text>
+  <text x="260" y="276" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">先找出重复的一组有几个，再用除法看余数</text>
+</svg>

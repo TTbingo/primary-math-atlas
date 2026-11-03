@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" role="img">
+  <rect x="0" y="0" width="480" height="320" fill="#fffdf8"/>
+  <text x="240" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">圆的各个部分</text>
+  <circle cx="148" cy="148" r="96" fill="#f7f2e6" stroke="#17181c" stroke-width="1.8"/>
+  <line x1="148" y1="148" x2="226.6" y2="92.9" stroke="#c0392b" stroke-width="1.8"/>
+  <text x="193.6" y="116.1" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#8f2419">r</text>
+  <line x1="148" y1="148" x2="74.5" y2="86.3" stroke="#c0392b" stroke-width="1.8"/>
+  <text x="105.3" y="112.2" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#8f2419">r</text>
+  <line x1="148" y1="148" x2="123.2" y2="240.7" stroke="#c0392b" stroke-width="1.8"/>
+  <text x="133.6" y="201.8" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#8f2419">r</text>
+  <line x1="52" y1="148" x2="244" y2="148" stroke="#2b6cb0" stroke-width="2.2"/>
+  <text x="148" y="136" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#2b6cb0">d</text>
+  <circle cx="148" cy="148" r="3.4" fill="#17181c"/>
+  <text x="158" y="164" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#17181c">O</text>
+  <text x="158" y="180" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#7a7266">圆心</text>
+  <circle cx="280" cy="92" r="3" fill="#bfa578"/>
+  <text x="290" y="96" text-anchor="start" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#17181c">圆心 O：圆的中心</text>
+  <circle cx="280" cy="118" r="3" fill="#bfa578"/>
+  <text x="290" y="122" text-anchor="start" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#17181c">半径 r：圆心到圆上一点</text>
+  <circle cx="280" cy="144" r="3" fill="#bfa578"/>
+  <text x="290" y="148" text-anchor="start" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#17181c">直径 d：过圆心、两端在圆上</text>
+  <circle cx="280" cy="170" r="3" fill="#bfa578"/>
+  <text x="290" y="174" text-anchor="start" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#17181c">同圆里，半径都相等</text>
+  <text x="280" y="214" text-anchor="start" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#8f2419">d = 2r，r = d ÷ 2</text>
+  <text x="240" y="262" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#7a7266">圆心决定圆画在哪儿，半径决定圆画得多大</text>
+  <text x="240" y="284" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">一个圆里有无数条半径、无数条直径，它们都分别相等</text>
+  <text x="240" y="306" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">用圆规画圆：针尖扎的那点就是圆心，两脚张开的距离就是半径</text>
+</svg>

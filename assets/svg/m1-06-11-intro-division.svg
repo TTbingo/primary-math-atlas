@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="320" viewBox="0 0 520 320" role="img">
+  <rect x="0" y="0" width="520" height="320" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">把 12 个圆片平均分，有两种分法</text>
+  <rect x="26" y="62" width="146" height="62" rx="6" fill="#f7f2e6" stroke="#b9a888" stroke-width="1.3"/>
+  <circle cx="48" cy="93" r="10" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>
+  <circle cx="82" cy="93" r="10" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>
+  <circle cx="116" cy="93" r="10" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>
+  <circle cx="150" cy="93" r="10" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>
+  <rect x="184" y="62" width="146" height="62" rx="6" fill="#f7f2e6" stroke="#b9a888" stroke-width="1.3"/>
+  <circle cx="206" cy="93" r="10" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>
+  <circle cx="240" cy="93" r="10" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>
+  <circle cx="274" cy="93" r="10" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>
+  <circle cx="308" cy="93" r="10" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>
+  <rect x="342" y="62" width="146" height="62" rx="6" fill="#f7f2e6" stroke="#b9a888" stroke-width="1.3"/>
+  <circle cx="364" cy="93" r="10" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>
+  <circle cx="398" cy="93" r="10" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>
+  <circle cx="432" cy="93" r="10" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>
+  <circle cx="466" cy="93" r="10" fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>
+  <text x="260" y="148" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#8f2419">平均分成 3 份，每份 4 个：12 ÷ 3 = 4</text>
+  <rect x="34" y="190" width="38" height="34" fill="#cfe0d0" stroke="#b9a888" stroke-width="1"/>
+  <text x="53.0" y="213" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">1</text>
+  <rect x="72" y="190" width="38" height="34" fill="#cfe0d0" stroke="#b9a888" stroke-width="1"/>
+  <text x="91.0" y="213" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">2</text>
+  <rect x="110" y="190" width="38" height="34" fill="#cfe0d0" stroke="#b9a888" stroke-width="1"/>
+  <text x="129.0" y="213" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">3</text>
+  <rect x="148" y="190" width="38" height="34" fill="#cfe0d0" stroke="#b9a888" stroke-width="1"/>
+  <text x="167.0" y="213" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">4</text>
+  <rect x="186" y="190" width="38" height="34" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <text x="205.0" y="213" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">5</text>
+  <rect x="224" y="190" width="38" height="34" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <text x="243.0" y="213" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">6</text>
+  <rect x="262" y="190" width="38" height="34" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <text x="281.0" y="213" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">7</text>
+  <rect x="300" y="190" width="38" height="34" fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>
+  <text x="319.0" y="213" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">8</text>
+  <rect x="338" y="190" width="38" height="34" fill="#cfe0d0" stroke="#b9a888" stroke-width="1"/>
+  <text x="357.0" y="213" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">9</text>
+  <rect x="376" y="190" width="38" height="34" fill="#cfe0d0" stroke="#b9a888" stroke-width="1"/>
+  <text x="395.0" y="213" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">10</text>
+  <rect x="414" y="190" width="38" height="34" fill="#cfe0d0" stroke="#b9a888" stroke-width="1"/>
+  <text x="433.0" y="213" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">11</text>
+  <rect x="452" y="190" width="38" height="34" fill="#cfe0d0" stroke="#b9a888" stroke-width="1"/>
+  <text x="471.0" y="213" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#17181c">12</text>
+  <line x1="34" y1="182" x2="34" y2="232" stroke="#8f2419" stroke-width="1.6"/>
+  <line x1="186" y1="182" x2="186" y2="232" stroke="#8f2419" stroke-width="1.6"/>
+  <line x1="338" y1="182" x2="338" y2="232" stroke="#8f2419" stroke-width="1.6"/>
+  <line x1="490" y1="182" x2="490" y2="232" stroke="#8f2419" stroke-width="1.6"/>
+  <text x="260" y="254" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="13" fill="#8f2419">每 4 个一份，能分成 3 份：12 ÷ 4 = 3</text>
+  <text x="260" y="284" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#7a7266">两种分法都是「平均分」，都用除法计算</text>
+  <text x="260" y="308" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#8f2419">总数 ÷ 份数 = 每份数；总数 ÷ 每份数 = 份数</text>
+</svg>

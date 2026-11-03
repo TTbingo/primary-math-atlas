@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300" role="img">
+  <rect x="0" y="0" width="480" height="300" fill="#fffdf8"/>
+  <text x="240" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">弧和扇形</text>
+  <path d="M 120,160 L 203.1,112 A 96,96 0 0 0 103.3,65.5 Z" fill="#f2ecdc" stroke="#17181c" stroke-width="1.6"/>
+  <line x1="120" y1="160" x2="203.1" y2="112" stroke="#17181c" stroke-width="1.8"/>
+  <line x1="120" y1="160" x2="103.3" y2="65.5" stroke="#17181c" stroke-width="1.8"/>
+  <circle cx="120" cy="160" r="3.4" fill="#17181c"/>
+  <path d="M 113.1,120.6 A 40,40 0 0 1 154.6,140" fill="none" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="144.5" y="111.4" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#8f2419">圆心角</text>
+  <text x="166.5" y="64.3" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#2b6cb0">弧</text>
+  <text x="120" y="262" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12.5" fill="#17181c">圆心角小（70°）</text>
+  <path d="M 350,160 L 437,119.4 A 96,96 0 0 0 254.4,151.6 Z" fill="#f2ecdc" stroke="#17181c" stroke-width="1.6"/>
+  <line x1="350" y1="160" x2="437" y2="119.4" stroke="#17181c" stroke-width="1.8"/>
+  <line x1="350" y1="160" x2="254.4" y2="151.6" stroke="#17181c" stroke-width="1.8"/>
+  <circle cx="350" cy="160" r="3.4" fill="#17181c"/>
+  <path d="M 310.2,156.5 A 40,40 0 0 1 386.3,143.1" fill="none" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="339.9" y="106.9" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#8f2419">圆心角</text>
+  <text x="330.9" y="55.7" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#2b6cb0">弧</text>
+  <text x="350" y="262" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12.5" fill="#17181c">圆心角大（150°）</text>
+  <text x="240" y="288" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">圆上两点之间的部分叫弧；两条半径和一段弧围成的图形叫扇形</text>
+</svg>
