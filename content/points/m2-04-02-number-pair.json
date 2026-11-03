@@ -29,9 +29,7 @@
     "符号意识"
   ],
   "scope": "core",
-  "prerequisites": [
-    "m2-03-02-translation-rotation"
-  ],
+  "prerequisites": [],
   "media": [
     {
       "id": "fig1",

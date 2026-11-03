@@ -32,7 +32,7 @@
   "scope": "core",
   "prerequisites": [
     "m1-01-03-num-within-100",
-    "m1-01-09-fraction-meaning"
+    "m1-01-06-decimal-position"
   ],
   "media": [
     {

@@ -31,7 +31,7 @@
   "scope": "core",
   "prerequisites": [
     "m1-01-09-fraction-meaning",
-    "m1-03-03-fraction-forms"
+    "m1-01-10-fraction-property"
   ],
   "media": [
     {

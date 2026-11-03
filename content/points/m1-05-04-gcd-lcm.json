@@ -30,7 +30,7 @@
   "scope": "core",
   "prerequisites": [
     "m1-05-01-factors-multiples",
-    "m1-05-03-prime-composite"
+    "m1-05-02-divisibility-rules"
   ],
   "sections": {
     "explanation": [
@@ -149,7 +149,7 @@
       },
       {
         "id": "m1-05-03-prime-composite",
-        "note": "前置：短除要除到商互质，得先知道什么是质数"
+        "note": "前置：短除要除到两个商互质，得先知道什么是互质"
       },
       {
         "id": "m1-01-09-fraction-meaning",

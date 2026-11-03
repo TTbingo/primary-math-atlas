@@ -29,11 +29,7 @@
     "模型意识"
   ],
   "scope": "core",
-  "prerequisites": [
-    "m1-06-02-add-within-5",
-    "m1-06-09-intro-multiplication",
-    "m1-06-11-intro-division"
-  ],
+  "prerequisites": [],
   "sections": {
     "explanation": [
       "四则运算不是四个孤立的动作，而是同一条链上的四个环节。用一个情境就能看清：**24 个苹果，每盒装 6 个，能装 4 盒**。",

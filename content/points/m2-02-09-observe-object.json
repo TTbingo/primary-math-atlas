@@ -29,9 +29,7 @@
     "推理意识"
   ],
   "scope": "core",
-  "prerequisites": [
-    "m2-02-01-solid-features"
-  ],
+  "prerequisites": [],
   "media": [
     {
       "id": "fig1",

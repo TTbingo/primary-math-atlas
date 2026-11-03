@@ -30,8 +30,7 @@
   ],
   "scope": "core",
   "prerequisites": [
-    "m1-06-26-add-laws",
-    "m1-06-27-mult-laws"
+    "m1-06-24-mixed-op-order"
   ],
   "sections": {
     "explanation": [

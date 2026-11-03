@@ -30,9 +30,7 @@
     "应用意识"
   ],
   "scope": "core",
-  "prerequisites": [
-    "m4-02-01-pattern-formula"
-  ],
+  "prerequisites": [],
   "media": [
     {
       "id": "fig1",

@@ -30,8 +30,8 @@
   ],
   "scope": "core",
   "prerequisites": [
-    "m2-01-17-rect-area",
-    "m2-01-18-area-parallelogram"
+    "m2-01-09-circle-features",
+    "m2-01-13-perimeter"
   ],
   "media": [
     {
@@ -166,7 +166,7 @@
       },
       {
         "id": "m2-01-17-rect-area",
-        "note": "前置：先有周长、面积的概念，才分得清 πd 和 πr²"
+        "note": "递进：有了 S = ab 这个根基，把圆剪拼成长方形时，才拼得出长 πr、宽 r"
       },
       {
         "id": "m2-02-07-cylinder-volume",
