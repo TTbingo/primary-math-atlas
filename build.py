@@ -537,8 +537,11 @@ def resolve_fig_slots(html, p, depth, idx):
         fig = (f'<figure class="fig"><img src="{src}" width="{m.get("width",480)}" '
                f'height="{m.get("height",260)}" alt="{attr(fig_alt(m.get("alt","")))}" loading="lazy">'
                f'<figcaption>{render_text(m.get("caption",""))}</figcaption></figure>')
-        html = html.replace(f'<div class="why-fig" data-fig-slot="{fid}"></div>', fig)
-        html = html.replace(f'<div class="ex-fig" data-fig-slot="{fid}"></div>', fig)
+        # 同一张图可能被「为什么是这样」和「例题」同时引用，只保留第一个位置
+        slot = (r'<div class="(?:why-fig|ex-fig)" data-fig-slot="'
+                + re.escape(fid) + r'"></div>')
+        html = re.sub(slot, lambda _m: fig, html, count=1)
+        html = re.sub(slot, "", html)
     html = re.sub(r'<span class="figref" data-fig="([A-Za-z0-9_-]+)"></span>', "", html)
     html = re.sub(r'<div class="why-fig" data-fig-slot="[^"]*"></div>', "", html)
     html = re.sub(r'<div class="ex-fig" data-fig-slot="[^"]*"></div>', "", html)
@@ -635,8 +638,21 @@ def emit_point(idx, pid, depth=2):
     body.append(render_standards(p, depth, idx))
     secs = render_sections(p, depth, idx, 2)
     if p.get("media"):
-        # 图若未被 slot 引用，统一放在「为什么是这样」之前
-        pass
+        # 图若未被正文 slot 引用，统一放在「为什么是这样」之前
+        unused = []
+        for m in p["media"]:
+            if f'data-fig-slot="{m["id"]}"' in secs:
+                continue
+            src = f"{idx.root_for(depth)}/assets/svg/{m['file']}"
+            unused.append(
+                f'<figure class="fig"><img src="{src}" '
+                f'width="{m.get("width",480)}" height="{m.get("height",260)}" '
+                f'alt="{attr(fig_alt(m.get("alt","")))}" loading="lazy">'
+                f'<figcaption>{render_text(m.get("caption",""))}</figcaption></figure>')
+        if unused:
+            figs = "".join(unused)
+            marker = '<section class="block sec-why"'
+            secs = secs.replace(marker, figs + marker, 1) if marker in secs else secs + figs
     body.append(secs)
     body.append(render_related_block_tail(p, depth, idx))
     # 上下页
