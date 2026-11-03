@@ -30,6 +30,16 @@
   "prerequisites": [
     "m4-03-02-multiplication-principle"
   ],
+  "media": [
+    {
+      "id": "fig1",
+      "file": "m4-03-03-permutation-combination.svg",
+      "alt": "左右两栏对比从 A、B、C 里选 2 人：左栏只选出 2 人不讲顺序，列出 AB、AC、BC 共 3 种；右栏选 2 人当正副班长要讲顺序，列出 AB、BA、AC、CA、BC、CB 共 6 种。图下说明：同样是选 2 人，要不要排先后结果差一倍；组合不管顺序，排列要分位置，可用 3×2=6 算。",
+      "width": 520,
+      "height": 300,
+      "caption": "图 1：选人还是排位置，一个要除、一个不用"
+    }
+  ],
   "sections": {
     "explanation": [
       "同样一句「从 5 个人里选 3 个人」，问法不同，答案差很多。要是选出来还要排成一排照相，甲站中间和乙站中间是两张不同的照片；要是选出来只是去扫地，谁站哪儿根本没人管。",

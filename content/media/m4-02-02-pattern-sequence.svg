@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="300" viewBox="0 0 520 300" role="img">
+  <rect x="0" y="0" width="520" height="300" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">三角形数：1、3、6、10、15 …</text>
+  <circle cx="60" cy="72" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <text x="60" y="178" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#8f2419">1</text>
+  <circle cx="160" cy="72" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="152" cy="88" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="168" cy="88" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <text x="160" y="178" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#8f2419">3</text>
+  <circle cx="260" cy="72" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="252" cy="88" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="268" cy="88" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="244" cy="104" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="260" cy="104" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="276" cy="104" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <text x="260" y="178" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#8f2419">6</text>
+  <circle cx="360" cy="72" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="352" cy="88" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="368" cy="88" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="344" cy="104" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="360" cy="104" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="376" cy="104" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="336" cy="120" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="352" cy="120" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="368" cy="120" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="384" cy="120" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <text x="360" y="178" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#8f2419">10</text>
+  <circle cx="460" cy="72" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="452" cy="88" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="468" cy="88" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="444" cy="104" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="460" cy="104" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="476" cy="104" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="436" cy="120" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="452" cy="120" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="468" cy="120" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="484" cy="120" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="428" cy="136" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="444" cy="136" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="460" cy="136" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="476" cy="136" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <circle cx="492" cy="136" r="5.5" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>
+  <text x="460" y="178" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#8f2419">15</text>
+  <text x="110" y="206" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#7a7266">+2</text>
+  <text x="210" y="206" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#7a7266">+3</text>
+  <text x="310" y="206" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#7a7266">+4</text>
+  <text x="410" y="206" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#7a7266">+5</text>
+  <text x="260" y="242" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">相邻两项的差依次多 1：+2、+3、+4、+5，下一项该 +6</text>
+  <text x="260" y="268" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">所以 15 后面是 21；这些数叫三角形数</text>
+</svg>

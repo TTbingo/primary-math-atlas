@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="320" viewBox="0 0 520 320" role="img">
+  <rect x="0" y="0" width="520" height="320" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">甲 10 天完成，乙 15 天完成，合作要几天？</text>
+  <rect x="40" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <line x1="40" y1="72" x2="40" y2="128" stroke="#8f2419" stroke-width="1.6"/>
+  <rect x="54" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="68" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="82" y="80" width="14" height="40" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="96" y="80" width="14" height="40" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="110" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <line x1="110" y1="72" x2="110" y2="128" stroke="#8f2419" stroke-width="1.6"/>
+  <rect x="124" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="138" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="152" y="80" width="14" height="40" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="166" y="80" width="14" height="40" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="180" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <line x1="180" y1="72" x2="180" y2="128" stroke="#8f2419" stroke-width="1.6"/>
+  <rect x="194" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="208" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="222" y="80" width="14" height="40" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="236" y="80" width="14" height="40" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="250" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <line x1="250" y1="72" x2="250" y2="128" stroke="#8f2419" stroke-width="1.6"/>
+  <rect x="264" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="278" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="292" y="80" width="14" height="40" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="306" y="80" width="14" height="40" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="320" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <line x1="320" y1="72" x2="320" y2="128" stroke="#8f2419" stroke-width="1.6"/>
+  <rect x="334" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="348" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="362" y="80" width="14" height="40" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="376" y="80" width="14" height="40" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="390" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <line x1="390" y1="72" x2="390" y2="128" stroke="#8f2419" stroke-width="1.6"/>
+  <rect x="404" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="418" y="80" width="14" height="40" fill="#d8e2ef" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="432" y="80" width="14" height="40" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.8"/>
+  <rect x="446" y="80" width="14" height="40" fill="#cfe0d0" stroke="#b9a888" stroke-width="0.8"/>
+  <text x="75" y="156" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">第 1 天</text>
+  <text x="145" y="156" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">第 2 天</text>
+  <text x="215" y="156" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">第 3 天</text>
+  <text x="285" y="156" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">第 4 天</text>
+  <text x="355" y="156" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">第 5 天</text>
+  <text x="425" y="156" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">第 6 天</text>
+  <text x="40" y="66" text-anchor="start" font-family="'Noto Serif SC','Songti SC',serif" font-size="11" fill="#7a7266">蓝 3 格 = 甲 1 天，绿 2 格 = 乙 1 天</text>
+  <text x="260" y="190" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">把总量看成 30 份（10 和 15 的最小公倍数）</text>
+  <text x="260" y="218" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">甲每天 3 份、乙每天 2 份，合作每天 5 份</text>
+  <text x="260" y="248" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="15" fill="#8f2419">30 ÷ 5 = 6（天）</text>
+  <text x="260" y="278" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#7a7266">也可把总量看成 1：1 ÷ (1/10 + 1/15) = 6 天</text>
+  <text x="260" y="302" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="11.5" fill="#8f2419">工程问题里工作总量常设为 1，效率就是 1 ÷ 天数</text>
+</svg>

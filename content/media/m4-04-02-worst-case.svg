@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="320" viewBox="0 0 520 320" role="img">
+  <rect x="0" y="0" width="520" height="320" fill="#fffdf8"/>
+  <text x="260" y="26" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="14" fill="#17181c">闭眼摸球：至少摸几个，保证有 2 个同色？</text>
+  <circle cx="70" cy="86" r="14" fill="#c0392b" stroke="#17181c" stroke-width="1"/>
+  <circle cx="106" cy="86" r="14" fill="#c0392b" stroke="#17181c" stroke-width="1"/>
+  <circle cx="142" cy="86" r="14" fill="#c0392b" stroke="#17181c" stroke-width="1"/>
+  <circle cx="178" cy="86" r="14" fill="#2b6cb0" stroke="#17181c" stroke-width="1"/>
+  <circle cx="214" cy="86" r="14" fill="#2b6cb0" stroke="#17181c" stroke-width="1"/>
+  <circle cx="250" cy="86" r="14" fill="#2b6cb0" stroke="#17181c" stroke-width="1"/>
+  <text x="260" y="122" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#7a7266">盒里 3 个红球、3 个蓝球</text>
+  <text x="260" y="150" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12.5" fill="#8f2419">先想「最倒霉」能拖到哪一步</text>
+  <rect x="30" y="170" width="146" height="66" rx="4" fill="#f7f2e6" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="103" y="196" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">第 1 个：红</text>
+  <text x="103" y="218" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">还没有同色</text>
+  <rect x="192" y="170" width="146" height="66" rx="4" fill="#f7f2e6" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="265" y="196" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">第 2 个：蓝</text>
+  <text x="265" y="218" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">还是没有同色</text>
+  <rect x="354" y="170" width="146" height="66" rx="4" fill="#f7f2e6" stroke="#b9a888" stroke-width="1.2"/>
+  <text x="427" y="196" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#17181c">第 3 个：？</text>
+  <text x="427" y="218" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="10.5" fill="#7a7266">红或蓝都能凑一对</text>
+  <text x="260" y="264" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#8f2419">最多摸 2 个还都是不同色，再摸 1 个必然凑成一对 → 3 个</text>
+  <text x="260" y="292" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="12" fill="#7a7266">最不利原则：先想最坏情况能撑几步，再加 1</text>
+</svg>

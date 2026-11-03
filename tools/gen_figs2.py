@@ -852,9 +852,256 @@ BATCH2 = [number_classify, decimal_position, fraction_meaning,
           fraction_property, percentage_meaning, positive_negative,
           intro_multiplication, intro_division, remainder_rule, decimal_mult,
           fraction_add_sub, mult_laws]
+# ───────────────────────────────────────────── 27. 算式中的规律
+def pattern_formula():
+    W, H = 520, 300
+    b = title(W, "从 1 开始连续加奇数，和是多少？")
+    for n, cx in enumerate((70, 190, 310, 430), start=1):
+        sx = cx - (n - 1) * 7.5
+        for i in range(n):
+            for j in range(n):
+                b += (f'  <circle cx="{f(sx+i*15)}" cy="{f(76+j*15)}" r="5" '
+                      f'fill="#e8dcc4" stroke="#b9a888" stroke-width="1"/>\n')
+        b += txt(cx, 170, ["1", "1+3", "1+3+5", "1+3+5+7"][n - 1], size=12)
+        b += txt(cx, 196, ["=1", "=4", "=9", "=16"][n - 1], size=14,
+                 color="#8f2419")
+        b += txt(cx, 216, ["1×1", "2×2", "3×3", "4×4"][n - 1], size=11,
+                 color="#7a7266")
+    b += note(260, 250, "从 1 起，连续奇数相加，加到第 n 个，和正好是 n × n",
+              size=12)
+    b += note(260, 276, "点阵每添一层 L 形，新多的点数就是下一个奇数",
+              size=11.5)
+    write("m4-02-01-pattern-formula.svg", svg(W, H, b))
+
+
+# ───────────────────────────────────────────── 28. 数列中的规律
+def pattern_sequence():
+    W, H = 520, 300
+    b = title(W, "三角形数：1、3、6、10、15 …")
+    for k, cx in enumerate((60, 160, 260, 360, 460), start=1):
+        for row in range(k):
+            for col in range(row + 1):
+                x = cx + (col - row / 2) * 16
+                b += (f'  <circle cx="{f(x)}" cy="{f(72+row*16)}" r="5.5" '
+                      f'fill="#cfe0d0" stroke="#b9a888" stroke-width="0.9"/>\n')
+        b += txt(cx, 178, ["1", "3", "6", "10", "15"][k - 1], size=14,
+                 color="#8f2419")
+    for i, d in enumerate((2, 3, 4, 5)):
+        b += txt(110 + i * 100, 206, f"+{d}", size=11, color="#7a7266")
+    b += note(260, 242, "相邻两项的差依次多 1：+2、+3、+4、+5，下一项该 +6",
+              size=11.5)
+    b += note(260, 268, "所以 15 后面是 21；这些数叫三角形数", size=12,
+              color="#8f2419")
+    write("m4-02-02-pattern-sequence.svg", svg(W, H, b))
+
+
+# ───────────────────────────────────────────── 29. 数图形中的规律
+def pattern_figure():
+    W, H = 520, 300
+    b = title(W, "数线段、数角，怎样不重不漏？")
+    b += line(40, 100, 240, 100, "#17181c", 2)
+    for i, lab in enumerate("ABCDE"):
+        x = 40 + i * 50
+        b += (f'  <circle cx="{x}" cy="100" r="4" fill="#c0392b"/>\n')
+        b += txt(x, 122, lab, size=11)
+    b += txt(140, 152, "以 A 起 4 条、B 起 3 条、C 起 2 条、D 起 1 条",
+             size=11)
+    b += txt(140, 180, "4 + 3 + 2 + 1 = 10（条）", size=13, color="#8f2419")
+    ox, oy = 380, 190
+    for ex, ey in ((300, 90), (350, 76), (410, 76), (460, 90)):
+        b += line(ox, oy, ex, ey, "#17181c", 1.6)
+    b += (f'  <circle cx="{ox}" cy="{oy}" r="4" fill="#c0392b"/>\n')
+    b += txt(380, 212, "3 + 2 + 1 = 6（个角）", size=13, color="#8f2419")
+    b += note(260, 246, "固定一个起点按顺序数，就不会数重，也不会漏", size=11.5)
+    b += note(260, 272, "n 个点（或 n 条射线）都是 1 + 2 + … + (n-1)",
+              size=11.5, color="#8f2419")
+    write("m4-02-04-pattern-figure.svg", svg(W, H, b))
+
+
+# ───────────────────────────────────────────── 30. 加法原理
+def addition_principle():
+    W, H = 520, 300
+    b = title(W, "从家到学校，有几类走法？")
+    b += box(40, 70, 180, 120, "", fill="#f7f2e6")
+    b += txt(130, 96, "第 1 类：坐公交", size=12.5)
+    b += box(300, 70, 180, 120, "", fill="#f7f2e6")
+    b += txt(390, 96, "第 2 类：走路", size=12.5)
+    for i in range(2):
+        b += (f'  <rect x="{70+i*80}" y="122" width="60" height="42" rx="4" '
+              f'fill="#e8dcc4" stroke="#b9a888" stroke-width="1.2"/>\n')
+        b += txt(100 + i * 80, 148, f"路线 {i+1}", size=11)
+    for i in range(3):
+        b += (f'  <rect x="{318+i*54}" y="122" width="46" height="42" rx="4" '
+              f'fill="#cfe0d0" stroke="#b9a888" stroke-width="1.2"/>\n')
+        b += txt(341 + i * 54, 148, f"路线 {i+1}", size=10)
+    b += txt(260, 140, "或", size=16, color="#8f2419")
+    b += txt(260, 224, "2 + 3 = 5（种）", size=16, color="#8f2419")
+    b += note(260, 258, "每一类办法都能单独把这件事做完，就把各类的种数相加",
+              size=11.5)
+    b += note(260, 284, "和分步计数区分开：分类用加法，分步用乘法",
+              size=11.5, color="#8f2419")
+    write("m4-03-01-addition-principle.svg", svg(W, H, b))
+
+
+# ───────────────────────────────────────────── 31. 排列与组合
+def permutation_combination():
+    W, H = 520, 300
+    b = title(W, "从 A、B、C 里选 2 人")
+    b += txt(145, 62, "只选出 2 人（不讲顺序）", size=12)
+    b += txt(385, 62, "选 2 人当正、副班长（讲顺序）", size=12)
+    b += box(40, 76, 210, 150, "", fill="#f7f2e6")
+    b += box(270, 76, 210, 150, "", fill="#f7f2e6")
+    for i, lab in enumerate(("AB", "AC", "BC")):
+        b += (f'  <rect x="{70+i*62}" y="104" width="52" height="34" rx="4" '
+              f'fill="#e8dcc4" stroke="#b9a888" stroke-width="1.1"/>\n')
+        b += txt(96 + i * 62, 126, lab, size=12)
+    b += txt(145, 190, "共 3 种", size=13, color="#8f2419")
+    for i, lab in enumerate(("AB", "BA", "AC", "CA", "BC", "CB")):
+        x = 292 + (i % 3) * 62
+        y = 96 + (i // 3) * 44
+        b += (f'  <rect x="{x}" y="{y}" width="52" height="32" rx="4" '
+              f'fill="#cfe0d0" stroke="#b9a888" stroke-width="1.1"/>\n')
+        b += txt(x + 26, y + 21, lab, size=12)
+    b += txt(375, 198, "共 6 种", size=13, color="#8f2419")
+    b += note(260, 250, "同样是选 2 人，要不要排先后，结果差一倍", size=11.5)
+    b += note(260, 276, "组合不管顺序；排列要分位置，可用 3 × 2 = 6 算",
+              size=11.5, color="#8f2419")
+    write("m4-03-03-permutation-combination.svg", svg(W, H, b))
+
+
+# ───────────────────────────────────────────── 32. 最不利原则
+def worst_case():
+    W, H = 520, 320
+    b = title(W, "闭眼摸球：至少摸几个，保证有 2 个同色？")
+    for i in range(6):
+        c = "#c0392b" if i < 3 else "#2b6cb0"
+        b += (f'  <circle cx="{70+i*36}" cy="86" r="14" fill="{c}" '
+              f'stroke="#17181c" stroke-width="1"/>\n')
+    b += txt(260, 122, "盒里 3 个红球、3 个蓝球", size=12, color="#7a7266")
+    b += txt(260, 150, "先想「最倒霉」能拖到哪一步", size=12.5,
+             color="#8f2419")
+    for i, (lab, sub) in enumerate((("第 1 个：红", "还没有同色"),
+                                    ("第 2 个：蓝", "还是没有同色"),
+                                    ("第 3 个：？", "红或蓝都能凑一对"))):
+        x = 30 + i * 162
+        b += (f'  <rect x="{x}" y="170" width="146" height="66" rx="4" '
+              f'fill="#f7f2e6" stroke="#b9a888" stroke-width="1.2"/>\n')
+        b += txt(x + 73, 196, lab, size=12)
+        b += txt(x + 73, 218, sub, size=10.5, color="#7a7266")
+    b += txt(260, 264, "最多摸 2 个还都是不同色，再摸 1 个必然凑成一对 → 3 个",
+             size=12, color="#8f2419")
+    b += note(260, 292, "最不利原则：先想最坏情况能撑几步，再加 1",
+              size=12)
+    write("m4-04-02-worst-case.svg", svg(W, H, b))
+
+
+# ───────────────────────────────────────────── 33. 工程问题
+def engineering():
+    W, H = 520, 320
+    b = title(W, "甲 10 天完成，乙 15 天完成，合作要几天？")
+    x0, g = 40, 14
+    for j in range(30):
+        day = j // 5
+        c = "#d8e2ef" if j % 5 < 3 else "#cfe0d0"
+        b += (f'  <rect x="{x0+j*g}" y="80" width="{g}" height="40" '
+              f'fill="{c}" stroke="#b9a888" stroke-width="0.8"/>\n')
+        if j % 5 == 0:
+            b += line(x0 + j * g, 72, x0 + j * g, 128, "#8f2419", 1.6)
+    for d in range(6):
+        b += txt(x0 + d * 5 * g + 35, 156, f"第 {d+1} 天", size=10.5,
+                 color="#7a7266")
+    b += txt(40, 66, "蓝 3 格 = 甲 1 天，绿 2 格 = 乙 1 天", size=11,
+             color="#7a7266", anchor="start")
+    b += txt(260, 190, "把总量看成 30 份（10 和 15 的最小公倍数）", size=12)
+    b += txt(260, 218, "甲每天 3 份、乙每天 2 份，合作每天 5 份", size=12)
+    b += txt(260, 248, "30 ÷ 5 = 6（天）", size=15, color="#8f2419")
+    b += note(260, 278, "也可把总量看成 1：1 ÷ (1/10 + 1/15) = 6 天",
+              size=11.5)
+    b += note(260, 302, "工程问题里工作总量常设为 1，效率就是 1 ÷ 天数",
+              size=11.5, color="#8f2419")
+    write("m1-07-13-engineering.svg", svg(W, H, b))
+
+
+# ───────────────────────────────────────────── 34. 按比例分配
+def proportion_allocation():
+    W, H = 520, 300
+    b = title(W, "40 个球按 2 : 3 分给两个班")
+    x0, seg = 40, 88
+    for j in range(5):
+        c = "#e8dcc4" if j < 2 else "#cfe0d0"
+        b += (f'  <rect x="{x0+j*seg}" y="80" width="{seg}" height="52" '
+              f'fill="{c}" stroke="#17181c" stroke-width="1.2"/>\n')
+        b += txt(x0 + j * seg + seg / 2, 112, "1 份", size=11)
+    b += txt(128, 68, "一班 2 份", size=12)
+    b += txt(352, 68, "二班 3 份", size=12)
+    b += txt(260, 166, "总份数：2 + 3 = 5", size=13)
+    b += txt(260, 194, "每份：40 ÷ 5 = 8（个）", size=13)
+    b += txt(260, 222, "一班 8 × 2 = 16 个，二班 8 × 3 = 24 个", size=13,
+             color="#8f2419")
+    b += note(260, 254, "先求总份数，再求一份是多少，最后分别乘各自的份数",
+              size=11.5)
+    b += note(260, 280, "检验：16 + 24 = 40，且 16 : 24 = 2 : 3",
+              size=11.5, color="#8f2419")
+    write("m1-09-04-proportion-allocation.svg", svg(W, H, b))
+
+
+# ───────────────────────────────────────────── 35. 分数比较大小
+def compare_fraction():
+    W, H = 520, 300
+    b = title(W, "2/5 和 3/7，哪个大？")
+    x0, w = 40, 400
+    for j in range(5):
+        c = "#e8dcc4" if j < 2 else "#fffdf8"
+        b += (f'  <rect x="{f(x0+j*w/5)}" y="72" width="{f(w/5)}" '
+              f'height="42" fill="{c}" stroke="#17181c" stroke-width="1.2"/>\n')
+    b += txt(465, 99, "2/5", size=14)
+    for j in range(7):
+        c = "#cfe0d0" if j < 3 else "#fffdf8"
+        b += (f'  <rect x="{f(x0+j*w/7)}" y="132" width="{f(w/7)}" '
+              f'height="42" fill="{c}" stroke="#17181c" stroke-width="1.2"/>\n')
+    b += txt(465, 159, "3/7", size=14)
+    b += txt(260, 204, "分母不同，每一份不一样大，不好直接比", size=12)
+    b += txt(260, 232, "通分：2/5 = 14/35，3/7 = 15/35", size=13)
+    b += txt(260, 260, "15/35 &gt; 14/35，所以 3/7 &gt; 2/5", size=14,
+             color="#8f2419")
+    b += note(260, 288, "先化成同分母再比分子；也可以化成小数比",
+              size=11.5)
+    write("m1-04-02-compare-fraction.svg", svg(W, H, b))
+
+
+# ───────────────────────────────────────────── 36. 四舍五入
+def rounding():
+    W, H = 520, 300
+    b = title(W, "四舍五入：看要保留的那一位的后一位")
+    x0, step, y = 60, 40, 110
+    b += line(x0, y, x0 + 10 * step, y, "#17181c", 1.8)
+    for i in range(11):
+        x = x0 + i * step
+        b += line(x, y - 7, x, y + 7, "#17181c", 1.2)
+        b += txt(x, y + 24, f"3.{i}" if i < 10 else "4.0", size=10,
+                 color="#7a7266")
+    mid = x0 + 5 * step
+    b += line(mid, y - 30, mid, y + 12, "#c0392b", 2)
+    b += txt(mid, y - 38, "3.5 是分界", size=11.5, color="#8f2419")
+    b += txt(140, 68, "0~4 舍 → 3", size=12, color="#2b6cb0")
+    b += txt(380, 68, "5~9 入 → 4", size=12, color="#8f2419")
+    b += (f'  <circle cx="{x0+4*step}" cy="{y}" r="5" fill="#2b6cb0"/>\n')
+    b += (f'  <circle cx="{mid}" cy="{y}" r="5" fill="#c0392b"/>\n')
+    b += txt(260, 178, "3.4 保留整数 ≈ 3；3.5 保留整数 ≈ 4", size=13,
+             color="#17181c")
+    b += note(260, 212, "≈ 是约等号，读作「约等于」，不是等号", size=11.5)
+    b += note(260, 240, "取近似数时，末尾的 0 不能随便去掉", size=11.5)
+    b += note(260, 268, "3.0 表示精确到十分位，3 只表示精确到个位",
+              size=11.5, color="#8f2419")
+    write("m1-03-01-rounding.svg", svg(W, H, b))
+
+
 BATCH3 = [fraction_div, equation_solve, proportion, scale, pattern_cycle,
           multiplication_principle, pigeonhole]
-ALL = BATCH1 + BATCH2 + BATCH3
+BATCH4 = [pattern_formula, pattern_sequence, pattern_figure,
+          addition_principle, permutation_combination, worst_case,
+          engineering, proportion_allocation, compare_fraction, rounding]
+ALL = BATCH1 + BATCH2 + BATCH3 + BATCH4
 
 if __name__ == "__main__":
     args = sys.argv[1:]
