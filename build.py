@@ -480,6 +480,11 @@ def render_related(p, depth, idx):
         out_parts.append('<div class="rel-group"><p class="rel-label">本知识点指向</p><ul>' + "".join(lis) + "</ul></div>")
     inc = idx.incoming.get(p["id"], [])
     if inc:
+        # 去重：已出现在「本知识点指向」的目标不再进「指向本知识点」，
+        # 避免 A↔B 双向数据边导致同一目标在两个分组重复展示。
+        out_ids = {r["id"] for r in outs}
+        inc = [(pid, note) for pid, note in inc if pid not in out_ids]
+    if inc:
         lis = []
         for pid, note in inc:
             t = idx.points[pid]["title"]
