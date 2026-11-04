@@ -2,8 +2,9 @@
 
 按**四大模块**（而不是年级）归纳的小学数学知识点静态站点，每个知识点对应《义务教育数学课程标准（2022 年版）》。
 
-- 线上地址：<https://ttbingo.github.io/primary-math-atlas/>
-- 内容规模：4 模块 / 21 主题 / 136 知识点 / 163 个页面
+- 线上地址（GitHub Pages）：<https://ttbingo.github.io/primary-math-atlas/>
+- 线上地址（workbuddy.host，需分享码）：<https://primary-math-atlas.app.workbuddy.host/?sharecode=BYT4SQX5HE>
+- 内容规模：4 模块 / 21 主题 / 136 知识点 / 163 个页面 / 102 张 SVG 配图（101 篇有图）
 - 纯静态，零依赖：断网双击 `dist/index.html` 也能完整浏览（KaTeX 已本地化）
 
 ## 四个模块
@@ -39,23 +40,36 @@ dist/                构建产物（不入库，走 gh-pages 分支）
 ```bash
 python build.py          # 生成 dist/
 python build.py --check  # 只做校验：死链、裸公式、禁用词、板块完整性
+MATH_NO_CLEAN=1 python build.py   # 原地覆盖，不删 dist（沙箱禁止整树删除时用）
 open dist/index.html     # 或直接双击
 ```
+
+## 内容约定
+
+- `content/points/*.json` 的 `sections` 是**字典**（键为板块 id），不是数组。
+- `prerequisites` 存**知识点 id 数组**，必须是真正的先修知识，不能拿 `related[0]` 顶替。
+- `related` 每条为 `{id, note}`，**只从一个方向书写**：构建时由 `idx.incoming` 自动生成反向引用并渲染为「指向本知识点」分组。若两个方向都写，同一目标会在两个分组重复出现（`render_related` 已做去重兜底，但数据仍应单向书写）。
+- 配图放 `content/media/*.svg`，在知识点的 `media` 字段声明（alt/caption/宽高）；未被正文 slot 引用的图会自动插入「为什么是这样」之前。SVG 是 XML，文本中的 `<`、`>` 必须写成 `&lt;`、`&gt;`。
 
 ## 备份与发布
 
 - `main` 分支：源码（本目录内容，`dist/` 已忽略）
 - `gh-pages` 分支：`dist/` 成品，GitHub Pages 从该分支根路径发布
 
-更新站点：
+更新 GitHub Pages：
 
 ```bash
 python build.py
-python tools/deploy_ghpages.py "site: 更新说明"
+python tools/deploy_ghpages.py "site: 更新说明"   # 差异同步，避免整树删除被拦截
 ```
+
+更新 workbuddy.host：发布目录固定为 `dist/`，appId `wbapp_kHGLrsiTw1074ukrOuud1h`，重新发布后链接不变（`domainPrefix=primary-math-atlas`，`entryHtml=index.html`）。
 
 线上冒烟检查（Playwright）：
 
 ```bash
-python tools/verify_online.py
+python tools/verify_online.py                                          # GitHub Pages
+python tools/verify_online.py https://primary-math-atlas.app.workbuddy.host BYT4SQX5HE
 ```
+
+> workbuddy.host 对每个请求做门禁，裸访问返回 403「链接不完整」；首次带 `?sharecode=` 后服务端下发 HttpOnly cookie，子资源自动放行，因此 `dist/` 不需要嵌入分享码。
