@@ -44,3 +44,15 @@ python tools/verify_online.py [BASE] [CODE]   # Playwright 线上冒烟（含配
 | `tools/gen_figs*.py` `patch_media.py` | 配图生成 / media 字段批量写入 |
 | `tools/patch_logic*.py` | 前置与正文逻辑批量修复（历史修复留档，可参照写法） |
 | `templates/` `assets/` | HTML 模板、CSS/JS、本地化 KaTeX 0.16.22 |
+46. **教材定位（textbook_ref）是必填字段**：每篇都要有 `{note, locations[]}`，locations 里每项是 `{volume, units[{no,name}], special[{kind,name}]}`。册次与单元号必须与 `content/textbook.json` 完全一致（build 会逐条比对单元名，对不上就报错）。`content/textbook.json` 是人教版小学数学 2024 新版：12 册 × 单元号 + 综合实践 + 数学广角（数学广角不占单元号）。
+47. **关联知识点用三类结构**：`{id, kind, note}`，kind 只能是 `前置 / 后续 / 常一起考`，每类至少一条、总数 2~4 条。硬约束：「前置」的目标必须排在本文之前，「后续」必须排在本文之后（顺序 = 依次遍历 `modules.json` 的 `topics` 数组、展开每个的 `points`）。**同一对关系只在一篇里写**，另一篇靠构建器按 `REL_FLIP` 自动补反向链接——两篇都写就会重复展示。站内没有前置可用时用 `ext:` 前缀引用站外内容（渲染为纯文字，不生成链接）。
+48. **年级进度**：先学的篇目不得引用后学概念。「因数」是五下术语、「方程」是五下、「小数乘法」是五上、「百分数」是六上、「正反比例」是六下——低年级篇目里不能出现。确需提前借用的名词，在该篇 `cautions` 里写明「某年级后面才学，这里提前借用」。
+49. **自检工具**（都在 `tools/`）：
+    - `check_content` 规则已并入 `build.py --check`（三类合法性/顺序/齐全、教材定位、LaTeX 反斜杠+空格、禁用词、模板腔词）
+    - `tools/audit.py` —— 四线扫描的入口（`numbers` / `logic` / `figures`）
+    - `tools/verify_answers.py` —— 例题 solution 与 answer 的交叉验算（含人工核实白名单）
+    - `tools/verify_charts.py` —— SVG 图表几何与标注比对（条形/折线/扇形）
+    - `tools/audit_overflow.py` —— 锚点感知的溢出扫描（188 页 × 2 视口）
+    - `tools/regress.py` —— 全站回归（链接、公式渲染、三类关联、教材定位、导读）
+    **写检测器后必须先造错验证它真能抓到**（2026-11-05 曾因解析器错误漏检全部条形图）。
+50. **JSON 里 LaTeX 禁用「反斜杠 + 空格」**（`\ 5`、`a \ b`）：KaTeX 会解析失败。写空格用 `\,` 或 `~`。

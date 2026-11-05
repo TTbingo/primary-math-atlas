@@ -24,6 +24,11 @@ FORBIDDEN = ["证明", "求证", "证毕", "∵", "∴", "Q.E.D."]
 errors = []
 warnings = []
 
+# 关联知识点的三类：学之前要先会的 / 学完之后接着用的 / 常与本文同题出现的
+REL_KINDS = ("前置", "后续", "常一起考")
+# 反向补链时类别的翻转：A 的「后续」= B 的「前置」
+REL_FLIP = {"前置": "后续", "后续": "前置", "常一起考": "常一起考"}
+
 
 def err(msg):
     errors.append(msg)
@@ -49,7 +54,9 @@ def load_all():
     std = {s["id"]: s for s in read_json(C / "standards.json")["items"]}
     mod = read_json(C / "modules.json")
     points = {p.stem: read_json(p) for p in sorted((C / "points").glob("*.json"))}
-    return tax, site, std, mod, points
+    tb = read_json(C / "textbook.json")
+    guides = read_json(C / "guides.json").get("guides", {})
+    return tax, site, std, mod, points, tb, guides
 
 # --------------------------------------------------------------- markdown
 MATH_FALLBACK = [
@@ -75,6 +82,34 @@ def attr(s):
     return s.replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+# 渲染期上下文：当前页面的 depth 与知识点索引，供 [[id]] 生成站内链接
+RENDER_CTX = {"depth": 2, "idx": None}
+
+
+def set_render_ctx(idx, depth):
+    RENDER_CTX["idx"] = idx
+    RENDER_CTX["depth"] = depth
+
+
+def _point_link(m):
+    """把 [[m2-01-17]] 转成指向该知识点页的链接，链接文字是知识点名称。
+
+    正文里用短 ID 更易读，而 idx.points 的键是完整 slug（含英文后缀），
+    这里做一次短 ID → slug 的映射。匹配不到或不唯一时退回纯文本，不生成错链接。
+    """
+    short = m.group(1)
+    idx = RENDER_CTX.get("idx")
+    if idx is None:
+        return f'<span class="ptref-dead">{esc(short)}</span>'
+    hits = [k for k in idx.points if k == short or k.startswith(short + "-")]
+    if len(hits) != 1:
+        return f'<span class="ptref-dead">{esc(short)}</span>'
+    pid = hits[0]
+    title = idx.points[pid]["title"]
+    href = idx.rel(pid, RENDER_CTX["depth"])
+    return f'<a class="ptref" href="{href}">{esc(title)}</a>'
+
+
 def md_inline(s):
     s = esc(s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s, flags=re.S)
@@ -82,6 +117,8 @@ def md_inline(s):
     s = re.sub(r"`([^`\n]+)`", r'<code class="inline">\1</code>', s)
     s = re.sub(r"@@([A-Za-z0-9_-]+)", r'<span class="figref" data-fig="\1"></span>', s)
     s = re.sub(r"@point:([a-z0-9-]+)", r'<span class="ptref" data-point="\1"></span>', s)
+    # [[知识点短 ID]] → 站点内链接（文字是知识点名称，不是 id）
+    s = re.sub(r"\[\[(m[1-4]-\d{2}-\d{2})\]\]", _point_link, s)
     return s
 
 
@@ -188,13 +225,15 @@ def tmpl(name, vars_):
 
 
 # --------------------------------------------------------------- validate
-def validate(tax, std, mod, points):
+def validate(tax, std, mod, points, tb):
     sec_keys = [s["key"] for s in tax["sections"]]
     domains = set(tax["domains"])
     scenes = set(tax["scenes"])
     modules_ = {m["id"]: m for m in mod["modules"]}
     topics_ = {t["id"]: t for t in mod["topics"]}
     plan = {p for t in mod["topics"] for p in t["points"]}
+    # 清单展开后的顺序（判定「前置/后续」先后用）：先 topics 顺序，再节内 points 顺序
+    plan_order = [p for t in mod["topics"] for p in t["points"]]
     scopes = set(tax["scopes"])
     literacy = set(tax["literacy"])
 
@@ -293,15 +332,65 @@ def validate(tax, std, mod, points):
             elif kind == "related":
                 if len(v) < mn:
                     err(f"{ctx}.{k}: 条数 {len(v)} < 要求 {mn}")
+                has_kind = any(r.get("kind") for r in v)
                 for r in v:
-                    if r.get("id") not in plan:
-                        err(f"{ctx}.{k}: 关联 {r.get('id')} 不在知识点清单内")
+                    rid = r.get("id")
+                    if rid.startswith("ext:"):
+                        # ext: = 站外的知识方向（如高中衔接），只作文字提示，不生成链接
+                        continue
+                    if rid not in plan:
+                        err(f"{ctx}.{k}: 关联 {rid} 不在知识点清单内")
+                        continue
+                    if not has_kind:
+                        continue
+                    rk = r.get("kind")
+                    if rk not in REL_KINDS:
+                        err(f"{ctx}.{k}: 关联 {rid} 的 kind「{rk}」不合法（只能是 {REL_KINDS}）")
+                        continue
+                    # 顺序校验：前置必须排在本文之前，后续必须排在本文之后
+                    if rk == "前置" and plan_order.index(rid) > plan_order.index(pid):
+                        err(f"{ctx}.{k}: 「前置」{rid} 排在本文之后（前置必须先学）")
+                    if rk == "后续" and plan_order.index(rid) < plan_order.index(pid):
+                        err(f"{ctx}.{k}: 「后续」{rid} 排在本文之前（后续必须后学）")
+                if has_kind:
+                    kinds = {r.get("kind") for r in v}
+                    for rk in REL_KINDS:
+                        if rk not in kinds:
+                            err(f"{ctx}.{k}: 关联知识点缺「{rk}」类")
+
+        # 教材定位：必须有，且册次/单元能对得上 content/textbook.json
+        ref = p.get("textbook_ref")
+        if not ref:
+            err(f"{ctx}: 缺 textbook_ref（教材定位）")
+        else:
+            for loc in ref.get("locations", []):
+                vol = tb["volumes"].get(loc.get("volume"))
+                if not vol:
+                    err(f"{ctx}: 教材册次 {loc.get('volume')} 不在 textbook.json 内")
+                    continue
+                for u in loc.get("units", []):
+                    if vol["units"].get(str(u.get("no"))) != u.get("name"):
+                        err(f"{ctx}: 教材单元 {loc['volume']} 第{u.get('no')}单元 标成「{u.get('name')}」与教材表不符")
+                for sp in loc.get("special", []):
+                    pool = vol["practical"] if sp.get("kind") == "综合与实践" else vol["corner"]
+                    if sp.get("name") not in pool:
+                        err(f"{ctx}: 教材栏目 {sp.get('kind')}·{sp.get('name')} 不在 {loc['volume']} 内")
+            if not ref.get("note"):
+                err(f"{ctx}: textbook_ref 缺 note（要说明与教材的对应关系）")
+
+        # LaTeX 禁用「反斜杠 + 空格」写法（KaTeX 会解析失败）
+        blob_s = json.dumps(p.get("sections", {}), ensure_ascii=False)
+        for mm in re.finditer(r"\\\\\s", blob_s):
+            err(f"{ctx}: LaTeX 出现「反斜杠+空格」写法（KaTeX 会报错）→ {blob_s[max(0,mm.start()-30):mm.start()+12]}")
 
         # 禁用词
-        blob = json.dumps(p.get("sections", {}), ensure_ascii=False)
+        blob = blob_s
         for w in tax["forbidden_words"]:
             if w in blob:
                 err(f"{ctx}: 命中禁用词「{w}」（小学阶段不使用「证明」类表述）")
+        for w in ("综上所述", "值得注意", "不难发现", "众所周知", "由此可见", "总而言之", "不难看出"):
+            if w in blob:
+                err(f"{ctx}: 命中模板腔词「{w}」（要写小学生能听懂的大白话）")
         # 人民币 $ 误用（先剥离数学公式，避免误伤 $1\,\text{cm}^2$ 这类写法）
         blob_nomath = re.sub(r"\$[^$\n]+\$", "\x00", blob)
         for m2 in re.finditer(r"(?<!\\)\$\d", blob_nomath):
@@ -334,8 +423,10 @@ def validate(tax, std, mod, points):
 class Index:
     """按「模块 → 节 → 知识点」组织。清单里已写和待写都在，只是待写的不出现在页面链接里。"""
 
-    def __init__(self, tax, std, mod, points):
+    def __init__(self, tax, std, mod, points, guides=None, tb=None):
         self.tax, self.std, self.mod, self.points = tax, std, mod, points
+        self.guides = guides or {}
+        self.tb = tb or {}
         self.modules = {m["id"]: m for m in mod["modules"]}
         self.module_order = [m["id"] for m in mod["modules"]]
         self.topics = {t["id"]: t for t in mod["topics"]}
@@ -352,7 +443,10 @@ class Index:
         for pid, p in points.items():
             for r in p.get("sections", {}).get("related", []):
                 if r.get("id") in self.incoming:
-                    self.incoming[r["id"]].append((pid, r.get("note", "")))
+                    # 带 kind 的条目反向补链时翻转类别（A 的「后续」= B 的「前置」）
+                    kind = r.get("kind")
+                    flipped = REL_FLIP.get(kind) if kind else None
+                    self.incoming[r["id"]].append((pid, r.get("note", ""), flipped))
 
     def topic_points(self, tid):
         return [p for p in self.topics[tid]["points"] if p in self.points]
@@ -403,6 +497,37 @@ def render_media(p, depth, idx):
             f'alt="{attr(m.get("alt",""))}" loading="lazy">'
             f'<figcaption>{esc(m.get("caption",""))}</figcaption></figure>')
     return "".join(out)
+
+
+def render_textbook(p, depth, idx):
+    """教材定位区块：册次 · 第X章 章名 · X.Y 节名 + 与教材的对应说明。
+
+    定位精确到人教版教材的节，读者据此能直接翻到课本的那一节。
+    """
+    ref = p.get("textbook_ref")
+    if not ref:
+        return ""
+    tb = idx.tb
+    parts = ['<section class="block textbook"><h2>教材定位</h2>']
+    segs = []
+    for loc in ref.get("locations", []):
+        vol = tb["volumes"].get(loc.get("volume"))
+        if not vol:
+            continue
+        seg = [f'<span class="tb-vol">{esc(vol["label"])}</span>']
+        for u in loc.get("units", []):
+            seg.append(f'<span class="tb-ch">第{esc(str(u["no"]))}单元 {esc(u["name"])}</span>')
+        for sp in loc.get("special", []):
+            seg.append(f'<span class="tb-ch">{esc(sp.get("kind",""))}·{esc(sp.get("name",""))}</span>')
+        segs.append('<span class="tb-line">' + "".join(seg) + "</span>")
+    if not segs:
+        return ""
+    parts.append(f'<p class="tb-edition">{esc(tb["publisher"])}《{esc(tb["edition"])}》</p>')
+    parts.append('<div class="tb-lines">' + "".join(segs) + "</div>")
+    if ref.get("note"):
+        parts.append(f'<p class="tb-note">{render_inline(ref["note"])}</p>')
+    parts.append("</section>")
+    return "".join(parts)
 
 
 def render_standards(p, depth, idx):
@@ -469,28 +594,71 @@ def render_pitfalls(items):
 
 
 def render_related(p, depth, idx):
+    """关联知识点。
+
+    新格式：每条带 kind（前置/后续/常一起考），按三类分组渲染。
+    反向补链（别的篇目指向本文）按 REL_FLIP 翻转类别后并入对应分组：
+    A 的「后续」= B 的「前置」。
+    旧格式：只有 {id, note}，渲染成单组「本知识点指向」——向后兼容历史篇目。
+    """
     out_parts = []
     outs = p.get("sections", {}).get("related", [])
-    if outs:
+    has_kind = any(r.get("kind") for r in outs)
+    out_ids = {r["id"] for r in outs}
+
+    # 反向补链：(来源 id, 说明, 翻转后的类别)；来源已在本页 outgoing 里则不重复展示
+    inc = [(pid, note, fl) for pid, note, fl in idx.incoming.get(p["id"], [])
+           if pid not in out_ids]
+
+    def rel_items(pairs):
         lis = []
-        for r in outs:
-            t = idx.points[r["id"]]["title"]
-            lis.append(f'<li><a href="{idx.rel(r["id"], depth)}">{esc(t)}</a>'
-                       f'<span class="rel-note">{render_inline(r.get("note",""))}</span></li>')
-        out_parts.append('<div class="rel-group"><p class="rel-label">本知识点指向</p><ul>' + "".join(lis) + "</ul></div>")
-    inc = idx.incoming.get(p["id"], [])
-    if inc:
-        # 去重：已出现在「本知识点指向」的目标不再进「指向本知识点」，
-        # 避免 A↔B 双向数据边导致同一目标在两个分组重复展示。
-        out_ids = {r["id"] for r in outs}
-        inc = [(pid, note) for pid, note in inc if pid not in out_ids]
-    if inc:
-        lis = []
-        for pid, note in inc:
-            t = idx.points[pid]["title"]
-            lis.append(f'<li><a href="{idx.rel(pid, depth)}">{esc(t)}</a>'
+        for rid, note in pairs:
+            if rid.startswith("ext:"):
+                # ext: = 站外的知识方向（如高中衔接），只作文字提示，不生成链接
+                lis.append(f'<li><span class="rel-ext">{esc(rid[4:])}</span>'
+                           f'<span class="rel-note">{render_inline(note)}</span></li>')
+                continue
+            t = idx.points[rid]["title"]
+            lis.append(f'<li><a href="{idx.rel(rid, depth)}">{esc(t)}</a>'
                        f'<span class="rel-note">{render_inline(note)}</span></li>')
-        out_parts.append('<div class="rel-group"><p class="rel-label">指向本知识点</p><ul>' + "".join(lis) + "</ul></div>")
+        return lis
+
+    legacy_out = []
+    if has_kind:
+        groups = {k: [] for k in REL_KINDS}
+        for r in outs:
+            # kind 非法时校验器会报错，但构建不能崩——归到 legacy 组
+            k = r.get("kind")
+            if k in groups:
+                groups[k].append((r["id"], r.get("note", "")))
+            else:
+                legacy_out.append((r["id"], r.get("note", "")))
+        # 旧格式篇目指过来的链接没有类别，单列一组，不丢
+        legacy = [(pid, note) for pid, note, fl in inc if fl not in groups]
+        for pid, note, fl in inc:
+            if fl in groups:
+                groups[fl].append((pid, note))
+        for kind in REL_KINDS:
+            lis = rel_items(groups[kind])
+            if not lis:
+                continue
+            out_parts.append(
+                f'<div class="rel-group rel-{esc(kind)}"><p class="rel-label">'
+                f'<span class="rel-tag">{esc(kind)}</span></p><ul>' + "".join(lis) + "</ul></div>")
+        legacy = legacy + legacy_out
+        if legacy:
+            out_parts.append('<div class="rel-group"><p class="rel-label">指向本知识点</p><ul>'
+                             + "".join(rel_items(legacy)) + "</ul></div>")
+    else:
+        if outs:
+            out_parts.append('<div class="rel-group"><p class="rel-label">本知识点指向</p><ul>'
+                             + "".join(rel_items((r["id"], r.get("note", "")) for r in outs))
+                             + "</ul></div>")
+        # 旧格式页面：所有反向补链都放进「指向本知识点」
+        if inc:
+            out_parts.append('<div class="rel-group"><p class="rel-label">指向本知识点</p><ul>'
+                             + "".join(rel_items((pid, note) for pid, note, _ in inc))
+                             + "</ul></div>")
     return "".join(out_parts)
 
 
@@ -609,6 +777,7 @@ def build_toc(entries):
 
 # --------------------------------------------------------------- pages
 def emit_point(idx, pid, depth=2):
+    set_render_ctx(idx, depth)
     p = idx.points[pid]
     tax = idx.tax
     scope_label = tax["scopes"].get(p.get("scope", "core"), "")
@@ -640,6 +809,7 @@ def emit_point(idx, pid, depth=2):
             '</h1>' + head + '</div>',
             '<div class="panel panel-body">',
             f'<section class="block overview">{overview}</section>']
+    body.append(render_textbook(p, depth, idx))
     body.append(render_standards(p, depth, idx))
     secs = render_sections(p, depth, idx, 2)
     if p.get("media"):
@@ -696,12 +866,12 @@ def render_related_block_tail(p, depth, idx):
 
 
 def emit_topic(idx, tid, depth=2):
+    set_render_ctx(idx, depth)
     """主题页：这一节讲什么、对应课标哪几条、下面有哪些知识点。"""
     t = idx.topics[tid]
     mid = t["module"]
     m = idx.modules[mid]
     written = idx.topic_points(tid)
-    pending = idx.topic_pending(tid)
 
     overview = '<table class="kv"><tbody>'
     overview += (f'<tr><th>所属模块</th><td><a href="{idx.rel_module(mid, depth)}">'
@@ -734,12 +904,6 @@ def emit_topic(idx, tid, depth=2):
                 f'<span class="tl-m">{badge(p.get("verb_level",""))}'
                 f'{badge(idx.tax["scopes"].get(p.get("scope","core"),""))}</span></a></li>')
         body.append("</ul></section>")
-    if pending:
-        body.append('<section class="block"><h2>这一节还会包含</h2><ul class="items pending">')
-        for pid in pending:
-            title = pid.split("-", 3)[-1].replace("-", " ")
-            body.append(f'<li>{esc(title)}<span class="tag-soon">待写</span></li>')
-        body.append('</ul><p class="note">这些知识点已列入规划，正文尚未撰写。</p></section>')
     body.append("</div>")
 
     entries = [(2, "知识点", "list")] if written else []
@@ -752,7 +916,50 @@ def emit_topic(idx, tid, depth=2):
 
 
 
+def render_guide(idx, mid, depth):
+    """领域导读板块。
+
+    结构参照参考站「部分导读」：引言定位 → 「主题/内容/在后面哪里用」表格
+    → 「考试里怎么考」→ 「怎么读这一部分」。
+
+    表格的「内容」列由各主题的知识点标题自动汇总（不手写，避免与正文脱节）；
+    「在后面哪里用」列里的 [[知识点短ID]] 渲染成站内链接。
+    """
+    g = idx.guides.get(mid)
+    if not g:
+        return ""
+    rows = []
+    for r in g.get("rows", []):
+        tid = r.get("topic")
+        t = idx.topics.get(tid)
+        if not t:
+            continue
+        # 「内容」列：自动汇总该主题下所有知识点的标题
+        titles = [idx.points[p]["title"] for p in idx.topic_points(tid)]
+        content = "、".join(titles) if titles else "—"
+        where = render_inline(r.get("where", ""))
+        rows.append(
+            f'<tr><th scope="row"><a href="{idx.rel_topic(tid, depth)}">{esc(t["title"])}</a></th>'
+            f'<td class="gd-content">{esc(content)}</td>'
+            f'<td class="gd-where">{where}</td></tr>')
+    if not rows:
+        return ""
+    parts = ['<section class="block guide" id="guide"><h2>导读</h2>']
+    if g.get("intro"):
+        parts.append(f'<p class="gd-intro">{render_inline(g["intro"])}</p>')
+    parts.append('<div class="gd-table-wrap"><table class="gd-table">'
+                 '<thead><tr><th>主题</th><th>内容</th><th>在后面哪里用</th></tr></thead>'
+                 '<tbody>' + "".join(rows) + '</tbody></table></div>')
+    if g.get("exam_hint"):
+        parts.append(f'<h3>考试里怎么考</h3><p class="gd-hint">{render_inline(g["exam_hint"])}</p>')
+    if g.get("read_hint"):
+        parts.append(f'<h3>怎么读这一部分</h3><p class="gd-hint">{render_inline(g["read_hint"])}</p>')
+    parts.append("</section>")
+    return "".join(parts)
+
+
 def emit_module(idx, mid, depth=1):
+    set_render_ctx(idx, depth)
     """模块页：这个模块由哪些主题组成。"""
     m = idx.modules[mid]
     tids = idx.module_topics(mid)
@@ -761,13 +968,21 @@ def emit_module(idx, mid, depth=1):
             f'<p class="mod-kicker">模块 {m["no"]}</p>'
             f'<h1 id="_top">{esc(m["title"])}</h1>'
             f'<p class="grade-sub">{esc(m["desc"])}</p></div>')
-    body = [head, '<div class="panel panel-body">']
+    body = [head]
+    guide = render_guide(idx, mid, depth)
+    if guide:
+        body.append('<div class="panel panel-body">')
+        body.append(guide)
+        body.append("</div>")
+    body.append('<div class="panel panel-body">')
     body.append('<section class="block overview"><table class="kv"><tbody>'
                 f'<tr><th>课标主题</th><td>{esc(m.get("strand",""))}</td></tr>'
                 f'<tr><th>主题数</th><td>{len(tids)} 个</td></tr>'
                 f'<tr><th>知识点</th><td>{total} 篇</td></tr>'
                 '</tbody></table></section>')
     entries = []
+    if guide:
+        entries.append((2, "导读", "guide"))
     for tid in tids:
         t = idx.topics[tid]
         written = idx.topic_points(tid)
@@ -781,8 +996,6 @@ def emit_module(idx, mid, depth=1):
                 body.append(f'<li><a href="{idx.rel(pid, depth)}">'
                             f'{esc(idx.points[pid]["title"])}</a></li>')
             body.append("</ul>")
-        else:
-            body.append('<p class="note">这一节的内容还在规划中。</p>')
         body.append("</section>")
         entries.append((2, t["title"], tid))
     body.append("</div>")
@@ -794,6 +1007,7 @@ def emit_module(idx, mid, depth=1):
     }))
 
 def emit_home(idx, depth=0):
+    set_render_ctx(idx, depth)
     tax = idx.tax
     n_written = len(idx.point_order)
     n_topics = len(idx.topic_order)
@@ -931,8 +1145,8 @@ def copy_assets():
 
 
 def build():
-    tax, site, std, mod, points = load_all()
-    validate(tax, std, mod, points)
+    tax, site, std, mod, points, tb, guides = load_all()
+    validate(tax, std, mod, points, tb)
     if errors:
         print(f"校验失败：{len(errors)} 个错误")
         for e in errors[:60]:
@@ -940,7 +1154,7 @@ def build():
         if len(errors) > 60:
             print(f"  … 另有 {len(errors)-60} 条")
         return 1
-    idx = Index(tax, std, mod, points)
+    idx = Index(tax, std, mod, points, guides, tb)
     idx.site_title_sub = site.get("subtitle", "")
 
     safe_rebuild()
@@ -1001,8 +1215,8 @@ def verify_output():
 
 
 def check():
-    tax, site, std, mod, points = load_all()
-    validate(tax, std, mod, points)
+    tax, site, std, mod, points, tb, guides = load_all()
+    validate(tax, std, mod, points, tb)
     if errors:
         print(f"✗ {len(errors)} 个错误")
         for e in errors[:80]:

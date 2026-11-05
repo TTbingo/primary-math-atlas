@@ -62,7 +62,11 @@
     "m1-01-09-fraction-meaning",
     "m1-01-10-fraction-property",
     "m1-01-11-percentage-meaning",
-    "m1-01-12-positive-negative"
+    "m1-01-12-positive-negative",
+    "m1-01-13-num-6-to-10",
+    "m1-01-14-num-11-to-20",
+    "m1-01-15-fraction-intro",
+    "m1-01-16-fraction-division"
    ]
   },
   {
@@ -94,7 +98,8 @@
     "m1-03-01-rounding",
     "m1-03-02-rewrite-wan-yi",
     "m1-03-03-fraction-forms",
-    "m1-03-04-decimal-fraction-percent-convert"
+    "m1-03-04-decimal-fraction-percent-convert",
+    "m1-03-05-hundred-thousand"
    ]
   },
   {
@@ -175,7 +180,13 @@
     "m1-06-27-mult-laws",
     "m1-06-28-sub-div-property",
     "m1-06-29-power",
-    "m1-06-30-estimation"
+    "m1-06-30-estimation",
+    "m1-06-31-mult-add-sub",
+    "m1-06-32-decimal-add-sub",
+    "m1-06-33-mental-add-sub-100",
+    "m1-06-34-mul-table-7-9",
+    "m1-06-35-div-table-7-9",
+    "m1-06-36-fraction-diff"
    ]
   },
   {
@@ -207,7 +218,14 @@
     "m1-07-12-chasing",
     "m1-07-13-engineering",
     "m1-07-14-profit-interest",
-    "m1-07-15-concentration"
+    "m1-07-15-concentration",
+    "m1-07-16-add-sub-relation",
+    "m1-07-17-times-relation",
+    "m1-07-18-rmb",
+    "m1-07-19-time-units",
+    "m1-07-20-date",
+    "m1-07-21-optimization",
+    "m1-07-22-find-bad-item"
    ]
   },
   {
@@ -240,7 +258,8 @@
     "m1-09-01-ratio-meaning",
     "m1-09-02-proportion",
     "m1-09-03-scale",
-    "m1-09-04-proportion-allocation"
+    "m1-09-04-proportion-allocation",
+    "m1-09-05-lever-balance"
    ]
   },
   {
@@ -285,7 +304,9 @@
     "m2-01-21-circle-circumference",
     "m2-01-22-circle-area",
     "m2-01-23-composite-area",
-    "m2-01-24-irregular-area"
+    "m2-01-24-irregular-area",
+    "m2-01-25-plane-shapes",
+    "m2-01-26-mass-units"
    ]
   },
   {
@@ -310,7 +331,8 @@
     "m2-02-07-cylinder-volume",
     "m2-02-08-cone-volume",
     "m2-02-09-observe-object",
-    "m2-02-10-irregular-volume"
+    "m2-02-10-irregular-volume",
+    "m2-02-11-solid-shapes-intro"
    ]
   },
   {
@@ -328,7 +350,8 @@
    "points": [
     "m2-03-01-axis-symmetry",
     "m2-03-02-translation-rotation",
-    "m2-03-03-scale-enlarge"
+    "m2-03-03-scale-enlarge",
+    "m2-03-04-tessellation"
    ]
   },
   {
@@ -411,7 +434,8 @@
    ],
    "points": [
     "m3-04-01-certainty",
-    "m3-04-02-possibility"
+    "m3-04-02-possibility",
+    "m3-04-03-digital-code"
    ]
   },
   {
@@ -442,7 +466,8 @@
     "m4-02-01-pattern-formula",
     "m4-02-02-pattern-sequence",
     "m4-02-03-pattern-cycle",
-    "m4-02-04-pattern-figure"
+    "m4-02-04-pattern-figure",
+    "m4-02-05-logic-reasoning"
    ]
   },
   {
@@ -457,7 +482,8 @@
    "points": [
     "m4-03-01-addition-principle",
     "m4-03-02-multiplication-principle",
-    "m4-03-03-permutation-combination"
+    "m4-03-03-permutation-combination",
+    "m4-03-04-set-overlap"
    ]
   },
   {

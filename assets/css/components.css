@@ -138,6 +138,8 @@
 .rel-group ul { list-style: none; margin: 0; padding: 0; }
 .rel-group li { padding: .25rem 0; border-bottom: 1px solid var(--line-weak); }
 .rel-note { display: block; font-size: var(--fs-sm); color: var(--text-sub); }
+/* ext: = 站外知识方向，只作文字提示，不生成链接 */
+.rel-ext { color: var(--text-sub); font-weight: 600; }
 
 /* ---------- 条目列表 ---------- */
 ul.items { margin: 0; padding-left: 1.2rem; }
@@ -378,3 +380,105 @@ ul.pending { color: var(--text-faint); }
 .std-fold summary { cursor: pointer; color: var(--accent); font-size: var(--fs-sm); }
 .std-fold[open] summary { margin-bottom: .4rem; }
 .std-fold .std-text, .std-fold { line-height: 1.8; }
+
+
+/* ---------- 领域导读 ---------- */
+.guide h2 { margin-top: 0; }
+.gd-intro {
+  margin: 0 0 1.2rem; padding: .8rem 1rem;
+  background: var(--code-bg); border-left: 3px solid var(--accent);
+  border-radius: 0 4px 4px 0; color: var(--text);
+}
+.gd-table-wrap { overflow-x: auto; margin-bottom: 1.4rem; }
+.gd-table {
+  width: 100%; border-collapse: collapse; font-size: var(--fs-body);
+  line-height: 1.7;
+}
+.gd-table thead th {
+  text-align: left; font-weight: 700; font-size: var(--fs-sm);
+  letter-spacing: .05em; color: var(--text-sub);
+  border-bottom: 2px solid var(--line-strong); padding: .5rem .6rem;
+  white-space: nowrap;
+}
+.gd-table tbody th {
+  text-align: left; font-weight: 600; vertical-align: top;
+  padding: .7rem .6rem; border-bottom: 1px solid var(--line-weak);
+  white-space: nowrap; width: 1%;
+}
+.gd-table tbody th a { color: var(--accent); text-decoration: none; }
+.gd-table tbody th a:hover { text-decoration: underline; }
+.gd-content, .gd-where {
+  padding: .7rem .6rem; border-bottom: 1px solid var(--line-weak);
+  vertical-align: top;
+}
+.gd-content { color: var(--text); font-size: var(--fs-sm); }
+.gd-where { color: var(--text-sub); font-size: var(--fs-sm); }
+.gd-where .ptref { white-space: normal; }
+.gd-hint { margin: 0 0 1rem; }
+.guide h3 {
+  margin: 1.4rem 0 .5rem; font-size: var(--fs-h4);
+  padding-left: .5rem; border-left: 3px solid var(--accent);
+}
+
+/* 正文内的知识点跳转链接 */
+.ptref {
+  color: var(--accent); text-decoration: none;
+  border-bottom: 1px dashed var(--accent-soft);
+  padding-bottom: 1px; white-space: nowrap;
+}
+.ptref:hover { border-bottom-style: solid; background: var(--accent-soft); }
+.ptref-dead { color: var(--text-faint); }
+
+/* ---------- 窄屏：导读表格堆叠成带小标签的卡片 ---------- */
+@media (max-width: 720px) {
+  .gd-table, .gd-table tbody, .gd-table tr, .gd-table td, .gd-table th {
+    display: block; width: auto; white-space: normal;
+  }
+  .gd-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .gd-table tbody tr {
+    border: 1px solid var(--line-weak); border-radius: 4px;
+    padding: .7rem .8rem; margin-bottom: .9rem; background: var(--card);
+  }
+  .gd-table tbody th { border-bottom: 1px solid var(--line-weak); padding: 0 0 .45rem; }
+  .gd-table tbody th::after {
+    content: ""; display: block;
+  }
+  .gd-content, .gd-where { border-bottom: none; padding: .45rem 0 0; }
+  .gd-content::before, .gd-where::before {
+    display: block; font-size: var(--fs-sm); font-weight: 700;
+    letter-spacing: .05em; color: var(--text-faint); margin-bottom: .15rem;
+  }
+  .gd-content::before { content: "内容"; }
+  .gd-where::before { content: "在后面哪里用"; }
+  .gd-where { padding-bottom: .2rem; }
+}
+
+
+/* ---------- 教材定位 ---------- */
+.textbook { border-left: 3px solid var(--ok); padding-left: .9rem; }
+.textbook h2 { margin-top: 0; }
+.tb-edition { font-size: var(--fs-sm); color: var(--text-sub); margin: 0 0 .5rem; }
+.tb-lines { display: flex; flex-direction: column; gap: .35rem; margin-bottom: .5rem; }
+.tb-line { display: inline-flex; flex-wrap: wrap; gap: .35rem; align-items: baseline; }
+.tb-line > span {
+  display: inline-block; padding: .12rem .5rem; border-radius: 3px;
+  font-size: var(--fs-sm); border: 1px solid currentColor; white-space: nowrap;
+}
+.tb-vol { color: var(--ok); font-weight: 600; }
+.tb-ch { color: var(--accent); font-weight: 600; }
+.tb-note { margin: 0; font-size: var(--fs-sm); color: var(--text-sub); }
+.tb-note .math, .tb-note .katex { white-space: nowrap; font-size: 1.02em; }
+
+/* ---------- 关联知识点的三类标签 ---------- */
+.rel-tag {
+  display: inline-block; padding: .1rem .45rem; border-radius: 3px;
+  font-size: var(--fs-sm); font-weight: 600; letter-spacing: .04em;
+  border: 1px solid currentColor;
+}
+.rel-前置 .rel-tag { color: var(--rel-pre); }
+.rel-后续 .rel-tag { color: var(--rel-post); }
+.rel-常一起考 .rel-tag { color: var(--rel-together); }
+.rel-group { border-left: 3px solid var(--line-strong); padding-left: .7rem; margin-bottom: 1rem; }
+.rel-前置 { border-left-color: var(--rel-pre); }
+.rel-后续 { border-left-color: var(--rel-post); }
+.rel-常一起考 { border-left-color: var(--rel-together); }

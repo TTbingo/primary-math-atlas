@@ -1,0 +1,918 @@
+[
+ {
+  "id": "m2-01-14-rect-perimeter",
+  "title": "长方形和正方形的周长",
+  "topic": "m2-01",
+  "pos": 109,
+  "miss": [
+   "常一起考"
+  ],
+  "pre": [
+   "m2-01-13-perimeter"
+  ],
+  "post": [
+   "m2-01-17-rect-area"
+  ],
+  "all": [
+   "m2-01-13-perimeter",
+   "m2-01-17-rect-area"
+  ]
+ },
+ {
+  "id": "m2-01-15-area-and-unit",
+  "title": "面积和面积单位",
+  "topic": "m2-01",
+  "pos": 110,
+  "miss": [
+   "前置",
+   "常一起考"
+  ],
+  "pre": [],
+  "post": [
+   "m2-01-17-rect-area",
+   "m2-01-16-area-unit-convert"
+  ],
+  "all": [
+   "m2-01-17-rect-area",
+   "m2-01-16-area-unit-convert"
+  ]
+ },
+ {
+  "id": "m2-01-16-area-unit-convert",
+  "title": "面积单位的换算",
+  "topic": "m2-01",
+  "pos": 111,
+  "miss": [
+   "常一起考"
+  ],
+  "pre": [
+   "m2-01-15-area-and-unit"
+  ],
+  "post": [
+   "m2-01-17-rect-area"
+  ],
+  "all": [
+   "m2-01-17-rect-area",
+   "m2-01-15-area-and-unit"
+  ]
+ },
+ {
+  "id": "m2-01-17-rect-area",
+  "title": "长方形和正方形的面积",
+  "topic": "m2-01",
+  "pos": 112,
+  "miss": [
+   "后续",
+   "常一起考"
+  ],
+  "pre": [
+   "m2-01-15-area-and-unit",
+   "m2-01-16-area-unit-convert"
+  ],
+  "post": [],
+  "all": [
+   "m2-01-15-area-and-unit",
+   "m2-01-16-area-unit-convert"
+  ]
+ },
+ {
+  "id": "m2-01-18-area-parallelogram",
+  "title": "平行四边形的面积",
+  "topic": "m2-01",
+  "pos": 113,
+  "miss": [],
+  "pre": [
+   "m2-01-17-rect-area",
+   "m2-01-08-quadrilateral"
+  ],
+  "post": [
+   "m2-01-19-area-triangle",
+   "m2-01-20-area-trapezoid"
+  ],
+  "all": [
+   "m2-01-17-rect-area",
+   "m2-01-19-area-triangle",
+   "m2-01-20-area-trapezoid",
+   "m2-01-08-quadrilateral"
+  ]
+ },
+ {
+  "id": "m2-01-19-area-triangle",
+  "title": "三角形的面积",
+  "topic": "m2-01",
+  "pos": 114,
+  "miss": [],
+  "pre": [
+   "m2-01-18-area-parallelogram",
+   "m2-01-05-triangle-classify",
+   "m2-01-17-rect-area"
+  ],
+  "post": [
+   "m2-01-20-area-trapezoid"
+  ],
+  "all": [
+   "m2-01-18-area-parallelogram",
+   "m2-01-20-area-trapezoid",
+   "m2-01-05-triangle-classify",
+   "m2-01-17-rect-area"
+  ]
+ },
+ {
+  "id": "m2-01-20-area-trapezoid",
+  "title": "梯形的面积",
+  "topic": "m2-01",
+  "pos": 115,
+  "miss": [
+   "后续"
+  ],
+  "pre": [
+   "m2-01-19-area-triangle",
+   "m2-01-18-area-parallelogram",
+   "m2-01-08-quadrilateral",
+   "m2-01-17-rect-area"
+  ],
+  "post": [],
+  "all": [
+   "m2-01-19-area-triangle",
+   "m2-01-18-area-parallelogram",
+   "m2-01-08-quadrilateral",
+   "m2-01-17-rect-area"
+  ]
+ },
+ {
+  "id": "m2-01-21-circle-circumference",
+  "title": "圆的周长与圆周率",
+  "topic": "m2-01",
+  "pos": 116,
+  "miss": [],
+  "pre": [
+   "m2-01-18-area-parallelogram",
+   "m2-01-17-rect-area"
+  ],
+  "post": [
+   "m2-01-22-circle-area",
+   "m2-02-07-cylinder-volume"
+  ],
+  "all": [
+   "m2-01-22-circle-area",
+   "m2-01-18-area-parallelogram",
+   "m2-01-17-rect-area",
+   "m2-02-07-cylinder-volume"
+  ]
+ },
+ {
+  "id": "m2-01-22-circle-area",
+  "title": "圆的面积",
+  "topic": "m2-01",
+  "pos": 117,
+  "miss": [],
+  "pre": [
+   "m2-01-21-circle-circumference",
+   "m2-01-18-area-parallelogram",
+   "m2-01-17-rect-area"
+  ],
+  "post": [
+   "m2-02-07-cylinder-volume"
+  ],
+  "all": [
+   "m2-01-21-circle-circumference",
+   "m2-01-18-area-parallelogram",
+   "m2-01-17-rect-area",
+   "m2-02-07-cylinder-volume"
+  ]
+ },
+ {
+  "id": "m2-01-23-composite-area",
+  "title": "组合图形的面积",
+  "topic": "m2-01",
+  "pos": 118,
+  "miss": [],
+  "pre": [
+   "m2-01-17-rect-area",
+   "m2-01-19-area-triangle",
+   "m2-01-22-circle-area"
+  ],
+  "post": [
+   "m2-01-24-irregular-area"
+  ],
+  "all": [
+   "m2-01-17-rect-area",
+   "m2-01-19-area-triangle",
+   "m2-01-22-circle-area",
+   "m2-01-24-irregular-area"
+  ]
+ },
+ {
+  "id": "m2-01-24-irregular-area",
+  "title": "不规则图形的面积",
+  "topic": "m2-01",
+  "pos": 119,
+  "miss": [],
+  "pre": [
+   "m2-01-23-composite-area",
+   "m2-01-15-area-and-unit",
+   "m2-01-17-rect-area"
+  ],
+  "post": [
+   "m2-02-10-irregular-volume"
+  ],
+  "all": [
+   "m2-01-23-composite-area",
+   "m2-01-15-area-and-unit",
+   "m2-01-17-rect-area",
+   "m2-02-10-irregular-volume"
+  ]
+ },
+ {
+  "id": "m2-02-01-solid-features",
+  "title": "长方体和正方体的认识",
+  "topic": "m2-02",
+  "pos": 122,
+  "miss": [],
+  "pre": [
+   "m2-01-08-quadrilateral"
+  ],
+  "post": [
+   "m2-02-03-cuboid-surface",
+   "m2-02-05-cuboid-volume-formula",
+   "m2-02-02-cylinder-cone-features"
+  ],
+  "all": [
+   "m2-02-03-cuboid-surface",
+   "m2-02-05-cuboid-volume-formula",
+   "m2-02-02-cylinder-cone-features",
+   "m2-01-08-quadrilateral"
+  ]
+ },
+ {
+  "id": "m2-02-02-cylinder-cone-features",
+  "title": "圆柱和圆锥的认识",
+  "topic": "m2-02",
+  "pos": 123,
+  "miss": [],
+  "pre": [
+   "m2-01-09-circle-features"
+  ],
+  "post": [
+   "m2-02-06-cylinder-surface",
+   "m2-02-07-cylinder-volume",
+   "m2-02-08-cone-volume"
+  ],
+  "all": [
+   "m2-02-06-cylinder-surface",
+   "m2-02-07-cylinder-volume",
+   "m2-02-08-cone-volume",
+   "m2-01-09-circle-features"
+  ]
+ },
+ {
+  "id": "m2-02-03-cuboid-surface",
+  "title": "长方体和正方体的表面积",
+  "topic": "m2-02",
+  "pos": 124,
+  "miss": [],
+  "pre": [
+   "m2-01-17-rect-area"
+  ],
+  "post": [
+   "m2-02-04-cuboid-volume",
+   "m2-02-06-cylinder-surface"
+  ],
+  "all": [
+   "m2-02-04-cuboid-volume",
+   "m2-01-17-rect-area",
+   "m2-02-06-cylinder-surface"
+  ]
+ },
+ {
+  "id": "m2-02-04-cuboid-volume",
+  "title": "体积和体积单位",
+  "topic": "m2-02",
+  "pos": 125,
+  "miss": [],
+  "pre": [
+   "m2-02-03-cuboid-surface",
+   "m2-01-15-area-and-unit"
+  ],
+  "post": [
+   "m2-02-07-cylinder-volume"
+  ],
+  "all": [
+   "m2-02-03-cuboid-surface",
+   "m2-01-15-area-and-unit",
+   "m2-02-07-cylinder-volume"
+  ]
+ },
+ {
+  "id": "m2-02-05-cuboid-volume-formula",
+  "title": "长方体和正方体的体积公式",
+  "topic": "m2-02",
+  "pos": 126,
+  "miss": [],
+  "pre": [
+   "m2-02-04-cuboid-volume",
+   "m2-02-03-cuboid-surface",
+   "m2-01-17-rect-area",
+   "m1-06-29-power"
+  ],
+  "post": [
+   "m2-02-07-cylinder-volume"
+  ],
+  "all": [
+   "m2-02-04-cuboid-volume",
+   "m2-02-03-cuboid-surface",
+   "m2-02-07-cylinder-volume",
+   "m2-01-17-rect-area",
+   "m1-06-29-power"
+  ]
+ },
+ {
+  "id": "m2-02-06-cylinder-surface",
+  "title": "圆柱的表面积",
+  "topic": "m2-02",
+  "pos": 127,
+  "miss": [],
+  "pre": [
+   "m2-01-22-circle-area",
+   "m2-01-18-area-parallelogram"
+  ],
+  "post": [
+   "m2-02-07-cylinder-volume",
+   "m2-02-08-cone-volume"
+  ],
+  "all": [
+   "m2-02-07-cylinder-volume",
+   "m2-02-08-cone-volume",
+   "m2-01-22-circle-area",
+   "m2-01-18-area-parallelogram"
+  ]
+ },
+ {
+  "id": "m2-02-07-cylinder-volume",
+  "title": "圆柱的体积",
+  "topic": "m2-02",
+  "pos": 128,
+  "miss": [],
+  "pre": [
+   "m2-01-22-circle-area",
+   "m2-02-06-cylinder-surface",
+   "m2-01-18-area-parallelogram"
+  ],
+  "post": [
+   "m2-02-08-cone-volume"
+  ],
+  "all": [
+   "m2-01-22-circle-area",
+   "m2-02-06-cylinder-surface",
+   "m2-02-08-cone-volume",
+   "m2-01-18-area-parallelogram"
+  ]
+ },
+ {
+  "id": "m2-02-08-cone-volume",
+  "title": "圆锥的体积",
+  "topic": "m2-02",
+  "pos": 129,
+  "miss": [
+   "后续"
+  ],
+  "pre": [
+   "m2-02-07-cylinder-volume",
+   "m2-02-06-cylinder-surface",
+   "m2-01-19-area-triangle"
+  ],
+  "post": [],
+  "all": [
+   "m2-02-07-cylinder-volume",
+   "m2-02-06-cylinder-surface",
+   "m2-01-19-area-triangle"
+  ]
+ },
+ {
+  "id": "m2-02-09-observe-object",
+  "title": "观察物体",
+  "topic": "m2-02",
+  "pos": 130,
+  "miss": [
+   "后续"
+  ],
+  "pre": [
+   "m2-02-01-solid-features",
+   "m2-02-03-cuboid-surface",
+   "m2-02-05-cuboid-volume-formula"
+  ],
+  "post": [],
+  "all": [
+   "m2-02-01-solid-features",
+   "m2-02-03-cuboid-surface",
+   "m2-02-05-cuboid-volume-formula"
+  ]
+ },
+ {
+  "id": "m2-02-10-irregular-volume",
+  "title": "不规则物体的体积",
+  "topic": "m2-02",
+  "pos": 131,
+  "miss": [
+   "后续"
+  ],
+  "pre": [
+   "m2-02-04-cuboid-volume",
+   "m2-02-05-cuboid-volume-formula",
+   "m2-01-24-irregular-area",
+   "m2-02-08-cone-volume"
+  ],
+  "post": [],
+  "all": [
+   "m2-02-04-cuboid-volume",
+   "m2-02-05-cuboid-volume-formula",
+   "m2-01-24-irregular-area",
+   "m2-02-08-cone-volume"
+  ]
+ },
+ {
+  "id": "m2-03-01-axis-symmetry",
+  "title": "轴对称",
+  "topic": "m2-03",
+  "pos": 133,
+  "miss": [
+   "常一起考"
+  ],
+  "pre": [
+   "m2-01-05-triangle-classify"
+  ],
+  "post": [
+   "m2-03-02-translation-rotation"
+  ],
+  "all": [
+   "m2-03-02-translation-rotation",
+   "m2-01-05-triangle-classify"
+  ]
+ },
+ {
+  "id": "m2-03-02-translation-rotation",
+  "title": "平移和旋转",
+  "topic": "m2-03",
+  "pos": 134,
+  "miss": [
+   "后续",
+   "常一起考"
+  ],
+  "pre": [
+   "m2-01-18-area-parallelogram",
+   "m2-01-19-area-triangle"
+  ],
+  "post": [],
+  "all": [
+   "m2-01-18-area-parallelogram",
+   "m2-01-19-area-triangle"
+  ]
+ },
+ {
+  "id": "m2-03-03-scale-enlarge",
+  "title": "图形的放大与缩小",
+  "topic": "m2-03",
+  "pos": 135,
+  "miss": [
+   "后续",
+   "常一起考"
+  ],
+  "pre": [
+   "m1-09-03-scale",
+   "m2-03-02-translation-rotation"
+  ],
+  "post": [],
+  "all": [
+   "m1-09-03-scale",
+   "m2-03-02-translation-rotation"
+  ]
+ },
+ {
+  "id": "m2-04-01-direction",
+  "title": "方向与位置",
+  "topic": "m2-04",
+  "pos": 137,
+  "miss": [
+   "前置",
+   "常一起考"
+  ],
+  "pre": [],
+  "post": [
+   "m2-04-03-route-map",
+   "m2-04-02-number-pair"
+  ],
+  "all": [
+   "m2-04-03-route-map",
+   "m2-04-02-number-pair"
+  ]
+ },
+ {
+  "id": "m2-04-02-number-pair",
+  "title": "用数对确定位置",
+  "topic": "m2-04",
+  "pos": 138,
+  "miss": [
+   "后续"
+  ],
+  "pre": [
+   "m2-03-02-translation-rotation",
+   "m2-01-15-area-and-unit",
+   "m1-09-01-ratio-meaning"
+  ],
+  "post": [],
+  "all": [
+   "m2-03-02-translation-rotation",
+   "m2-01-15-area-and-unit",
+   "m1-09-01-ratio-meaning"
+  ]
+ },
+ {
+  "id": "m2-04-03-route-map",
+  "title": "描述路线图",
+  "topic": "m2-04",
+  "pos": 139,
+  "miss": [
+   "后续",
+   "常一起考"
+  ],
+  "pre": [
+   "m2-04-01-direction",
+   "m1-09-03-scale"
+  ],
+  "post": [],
+  "all": [
+   "m2-04-01-direction",
+   "m1-09-03-scale"
+  ]
+ },
+ {
+  "id": "m3-01-01-data-collect",
+  "title": "数据的收集、整理与分析",
+  "topic": "m3-01",
+  "pos": 140,
+  "miss": [
+   "前置"
+  ],
+  "pre": [],
+  "post": [
+   "m3-01-02-statistical-table",
+   "m3-02-01-bar-chart",
+   "m3-03-01-average"
+  ],
+  "all": [
+   "m3-01-02-statistical-table",
+   "m3-02-01-bar-chart",
+   "m3-03-01-average"
+  ]
+ },
+ {
+  "id": "m3-01-02-statistical-table",
+  "title": "统计表",
+  "topic": "m3-01",
+  "pos": 141,
+  "miss": [],
+  "pre": [
+   "m3-01-01-data-collect"
+  ],
+  "post": [
+   "m3-02-01-bar-chart",
+   "m3-02-04-chart-choice"
+  ],
+  "all": [
+   "m3-01-01-data-collect",
+   "m3-02-01-bar-chart",
+   "m3-02-04-chart-choice"
+  ]
+ },
+ {
+  "id": "m3-02-01-bar-chart",
+  "title": "条形统计图",
+  "topic": "m3-02",
+  "pos": 142,
+  "miss": [],
+  "pre": [
+   "m3-01-02-statistical-table"
+  ],
+  "post": [
+   "m3-02-02-line-chart",
+   "m3-02-04-chart-choice"
+  ],
+  "all": [
+   "m3-01-02-statistical-table",
+   "m3-02-02-line-chart",
+   "m3-02-04-chart-choice"
+  ]
+ },
+ {
+  "id": "m3-02-02-line-chart",
+  "title": "折线统计图",
+  "topic": "m3-02",
+  "pos": 143,
+  "miss": [],
+  "pre": [
+   "m3-02-01-bar-chart"
+  ],
+  "post": [
+   "m3-02-04-chart-choice",
+   "m3-02-03-pie-chart"
+  ],
+  "all": [
+   "m3-02-01-bar-chart",
+   "m3-02-04-chart-choice",
+   "m3-02-03-pie-chart"
+  ]
+ },
+ {
+  "id": "m3-02-03-pie-chart",
+  "title": "扇形统计图",
+  "topic": "m3-02",
+  "pos": 144,
+  "miss": [
+   "后续"
+  ],
+  "pre": [
+   "m1-01-11-percentage-meaning",
+   "m1-09-01-ratio-meaning",
+   "m1-09-02-proportion"
+  ],
+  "post": [],
+  "all": [
+   "m1-01-11-percentage-meaning",
+   "m1-09-01-ratio-meaning",
+   "m1-09-02-proportion"
+  ]
+ },
+ {
+  "id": "m3-02-04-chart-choice",
+  "title": "统计图的选择",
+  "topic": "m3-02",
+  "pos": 145,
+  "miss": [
+   "后续"
+  ],
+  "pre": [
+   "m3-02-01-bar-chart",
+   "m3-02-02-line-chart",
+   "m3-02-03-pie-chart",
+   "m3-01-01-data-collect"
+  ],
+  "post": [],
+  "all": [
+   "m3-02-01-bar-chart",
+   "m3-02-02-line-chart",
+   "m3-02-03-pie-chart",
+   "m3-01-01-data-collect"
+  ]
+ },
+ {
+  "id": "m3-03-01-average",
+  "title": "平均数的意义与求法",
+  "topic": "m3-03",
+  "pos": 146,
+  "miss": [
+   "后续"
+  ],
+  "pre": [
+   "m1-06-11-intro-division",
+   "m1-06-18-div-2digit",
+   "m1-07-01-quantity-relations"
+  ],
+  "post": [],
+  "all": [
+   "m1-06-11-intro-division",
+   "m1-06-18-div-2digit",
+   "m1-07-01-quantity-relations"
+  ]
+ },
+ {
+  "id": "m3-04-01-certainty",
+  "title": "确定事件与不确定事件",
+  "topic": "m3-04",
+  "pos": 147,
+  "miss": [],
+  "pre": [
+   "m3-01-01-data-collect",
+   "m3-03-01-average"
+  ],
+  "post": [
+   "m3-04-02-possibility"
+  ],
+  "all": [
+   "m3-04-02-possibility",
+   "m3-01-01-data-collect",
+   "m3-03-01-average"
+  ]
+ },
+ {
+  "id": "m3-04-02-possibility",
+  "title": "可能性的大小",
+  "topic": "m3-04",
+  "pos": 148,
+  "miss": [
+   "后续"
+  ],
+  "pre": [
+   "m3-04-01-certainty",
+   "m3-02-01-bar-chart",
+   "m3-01-01-data-collect"
+  ],
+  "post": [],
+  "all": [
+   "m3-04-01-certainty",
+   "m3-02-01-bar-chart",
+   "m3-01-01-data-collect"
+  ]
+ },
+ {
+  "id": "m4-01-01-thinking-methods",
+  "title": "常用的数学思想和方法",
+  "topic": "m4-01",
+  "pos": 150,
+  "miss": [],
+  "pre": [
+   "m2-01-18-area-parallelogram",
+   "m1-08-01-letters"
+  ],
+  "post": [
+   "m4-02-02-pattern-sequence"
+  ],
+  "all": [
+   "m2-01-18-area-parallelogram",
+   "m4-02-02-pattern-sequence",
+   "m1-08-01-letters"
+  ]
+ },
+ {
+  "id": "m4-02-01-pattern-formula",
+  "title": "算式中的规律",
+  "topic": "m4-02",
+  "pos": 151,
+  "miss": [],
+  "pre": [
+   "m1-06-27-mult-laws",
+   "m1-06-16-mult-2digit"
+  ],
+  "post": [
+   "m4-02-02-pattern-sequence"
+  ],
+  "all": [
+   "m4-02-02-pattern-sequence",
+   "m1-06-27-mult-laws",
+   "m1-06-16-mult-2digit"
+  ]
+ },
+ {
+  "id": "m4-02-02-pattern-sequence",
+  "title": "数列中的规律",
+  "topic": "m4-02",
+  "pos": 152,
+  "miss": [],
+  "pre": [
+   "m4-02-01-pattern-formula"
+  ],
+  "post": [
+   "m4-02-04-pattern-figure",
+   "m4-02-03-pattern-cycle"
+  ],
+  "all": [
+   "m4-02-01-pattern-formula",
+   "m4-02-04-pattern-figure",
+   "m4-02-03-pattern-cycle"
+  ]
+ },
+ {
+  "id": "m4-02-03-pattern-cycle",
+  "title": "周期中的规律",
+  "topic": "m4-02",
+  "pos": 153,
+  "miss": [],
+  "pre": [
+   "m4-02-02-pattern-sequence",
+   "m1-06-13-remainder-meaning"
+  ],
+  "post": [
+   "m4-02-04-pattern-figure"
+  ],
+  "all": [
+   "m4-02-02-pattern-sequence",
+   "m1-06-13-remainder-meaning",
+   "m4-02-04-pattern-figure"
+  ]
+ },
+ {
+  "id": "m4-02-04-pattern-figure",
+  "title": "数图形中的规律",
+  "topic": "m4-02",
+  "pos": 154,
+  "miss": [
+   "后续"
+  ],
+  "pre": [
+   "m4-02-02-pattern-sequence",
+   "m2-01-01-lines-ray-segment",
+   "m4-01-01-thinking-methods"
+  ],
+  "post": [],
+  "all": [
+   "m4-02-02-pattern-sequence",
+   "m2-01-01-lines-ray-segment",
+   "m4-01-01-thinking-methods"
+  ]
+ },
+ {
+  "id": "m4-03-01-addition-principle",
+  "title": "加法原理与分类计数",
+  "topic": "m4-03",
+  "pos": 156,
+  "miss": [],
+  "pre": [
+   "m1-06-26-add-laws"
+  ],
+  "post": [
+   "m4-03-02-multiplication-principle",
+   "m4-03-03-permutation-combination"
+  ],
+  "all": [
+   "m4-03-02-multiplication-principle",
+   "m4-03-03-permutation-combination",
+   "m1-06-26-add-laws"
+  ]
+ },
+ {
+  "id": "m4-03-02-multiplication-principle",
+  "title": "乘法原理与分步计数",
+  "topic": "m4-03",
+  "pos": 157,
+  "miss": [],
+  "pre": [
+   "m4-03-01-addition-principle",
+   "m1-06-09-intro-multiplication"
+  ],
+  "post": [
+   "m4-03-03-permutation-combination"
+  ],
+  "all": [
+   "m4-03-01-addition-principle",
+   "m4-03-03-permutation-combination",
+   "m1-06-09-intro-multiplication"
+  ]
+ },
+ {
+  "id": "m4-03-03-permutation-combination",
+  "title": "排列与组合",
+  "topic": "m4-03",
+  "pos": 158,
+  "miss": [],
+  "pre": [
+   "m4-03-02-multiplication-principle",
+   "m4-03-01-addition-principle"
+  ],
+  "post": [
+   "m4-04-01-pigeonhole"
+  ],
+  "all": [
+   "m4-03-02-multiplication-principle",
+   "m4-03-01-addition-principle",
+   "m4-04-01-pigeonhole"
+  ]
+ },
+ {
+  "id": "m4-04-01-pigeonhole",
+  "title": "抽屉原理",
+  "topic": "m4-04",
+  "pos": 160,
+  "miss": [],
+  "pre": [
+   "m1-06-13-remainder-meaning",
+   "m4-03-01-addition-principle"
+  ],
+  "post": [
+   "m4-04-02-worst-case"
+  ],
+  "all": [
+   "m4-04-02-worst-case",
+   "m1-06-13-remainder-meaning",
+   "m4-03-01-addition-principle"
+  ]
+ },
+ {
+  "id": "m4-04-02-worst-case",
+  "title": "最不利原则",
+  "topic": "m4-04",
+  "pos": 161,
+  "miss": [
+   "后续"
+  ],
+  "pre": [
+   "m4-04-01-pigeonhole",
+   "m4-03-01-addition-principle",
+   "m1-06-13-remainder-meaning"
+  ],
+  "post": [],
+  "all": [
+   "m4-04-01-pigeonhole",
+   "m4-03-01-addition-principle",
+   "m1-06-13-remainder-meaning"
+  ]
+ }
+]
