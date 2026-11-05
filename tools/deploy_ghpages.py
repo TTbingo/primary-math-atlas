@@ -11,7 +11,8 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIST = os.path.join(ROOT, "dist")
 WORK = os.path.join(ROOT, ".tmp", "ghpages")
-REMOTE = os.environ.get("GHP_REMOTE", "https://github.com/TTbingo/primary-math-atlas.git")
+# 本机 HTTPS/443 被防火墙挡，GitHub API 需走代理 17897；git 推送走 SSH（22 端口）可直接用
+REMOTE = os.environ.get("GHP_REMOTE", "git@github.com:TTbingo/primary-math-atlas.git")
 BRANCH = "gh-pages"
 
 
@@ -52,7 +53,9 @@ def main():
             print(f"清理线上已移除的文件 {removed} 个")
     else:
         os.makedirs(WORK, exist_ok=True)
-    shutil.copytree(DIST, WORK, dirs_exist_ok=True)
+    # 排除验收截图目录：它只是本地目检用的，不该上线
+    shutil.copytree(DIST, WORK, dirs_exist_ok=True,
+                    ignore=shutil.ignore_patterns("_shot", ".tmp"))
     open(os.path.join(WORK, ".nojekyll"), "w").close()
 
     is_repo = os.path.isdir(os.path.join(WORK, ".git"))
