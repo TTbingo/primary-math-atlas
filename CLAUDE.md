@@ -24,10 +24,27 @@ python tools/verify_online.py [BASE] [CODE]   # Playwright 线上冒烟（含配
 6. **SVG 是 XML**：文本里的 `<` `>` 必须写成 `&lt;` `&gt;`，否则整张图解析失败（曾导致三边关系、余数图白屏）。
 7. **公式**：正文用 `$...$` / `$$...$$`；块级 `render_text` 不要塞进 `<p>`（用 `render_inline` 剥外层）。渲染后不应残留裸 `$`。
 8. **术语不得超纲**：不出现绝对值、平方根、√、相反数、极限、`n-m` 字母公式等初中表述，改成小学说法（"负号后面的数""试到两数相乘超过它"）。
+9. **教材定位（textbook_ref）是必填字段**：每篇都要有 `{note, locations[]}`，locations 里每项是 `{volume, units[{no,name}], special[{kind,name}]}`。册次与单元号必须与 `content/textbook.json` 完全一致（build 会逐条比对单元名，对不上就报错）。`content/textbook.json` 是人教版小学数学 2024 新版：12 册 × 单元号 + 综合实践 + 数学广角（数学广角不占单元号）。
+10. **关联知识点用三类结构**：`{id, kind, note}`，kind 只能是 `前置 / 后续 / 常一起考`，每类至少一条、总数不少于 2（现行全站分布 3~7 条）。硬约束：「前置」的目标必须排在本文之前，「后续」必须排在本文之后（顺序 = 依次遍历 `modules.json` 的 `topics` 数组、展开每个的 `points`）。**同一对关系只在一篇里写**，另一篇靠构建器按 `REL_FLIP` 自动补反向链接——两篇都写就会重复展示。站内没有前置可用时用 `ext:` 前缀引用站外内容（渲染为纯文字，不生成链接）。
+11. **年级进度**：先学的篇目不得引用后学概念。「因数」是五下术语、「方程」是五下、「小数乘法」是五上、「百分数」是六上、「正反比例」是六下——低年级篇目里不能出现。确需提前借用的名词，在该篇 `cautions` 里写明「某年级后面才学，这里提前借用」。
+12. **自检工具**（都在 `tools/`）：
+    - `check_content` 规则已并入 `build.py --check`（三类合法性/顺序/齐全、教材定位、LaTeX 反斜杠+空格、禁用词、模板腔词）
+    - `tools/audit.py` —— 四线扫描的入口（`numbers` / `logic` / `figures`）
+    - `tools/verify_answers.py` —— 例题 solution 与 answer 的交叉验算（含人工核实白名单）
+    - `tools/verify_charts.py` —— SVG 图表几何与标注比对（条形/折线/扇形）
+    - `tools/audit_overflow.py` —— 锚点感知的溢出扫描（全站页面 × 2 视口）
+    - `tools/regress.py` —— 全站回归（链接、公式渲染、三类关联、教材定位、导读）
+    **写检测器后必须先造错验证它真能抓到**（曾因解析器错误漏检全部条形图）。
+13. **JSON 里 LaTeX 禁用「反斜杠 + 空格」**（`\ 5`、`a \ b`）：KaTeX 会解析失败。写空格用 `\,` 或 `~`。
+14. **例题「场景」按内容判定，不要求同篇不重复**：`examples[].scene` 只能取 `taxonomy.json.scenes` 的 13 个值之一，但**同一篇内允许重复**——场景是「这道题发生在哪儿」，两道题都在超市很正常。曾为满足「同篇不重复」硬凑标签，出现「金融理财：一年有多少天」这类错配，已按内容全站重标 303 处（`tools/fix_example_scenes.py` + `tools/_scene_fix.tsv`，报告见 `content/_reference/scene-fix-report.html`）。新增例题时照实写，别为了凑数改标签。
+15. **教材定位必须覆盖内容实际年级跨度**：`textbook_ref` 所挂册次/单元按例题与正文的最高难度判定，不能只挂起点册（「算式、数列与周期中的规律」例题是等差/兔子数列/周期余数，却只挂一年级下册找规律，2026-11-06 修正）。定位须落在「内容的工具/载体所在单元」：行程类整数题挂四上乘法模型、乘方挂五下体积与六上圆、小数估算挂五上小数乘除。通识篇（跨册思想方法）`locations` 置空、只留 note，禁止残留裸册次（build 已加校验拦截）。
+16. **「常见的量」是数与代数的第 10 节（m1-10），不从图形模块里讲**：时间、人民币、质量、温度、速度 + 单位/进率/名数总纲四篇归 m1-10。质量单位不再跟着「认识平面图形」走（原 m2-01-01 已剥离，改名 plane-shapes）。长度留在图形（测量起点），面积、体积也留在图形。新增量类内容先看这节有没有位置，别再往图形篇里塞。
+17. **节内序号必须从 01 连续**：删一篇就会触发整节重编号（m1-07 删 02 后 03..14 全前移）。改名时要同步 `id` 字段、文件名、modules.json 清单、全站 related/prerequisites、guides 的 `[[短ID]]`，并把引用按「同 slug 前移一号」修正——不要二次全局替换，会把已改过的引用再挪一格。
+18. **related 禁止指向自己**：合并多篇为一篇时，必须剔除「目标在本合并组内」的 related 条目——A 的关联指向合并兄弟 B，合并后就是自引用（语义已内化为页内关系，直接删）。删除后若三类缺一，用 `ext:` 站外延伸补位（先例：m1-01-01 / m2-01-03 / m4-04-01 / m2-02-06），不要硬找站内页面凑关联。2026-11-06 清理 51 处遗留（`tools/fix_self_refs.py`，报告见 `content/_reference/self-ref-fix-report.md`）。
 
 ## 环境陷阱（已踩过，别重犯）
 
-- **git push**：SSH 被沙箱禁读 `~/.ssh` → 远端用 HTTPS，走 `credential.helper`（gh）通道。
+- **git push**：HTTPS/443 被防火墙挡，推送一律走 SSH（22 端口，密钥已配好）；调 GitHub API 才需 `HTTPS_PROXY=http://127.0.0.1:17897`。
 - **批量删除**：`shutil.rmtree` 删 `gh-pages` 整树被 bulk-delete 拦截 → `deploy_ghpages.py` 用集合差 + 逐个 `os.remove`。
 - **CDN 缓存**：GitHub Pages HTML 有缓存，校验线上改动要带 `Cache-Control: no-cache` 或加 `?r=时间戳`。
 - **workbuddy.host 门禁**：裸请求 403；首次 `/?sharecode=BYT4SQX5HE` 种 HttpOnly cookie 后子资源自动 200。curl 验证必须带 cookie jar（`-b`），否则误判"图片全 403"。
@@ -38,26 +55,9 @@ python tools/verify_online.py [BASE] [CODE]   # Playwright 线上冒烟（含配
 | 路径 | 作用 |
 |---|---|
 | `content/modules.json` | 模块/主题/知识点清单，ID 唯一定义（`m{模块}-{节}-{序}-{slug}`，字典序即学习顺序） |
-| `content/points/*.json` | 136 篇正文 |
+| `content/points/*.json` | 90 篇正文（2026-11-06：162 篇合并为 87，常见的量拆分后净增 3） |
 | `content/media/*.svg` | 102 张配图 |
 | `build.py` | 单文件构建 + `verify_output()` 自检 |
 | `tools/gen_figs*.py` `patch_media.py` | 配图生成 / media 字段批量写入 |
 | `tools/patch_logic*.py` | 前置与正文逻辑批量修复（历史修复留档，可参照写法） |
 | `templates/` `assets/` | HTML 模板、CSS/JS、本地化 KaTeX 0.16.22 |
-46. **教材定位（textbook_ref）是必填字段**：每篇都要有 `{note, locations[]}`，locations 里每项是 `{volume, units[{no,name}], special[{kind,name}]}`。册次与单元号必须与 `content/textbook.json` 完全一致（build 会逐条比对单元名，对不上就报错）。`content/textbook.json` 是人教版小学数学 2024 新版：12 册 × 单元号 + 综合实践 + 数学广角（数学广角不占单元号）。
-47. **关联知识点用三类结构**：`{id, kind, note}`，kind 只能是 `前置 / 后续 / 常一起考`，每类至少一条、总数 2~4 条。硬约束：「前置」的目标必须排在本文之前，「后续」必须排在本文之后（顺序 = 依次遍历 `modules.json` 的 `topics` 数组、展开每个的 `points`）。**同一对关系只在一篇里写**，另一篇靠构建器按 `REL_FLIP` 自动补反向链接——两篇都写就会重复展示。站内没有前置可用时用 `ext:` 前缀引用站外内容（渲染为纯文字，不生成链接）。
-48. **年级进度**：先学的篇目不得引用后学概念。「因数」是五下术语、「方程」是五下、「小数乘法」是五上、「百分数」是六上、「正反比例」是六下——低年级篇目里不能出现。确需提前借用的名词，在该篇 `cautions` 里写明「某年级后面才学，这里提前借用」。
-49. **自检工具**（都在 `tools/`）：
-    - `check_content` 规则已并入 `build.py --check`（三类合法性/顺序/齐全、教材定位、LaTeX 反斜杠+空格、禁用词、模板腔词）
-    - `tools/audit.py` —— 四线扫描的入口（`numbers` / `logic` / `figures`）
-    - `tools/verify_answers.py` —— 例题 solution 与 answer 的交叉验算（含人工核实白名单）
-    - `tools/verify_charts.py` —— SVG 图表几何与标注比对（条形/折线/扇形）
-    - `tools/audit_overflow.py` —— 锚点感知的溢出扫描（188 页 × 2 视口）
-    - `tools/regress.py` —— 全站回归（链接、公式渲染、三类关联、教材定位、导读）
-    **写检测器后必须先造错验证它真能抓到**（2026-11-05 曾因解析器错误漏检全部条形图）。
-50. **JSON 里 LaTeX 禁用「反斜杠 + 空格」**（`\ 5`、`a \ b`）：KaTeX 会解析失败。写空格用 `\,` 或 `~`。
-51. **例题「场景」按内容判定，不要求同篇不重复**：`examples[].scene` 只能取 `taxonomy.json.scenes` 的 13 个值之一，但**同一篇内允许重复**——场景是「这道题发生在哪儿」，两道题都在超市很正常。2026-11-06 前为满足「同篇不重复」硬凑标签，出现「金融理财：一年有多少天」这类错配，已按内容全站重标 303 处（`tools/fix_example_scenes.py` + `tools/_scene_fix.tsv`，报告见 `content/_reference/scene-fix-report.html`）。新增例题时照实写，别为了凑数改标签。
-52. **教材定位必须覆盖内容实际年级跨度**：`textbook_ref` 所挂册次/单元按例题与正文的最高难度判定，不能只挂起点册（「算式、数列与周期中的规律」例题是等差/兔子数列/周期余数，却只挂一年级下册找规律，2026-11-06 修正）。定位须落在「内容的工具/载体所在单元」：行程类整数题挂四上乘法模型、乘方挂五下体积与六上圆、小数估算挂五上小数乘除。通识篇（跨册思想方法）`locations` 置空、只留 note，禁止残留裸册次（build 已加校验拦截）。
-53. **「常见的量」是数与代数的第 10 节（m1-10），不从图形模块里讲**：时间、人民币、质量、温度、速度 + 单位/进率/名数总纲四篇归 m1-10。质量单位不再跟着「认识平面图形」走（原 m2-01-01 已剥离，改名 plane-shapes）。长度留在图形（测量起点），面积、体积也留在图形。新增量类内容先看这节有没有位置，别再往图形篇里塞。
-54. **节内序号必须从 01 连续**：删一篇就会触发整节重编号（m1-07 删 02 后 03..14 全前移）。改名时要同步 `id` 字段、文件名、modules.json 清单、全站 related/prerequisites、guides 的 `[[短ID]]`，并把引用按「同 slug 前移一号」修正——不要二次全局替换，会把已改过的引用再挪一格。
-55. **related 禁止指向自己**：合并多篇为一篇时，必须剔除「目标在本合并组内」的 related 条目——A 的关联指向合并兄弟 B，合并后就是自引用（语义已内化为页内关系，直接删）。删除后若三类缺一，用 `ext:` 站外延伸补位（先例：m1-01-01 / m2-01-03 / m4-04-01 / m2-02-06），不要硬找站内页面凑关联。2026-11-06 清理 51 处遗留（`tools/fix_self_refs.py`，报告见 `content/_reference/self-ref-fix-report.md`）。

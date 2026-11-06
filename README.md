@@ -24,7 +24,7 @@
 ```
 content/
   modules.json       模块/主题/知识点清单（唯一定义）
-  points/*.json      136 篇知识点正文
+  points/*.json      90 篇知识点正文
   standards.json     课标原文条目
   taxonomy.json      行为动词、核心素养、scope 字典
   media/*.svg        配图
