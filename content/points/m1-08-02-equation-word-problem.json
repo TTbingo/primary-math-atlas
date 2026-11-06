@@ -144,12 +144,12 @@
         "note": "按比例分配列方程解，就是把各部分占总量的比写成等式"
       },
       {
-        "id": "m1-07-04-sum-difference-multiple-problems",
+        "id": "m1-07-03-sum-difference-multiple-problems",
         "kind": "常一起考",
         "note": "和倍问题用算术法要倒推「和 ÷ (倍数 + 1)」，用方程则是顺着写"
       },
       {
-        "id": "m1-07-03-quantity-relations",
+        "id": "m1-07-02-quantity-relations",
         "kind": "常一起考",
         "note": "总价、路程这些关系式，就是列方程时要找的等量关系"
       }

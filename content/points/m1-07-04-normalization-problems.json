@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "id": "m1-07-05-normalization-problems",
+  "id": "m1-07-04-normalization-problems",
   "type": "point",
   "module": "m1",
   "topic": "m1-07",
@@ -38,7 +38,7 @@
   ],
   "scope": "core",
   "prerequisites": [
-    "m1-07-03-quantity-relations"
+    "m1-07-02-quantity-relations"
   ],
   "sections": {
     "explanation": [
@@ -246,7 +246,7 @@
     "rhyme": "归一先求一份量，总量除以份数得；一份乘上要求的份，正归一乘反归一除。 **（归总问题）** 归总先求总量走，一份乘份数得总；总量除以新份数，换个分法答案出。总量不变是根本，一增一减好核对。",
     "related": [
       {
-        "id": "m1-07-03-quantity-relations",
+        "id": "m1-07-02-quantity-relations",
         "kind": "前置",
         "note": "单价 × 数量 = 总价，就是最典型的归一结构，先把这个关系认熟"
       },
@@ -256,22 +256,22 @@
         "note": "归一的每一步都是除法，除数常常是两位数，算理不熟会算错方向"
       },
       {
-        "id": "m1-07-05-normalization-problems",
+        "id": "m1-07-04-normalization-problems",
         "kind": "后续",
         "note": "归总是归一的镜像：先求总量，再按新的一份去分，两篇对着读方向才不乱"
       },
       {
-        "id": "m1-07-08-chicken-rabbit",
+        "id": "m1-07-07-chicken-rabbit",
         "kind": "常一起考",
         "note": "鸡兔同笼也是先求出一份再乘份数，与归一同一套路"
       },
       {
-        "id": "m1-07-09-surplus-deficit",
+        "id": "m1-07-08-surplus-deficit",
         "kind": "后续",
         "note": "盈亏问题也是「同一批东西、两种分法」，两次分完的余缺正是总量在变"
       },
       {
-        "id": "m1-07-04-sum-difference-multiple-problems",
+        "id": "m1-07-03-sum-difference-multiple-problems",
         "kind": "常一起考",
         "note": "和差问题里两堆合起来再拆开，与归总的「总量不变」是同一思路"
       }

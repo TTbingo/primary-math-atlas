@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "id": "m1-07-04-sum-difference-multiple-problems",
+  "id": "m1-07-03-sum-difference-multiple-problems",
   "type": "point",
   "module": "m1",
   "topic": "m1-07",
@@ -42,7 +42,7 @@
   ],
   "scope": "core",
   "prerequisites": [
-    "m1-07-03-quantity-relations"
+    "m1-07-02-quantity-relations"
   ],
   "media": [
     {
@@ -367,17 +367,17 @@
     "rhyme": "和加差，除以二，出来就是大数；和减差，除以二，小数跟着走。加差减差别弄反，回代一遍最稳当。 **（和倍问题）** 和倍先数几份整，一倍几倍加起来；和除以份数得一份，一份乘倍数得大数。加一不是减一，认准小数那一份。 **（差倍问题）** 差倍先看多几份，倍数减一才是份；差除以份得一份，一份乘倍数得大数。差配减一和配加，两套份数别交叉。",
     "related": [
       {
-        "id": "m1-07-03-quantity-relations",
+        "id": "m1-07-02-quantity-relations",
         "kind": "前置",
         "note": "先分清「一共多少」和「相差多少」这两个量，才认得出和差问题"
       },
       {
-        "id": "m1-07-09-surplus-deficit",
+        "id": "m1-07-08-surplus-deficit",
         "kind": "后续",
         "note": "和差问题之后是盈亏问题，都是同一批东西按两种方式分，只看量差在哪里"
       },
       {
-        "id": "m1-07-04-sum-difference-multiple-problems",
+        "id": "m1-07-03-sum-difference-multiple-problems",
         "kind": "常一起考",
         "note": "和差拿和做文章，和倍拿和切份，两题放在一起最见差别"
       },
@@ -387,7 +387,7 @@
         "note": "用字母表示数以后，「小数的 3 倍」写成 $3x$，和就是 $x + 3x = 96$，份数关系一眼看清"
       },
       {
-        "id": "m1-07-05-normalization-problems",
+        "id": "m1-07-04-normalization-problems",
         "kind": "常一起考",
         "note": "归一问题先求出一份，和倍问题也要先找那 1 份，再乘上倍数"
       }

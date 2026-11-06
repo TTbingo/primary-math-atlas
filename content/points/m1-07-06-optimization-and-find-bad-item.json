@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "id": "m1-07-07-optimization-and-find-bad-item",
+  "id": "m1-07-06-optimization-and-find-bad-item",
   "type": "point",
   "module": "m1",
   "topic": "m1-07",
@@ -39,7 +39,6 @@
   ],
   "scope": "common",
   "prerequisites": [
-    "m1-07-02-rmb-time-and-date",
     "m1-06-11-mixed-operation-order",
     "m1-06-06-division-intro-and-quotient"
   ],
@@ -254,9 +253,9 @@
     "rhyme": "先排主链再填空档，能等的时候别干等；一锅能烙两张算轮数；排队卸货短的先，等待自然少一半。 **（找次品）** 天平称物三句话，左重右重也平说；物品均分三份走，一称嫌疑少三分之二；九个以内两次够，二十七个要三次。",
     "related": [
       {
-        "id": "m1-07-02-rmb-time-and-date",
-        "kind": "前置",
-        "note": "优化问题全靠算「一共多少分钟」，时分秒的进率和经过时间算不清就没法比方案"
+        "id": "m1-10-02-time-units-and-24h",
+        "kind": "常一起考",
+        "note": "常一起考：优化问题全靠算「一共多少分钟」，时分秒的进率与经过时间要和方案比较一起用"
       },
       {
         "id": "m1-06-11-mixed-operation-order",
@@ -264,7 +263,7 @@
         "note": "先想清先算哪一步、后算哪一步，才谈得上重新安排这几十件事的先后"
       },
       {
-        "id": "m1-07-03-quantity-relations",
+        "id": "m1-07-02-quantity-relations",
         "kind": "常一起考",
         "note": "行程安排题要把「路上时间」和「路上距离」配起来算，和这里的排队安排是同一类统筹"
       },

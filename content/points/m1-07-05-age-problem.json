@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "id": "m1-07-06-age-problem",
+  "id": "m1-07-05-age-problem",
   "type": "point",
   "module": "m1",
   "topic": "m1-07",
@@ -144,12 +144,12 @@
     "rhyme": "年龄差，永不改；倍数变，画线段；先求那年小年龄，再减今年得年数。",
     "related": [
       {
-        "id": "m1-07-04-sum-difference-multiple-problems",
+        "id": "m1-07-03-sum-difference-multiple-problems",
         "kind": "前置",
         "note": "年龄问题的算式就是差倍公式，差不变、倍数已知，直接套 $差 \\div (倍数 - 1)$"
       },
       {
-        "id": "m1-07-04-sum-difference-multiple-problems",
+        "id": "m1-07-03-sum-difference-multiple-problems",
         "kind": "常一起考",
         "note": "题目同时给出年龄和与年龄差时，直接用和差公式求两人今年的年龄"
       },

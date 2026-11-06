@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "id": "m1-07-12-engineering",
+  "id": "m1-07-11-engineering",
   "type": "point",
   "module": "m1",
   "topic": "m1-07",
@@ -134,12 +134,12 @@
         "note": "异分母相加要先通分，$1/10 + 1/15$ 才算得出 $1/6$"
       },
       {
-        "id": "m1-07-14-concentration",
+        "id": "m1-07-13-concentration",
         "kind": "后续",
         "note": "浓度问题把溶液看成 1，与工程问题把工作量看成 1 是同一种想法"
       },
       {
-        "id": "m1-07-11-meeting-and-chasing",
+        "id": "m1-07-10-meeting-and-chasing",
         "kind": "常一起考",
         "note": "速度相加吃路程，效率相加吃工作量，是同一个模型"
       }

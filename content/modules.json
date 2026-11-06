@@ -176,19 +176,18 @@
       ],
       "points": [
         "m1-07-01-quantity-relations-basic",
-        "m1-07-02-rmb-time-and-date",
-        "m1-07-03-quantity-relations",
-        "m1-07-04-sum-difference-multiple-problems",
-        "m1-07-05-normalization-problems",
-        "m1-07-06-age-problem",
-        "m1-07-07-optimization-and-find-bad-item",
-        "m1-07-08-chicken-rabbit",
-        "m1-07-09-surplus-deficit",
-        "m1-07-10-tree-planting",
-        "m1-07-11-meeting-and-chasing",
-        "m1-07-12-engineering",
-        "m1-07-13-profit-interest",
-        "m1-07-14-concentration"
+        "m1-07-02-quantity-relations",
+        "m1-07-03-sum-difference-multiple-problems",
+        "m1-07-04-normalization-problems",
+        "m1-07-05-age-problem",
+        "m1-07-06-optimization-and-find-bad-item",
+        "m1-07-07-chicken-rabbit",
+        "m1-07-08-surplus-deficit",
+        "m1-07-09-tree-planting",
+        "m1-07-10-meeting-and-chasing",
+        "m1-07-11-engineering",
+        "m1-07-12-profit-interest",
+        "m1-07-13-concentration"
       ]
     },
     {
@@ -222,6 +221,32 @@
       ]
     },
     {
+      "id": "m1-10",
+      "module": "m1",
+      "no": 10,
+      "title": "常见的量",
+      "desc": "多长、多重、多久、多热、多快——量出来的数离开单位就没有意义。单位分级、进率、名数的化与聚，加上时间、人民币、质量、温度、速度这几套常用单位，单独成一节。",
+      "standard_ids": [
+        "std-s1-cp-2",
+        "std-s1-cp-3",
+        "std-s1-cp-5",
+        "std-s1-na-7",
+        "std-s1-geo-2",
+        "std-s2-cp-1",
+        "std-s2-cp-2",
+        "std-s2-cp-4",
+        "std-s2-na-8",
+        "std-s2-na-10",
+        "std-s2-geo-3"
+      ],
+      "points": [
+        "m1-10-01-measure-units-and-denominate",
+        "m1-10-02-time-units-and-24h",
+        "m1-10-03-mass-temperature-speed",
+        "m1-10-04-rmb"
+      ]
+    },
+    {
       "id": "m2-01",
       "module": "m2",
       "no": 1,
@@ -240,7 +265,7 @@
         "std-s3-geo-3"
       ],
       "points": [
-        "m2-01-01-plane-shapes-and-mass",
+        "m2-01-01-plane-shapes",
         "m2-01-02-length-units",
         "m2-01-03-lines-and-angles",
         "m2-01-04-perimeter",

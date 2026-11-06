@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "id": "m1-07-08-chicken-rabbit",
+  "id": "m1-07-07-chicken-rabbit",
   "type": "point",
   "module": "m1",
   "topic": "m1-07",
@@ -154,7 +154,7 @@
         "note": "学过方程后，设兔为 $x$ 顺着列式，比假设法更不容易把「求出来的量」认错"
       },
       {
-        "id": "m1-07-05-normalization-problems",
+        "id": "m1-07-04-normalization-problems",
         "kind": "常一起考",
         "note": "鸡兔同笼与归总都是先求出总量再分配，一个分脚一个分总量"
       }

@@ -280,7 +280,7 @@
         "note": "三下学除数是一位数的除法，「余数比除数小」这条规矩照样用来定商"
       },
       {
-        "id": "m1-07-07-optimization-and-find-bad-item",
+        "id": "m1-07-06-optimization-and-find-bad-item",
         "kind": "常一起考",
         "note": "把次品分成三份，分不尽时的零头，正是有余数的除法"
       },

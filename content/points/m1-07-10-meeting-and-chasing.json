@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "id": "m1-07-11-meeting-and-chasing",
+  "id": "m1-07-10-meeting-and-chasing",
   "type": "point",
   "module": "m1",
   "topic": "m1-07",
@@ -39,7 +39,7 @@
   ],
   "scope": "core",
   "prerequisites": [
-    "m1-07-03-quantity-relations"
+    "m1-07-02-quantity-relations"
   ],
   "media": [
     {
@@ -223,7 +223,7 @@
     "rhyme": "相向同时走，速度先相加；路程除以速度和，碰头时间算得准。 **（追及问题）** 同向追，速度减；差距除以速度差，追上时刻不会偏。",
     "related": [
       {
-        "id": "m1-07-03-quantity-relations",
+        "id": "m1-07-02-quantity-relations",
         "kind": "前置",
         "note": "先会「速度 × 时间 = 路程」，才能把两个人的路程合起来"
       },
@@ -238,17 +238,17 @@
         "note": "相遇问题列方程解：设相遇时间为 $t$，两人的路程和写成一条等式"
       },
       {
-        "id": "m1-07-11-meeting-and-chasing",
+        "id": "m1-07-10-meeting-and-chasing",
         "kind": "常一起考",
         "note": "相遇用速度和，追及用速度差，成对看才不弄反"
       },
       {
-        "id": "m1-07-12-engineering",
+        "id": "m1-07-11-engineering",
         "kind": "后续",
         "note": "工程问题把追及搬到了工作量上：效率和对应时间比，追及对应的是速度差"
       },
       {
-        "id": "m1-07-06-age-problem",
+        "id": "m1-07-05-age-problem",
         "kind": "常一起考",
         "note": "年龄问题里两人每年都长一岁，也是追及模型"
       }

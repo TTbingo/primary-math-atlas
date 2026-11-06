@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "id": "m1-07-09-surplus-deficit",
+  "id": "m1-07-08-surplus-deficit",
   "type": "point",
   "module": "m1",
   "topic": "m1-07",
@@ -150,12 +150,12 @@
         "note": "$(盈 + 亏) \\div$ 分配差是带括号的两级运算，括号位置写错答案就全反"
       },
       {
-        "id": "m1-07-12-engineering",
+        "id": "m1-07-11-engineering",
         "kind": "后续",
         "note": "工程问题里两队效率一加、总量不变，和盈亏的分配是同一个模型"
       },
       {
-        "id": "m1-07-05-normalization-problems",
+        "id": "m1-07-04-normalization-problems",
         "kind": "常一起考",
         "note": "归一问题是先求「一份」，盈亏问题是先求「几份」，两条路的除法方向正好相反"
       }

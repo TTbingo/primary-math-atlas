@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "id": "m1-07-03-quantity-relations",
+  "id": "m1-07-02-quantity-relations",
   "type": "point",
   "module": "m1",
   "topic": "m1-07",
@@ -155,7 +155,7 @@
         "note": "先有「几个几」的意思，单价、速度才说得清是「一份」"
       },
       {
-        "id": "m1-07-13-profit-interest",
+        "id": "m1-07-12-profit-interest",
         "kind": "后续",
         "note": "利润与利息题同样要先找单价和数量，百分率应用就是数量关系的一次搬家"
       },
