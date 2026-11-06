@@ -29,6 +29,8 @@
   <aside class="sidebar" id="sidebar">
     <div class="side-inner">{{SIDEBAR}}</div>
   </aside>
+  <!-- 紧跟侧栏执行：首帧前把滚动位置与展开状态还原，避免先画到顶部再跳 -->
+  <script src="{{ROOT}}/assets/js/nav-state.js"></script>
   <div class="sidebar-mask" id="sidebar-mask" hidden></div>
 
   <div class="main-pane">
