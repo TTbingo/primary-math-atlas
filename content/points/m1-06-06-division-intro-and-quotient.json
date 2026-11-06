@@ -375,11 +375,6 @@
         "note": "口算里的除法同样靠一句乘法口诀求商"
       },
       {
-        "id": "m1-06-06-division-intro-and-quotient",
-        "kind": "前置",
-        "note": "用 2~6 的口诀求商是同一招，只是范围小一些"
-      },
-      {
         "id": "m1-06-09-division-with-remainder",
         "kind": "常一起考",
         "note": "有余数的除法和表内除法常在同一份卷子里对照出现"

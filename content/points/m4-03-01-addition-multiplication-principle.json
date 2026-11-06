@@ -239,11 +239,6 @@
         "note": "交换律、结合律保证分类相加时先加哪一类都一样，结果才靠得住"
       },
       {
-        "id": "m4-03-01-addition-multiplication-principle",
-        "kind": "后续",
-        "note": "分类用加、分步用乘，这两个原理是一对搭档"
-      },
-      {
         "id": "m4-04-01-pigeonhole-and-worst-case",
         "kind": "常一起考",
         "note": "分类计数和抽屉原理都是把东西分堆，再看每一堆的结果"

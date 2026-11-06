@@ -324,19 +324,9 @@
         "note": "从算式里的规律到图形里的规律，都是先老实算出前几个，再往下猜一个"
       },
       {
-        "id": "m4-02-01-pattern-arith-sequence-cycle",
-        "kind": "常一起考",
-        "note": "算式排成列、数列排成行，看的都是「下一项怎么来」"
-      },
-      {
         "id": "m1-06-15-power",
         "kind": "前置",
         "note": "平方数列 1、4、9、16 正是乘方，先认识乘方才看得出这一列"
-      },
-      {
-        "id": "m4-02-01-pattern-arith-sequence-cycle",
-        "kind": "后续",
-        "note": "数列的规律是越变越大，周期是转圈重复，接着学另一种规律"
       },
       {
         "id": "m4-02-02-pattern-figure-and-reasoning",
