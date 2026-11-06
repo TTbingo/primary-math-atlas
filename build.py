@@ -367,6 +367,8 @@ def validate(tax, std, mod, points, tb):
                 if not vol:
                     err(f"{ctx}: 教材册次 {loc.get('volume')} 不在 textbook.json 内")
                     continue
+                if not loc.get("units") and not loc.get("special"):
+                    err(f"{ctx}: 教材定位 {loc.get('volume')} 只挂册次、未指明单元或栏目（通识篇应将 locations 置空）")
                 for u in loc.get("units", []):
                     if vol["units"].get(str(u.get("no"))) != u.get("name"):
                         err(f"{ctx}: 教材单元 {loc['volume']} 第{u.get('no')}单元 标成「{u.get('name')}」与教材表不符")
@@ -527,7 +529,13 @@ def render_textbook(p, depth, idx):
             seg.append(f'<span class="tb-ch">{esc(sp.get("kind",""))}·{esc(sp.get("name",""))}</span>')
         segs.append('<span class="tb-line">' + "".join(seg) + "</span>")
     if not segs:
-        return ""
+        # 通识篇：locations 为空，只渲染说明，不显示具体册次
+        if not ref.get("note"):
+            return ""
+        parts.append(f'<p class="tb-edition">{esc(tb["publisher"])}《{esc(tb["edition"])}》</p>')
+        parts.append(f'<p class="tb-note">{render_inline(ref["note"])}</p>')
+        parts.append("</section>")
+        return "".join(parts)
     parts.append(f'<p class="tb-edition">{esc(tb["publisher"])}《{esc(tb["edition"])}》</p>')
     parts.append('<div class="tb-lines">' + "".join(segs) + "</div>")
     if ref.get("note"):
