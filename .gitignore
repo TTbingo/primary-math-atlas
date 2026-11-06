@@ -13,3 +13,6 @@ content/_backup_points_grades/
 # 系统
 .DS_Store
 Thumbs.db
+
+# 本轮合并前快照（本地核对用，不上库）
+content/_backup_*

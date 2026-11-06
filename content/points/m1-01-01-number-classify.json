@@ -31,8 +31,8 @@
   ],
   "scope": "core",
   "prerequisites": [
-    "m1-01-03-num-within-100",
-    "m1-01-06-decimal-position"
+    "m1-01-03-num-composition-100",
+    "m1-01-05-decimal-position"
   ],
   "media": [
     {
@@ -137,12 +137,12 @@
         "note": "这是全站的第一篇，往前没有站内篇目可指，只能借生活里的数数经验垫底"
       },
       {
-        "id": "m1-01-06-decimal-position",
+        "id": "m1-01-05-decimal-position",
         "kind": "后续",
         "note": "数位顺序表把「同一个数字站在不同位上表示的大小差十倍百倍」讲透，数的分类这才有了可以落脚的位置"
       },
       {
-        "id": "m1-02-02-decimal-fraction-read-write",
+        "id": "m1-02-01-number-read-write",
         "kind": "常一起考",
         "note": "整数、小数、分数、百分数是同一批数的几张面孔，「先分类再读写」常是同一道题的两问"
       }

@@ -122,12 +122,12 @@
     "rhyme": "新题不会做，先想旧题样；能拆就去拆，能画就画上；情况列成表，两头一起想。",
     "related": [
       {
-        "id": "m1-08-01-letters",
+        "id": "m1-08-01-letters-and-equation",
         "kind": "前置",
         "note": "用字母把「第几个」和「是多少」一一对上，对应这条思路的起点"
       },
       {
-        "id": "m4-02-01-pattern-formula",
+        "id": "m4-02-01-pattern-arith-sequence-cycle",
         "kind": "后续",
         "note": "找规律正是转化、列表这些方法派上用场的地方"
       },

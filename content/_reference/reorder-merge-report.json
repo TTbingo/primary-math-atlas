@@ -1,0 +1,1000 @@
+{
+  "merge_groups": [
+    {
+      "topic": "m1-01",
+      "new_title": "1~20 的认识",
+      "new_slug": "num-1-to-20",
+      "from": [
+        "m1-01-02-num-1-to-5",
+        "m1-01-13-num-6-to-10",
+        "m1-01-14-num-11-to-20"
+      ]
+    },
+    {
+      "topic": "m1-01",
+      "new_title": "小数的认识与意义",
+      "new_slug": "decimal-intro-and-meaning",
+      "from": [
+        "m1-01-07-decimal-meaning",
+        "m1-01-08-decimal-intro"
+      ]
+    },
+    {
+      "topic": "m1-01",
+      "new_title": "分数的意义与基本性质",
+      "new_slug": "fraction-meaning-and-property",
+      "from": [
+        "m1-01-09-fraction-meaning",
+        "m1-01-10-fraction-property"
+      ]
+    },
+    {
+      "topic": "m1-01",
+      "new_title": "分数的初步认识与分数和除法的关系",
+      "new_slug": "fraction-intro-and-division",
+      "from": [
+        "m1-01-15-fraction-intro",
+        "m1-01-16-fraction-division"
+      ]
+    },
+    {
+      "topic": "m1-02",
+      "new_title": "整数、小数、分数与百分数的读写",
+      "new_slug": "number-read-write",
+      "from": [
+        "m1-02-01-integer-read-write",
+        "m1-02-02-decimal-fraction-read-write"
+      ]
+    },
+    {
+      "topic": "m1-03",
+      "new_title": "近似数与大数的改写",
+      "new_slug": "rounding-and-rewrite",
+      "from": [
+        "m1-03-01-rounding",
+        "m1-03-02-rewrite-wan-yi"
+      ]
+    },
+    {
+      "topic": "m1-03",
+      "new_title": "分数、小数与百分数的互化",
+      "new_slug": "fraction-decimal-percent-convert",
+      "from": [
+        "m1-03-03-fraction-forms",
+        "m1-03-04-decimal-fraction-percent-convert"
+      ]
+    },
+    {
+      "topic": "m1-04",
+      "new_title": "整数、小数、分数与正负数的比较大小",
+      "new_slug": "compare-numbers",
+      "from": [
+        "m1-04-01-compare-integer-decimal",
+        "m1-04-02-compare-fraction",
+        "m1-04-03-compare-negative"
+      ]
+    },
+    {
+      "topic": "m1-05",
+      "new_title": "2、3、5 的倍数特征与质数、合数",
+      "new_slug": "divisibility-and-prime",
+      "from": [
+        "m1-05-02-divisibility-rules",
+        "m1-05-03-prime-composite"
+      ]
+    },
+    {
+      "topic": "m1-05",
+      "new_title": "因数、倍数与最大公因数、最小公倍数",
+      "new_slug": "factors-multiples-and-gcd-lcm",
+      "from": [
+        "m1-05-01-factors-multiples",
+        "m1-05-04-gcd-lcm"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "5 以内数的加法与减法",
+      "new_slug": "add-sub-within-5",
+      "from": [
+        "m1-06-02-add-within-5",
+        "m1-06-03-sub-within-5"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "20 以内的进位加法与退位减法",
+      "new_slug": "add-sub-within-20",
+      "from": [
+        "m1-06-04-carry-add-9",
+        "m1-06-05-borrow-sub-9",
+        "m1-06-06-borrow-sub-methods"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "100 以内加减法的口算与笔算",
+      "new_slug": "add-sub-within-100",
+      "from": [
+        "m1-06-07-written-add-sub-2digit",
+        "m1-06-33-mental-add-sub-100"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "乘法的初步认识与 1~9 的乘法口诀",
+      "new_slug": "multiplication-intro-and-table",
+      "from": [
+        "m1-06-09-intro-multiplication",
+        "m1-06-10-mult-table",
+        "m1-06-34-mul-table-7-9"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "除法的初步认识与用口诀求商",
+      "new_slug": "division-intro-and-quotient",
+      "from": [
+        "m1-06-11-intro-division",
+        "m1-06-12-division-by-table",
+        "m1-06-35-div-table-7-9"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "有余数除法的意义与余数的性质",
+      "new_slug": "division-with-remainder",
+      "from": [
+        "m1-06-13-remainder-meaning",
+        "m1-06-14-remainder-rule"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "多位数乘一位数与多位数乘两位数",
+      "new_slug": "multiplication-multi-digit",
+      "from": [
+        "m1-06-15-mult-1digit",
+        "m1-06-16-mult-2digit"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "除数是一位数与除数是两位数的除法",
+      "new_slug": "division-multi-digit",
+      "from": [
+        "m1-06-17-div-1digit",
+        "m1-06-18-div-2digit"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "小数乘法与小数除法的算理",
+      "new_slug": "decimal-mult-and-div",
+      "from": [
+        "m1-06-19-decimal-mult",
+        "m1-06-20-decimal-div"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "分数的加法和减法",
+      "new_slug": "fraction-add-sub",
+      "from": [
+        "m1-06-21-fraction-add-sub",
+        "m1-06-36-fraction-diff"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "分数乘法与分数除法的算理",
+      "new_slug": "fraction-mult-and-div",
+      "from": [
+        "m1-06-22-fraction-mult",
+        "m1-06-23-fraction-div"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "混合运算的顺序",
+      "new_slug": "mixed-operation-order",
+      "from": [
+        "m1-06-24-mixed-op-order",
+        "m1-06-25-mixed-op-bracket"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "加法、乘法的运算律与减法、除法的性质",
+      "new_slug": "operation-laws",
+      "from": [
+        "m1-06-26-add-laws",
+        "m1-06-27-mult-laws",
+        "m1-06-28-sub-div-property"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "乘加乘减",
+      "new_slug": "mult-add-sub",
+      "from": [
+        "m1-06-31-mult-add-sub"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "new_title": "小数的加法和减法",
+      "new_slug": "decimal-add-sub",
+      "from": [
+        "m1-06-32-decimal-add-sub"
+      ]
+    },
+    {
+      "topic": "m1-07",
+      "new_title": "和差、和倍与差倍问题",
+      "new_slug": "sum-difference-multiple-problems",
+      "from": [
+        "m1-07-02-sum-difference",
+        "m1-07-03-sum-multiple",
+        "m1-07-04-difference-multiple"
+      ]
+    },
+    {
+      "topic": "m1-07",
+      "new_title": "归一问题与归总问题",
+      "new_slug": "normalization-problems",
+      "from": [
+        "m1-07-05-normalization",
+        "m1-07-06-total-normalization"
+      ]
+    },
+    {
+      "topic": "m1-07",
+      "new_title": "相遇问题与追及问题",
+      "new_slug": "meeting-and-chasing",
+      "from": [
+        "m1-07-11-meeting",
+        "m1-07-12-chasing"
+      ]
+    },
+    {
+      "topic": "m1-07",
+      "new_title": "数量间的加减关系与倍的关系",
+      "new_slug": "quantity-relations-basic",
+      "from": [
+        "m1-07-16-add-sub-relation",
+        "m1-07-17-times-relation"
+      ]
+    },
+    {
+      "topic": "m1-07",
+      "new_title": "人民币、时、分、秒与年月日",
+      "new_slug": "rmb-time-and-date",
+      "from": [
+        "m1-07-18-rmb",
+        "m1-07-19-time-units",
+        "m1-07-20-date"
+      ]
+    },
+    {
+      "topic": "m1-07",
+      "new_title": "优化问题与找次品",
+      "new_slug": "optimization-and-find-bad-item",
+      "from": [
+        "m1-07-21-optimization",
+        "m1-07-22-find-bad-item"
+      ]
+    },
+    {
+      "topic": "m1-08",
+      "new_title": "用字母表示数与方程的意义",
+      "new_slug": "letters-and-equation",
+      "from": [
+        "m1-08-01-letters",
+        "m1-08-02-equation-solve"
+      ]
+    },
+    {
+      "topic": "m1-08",
+      "new_title": "列方程解应用题",
+      "new_slug": "equation-word-problem",
+      "from": [
+        "m1-08-03-equation-word-problem"
+      ]
+    },
+    {
+      "topic": "m1-09",
+      "new_title": "比的意义、化简与正反比例",
+      "new_slug": "ratio-and-proportion",
+      "from": [
+        "m1-09-01-ratio-meaning",
+        "m1-09-02-proportion"
+      ]
+    },
+    {
+      "topic": "m1-09",
+      "new_title": "比例尺、按比例分配与杠杆平衡",
+      "new_slug": "scale-allocation-lever",
+      "from": [
+        "m1-09-03-scale",
+        "m1-09-04-proportion-allocation",
+        "m1-09-05-lever-balance"
+      ]
+    },
+    {
+      "topic": "m2-01",
+      "new_title": "线段、射线、直线与角的认识",
+      "new_slug": "lines-and-angles",
+      "from": [
+        "m2-01-01-lines-ray-segment",
+        "m2-01-02-intro-angles",
+        "m2-01-03-angle-measure"
+      ]
+    },
+    {
+      "topic": "m2-01",
+      "new_title": "三角形的认识、内角和与三边关系",
+      "new_slug": "triangle",
+      "from": [
+        "m2-01-05-triangle-classify",
+        "m2-01-06-triangle-angle-sum",
+        "m2-01-07-triangle-three-sides"
+      ]
+    },
+    {
+      "topic": "m2-01",
+      "new_title": "长度单位：厘米、米、毫米、分米与千米",
+      "new_slug": "length-units",
+      "from": [
+        "m2-01-11-length-cm-m",
+        "m2-01-12-length-km-mm"
+      ]
+    },
+    {
+      "topic": "m2-01",
+      "new_title": "周长的认识与长方形、正方形的周长",
+      "new_slug": "perimeter",
+      "from": [
+        "m2-01-13-perimeter",
+        "m2-01-14-rect-perimeter"
+      ]
+    },
+    {
+      "topic": "m2-01",
+      "new_title": "面积、面积单位与长方形正方形的面积",
+      "new_slug": "area-and-rect-area",
+      "from": [
+        "m2-01-15-area-and-unit",
+        "m2-01-16-area-unit-convert",
+        "m2-01-17-rect-area"
+      ]
+    },
+    {
+      "topic": "m2-01",
+      "new_title": "平行四边形、三角形与梯形的面积",
+      "new_slug": "polygon-area",
+      "from": [
+        "m2-01-18-area-parallelogram",
+        "m2-01-19-area-triangle",
+        "m2-01-20-area-trapezoid"
+      ]
+    },
+    {
+      "topic": "m2-01",
+      "new_title": "组合图形与不规则图形的面积",
+      "new_slug": "composite-irregular-area",
+      "from": [
+        "m2-01-23-composite-area",
+        "m2-01-24-irregular-area"
+      ]
+    },
+    {
+      "topic": "m2-01",
+      "new_title": "圆的特征与扇形的认识",
+      "new_slug": "circle-features-and-sector",
+      "from": [
+        "m2-01-09-circle-features",
+        "m2-01-10-sector"
+      ]
+    },
+    {
+      "topic": "m2-01",
+      "new_title": "圆的周长与圆的面积",
+      "new_slug": "circle-circumference-and-area",
+      "from": [
+        "m2-01-21-circle-circumference",
+        "m2-01-22-circle-area"
+      ]
+    },
+    {
+      "topic": "m2-01",
+      "new_title": "平行与垂直、平行四边形和梯形的认识",
+      "new_slug": "parallel-perpendicular-quadrilateral",
+      "from": [
+        "m2-01-04-parallel-perpendicular",
+        "m2-01-08-quadrilateral"
+      ]
+    },
+    {
+      "topic": "m2-01",
+      "new_title": "认识平面图形与克、千克、吨",
+      "new_slug": "plane-shapes-and-mass",
+      "from": [
+        "m2-01-25-plane-shapes",
+        "m2-01-26-mass-units"
+      ]
+    },
+    {
+      "topic": "m2-02",
+      "new_title": "长方体和正方体的认识、表面积与体积",
+      "new_slug": "cuboid",
+      "from": [
+        "m2-02-01-solid-features",
+        "m2-02-03-cuboid-surface",
+        "m2-02-05-cuboid-volume-formula"
+      ]
+    },
+    {
+      "topic": "m2-02",
+      "new_title": "圆柱和圆锥的认识与圆柱的表面积",
+      "new_slug": "cylinder-cone-and-surface",
+      "from": [
+        "m2-02-02-cylinder-cone-features",
+        "m2-02-06-cylinder-surface"
+      ]
+    },
+    {
+      "topic": "m2-02",
+      "new_title": "圆柱和圆锥的体积",
+      "new_slug": "cylinder-and-cone-volume",
+      "from": [
+        "m2-02-07-cylinder-volume",
+        "m2-02-08-cone-volume"
+      ]
+    },
+    {
+      "topic": "m2-02",
+      "new_title": "体积和体积单位与不规则物体的体积",
+      "new_slug": "volume-and-irregular-volume",
+      "from": [
+        "m2-02-04-cuboid-volume",
+        "m2-02-10-irregular-volume"
+      ]
+    },
+    {
+      "topic": "m2-02",
+      "new_title": "认识立体图形",
+      "new_slug": "solid-shapes-intro",
+      "from": [
+        "m2-02-11-solid-shapes-intro"
+      ]
+    },
+    {
+      "topic": "m2-02",
+      "new_title": "观察物体",
+      "new_slug": "observe-object",
+      "from": [
+        "m2-02-09-observe-object"
+      ]
+    },
+    {
+      "topic": "m2-03",
+      "new_title": "轴对称、平移和旋转",
+      "new_slug": "axis-symmetry-translation-rotation",
+      "from": [
+        "m2-03-01-axis-symmetry",
+        "m2-03-02-translation-rotation"
+      ]
+    },
+    {
+      "topic": "m2-03",
+      "new_title": "图形的放大与缩小和图形密铺",
+      "new_slug": "scale-enlarge-and-tessellation",
+      "from": [
+        "m2-03-03-scale-enlarge",
+        "m2-03-04-tessellation"
+      ]
+    },
+    {
+      "topic": "m2-04",
+      "new_title": "方向与位置、用数对确定位置和描述路线",
+      "new_slug": "position-and-route",
+      "from": [
+        "m2-04-01-direction",
+        "m2-04-02-number-pair",
+        "m2-04-03-route-map"
+      ]
+    },
+    {
+      "topic": "m3-01",
+      "new_title": "数据的收集、整理与统计表",
+      "new_slug": "data-collect-and-table",
+      "from": [
+        "m3-01-01-data-collect",
+        "m3-01-02-statistical-table"
+      ]
+    },
+    {
+      "topic": "m3-02",
+      "new_title": "条形统计图与折线统计图",
+      "new_slug": "bar-and-line-chart",
+      "from": [
+        "m3-02-01-bar-chart",
+        "m3-02-02-line-chart"
+      ]
+    },
+    {
+      "topic": "m3-02",
+      "new_title": "扇形统计图与统计图的选择",
+      "new_slug": "pie-chart-and-choice",
+      "from": [
+        "m3-02-03-pie-chart",
+        "m3-02-04-chart-choice"
+      ]
+    },
+    {
+      "topic": "m3-04",
+      "new_title": "确定事件与可能性的大小",
+      "new_slug": "certainty-and-possibility",
+      "from": [
+        "m3-04-01-certainty",
+        "m3-04-02-possibility"
+      ]
+    },
+    {
+      "topic": "m3-04",
+      "new_title": "数字编码",
+      "new_slug": "digital-code",
+      "from": [
+        "m3-04-03-digital-code"
+      ]
+    },
+    {
+      "topic": "m4-02",
+      "new_title": "算式、数列与周期中的规律",
+      "new_slug": "pattern-arith-sequence-cycle",
+      "from": [
+        "m4-02-01-pattern-formula",
+        "m4-02-02-pattern-sequence",
+        "m4-02-03-pattern-cycle"
+      ]
+    },
+    {
+      "topic": "m4-02",
+      "new_title": "数图形中的规律与推理",
+      "new_slug": "pattern-figure-and-reasoning",
+      "from": [
+        "m4-02-04-pattern-figure",
+        "m4-02-05-logic-reasoning"
+      ]
+    },
+    {
+      "topic": "m4-03",
+      "new_title": "加法原理与乘法原理",
+      "new_slug": "addition-multiplication-principle",
+      "from": [
+        "m4-03-01-addition-principle",
+        "m4-03-02-multiplication-principle"
+      ]
+    },
+    {
+      "topic": "m4-03",
+      "new_title": "排列与组合、集合与重叠问题",
+      "new_slug": "permutation-and-set-overlap",
+      "from": [
+        "m4-03-03-permutation-combination",
+        "m4-03-04-set-overlap"
+      ]
+    },
+    {
+      "topic": "m4-04",
+      "new_title": "抽屉原理与最不利原则",
+      "new_slug": "pigeonhole-and-worst-case",
+      "from": [
+        "m4-04-01-pigeonhole",
+        "m4-04-02-worst-case"
+      ]
+    }
+  ],
+  "order_changes": [
+    {
+      "topic": "m1-01",
+      "title": "数的意义和性质",
+      "before": [
+        "m1-01-01-number-classify",
+        "m1-01-02-num-1-to-5",
+        "m1-01-03-num-within-100",
+        "m1-01-04-num-within-10000",
+        "m1-01-05-big-number",
+        "m1-01-06-decimal-position",
+        "m1-01-07-decimal-meaning",
+        "m1-01-08-decimal-intro",
+        "m1-01-09-fraction-meaning",
+        "m1-01-10-fraction-property",
+        "m1-01-11-percentage-meaning",
+        "m1-01-12-positive-negative",
+        "m1-01-13-num-6-to-10",
+        "m1-01-14-num-11-to-20",
+        "m1-01-15-fraction-intro",
+        "m1-01-16-fraction-division"
+      ],
+      "after": [
+        "m1-01-01-number-classify",
+        "m1-01-02-num-1-to-5",
+        "m1-01-03-num-within-100",
+        "m1-01-04-num-within-10000",
+        "m1-01-06-decimal-position",
+        "m1-01-15-fraction-intro",
+        "m1-01-07-decimal-meaning",
+        "m1-01-05-big-number",
+        "m1-01-09-fraction-meaning",
+        "m1-01-11-percentage-meaning",
+        "m1-01-12-positive-negative"
+      ]
+    },
+    {
+      "topic": "m1-02",
+      "title": "数的读写",
+      "before": [
+        "m1-02-01-integer-read-write",
+        "m1-02-02-decimal-fraction-read-write"
+      ],
+      "after": [
+        "m1-02-01-integer-read-write"
+      ]
+    },
+    {
+      "topic": "m1-03",
+      "title": "数的改写与近似数",
+      "before": [
+        "m1-03-01-rounding",
+        "m1-03-02-rewrite-wan-yi",
+        "m1-03-03-fraction-forms",
+        "m1-03-04-decimal-fraction-percent-convert",
+        "m1-03-05-hundred-thousand"
+      ],
+      "after": [
+        "m1-03-05-hundred-thousand",
+        "m1-03-01-rounding",
+        "m1-03-03-fraction-forms"
+      ]
+    },
+    {
+      "topic": "m1-04",
+      "title": "比较大小",
+      "before": [
+        "m1-04-01-compare-integer-decimal",
+        "m1-04-02-compare-fraction",
+        "m1-04-03-compare-negative"
+      ],
+      "after": [
+        "m1-04-01-compare-integer-decimal"
+      ]
+    },
+    {
+      "topic": "m1-05",
+      "title": "因数、倍数、质数、合数",
+      "before": [
+        "m1-05-01-factors-multiples",
+        "m1-05-02-divisibility-rules",
+        "m1-05-03-prime-composite",
+        "m1-05-04-gcd-lcm"
+      ],
+      "after": [
+        "m1-05-01-factors-multiples",
+        "m1-05-02-divisibility-rules"
+      ]
+    },
+    {
+      "topic": "m1-06",
+      "title": "数的运算",
+      "before": [
+        "m1-06-01-meaning-of-operations",
+        "m1-06-02-add-within-5",
+        "m1-06-03-sub-within-5",
+        "m1-06-04-carry-add-9",
+        "m1-06-05-borrow-sub-9",
+        "m1-06-06-borrow-sub-methods",
+        "m1-06-07-written-add-sub-2digit",
+        "m1-06-08-written-add-sub-10000",
+        "m1-06-09-intro-multiplication",
+        "m1-06-10-mult-table",
+        "m1-06-11-intro-division",
+        "m1-06-12-division-by-table",
+        "m1-06-13-remainder-meaning",
+        "m1-06-14-remainder-rule",
+        "m1-06-15-mult-1digit",
+        "m1-06-16-mult-2digit",
+        "m1-06-17-div-1digit",
+        "m1-06-18-div-2digit",
+        "m1-06-19-decimal-mult",
+        "m1-06-20-decimal-div",
+        "m1-06-21-fraction-add-sub",
+        "m1-06-22-fraction-mult",
+        "m1-06-23-fraction-div",
+        "m1-06-24-mixed-op-order",
+        "m1-06-25-mixed-op-bracket",
+        "m1-06-26-add-laws",
+        "m1-06-27-mult-laws",
+        "m1-06-28-sub-div-property",
+        "m1-06-29-power",
+        "m1-06-30-estimation",
+        "m1-06-31-mult-add-sub",
+        "m1-06-32-decimal-add-sub",
+        "m1-06-33-mental-add-sub-100",
+        "m1-06-34-mul-table-7-9",
+        "m1-06-35-div-table-7-9",
+        "m1-06-36-fraction-diff"
+      ],
+      "after": [
+        "m1-06-01-meaning-of-operations",
+        "m1-06-02-add-within-5",
+        "m1-06-04-carry-add-9",
+        "m1-06-07-written-add-sub-2digit",
+        "m1-06-09-intro-multiplication",
+        "m1-06-11-intro-division",
+        "m1-06-31-mult-add-sub",
+        "m1-06-08-written-add-sub-10000",
+        "m1-06-13-remainder-meaning",
+        "m1-06-15-mult-1digit",
+        "m1-06-24-mixed-op-order",
+        "m1-06-17-div-1digit",
+        "m1-06-30-estimation",
+        "m1-06-26-add-laws",
+        "m1-06-29-power",
+        "m1-06-32-decimal-add-sub",
+        "m1-06-19-decimal-mult",
+        "m1-06-21-fraction-add-sub",
+        "m1-06-22-fraction-mult"
+      ]
+    },
+    {
+      "topic": "m1-07",
+      "title": "解决问题",
+      "before": [
+        "m1-07-01-quantity-relations",
+        "m1-07-02-sum-difference",
+        "m1-07-03-sum-multiple",
+        "m1-07-04-difference-multiple",
+        "m1-07-05-normalization",
+        "m1-07-06-total-normalization",
+        "m1-07-07-tree-planting",
+        "m1-07-08-chicken-rabbit",
+        "m1-07-09-surplus-deficit",
+        "m1-07-10-age-problem",
+        "m1-07-11-meeting",
+        "m1-07-12-chasing",
+        "m1-07-13-engineering",
+        "m1-07-14-profit-interest",
+        "m1-07-15-concentration",
+        "m1-07-16-add-sub-relation",
+        "m1-07-17-times-relation",
+        "m1-07-18-rmb",
+        "m1-07-19-time-units",
+        "m1-07-20-date",
+        "m1-07-21-optimization",
+        "m1-07-22-find-bad-item"
+      ],
+      "after": [
+        "m1-07-16-add-sub-relation",
+        "m1-07-18-rmb",
+        "m1-07-01-quantity-relations",
+        "m1-07-02-sum-difference",
+        "m1-07-05-normalization",
+        "m1-07-10-age-problem",
+        "m1-07-21-optimization",
+        "m1-07-08-chicken-rabbit",
+        "m1-07-09-surplus-deficit",
+        "m1-07-07-tree-planting",
+        "m1-07-11-meeting",
+        "m1-07-13-engineering",
+        "m1-07-14-profit-interest",
+        "m1-07-15-concentration"
+      ]
+    },
+    {
+      "topic": "m1-08",
+      "title": "式与方程",
+      "before": [
+        "m1-08-01-letters",
+        "m1-08-02-equation-solve",
+        "m1-08-03-equation-word-problem"
+      ],
+      "after": [
+        "m1-08-01-letters",
+        "m1-08-03-equation-word-problem"
+      ]
+    },
+    {
+      "topic": "m1-09",
+      "title": "比和比例",
+      "before": [
+        "m1-09-01-ratio-meaning",
+        "m1-09-02-proportion",
+        "m1-09-03-scale",
+        "m1-09-04-proportion-allocation",
+        "m1-09-05-lever-balance"
+      ],
+      "after": [
+        "m1-09-01-ratio-meaning",
+        "m1-09-03-scale"
+      ]
+    },
+    {
+      "topic": "m2-01",
+      "title": "图形的认识与测量",
+      "before": [
+        "m2-01-01-lines-ray-segment",
+        "m2-01-02-intro-angles",
+        "m2-01-03-angle-measure",
+        "m2-01-04-parallel-perpendicular",
+        "m2-01-05-triangle-classify",
+        "m2-01-06-triangle-angle-sum",
+        "m2-01-07-triangle-three-sides",
+        "m2-01-08-quadrilateral",
+        "m2-01-09-circle-features",
+        "m2-01-10-sector",
+        "m2-01-11-length-cm-m",
+        "m2-01-12-length-km-mm",
+        "m2-01-13-perimeter",
+        "m2-01-14-rect-perimeter",
+        "m2-01-15-area-and-unit",
+        "m2-01-16-area-unit-convert",
+        "m2-01-17-rect-area",
+        "m2-01-18-area-parallelogram",
+        "m2-01-19-area-triangle",
+        "m2-01-20-area-trapezoid",
+        "m2-01-21-circle-circumference",
+        "m2-01-22-circle-area",
+        "m2-01-23-composite-area",
+        "m2-01-24-irregular-area",
+        "m2-01-25-plane-shapes",
+        "m2-01-26-mass-units"
+      ],
+      "after": [
+        "m2-01-25-plane-shapes",
+        "m2-01-11-length-cm-m",
+        "m2-01-01-lines-ray-segment",
+        "m2-01-13-perimeter",
+        "m2-01-15-area-and-unit",
+        "m2-01-04-parallel-perpendicular",
+        "m2-01-05-triangle-classify",
+        "m2-01-18-area-parallelogram",
+        "m2-01-23-composite-area",
+        "m2-01-09-circle-features",
+        "m2-01-21-circle-circumference"
+      ]
+    },
+    {
+      "topic": "m2-02",
+      "title": "立体图形",
+      "before": [
+        "m2-02-01-solid-features",
+        "m2-02-02-cylinder-cone-features",
+        "m2-02-03-cuboid-surface",
+        "m2-02-04-cuboid-volume",
+        "m2-02-05-cuboid-volume-formula",
+        "m2-02-06-cylinder-surface",
+        "m2-02-07-cylinder-volume",
+        "m2-02-08-cone-volume",
+        "m2-02-09-observe-object",
+        "m2-02-10-irregular-volume",
+        "m2-02-11-solid-shapes-intro"
+      ],
+      "after": [
+        "m2-02-11-solid-shapes-intro",
+        "m2-02-09-observe-object",
+        "m2-02-01-solid-features",
+        "m2-02-04-cuboid-volume",
+        "m2-02-02-cylinder-cone-features",
+        "m2-02-07-cylinder-volume"
+      ]
+    },
+    {
+      "topic": "m2-03",
+      "title": "图形的变换与运动",
+      "before": [
+        "m2-03-01-axis-symmetry",
+        "m2-03-02-translation-rotation",
+        "m2-03-03-scale-enlarge",
+        "m2-03-04-tessellation"
+      ],
+      "after": [
+        "m2-03-01-axis-symmetry",
+        "m2-03-03-scale-enlarge"
+      ]
+    },
+    {
+      "topic": "m2-04",
+      "title": "图形与位置",
+      "before": [
+        "m2-04-01-direction",
+        "m2-04-02-number-pair",
+        "m2-04-03-route-map"
+      ],
+      "after": [
+        "m2-04-01-direction"
+      ]
+    },
+    {
+      "topic": "m3-01",
+      "title": "数据的收集与整理",
+      "before": [
+        "m3-01-01-data-collect",
+        "m3-01-02-statistical-table"
+      ],
+      "after": [
+        "m3-01-01-data-collect"
+      ]
+    },
+    {
+      "topic": "m3-02",
+      "title": "统计图",
+      "before": [
+        "m3-02-01-bar-chart",
+        "m3-02-02-line-chart",
+        "m3-02-03-pie-chart",
+        "m3-02-04-chart-choice"
+      ],
+      "after": [
+        "m3-02-01-bar-chart",
+        "m3-02-03-pie-chart"
+      ]
+    },
+    {
+      "topic": "m3-04",
+      "title": "可能性",
+      "before": [
+        "m3-04-01-certainty",
+        "m3-04-02-possibility",
+        "m3-04-03-digital-code"
+      ],
+      "after": [
+        "m3-04-03-digital-code",
+        "m3-04-01-certainty"
+      ]
+    },
+    {
+      "topic": "m4-02",
+      "title": "探索规律",
+      "before": [
+        "m4-02-01-pattern-formula",
+        "m4-02-02-pattern-sequence",
+        "m4-02-03-pattern-cycle",
+        "m4-02-04-pattern-figure",
+        "m4-02-05-logic-reasoning"
+      ],
+      "after": [
+        "m4-02-01-pattern-formula",
+        "m4-02-04-pattern-figure"
+      ]
+    },
+    {
+      "topic": "m4-03",
+      "title": "计数方法",
+      "before": [
+        "m4-03-01-addition-principle",
+        "m4-03-02-multiplication-principle",
+        "m4-03-03-permutation-combination",
+        "m4-03-04-set-overlap"
+      ],
+      "after": [
+        "m4-03-01-addition-principle",
+        "m4-03-03-permutation-combination"
+      ]
+    },
+    {
+      "topic": "m4-04",
+      "title": "抽屉原理",
+      "before": [
+        "m4-04-01-pigeonhole",
+        "m4-04-02-worst-case"
+      ],
+      "after": [
+        "m4-04-01-pigeonhole"
+      ]
+    }
+  ],
+  "count_before": 162,
+  "count_after": 87
+}

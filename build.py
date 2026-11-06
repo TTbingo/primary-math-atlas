@@ -396,8 +396,15 @@ def validate(tax, std, mod, points, tb):
         for m2 in re.finditer(r"(?<!\\)\$\d", blob_nomath):
             err(f"{ctx}: 疑似用 $ 表示人民币（应写「元」或 ¥）→ {blob_nomath[max(0,m2.start()-15):m2.start()+8]}")
         # 圆锥体积漏 1/3
-        if "圆锥" in p.get("title", "") and re.search(r"(?<![\d/])V\s*=\s*Sh(?!\s*/)", blob):
-            err(f"{ctx}: 圆锥体积疑似漏 1/3，请查 _reference/formula-audit.md A1")
+        # 只在「圆锥」上下文里查 V=Sh：合并后一篇可能同时讲圆柱和圆锥，
+        # 圆柱的 V=Sh 是对的，不能连带报错。取每个含「圆锥」的段落单独判断。
+        if "圆锥" in p.get("title", ""):
+            for seg in re.split(r"[。；\n]", blob):
+                if "圆锥" not in seg:
+                    continue
+                if re.search(r"(?<![\d/])V\s*=\s*Sh(?!\s*/)", seg):
+                    err(f"{ctx}: 圆锥体积疑似漏 1/3，请查 _reference/formula-audit.md A1")
+                    break
 
     # 模块体系自身的完整性：节必须有模块、模块必须有节、节内序号必须从 01 连续
     for t in mod["topics"]:

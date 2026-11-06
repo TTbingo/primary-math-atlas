@@ -151,17 +151,17 @@
         "note": "先把数本身认清楚，加、减、乘、除这些动作才有做事的对象"
       },
       {
-        "id": "m1-06-09-intro-multiplication",
+        "id": "m1-06-05-multiplication-intro-and-table",
         "kind": "后续",
         "note": "乘法是「几个几」，正是把它看成加法的压缩之后才有的写法"
       },
       {
-        "id": "m1-06-11-intro-division",
+        "id": "m1-06-06-division-intro-and-quotient",
         "kind": "后续",
         "note": "平均分的两种问法，正是等分除和包含除的来源"
       },
       {
-        "id": "m1-07-01-quantity-relations",
+        "id": "m1-07-03-quantity-relations",
         "kind": "常一起考",
         "note": "总价、路程这些数量关系，都是四则运算的意义套上具体情境"
       }

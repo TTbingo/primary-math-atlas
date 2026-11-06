@@ -29,7 +29,7 @@
   ],
   "scope": "extended",
   "prerequisites": [
-    "m1-06-25-mixed-op-bracket"
+    "m1-06-11-mixed-operation-order"
   ],
   "media": [
     {
@@ -145,17 +145,17 @@
     "rhyme": "一盈一亏先相加，双盈双亏大减小；再除每份差多少，人数总数都算好。",
     "related": [
       {
-        "id": "m1-06-25-mixed-op-bracket",
+        "id": "m1-06-11-mixed-operation-order",
         "kind": "前置",
         "note": "$(盈 + 亏) \\div$ 分配差是带括号的两级运算，括号位置写错答案就全反"
       },
       {
-        "id": "m1-07-13-engineering",
+        "id": "m1-07-12-engineering",
         "kind": "后续",
         "note": "工程问题里两队效率一加、总量不变，和盈亏的分配是同一个模型"
       },
       {
-        "id": "m1-07-05-normalization",
+        "id": "m1-07-05-normalization-problems",
         "kind": "常一起考",
         "note": "归一问题是先求「一份」，盈亏问题是先求「几份」，两条路的除法方向正好相反"
       }
