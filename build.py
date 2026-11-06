@@ -305,13 +305,12 @@ def validate(tax, std, mod, points, tb):
             elif kind == "examples":
                 if len(v) < mn:
                     err(f"{ctx}.{k}: 例题数 {len(v)} < 要求 {mn}")
-                seen = []
+                # 不再要求同篇场景互不重复：场景是「这道题发生在哪儿」的标签，同一篇里两道题都在超市、
+                # 都在教室很正常。2026-11-06 起以「标签与实际内容一致」为准（此前为凑不重复硬套过
+                # 「金融理财：一年有多少天」这类错标签）。枚举校验保留。
                 for e in v:
                     if e.get("scene") not in scenes:
                         err(f"{ctx}.{k}: 场景「{e.get('scene')}」不在枚举内")
-                    if e.get("scene") in seen:
-                        err(f"{ctx}.{k}: 场景「{e.get('scene')}」重复")
-                    seen.append(e.get("scene"))
                     for f in ("question", "solution", "answer"):
                         if not e.get(f):
                             err(f"{ctx}.{k}.{e.get('id')}: 缺 {f}")

@@ -1,0 +1,569 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>例题场景修正报告</title><style>
+
+:root{--ink:#1b2430;--muted:#5d6b7a;--line:#e3e8ee;--bg:#f6f8fa;--card:#fff;
+--accent:#2f6fd0;--old:#b23b3b;--new:#1e7a52}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:15px/1.7 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:26px;margin:0 0 8px}
+.lead{color:var(--muted);margin:0 0 22px;font-size:14px}
+.cards{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;flex:1 1 150px}
+.card b{display:block;font-size:22px;line-height:1.2}
+.card span{color:var(--muted);font-size:13px}
+h2{font-size:18px;margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+h3{font-size:15px;margin:26px 0 8px;color:var(--accent)}
+h3 em{color:var(--muted);font-style:normal;font-size:13px}
+table{width:100%;border-collapse:collapse;background:var(--card);font-size:13.5px;
+border:1px solid var(--line);border-radius:8px;overflow:hidden}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#eef2f7;font-weight:600;color:#33414f}
+tr:last-child td{border-bottom:none}
+td.n{white-space:nowrap;color:var(--muted)}
+.o{color:var(--old);text-decoration:line-through;text-decoration-thickness:1px}
+.nw{color:var(--new);font-weight:600}
+.tag{display:inline-block;background:#eef2f7;border-radius:5px;padding:1px 6px;font-size:12px;color:#42536a}
+.note{background:#fff8e6;border:1px solid #f0e0b0;border-radius:8px;padding:12px 16px;font-size:13.5px;margin:18px 0}
+
+</style></head><body><div class="wrap">
+<h1>例题场景修正报告</h1>
+<p class="lead">只改 <code>examples[].scene</code>；题干/解法/答案/配图零改动。共 303 处，涉及 70 篇。</p>
+<div class="cards">
+<div class="card"><b>648</b><span>全站例题</span></div>
+<div class="card"><b>303</b><span>修正场景</span></div>
+<div class="card"><b>70</b><span>涉及篇目</span></div>
+<div class="card"><b>13</b><span>场景枚举（未增减）</span></div>
+</div>
+<div class="note"><strong>规则变更：</strong>原先要求「同一篇内场景不得重复」，是机械分配留下的约束——为凑不重复，出现了「金融理财：一年有多少天」这类错标签。现改为按题目实际内容判定，允许同篇重复（两道题都在超市很正常）。构建器仍校验「场景必须在 13 个枚举内」。</div>
+<h2>主要错配类型</h2><table><tr><th>原场景 → 新场景</th><th class="n">道数</th></tr>
+<tr><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td class="n">26</td></tr>
+<tr><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td class="n">19</td></tr>
+<tr><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td class="n">18</td></tr>
+<tr><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td class="n">13</td></tr>
+<tr><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td class="n">12</td></tr>
+<tr><td><span class="o">农业生产</span> → <span class="nw">购物消费</span></td><td class="n">11</td></tr>
+<tr><td><span class="o">行程出行</span> → <span class="nw">校园生活</span></td><td class="n">9</td></tr>
+<tr><td><span class="o">饮食与配比</span> → <span class="nw">校园生活</span></td><td class="n">8</td></tr>
+<tr><td><span class="o">购物消费</span> → <span class="nw">饮食与配比</span></td><td class="n">7</td></tr>
+<tr><td><span class="o">上学日常</span> → <span class="nw">行程出行</span></td><td class="n">6</td></tr>
+<tr><td><span class="o">物流运输</span> → <span class="nw">校园生活</span></td><td class="n">5</td></tr>
+<tr><td><span class="o">物流运输</span> → <span class="nw">购物消费</span></td><td class="n">5</td></tr>
+</table>
+<h2>逐篇明细</h2>
+<h3>1~20 的认识 <em>m1-01-02-num-1-to-20 · 6 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex5</td><td><span class="o">物流运输</span> → <span class="nw">校园生活</span></td><td><span class="tag">运动会点名报数</span></td><td>全班 9 个小朋友做操，从小老师报数，报到第 7 个。小老师前面有几个人？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">行程出行</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">家里饼干被弟弟拿走</span></td><td>家里有一袋饼干 10 块，弟弟拿走 4 块。还剩几块？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">农业生产</span> → <span class="nw">购物消费</span></td><td><span class="tag">超市买盒装鸡蛋</span></td><td>妈妈买了 2 盒鸡蛋，每盒 10 个，又单独买了 3 个。一共有多少个鸡蛋？</td></tr>
+<tr><td class="n">ex10</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">运动会点名</span></td><td>报数报到 16 的小朋友，站在第 16 个的位置。他前面有几个人？</td></tr>
+<tr><td class="n">ex11</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">手工课发小棒</span></td><td>每组发 1 捆 10 根小棒，再多发 5 根。一共发多少根小棒？</td></tr>
+<tr><td class="n">ex12</td><td><span class="o">绿化照明</span> → <span class="nw">上学日常</span></td><td><span class="tag">文具盒铅笔被借走</span></td><td>盒子里原来有 12 支铅笔，借走 2 支。还剩多少支？</td></tr>
+</table>
+<h3>万以内数的读写与组成 <em>m1-01-04-num-10000-rw · 1 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">学校运动会入场人数</span></td><td>学校运动会，上午入场 1240 人，下午入场 1008 人。这两个数怎么读？</td></tr>
+</table>
+<h3>分数的初步认识与分数和除法的关系 <em>m1-01-06-fraction-intro-and-division · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">切月饼</span></td><td>切 4 块中取走 1 块，剩下的 3 块各占整块月饼的几分之几？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">手工课彩纸做窗花</span></td><td>剪下其中 3 块，一共用了这张彩纸的几分之几？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">店里分汉堡</span></td><td>每人能分到多少个汉堡？用分数表示是多少？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">家庭与年龄</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">分饺子</span></td><td>每人分到多少？剩下的那 1 个怎么用分数表示？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">物流运输</span> → <span class="nw">购物消费</span></td><td><span class="tag">文具店买钢笔</span></td><td>一共 12 元，12 元里含着几个 3 元？用除法算该怎么列式？</td></tr>
+</table>
+<h3>小数的认识与意义 <em>m1-01-07-decimal-intro-and-meaning · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex5</td><td><span class="o">上学日常</span> → <span class="nw">购物消费</span></td><td><span class="tag">超市价签</span></td><td>一盒牛奶的价签上写着 12.50 元，这是几元几角？这个数怎么读？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">体检表身高</span></td><td>小明的身高是 1.35 米，用米、分米、厘米说一说他有多高？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">家庭与年龄</span> → <span class="nw">计量与估算</span></td><td><span class="tag">体温计读数</span></td><td>体温计显示 36.5 ℃，这个小数怎么读？小数点右边的 5 表示什么？</td></tr>
+</table>
+<h3>分数的意义与基本性质 <em>m1-01-09-fraction-meaning-and-property · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">切披萨吃</span></td><td>他吃了这张披萨的几分之几？这个分数的分数单位是多少？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">手工课分彩带</span></td><td>每个小组分到多少米？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">计量与估算</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">果汁分瓶</span></td><td>每瓶装多少升？每瓶是总量的几分之几？</td></tr>
+</table>
+<h3>正数和负数 <em>m1-01-11-positive-negative · 2 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">上学日常</span> → <span class="nw">行程出行</span></td><td><span class="tag">电梯上下楼层</span></td><td>小红从 5 楼坐电梯到地下 2 层的车库，再从车库回到 1 楼。如果把向上记作正、向下记作负，这两段分别记作什么？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">行程出行</span> → <span class="nw">自然现象</span></td><td><span class="tag">两地海拔</span></td><td>甲地海拔 $+860$ 米，乙地海拔 $-154$ 米，两地相差多少米？</td></tr>
+</table>
+<h3>整数、小数、分数与百分数的读写 <em>m1-02-01-number-read-write · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">图书馆藏书</span></td><td>学校图书馆有藏书 3064000 册，这个数怎么读？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">购物消费</span> → <span class="nw">计量与估算</span></td><td><span class="tag">手机存储字节数</span></td><td>128000000000 怎么读？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">体测成绩</span></td><td>小明的身高是 1.42 米，体重是 38.5 千克，这两个小数怎么读？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">农业生产</span> → <span class="nw">购物消费</span></td><td><span class="tag">商场打折牌</span></td><td>牌子上写着「全场 $75\%$」，这个数怎么读？它表示的是什么意思？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">工程建造</span> → <span class="nw">计量与估算</span></td><td><span class="tag">电子秤称重</span></td><td>电子秤显示 2.30 千克，有人读成「二点三千克」，对吗？</td></tr>
+</table>
+<h3>整百整千数的加减 <em>m1-03-01-hundred-thousand · 2 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">家庭与年龄</span> → <span class="nw">金融理财</span></td><td><span class="tag">存折取钱</span></td><td>存折上现在还剩多少元？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">计量与估算</span> → <span class="nw">购物消费</span></td><td><span class="tag">买菜买米花钱</span></td><td>一共花了多少钱？先估一估，再算准数。</td></tr>
+</table>
+<h3>近似数与大数的改写 <em>m1-03-02-rounding-and-rewrite · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">全校人数统计</span></td><td>某小学共有学生 1876 人。精确到百位约多少人？精确到千位约多少人？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">饮食与配比</span> → <span class="nw">计量与估算</span></td><td><span class="tag">国土面积</span></td><td>我国陆地面积约 9600000 平方千米，改写成用「万」作单位的数是多少？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">图书馆藏书改写</span></td><td>图书馆有图书 120000 册，改写成用「万」作单位是多少册？如果实际是 125600 册，省略万位后面的尾数约是多少册？</td></tr>
+</table>
+<h3>分数、小数与百分数的互化 <em>m1-03-03-fraction-decimal-percent-convert · 6 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">行程出行</span> → <span class="nw">校园生活</span></td><td><span class="tag">跑道跑圈</span></td><td>小方跑了 $\frac{11}{4}$ 圈，说成带分数是几圈？一共跑了多少米？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">购物消费</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">分蛋糕</span></td><td>班里买了 4 个蛋糕，切开后一共剩下 $\frac{13}{4}$ 个，化成带分数是几个？还剩几块，每块是整个蛋糕的几分之几？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">工程建造</span> → <span class="nw">购物消费</span></td><td><span class="tag">买布做手工</span></td><td>裁一块 $2\frac{3}{5}$ 米长的布，化成分数是多少米？如果平均剪成 13 段，每段多长？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">购物消费</span></td><td><span class="tag">换季买外套</span></td><td>一件外套原价 240 元，打七五折出售。七五折写成百分数、小数、最简分数各是多少？现价多少元？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">物流运输</span> → <span class="nw">校园生活</span></td><td><span class="tag">口算比赛</span></td><td>一次口算比赛共 30 题，小果做对了 24 题。正确率是多少？化成最简分数是多少？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">计量与估算</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">饮料含糖量</span></td><td>一瓶饮料标签写「含糖量 12%」。化成小数和最简分数各是多少？500 毫升里含糖多少毫升？</td></tr>
+</table>
+<h3>整数、小数、分数与正负数的比较大小 <em>m1-04-01-compare-numbers · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex5</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">班级男生占比</span></td><td>一班男生占全班的 $\frac{5}{8}$，二班男生占全班的 $\frac{3}{5}$。哪个班男生占比高？</td></tr>
+<tr><td class="n">ex10</td><td><span class="o">工程建造</span> → <span class="nw">自然现象</span></td><td><span class="tag">盆地与湖面海拔</span></td><td>吐鲁番盆地最低处海拔约 -155 米，死海湖面海拔约 -430 米。哪个地方更低？</td></tr>
+<tr><td class="n">ex12</td><td><span class="o">绿化照明</span> → <span class="nw">工程建造</span></td><td><span class="tag">地铁站台深度</span></td><td>地铁站台的地面标高是 -12 米，地下车库是 -8 米。哪个更深？深多少米？</td></tr>
+</table>
+<h3>因数、倍数与最大公因数、最小公倍数 <em>m1-05-01-factors-multiples-and-gcd-lcm · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td><span class="tag">班级志愿服务分组</span></td><td>有哪几种分组方法？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">礼堂座位与人数</span></td><td>360 人能正好坐满若干排吗？还差几个座位才能再多坐满一排？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">男女生分组</span></td><td>男生 36 人、女生 24 人分组，每组男生人数相同、女生人数也相同，最多分几组？每组几男几女？</td></tr>
+</table>
+<h3>2、3、5 的倍数特征与质数、合数 <em>m1-05-02-divisibility-and-prime · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex4</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">数学社团找合数</span></td><td>91 是质数还是合数？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">行程出行</span> → <span class="nw">校园生活</span></td><td><span class="tag">团体操方阵</span></td><td>五年级 91 人排练团体操，要排成行数大于 1、每行人数也大于 1 的方阵，能排吗？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">质数判定练习</span></td><td>127 是不是质数？要说出试了哪几个数、为什么只试这些。</td></tr>
+</table>
+<h3>5 以内数的加法与减法 <em>m1-06-02-add-sub-within-5 · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex5</td><td><span class="o">行程出行</span> → <span class="nw">校园生活</span></td><td><span class="tag">操场小朋友走了</span></td><td>操场上有 5 个小朋友在玩游戏，走了 3 个。还剩几个小朋友？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">绿化照明</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">盘子草莓被吃掉</span></td><td>盘子里有 4 颗草莓，小明吃了 1 颗。盘子里还剩几颗？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">农业生产</span> → <span class="nw">上学日常</span></td><td><span class="tag">文具盒铅笔借同桌</span></td><td>文具盒里有 5 支铅笔，借给同桌 2 支。文具盒里还剩几支？</td></tr>
+</table>
+<h3>20 以内的进位加法与退位减法 <em>m1-06-03-add-sub-within-20 · 6 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">购物消费</span></td><td><span class="tag">文具店买钢笔找零</span></td><td>一支钢笔 9 元，乐乐付了 13 元，应找回多少元？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">行程出行</span> → <span class="nw">校园生活</span></td><td><span class="tag">图书角借绘本</span></td><td>图书角有 15 本绘本，一（2）班借走 9 本，还剩几本？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">物流运输</span> → <span class="nw">上学日常</span></td><td><span class="tag">跳绳计数</span></td><td>小禾今天跳绳 17 下，其中 9 下是妈妈帮她摇绳时跳的，剩下都是自己摇绳跳的。自己摇绳跳了多少下？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">美术课后发贴纸</span></td><td>美术课后老师拿出一共 16 枚星星贴纸，奖给剪纸比赛冠军 9 枚，还剩几枚？</td></tr>
+<tr><td class="n">ex10</td><td><span class="o">金融理财</span> → <span class="nw">购物消费</span></td><td><span class="tag">文具店买彩笔找零</span></td><td>一盒彩笔 8 元，甜甜付了 14 元，应找回多少元？</td></tr>
+<tr><td class="n">ex11</td><td><span class="o">自然现象</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">纸杯蛋糕送邻居</span></td><td>妈妈烤了 15 个纸杯蛋糕，送给楼下邻居 7 个，家里还剩几个？</td></tr>
+</table>
+<h3>100 以内加减法的口算与笔算 <em>m1-06-04-add-sub-within-100 · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">图书角借绘本</span></td><td>图书角原有 85 本绘本，本周借出 39 本，还剩多少本？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">物流运输</span> → <span class="nw">购物消费</span></td><td><span class="tag">书店买书</span></td><td>买这两样一共要多少元？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">教室粉笔盒</span></td><td>一盒粉笔有 76 支，用掉了 40 支。还剩多少支？</td></tr>
+</table>
+<h3>乘法的初步认识与 1~9 的乘法口诀 <em>m1-06-05-multiplication-intro-and-table · 9 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">绿化照明</span></td><td><span class="tag">校门口花坛摆花盆</span></td><td>花坛每排摆 6 盆花，一共摆了 5 排。一共摆了多少盆？先用加法算，再写成乘法。</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">上学日常</span> → <span class="nw">购物消费</span></td><td><span class="tag">文具店买贴纸</span></td><td>一张贴纸 2 元，买 6 张一共要多少元？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">物流运输</span> → <span class="nw">行程出行</span></td><td><span class="tag">坐公交车上学</span></td><td>公交车上一排有 4 个座位，一共 6 排。全坐满能坐多少人？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">购物消费</span></td><td><span class="tag">文具店买贴纸</span></td><td>一包贴纸 3 元，买 4 包一共多少元？说说你用了哪句口诀。</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">工程建造</span> → <span class="nw">购物消费</span></td><td><span class="tag">超市买鸡蛋</span></td><td>一盒鸡蛋 6 个，妈妈买了 4 盒。一共有多少个鸡蛋？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">绿化照明</span> → <span class="nw">上学日常</span></td><td><span class="tag">一周课表</span></td><td>一天上 6 节课，一周上 5 天。一周一共上多少节课？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">饮食与配比</span> → <span class="nw">购物消费</span></td><td><span class="tag">文具店彩笔</span></td><td>每盒彩笔 7 支，妈妈买了 8 盒。一共多少支？</td></tr>
+<tr><td class="n">ex10</td><td><span class="o">金融理财</span> → <span class="nw">校园生活</span></td><td><span class="tag">教室配课桌椅</span></td><td>教室里有 9 张课桌，每张桌旁摆 4 把椅子。一共多少把椅子？</td></tr>
+<tr><td class="n">ex12</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">美术课铅笔存货</span></td><td>仓库里有 8 盒铅笔，每盒 8 支。一共有多少支铅笔？</td></tr>
+</table>
+<h3>除法的初步认识与用口诀求商 <em>m1-06-06-division-intro-and-quotient · 7 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td><span class="tag">老师分发铅笔</span></td><td>老师把 18 支铅笔平均分给 3 个小组，每个小组分到几支？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">物流运输</span> → <span class="nw">购物消费</span></td><td><span class="tag">文具店买铅笔</span></td><td>一支铅笔 2 元，小丽带了 12 元，全买铅笔能买几支？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">工程建造</span> → <span class="nw">购物消费</span></td><td><span class="tag">买铅笔算单价</span></td><td>买 6 支同样的铅笔一共 18 元，一支铅笔多少元？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">整理图书角</span></td><td>图书角有 16 本书，平均放在 4 层书架上，每层放几本？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">金融理财</span> → <span class="nw">校园生活</span></td><td><span class="tag">彩笔分给小组</span></td><td>56 支彩笔平均分给 8 个小组，每组分到几支？</td></tr>
+<tr><td class="n">ex10</td><td><span class="o">自然现象</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">面包店算单价</span></td><td>9 个一样的面包一共 63 元，每个面包多少元？</td></tr>
+<tr><td class="n">ex12</td><td><span class="o">家庭与年龄</span> → <span class="nw">上学日常</span></td><td><span class="tag">铅笔装文具盒</span></td><td>56 支铅笔，每盒装 8 支，需要几个盒子？</td></tr>
+</table>
+<h3>乘加乘减 <em>m1-06-07-mult-add-sub · 1 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex4</td><td><span class="o">物流运输</span> → <span class="nw">购物消费</span></td><td><span class="tag">超市仓库牛奶</span></td><td>3 箱牛奶每箱 4 瓶，另外还零买了 5 瓶。一共多少瓶？</td></tr>
+</table>
+<h3>万以内加减法的笔算 <em>m1-06-08-add-sub-10000-written · 1 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">运动会号码牌</span></td><td>要为全校 3005 名同学每人做一个号码牌，已经做好 1287 个，还差多少个？</td></tr>
+</table>
+<h3>有余数除法的意义与余数的性质 <em>m1-06-09-division-with-remainder · 4 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">体育课分小组</span></td><td>二（1）班有 38 人，每 6 人分一个小组，能分成几个小组？还剩几人？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">物流运输</span> → <span class="nw">校园生活</span></td><td><span class="tag">运动会彩旗</span></td><td>体育室有 50 面彩旗，每 8 面扎成一束，能扎几束？还剩几面？这些彩旗至少要准备几束才能全部扎完？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">农业生产</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">糖果装礼袋分同学</span></td><td>有 38 颗糖，每 5 颗装一袋，能装满几袋？还剩几颗？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">运动会号码牌穿串</span></td><td>57 个号码牌，每 8 个穿成一串，能穿几串？还剩几个？</td></tr>
+</table>
+<h3>多位数乘一位数与多位数乘两位数 <em>m1-06-10-multiplication-multi-digit · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">农业生产</span> → <span class="nw">购物消费</span></td><td><span class="tag">超市买彩笔</span></td><td>超市里一盒彩笔 24 元，买 4 盒一共要多少元？列竖式并说明哪一步要进位。</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">折纸课裁纸</span></td><td>折纸课上一张大纸能裁出 14 张小纸，4 张大纸能裁出多少张小纸？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">饮食与配比</span> → <span class="nw">校园生活</span></td><td><span class="tag">校运会跑步计时</span></td><td>校运会跑道一圈 123 米，小明匀速跑 3 圈，一共跑了多少米？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">工程建造</span> → <span class="nw">购物消费</span></td><td><span class="tag">超市进年货</span></td><td>超市购进 25 箱坚果，每箱 128 元，一共要付多少元？说说竖式第二层的 6 为什么写在十位下面。</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">礼堂排座位</span></td><td>学校礼堂每排有 145 个座位，一共 24 排，最多能坐多少人？</td></tr>
+</table>
+<h3>混合运算的顺序 <em>m1-06-11-mixed-operation-order · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">物流运输</span> → <span class="nw">校园生活</span></td><td><span class="tag">校运会跑步计时</span></td><td>小明练 50 米跑，跑了 3 次、每次用 9 秒，中间一共休息 20 秒。从第一次起跑到第三次跑完，一共经过多少秒？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">上学日常</span> → <span class="nw">购物消费</span></td><td><span class="tag">超市文具套装</span></td><td>超市做活动：1 个本子 6 元和 1 支笔 4 元配成一套卖。妈妈买了 3 套，一共花了多少元？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">班级活动贴纸</span></td><td>班级活动有 30 张贴纸，先用掉 6 张做板报，剩下的平均分给 4 个小组，每组分到几张？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">折纸课分彩纸</span></td><td>折纸课上老师拿来 20 张彩纸，先拿出 4 张做示范，剩下的平均分给 4 个小组折千纸鹤，每组分到几张？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">跑步练习分组</span></td><td>小明练习跑步，慢跑 3 分钟再冲刺 2 分钟算一组，这样练了 4 组。一共练了多少分钟？</td></tr>
+</table>
+<h3>除数是一位数与除数是两位数的除法 <em>m1-06-12-division-multi-digit · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td><span class="tag">体育课分跳绳</span></td><td>体育器材室有 48 根跳绳，平均分给 2 个班，每班分到几根？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">工程建造</span> → <span class="nw">购物消费</span></td><td><span class="tag">文具店买彩笔算单价</span></td><td>3 盒同样的彩笔一共 36 元，一盒多少元？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">图书角上书架</span></td><td>图书角新到 96 本课外书，平均放到 3 个书架上，每个书架放几本？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">手工课剪彩带</span></td><td>一条 68 分米长的彩带，平均剪成 4 段，每段长几分米？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">校园生活</span> → <span class="nw">购物消费</span></td><td><span class="tag">买书包算钱</span></td><td>一个书包 68 元，300 元最多能买几个书包？还剩多少钱？</td></tr>
+</table>
+<h3>加法、乘法的运算律与减法、除法的性质 <em>m1-06-14-operation-laws · 6 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td><span class="tag">跳绳成绩统计</span></td><td>小组三个同学一分钟跳绳成绩分别是 175 下、68 下、32 下，小组一共跳了多少下？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">上学日常</span> → <span class="nw">购物消费</span></td><td><span class="tag">开学买文具</span></td><td>书包 47 元、笔袋 18 元、练习本 53 元，买齐这三样一共要付多少元？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">家庭与年龄</span> → <span class="nw">购物消费</span></td><td><span class="tag">超市结账</span></td><td>妈妈带 500 元，买菜花 128 元，买水果花 72 元，还剩多少元？用简便方法算。</td></tr>
+<tr><td class="n">ex10</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">图书馆分新书</span></td><td>图书馆有 960 本新书，先平均分给 8 个年级，每个年级再平均分给 12 个班，每班多少本？</td></tr>
+<tr><td class="n">ex11</td><td><span class="o">工程建造</span> → <span class="nw">物流运输</span></td><td><span class="tag">仓库装车</span></td><td>仓库有 1200 箱货，先由 4 辆货车平分，每辆车再跑 5 趟运完，平均每趟运多少箱？</td></tr>
+<tr><td class="n">ex12</td><td><span class="o">绿化照明</span> → <span class="nw">工程建造</span></td><td><span class="tag">截钢管</span></td><td>一根 20 米长的钢管，第一次截去 4.5 米，第二次截去 5.5 米，还剩多少米？</td></tr>
+</table>
+<h3>乘方 <em>m1-06-15-power · 2 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">折纸对折</span></td><td>一张纸对折 6 次，一共有多少层？用乘方表示。</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">工程建造</span> → <span class="nw">计量与估算</span></td><td><span class="tag">正方体木块体积</span></td><td>一块正方体木块的棱长是 5 厘米，它的体积是多少立方厘米？</td></tr>
+</table>
+<h3>小数的加法和减法 <em>m1-06-16-decimal-add-sub · 1 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">自然现象</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">爸爸与小明身高</span></td><td>小明身高是多少米？</td></tr>
+</table>
+<h3>小数乘法与小数除法的算理 <em>m1-06-17-decimal-mult-and-div · 2 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex5</td><td><span class="o">上学日常</span> → <span class="nw">购物消费</span></td><td><span class="tag">文具店买笔算单价</span></td><td>3 支同样的中性笔一共 7.2 元，每支多少元？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">农业生产</span> → <span class="nw">行程出行</span></td><td><span class="tag">骑行速度</span></td><td>周末骑行 8.4 千米，用了 0.6 小时。平均每小时行多少千米？</td></tr>
+</table>
+<h3>分数的加法和减法 <em>m1-06-18-fraction-add-sub · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">分吃蛋糕</span></td><td>两人一共吃了这块蛋糕的几分之几？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">购物消费</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">果汁兑水</span></td><td>兑好以后一共多少升？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">家庭与年龄</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">分大饼</span></td><td>两人一共分了多少张？</td></tr>
+</table>
+<h3>分数乘法与分数除法的算理 <em>m1-06-19-fraction-mult-and-div · 4 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">给教室做窗帘桌布</span></td><td>一匹布长 20 米，做窗帘用去它的 $\frac{3}{4}$，做桌布又用去剩下部分的 $\frac{2}{5}$。做桌布用了多少米？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">体育课跑步训练</span></td><td>操场一圈 400 米。小华跑了 $\frac{5}{8}$ 圈，小丽跑的是小华的 $\frac{4}{5}$。小丽跑了多少米？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">计量与估算</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">分果汁</span></td><td>一瓶果汁有 $\frac{3}{4}$ 升，每杯倒 $\frac{1}{8}$ 升，一瓶能倒几杯？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">手工课剪彩带</span></td><td>一条彩带长 $\frac{2}{3}$ 米，每段剪 $\frac{1}{6}$ 米，可以剪成几段？</td></tr>
+</table>
+<h3>数量间的加减关系与倍的关系 <em>m1-07-01-quantity-relations-basic · 6 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">手工课做卡片</span></td><td>小明比小红多做了几张？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">跳绳比多少</span></td><td>小刚比小丽多跳多少下？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">手工课折纸鹤</span></td><td>小刚折了多少只纸鹤？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">自然现象</span> → <span class="nw">校园生活</span></td><td><span class="tag">班级扎气球</span></td><td>红气球个数是黄气球个数的几倍？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">农业生产</span> → <span class="nw">购物消费</span></td><td><span class="tag">彩笔橡皮比价</span></td><td>一盒彩笔的价钱是一盒橡皮的多少倍？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">物流运输</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">父子年龄倍数</span></td><td>爸爸的年龄是儿子的几倍？</td></tr>
+</table>
+<h3>人民币、时、分、秒与年月日 <em>m1-07-02-rmb-time-and-date · 8 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">农业生产</span> → <span class="nw">购物消费</span></td><td><span class="tag">带钱买东西够不够</span></td><td>带 10 元去买 6 元 8 角的笔记本和 2 元 5 角的橡皮，这些钱够吗？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">物流运输</span> → <span class="nw">金融理财</span></td><td><span class="tag">数储蓄罐零钱</span></td><td>储蓄罐里有 1 张 5 元、3 张 1 元、2 枚 5 角，一共多少钱？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">行程出行</span> → <span class="nw">计量与估算</span></td><td><span class="tag">分针走钟面</span></td><td>钟面上分针从 12 走到 6，一共走了多少分钟？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">工程建造</span> → <span class="nw">行程出行</span></td><td><span class="tag">坐公交车</span></td><td>小明 8 时 10 分坐上车，8 时 45 分下车，他在车上待了多长时间？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">自然现象</span> → <span class="nw">计量与估算</span></td><td><span class="tag">2月天数</span></td><td>2024 年 2 月有多少天？为什么？</td></tr>
+<tr><td class="n">ex10</td><td><span class="o">绿化照明</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">外婆生日2月29日</span></td><td>外婆的生日是 2 月 29 日。她在 2000 年过过一次生日，下一次过生日是哪一年？那一年 2 月有几天？</td></tr>
+<tr><td class="n">ex11</td><td><span class="o">饮食与配比</span> → <span class="nw">行程出行</span></td><td><span class="tag">火车票时刻</span></td><td>火车票上印着「18:40 开，次日 06:05 到」。18:40 是普通计时法的几点几分？06:05 呢？</td></tr>
+<tr><td class="n">ex12</td><td><span class="o">金融理财</span> → <span class="nw">计量与估算</span></td><td><span class="tag">一年有多少天</span></td><td>平年一年 365 天，闰年 366 天。一年有 7 个大月、4 个小月和 1 个 2 月，请验算这两种情况下各有多少天。</td></tr>
+</table>
+<h3>和差、和倍与差倍问题 <em>m1-07-04-sum-difference-multiple-problems · 6 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">合唱队分声部</span></td><td>学校合唱队两个声部一共 84 人，高声部比低声部多 12 人。两个声部各多少人？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">饮食与配比</span> → <span class="nw">农业生产</span></td><td><span class="tag">两筐苹果</span></td><td>两筐苹果共重 58 千克。从甲筐取出 4 千克放进乙筐后，两筐正好一样重。原来两筐各重多少千克？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">合唱队分声部</span></td><td>学校合唱队两个声部一共 96 人，高声部人数是低声部的 3 倍。两个声部各多少人？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">行程出行</span> → <span class="nw">农业生产</span></td><td><span class="tag">两个大棚收黄瓜</span></td><td>两个蔬菜大棚一共收了 960 千克黄瓜，甲棚的产量是乙棚的 7 倍。两棚各收多少千克？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">班级图书角</span></td><td>图书角的故事书比科技书多 60 本，故事书的本数是科技书的 4 倍。两种书各多少本？</td></tr>
+<tr><td class="n">ex12</td><td><span class="o">校园生活</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">母女年龄</span></td><td>妈妈比女儿大 28 岁，妈妈的年龄正好是女儿的 5 倍。女儿和妈妈各多少岁？</td></tr>
+</table>
+<h3>归一问题与归总问题 <em>m1-07-05-normalization-problems · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">打印机印资料</span></td><td>一台打印机 3 分钟打印 45 页。照这样计算，8 分钟能打印多少页？打印 300 页要多少分钟？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">行程出行</span> → <span class="nw">工程建造</span></td><td><span class="tag">修路队修路</span></td><td>修路队原计划每天修 120 米，15 天修完。实际每天修 150 米，实际用了多少天？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">饮食与配比</span> → <span class="nw">农业生产</span></td><td><span class="tag">农场装苹果礼盒</span></td><td>一筐苹果，每盒装 6 个，正好装 20 盒。如果每盒装 8 个，能装多少盒？</td></tr>
+</table>
+<h3>年龄问题 <em>m1-07-06-age-problem · 2 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">上学日常</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">兄妹年龄和</span></td><td>哥哥今年 12 岁，妹妹今年 7 岁。几年后两人的年龄和是 29 岁？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">计量与估算</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">出生年份推年龄</span></td><td>妈妈 1986 年出生，女儿 2012 年出生。哪一年妈妈的年龄正好是女儿的 2 倍？</td></tr>
+</table>
+<h3>优化问题与找次品 <em>m1-07-07-optimization-and-find-bad-item · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex4</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">大扫除分工</span></td><td>放学后要完成三件事：擦黑板要 3 分钟，摆桌椅要 4 分钟，倒垃圾要 3 分钟。只有 2 名同学，每人一次只能做一件事。最少多少分钟能全部完成？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">购物消费</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">酸奶找次品</span></td><td>8 盒一样的酸奶中有 1 盒稍轻一些，用天平最少称几次能找出这盒？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">行程出行</span> → <span class="nw">工程建造</span></td><td><span class="tag">零件找次品</span></td><td>一批 27 个同样的零件里有 1 个是次品（轻一些），用天平最少称几次能找出来？</td></tr>
+</table>
+<h3>相遇问题与追及问题 <em>m1-07-11-meeting-and-chasing · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td><span class="tag">教室到图书馆</span></td><td>教室到图书馆相距 520 米。小明从教室出发每分走 70 米，小红从图书馆出发每分走 60 米，同时相向而行。几分钟后相遇？相遇处离教室多远？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">物流运输</span></td><td><span class="tag">外卖骑手追单</span></td><td>一位骑手从商家出发，每分行 250 米。2 分钟后，另一位骑手从同一地点出发，每分行 300 米，沿同一条路去追。几分钟后追上？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">上学日常</span> → <span class="nw">行程出行</span></td><td><span class="tag">快车追慢车</span></td><td>慢车 8:00 从甲站开出，每时行 60 千米。快车 8:30 从同一站开出，每时行 90 千米，走同一条线路。快车几时追上慢车？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">饮食与配比</span> → <span class="nw">校园生活</span></td><td><span class="tag">跑道套圈</span></td><td>环形跑道一圈 400 米。甲每秒跑 6 米，乙每秒跑 4 米，两人从同一地点同时同向出发。甲第一次追上乙要多少秒？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">计量与估算</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">姐姐追弟弟</span></td><td>弟弟每分走 50 米，先走 10 分钟后，姐姐从家出发，每分走 75 米，沿同一条路去追。姐姐几分钟后追上？</td></tr>
+</table>
+<h3>用字母表示数与方程的意义 <em>m1-08-01-letters-and-equation · 4 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">数学活动课摆小棒</span></td><td>用小棒摆正方形（每个正方形共用一条边），摆 $n$ 个正方形需要多少根小棒？摆 8 个呢？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">购物消费</span></td><td><span class="tag">文具店买中性笔</span></td><td>买 6 支同样的中性笔一共 45 元，每支多少元？列方程解答。</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">物流运输</span> → <span class="nw">金融理财</span></td><td><span class="tag">储蓄罐存零花钱</span></td><td>小杰的储蓄罐里原有一些钱，这周又存入 25 元，现在一共 68 元。原来有多少元？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">计量与估算</span> → <span class="nw">绿化照明</span></td><td><span class="tag">长方形花坛求宽</span></td><td>一个长方形花坛的周长是 36 米，长是 11 米，宽是多少米？</td></tr>
+</table>
+<h3>比的意义、化简与正反比例 <em>m1-09-01-ratio-and-proportion · 4 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">计量与估算</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">浓缩果汁兑水</span></td><td>一瓶浓缩果汁的说明上写着「原液与水的比是 $1 : 4$」。小华倒了 150 毫升原液，要加多少毫升水？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">家庭与年龄</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">配方放大做奶茶</span></td><td>配方是茶 : 奶 $= 3 : 1$。要做一大锅，已经放了 12 杯茶，该放几杯奶？用比例的知识算。</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">购物消费</span> → <span class="nw">行程出行</span></td><td><span class="tag">大巴匀速行驶</span></td><td>一辆大巴以 80 千米/时匀速行驶。(1) 行驶的路程与时间成什么比例？(2) 如果全程 240 千米，那么速度与时间成什么比例？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">农业生产</span> → <span class="nw">购物消费</span></td><td><span class="tag">买苹果总价质量</span></td><td>苹果 6 元/千克。(1) 买 2 千克、5 千克时，总价与质量成什么比例？(2) 如果只带了 30 元，买的千克数与单价成什么比例？</td></tr>
+</table>
+<h3>比例尺、按比例分配与杠杆平衡 <em>m1-09-02-scale-allocation-lever · 4 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex4</td><td><span class="o">自然现象</span> → <span class="nw">行程出行</span></td><td><span class="tag">地图上两城距离</span></td><td>在一幅中国地图上，甲、乙两城的图上距离是 12 厘米，实际直线距离约 480 千米。这幅地图的比例尺是多少？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">农业生产</span> → <span class="nw">工程建造</span></td><td><span class="tag">工地拌混凝土</span></td><td>混凝土按水泥 $:$ 砂 $:$ 石子 $= 2 : 3 : 5$ 配制。要拌 20 吨混凝土，三种材料各需多少吨？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">新书分到三个班</span></td><td>图书馆把 360 本新书分给三个班，三个班的人数比是 $40 : 32 : 48$。三个班各分到多少本？</td></tr>
+<tr><td class="n">ex11</td><td><span class="o">绿化照明</span> → <span class="nw">校园生活</span></td><td><span class="tag">直尺棋子找平衡</span></td><td>支点在 0 格处。左边放 3 枚棋子于第 4 格，要让直尺水平，右边放 1 枚棋子应在第几格？若右边改放 2 枚棋子呢？</td></tr>
+</table>
+<h3>认识平面图形与克、千克、吨 <em>m2-01-01-plane-shapes-and-mass · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">手工课拼小旗</span></td><td>手工课要用 2 个三角形和 3 个正方形拼成一排小旗，一共要用多少块图形？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">家庭与年龄</span> → <span class="nw">上学日常</span></td><td><span class="tag">整理图形卡片</span></td><td>卡片里有长方形、正方形、三角形和圆形各若干张。要把卡片按形状分成几堆，每一堆怎么放？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">饮食与配比</span> → <span class="nw">上学日常</span></td><td><span class="tag">描笔筒底面</span></td><td>小明把一个圆柱形笔筒的上下两个面描在纸上，描出了两个什么形状？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">购物消费</span></td><td><span class="tag">超市买盐</span></td><td>小丽买了两袋盐，每袋 1 千克。一共重多少克？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">工程建造</span> → <span class="nw">计量与估算</span></td><td><span class="tag">曹冲称象</span></td><td>曹冲称象时，往船上装了 12 块石头，每块石头重 100 千克，这些石头一共重多少千克？大象又有多重？</td></tr>
+</table>
+<h3>长度单位：厘米、米、毫米、分米与千米 <em>m2-01-02-length-units · 4 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">量课桌的高</span></td><td>小华量课桌的高，他把课桌的顶端对准尺子的刻度 2，底端正好对着刻度 72。课桌高多少厘米？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">饮食与配比</span> → <span class="nw">校园生活</span></td><td><span class="tag">体育课比跳绳</span></td><td>小丽的跳绳长 2 米，小刚的跳绳长 180 厘米。谁的跳绳长？长多少厘米？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">体检量身高</span></td><td>小明身高 1 米 25 厘米，小红身高 118 厘米。谁高？高多少厘米？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">量讲台长度</span></td><td>教室讲台长 12 分米，合多少厘米？合几米几分米？</td></tr>
+</table>
+<h3>线段、射线、直线与角的认识 <em>m2-01-03-lines-and-angles · 9 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td><span class="tag">校运会跑步路线</span></td><td>校运会上从起点 A 到终点 B，可以沿直跑道跑，也可以绕过花坛跑。哪条路最短？这个最短的长度叫什么？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">折纸压折痕</span></td><td>折纸时把一张纸对折压出一条折痕，量得 18 厘米。这条折痕是线段、射线还是直线？为什么？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">饮食与配比</span> → <span class="nw">上学日常</span></td><td><span class="tag">尺子量数学书</span></td><td>用尺子量数学书的一条边量得 26 厘米；再量手电筒射出去的那道光柱，能量出长度吗？说说理由。</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">农业生产</span> → <span class="nw">自然现象</span></td><td><span class="tag">手电筒光束</span></td><td>夜里手电筒射向天空的光，和作业本上两头都画箭头的那条线，各像哪种线？它们能比长短吗？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">物流运输</span> → <span class="nw">计量与估算</span></td><td><span class="tag">钟面指针夹角</span></td><td>钟面上 2 点整和 4 点整，时针和分针形成的角哪个更大？指针的长短变了吗？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">行程出行</span> → <span class="nw">校园生活</span></td><td><span class="tag">折纸课上的角</span></td><td>折纸时把纸对折再打开，折痕和纸边形成一个角。把这张纸裁小一半，这个角会变小吗？如果把角的两条边都画长 3 倍呢？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">工程建造</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">折扇打开</span></td><td>一把折扇慢慢打开，扇面两条边形成的角怎么变？把扇骨换成长一倍的，角会跟着变大吗？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">绿化照明</span> → <span class="nw">校园生活</span></td><td><span class="tag">公园滑梯坡度</span></td><td>滑梯的斜面和地面交于一点。把量角器中心对准这个点，0 刻度线贴住地面那条边，斜边指在外圈 140、内圈 40 的位置。滑梯与地面的夹角是多少度？是什么角？</td></tr>
+<tr><td class="n">ex11</td><td><span class="o">家庭与年龄</span> → <span class="nw">行程出行</span></td><td><span class="tag">地铁线路图弯道</span></td><td>地铁线路图上，一段轨道拐弯后与原来方向形成的夹角是 $150°$。列车实际转弯转了多少度？</td></tr>
+</table>
+<h3>周长的认识与长方形、正方形的周长 <em>m2-01-04-perimeter · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">绿化照明</span></td><td><span class="tag">花坛围栅栏</span></td><td>一个长方形花坛长 8 米、宽 5 米，围一圈栅栏需要多长？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">饮食与配比</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">照片配边框</span></td><td>一张照片长 15 厘米、宽 10 厘米，需要多长的边框条？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">行程出行</span> → <span class="nw">校园生活</span></td><td><span class="tag">宣传栏包边</span></td><td>一个正方形宣传栏边长 12 分米，包一圈金属边需要多长？</td></tr>
+</table>
+<h3>面积、面积单位与长方形正方形的面积 <em>m2-01-05-area-and-rect-area · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">饮食与配比</span> → <span class="nw">校园生活</span></td><td><span class="tag">教室铺地垫</span></td><td>教室地面长 9 米、宽 6 米，用边长 1 米的正方形地垫铺满，需要多少块？教室面积是多少？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td><span class="tag">课桌面积换算</span></td><td>课桌面面积是 24 平方分米，合多少平方厘米？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">操场面积公顷</span></td><td>学校操场长 100 米、宽 50 米，面积是多少平方米？合多少公顷？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">物流运输</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">书桌配桌垫</span></td><td>书桌桌面长 12 分米、宽 6 分米，配一块同样大的桌垫，面积是多少平方分米？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">行程出行</span> → <span class="nw">农业生产</span></td><td><span class="tag">正方形菜地</span></td><td>一块正方形菜地边长 9 米，面积是多少？如果每平方米种 4 棵菜，一共能种多少棵？</td></tr>
+</table>
+<h3>平行与垂直、平行四边形和梯形的认识 <em>m2-01-06-parallel-perpendicular-quadrilateral · 4 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td><span class="tag">黑板的平行垂直</span></td><td>教室的黑板是一个长方形。它的上边和下边、左边和右边分别是什么关系？相邻两条边呢？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">跳远量垂线</span></td><td>跳远时沙坑边有一条起跳线。体育老师为什么从落点向起跳线作垂线来量，而不是斜着量到起跳线的一端？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">物流运输</span> → <span class="nw">工程建造</span></td><td><span class="tag">小区伸缩门</span></td><td>小区门口的电动伸缩门由一排平行四边形连成。为什么它能拉长、能缩短，而每根杆子的长度一直没变？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">篮球架斜撑</span></td><td>学校的篮球架下面有一根斜撑，和立柱、横梁一起围成一个三角形。为什么不用四边形做这根斜撑？</td></tr>
+</table>
+<h3>三角形的认识、内角和与三边关系 <em>m2-01-07-triangle · 9 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td><span class="tag">红领巾分类</span></td><td>一条红领巾的两条腰都是 60 厘米，底边是 100 厘米，它按边分是什么三角形？按角分呢？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">红领巾底角</span></td><td>红领巾是等腰三角形，它的顶角是 120°，两个底角各是多少度？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">物流运输</span> → <span class="nw">工程建造</span></td><td><span class="tag">屋顶桁架钢架</span></td><td>一个三角形钢架的两个角分别是 55° 和 65°，第三个角是多少度？它是什么三角形？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">校园生活</span> → <span class="nw">绿化照明</span></td><td><span class="tag">路灯斜撑</span></td><td>路灯的斜撑和灯杆、横臂围成一个直角三角形，斜撑与横臂的夹角是 35°，斜撑与灯杆的夹角是多少度？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">家庭与年龄</span> → <span class="nw">上学日常</span></td><td><span class="tag">一副三角板</span></td><td>一副三角板有两块，一块的三个角是 30°、60°、90°，另一块是 45°、45°、90°。分别算一算它们的内角和，你发现了什么？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">计量与估算</span> → <span class="nw">工程建造</span></td><td><span class="tag">木条钉支架</span></td><td>现有三根木条，长度分别是 5 分米、7 分米、13 分米，能围成三角形吗？</td></tr>
+<tr><td class="n">ex10</td><td><span class="o">上学日常</span> → <span class="nw">行程出行</span></td><td><span class="tag">判断上学路线</span></td><td>从家到学校有一条直路长 800 米，也可以先走到书店再到学校，两段分别是 350 米和 500 米。哪条路近？</td></tr>
+<tr><td class="n">ex11</td><td><span class="o">饮食与配比</span> → <span class="nw">绿化照明</span></td><td><span class="tag">三角形花坛围栏</span></td><td>一个三角形花坛，两边分别是 6 米和 9 米，第三边可以是多少米？（取整米数）</td></tr>
+<tr><td class="n">ex12</td><td><span class="o">金融理财</span> → <span class="nw">上学日常</span></td><td><span class="tag">小棒围三角形</span></td><td>三根小棒长 4 厘米、4 厘米、8 厘米，有人说「4+4=8，正好相等，应该能围成一个扁扁的三角形」，对吗？</td></tr>
+</table>
+<h3>平行四边形、三角形与梯形的面积 <em>m2-01-08-polygon-area · 9 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">饮食与配比</span> → <span class="nw">校园生活</span></td><td><span class="tag">平行四边班旗</span></td><td>班旗是平行四边形，底边长 1.2 米，这条底上的高是 0.8 米。做一面旗需要多少平方米彩布？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">计量与估算</span> → <span class="nw">农业生产</span></td><td><span class="tag">菜地收白菜</span></td><td>菜地的底是 25 米，高是 16 米。每平方米收白菜 3 千克，这块地一共能收多少千克？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">购物消费</span> → <span class="nw">绿化照明</span></td><td><span class="tag">花坛铺草皮</span></td><td>花坛的底是 8 米，高是 5.5 米。铺草皮每平方米 12 元，铺满这个花坛要多少元？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">农业生产</span> → <span class="nw">工程建造</span></td><td><span class="tag">屋顶铺瓦</span></td><td>一面三角形屋顶，底宽 6 米，高 2.5 米。铺瓦每平方米 45 元，这面屋顶要多少元？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">上学日常</span> → <span class="nw">行程出行</span></td><td><span class="tag">警示牌反光膜</span></td><td>一块三角形警示牌，底 0.8 米，高 0.7 米。给它正面贴反光膜，需要多少平方米的膜？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">物流运输</span> → <span class="nw">校园生活</span></td><td><span class="tag">梯形班旗</span></td><td>班旗是梯形，上底 0.8 米，下底 1.4 米，高 0.6 米。需要多少平方米彩布？</td></tr>
+<tr><td class="n">ex10</td><td><span class="o">行程出行</span> → <span class="nw">农业生产</span></td><td><span class="tag">水渠横截面</span></td><td>一条水渠的横截面是梯形，上底 1.2 米，下底 2.4 米，深（高）0.9 米。横截面积是多少平方米？</td></tr>
+<tr><td class="n">ex11</td><td><span class="o">家庭与年龄</span> → <span class="nw">绿化照明</span></td><td><span class="tag">梯形花坛种花</span></td><td>花坛上底 5 米，下底 9 米，高 4 米。每平方米种 8 株花，一共要种多少株？</td></tr>
+<tr><td class="n">ex12</td><td><span class="o">金融理财</span> → <span class="nw">农业生产</span></td><td><span class="tag">梯形菜地</span></td><td>菜地上底 12 米，下底 20 米，高 15 米。这块地的面积是多少平方米？</td></tr>
+</table>
+<h3>组合图形与不规则图形的面积 <em>m2-01-09-composite-irregular-area · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">工程建造</span> → <span class="nw">绿化照明</span></td><td><span class="tag">L形空地铺草坪</span></td><td>空地外框是长 12 米、宽 8 米的长方形，右下角缺掉一个长 5 米、宽 3 米的长方形。铺满草坪需要多少平方米？如果草坪每平方米 20 元，一共要多少元？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">饮食与配比</span> → <span class="nw">绿化照明</span></td><td><span class="tag">花坛加半圆</span></td><td>长方形部分长 6 米、宽 4 米，在宽 4 米的短边上接一个直径 4 米的半圆。这个花坛的面积是多少平方米？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">购物消费</span> → <span class="nw">工程建造</span></td><td><span class="tag">阳台铺地砖</span></td><td>阳台由两块长方形拼成：一块 $3.2$ 米乘 $1$ 米，一块 $1.6$ 米乘 $1$ 米。用边长 2 分米的正方形地砖铺满，需要多少块？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">自然现象</span> → <span class="nw">校园生活</span></td><td><span class="tag">科学课量树叶</span></td><td>把树叶放在每格 1 平方厘米的方格纸上，数得满格 18 格，不满格 14 格。这片树叶的面积大约是多少？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">计量与估算</span> → <span class="nw">自然现象</span></td><td><span class="tag">地图估算湖泊</span></td><td>地图上画了方格，每小格代表 1 平方千米。湖面占满格 26 格、不满格 16 格，湖面大约多少平方千米？</td></tr>
+</table>
+<h3>圆的特征与扇形的认识 <em>m2-01-10-circle-features-and-sector · 6 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">绿化照明</span></td><td><span class="tag">圆形花坛栅栏</span></td><td>一个圆形花坛的半径是 4 米，它的直径是多少米？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">圆规画圆</span></td><td>要画一个直径 9 厘米的圆，圆规两脚应张开多少厘米？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">工程建造</span> → <span class="nw">计量与估算</span></td><td><span class="tag">圆弧拼整圆</span></td><td>有两段圆弧，半径分别是 2 米和 3 米，把它们接起来能拼成一个圆吗？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">计量与估算</span></td><td><span class="tag">钟面扇形</span></td><td>3 点整时，时针指向 3，分针指向 12。这两根针和它们之间的弧围成的是什么图形？圆心角是多少度？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">统计饼图</span></td><td>班级最喜欢的水果统计图里，「苹果」那一块圆心角是 $90\degree$。这一块占全班的几分之几？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">物流运输</span> → <span class="nw">计量与估算</span></td><td><span class="tag">判断扇形</span></td><td>有个图形由两条线段和一段弧围成，但两条线段长度不相等。它是扇形吗？</td></tr>
+</table>
+<h3>圆的周长与圆的面积 <em>m2-01-11-circle-circumference-and-area · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">绿化照明</span></td><td><span class="tag">圆形花坛栅栏</span></td><td>一个圆形花坛的直径是 6 米，沿着边缘围一圈栅栏，需要多少米栅栏？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">工程建造</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">圆桌包边</span></td><td>一张圆桌的直径是 1.2 米，沿桌边包一圈金属装饰条（接头忽略不计），需要多少米？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">计量与估算</span> → <span class="nw">自然现象</span></td><td><span class="tag">量树干直径</span></td><td>用绳子绕一棵树的树干一圈，量得绳长 94.2 厘米。这棵树树干处的直径大约是多少厘米？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">农业生产</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">圆桌配玻璃</span></td><td>一张圆桌的直径是 1.4 米，配一块同样大小的圆形玻璃，需要多少平方米玻璃？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">物流运输</span> → <span class="nw">工程建造</span></td><td><span class="tag">圆形水池面积</span></td><td>一个圆形水池的周长是 31.4 米，它的占地面积是多少平方米？</td></tr>
+</table>
+<h3>观察物体 <em>m2-02-02-observe-object · 1 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex4</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">判断从前面看几个方格</span></td><td>小华说：「从前面看到 5 个方格，这个物体就一定用了 5 个小正方体。」这句话对吗？</td></tr>
+</table>
+<h3>长方体和正方体的认识、表面积与体积 <em>m2-02-03-cuboid · 10 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">物流运输</span></td><td><span class="tag">纸箱贴胶带</span></td><td>纸箱长 6 分米、宽 4 分米、高 3 分米，沿所有棱贴一圈胶带，至少需要多少分米？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">农业生产</span> → <span class="nw">工程建造</span></td><td><span class="tag">焊长方体铁架</span></td><td>铁架长 8 分米、宽 5 分米、高 4 分米，需要多少分米角铁？如果角铁每分米 3 元，材料费多少元？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">上学日常</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">正方体礼盒贴金边</span></td><td>礼盒是正方体，棱长 25 厘米，12 条棱都贴上金边，需要多长金边？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">物流运输</span> → <span class="nw">上学日常</span></td><td><span class="tag">吸管搭长方体框架</span></td><td>相交于一个顶点的三条棱分别长 10 厘米、6 厘米、4 厘米。这个框架的 12 条棱一共多长？最大的那个面面积是多少？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">工程建造</span> → <span class="nw">物流运输</span></td><td><span class="tag">快递纸箱硬纸板</span></td><td>做这个纸箱至少要用多少平方分米硬纸板？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">行程出行</span> → <span class="nw">工程建造</span></td><td><span class="tag">铁皮水箱</span></td><td>做这个水箱要用多少平方分米铁皮？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">绿化照明</span> → <span class="nw">购物消费</span></td><td><span class="tag">手机包装盒</span></td><td>做这个盒子要用多少平方厘米硬纸板？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">家庭与年龄</span> → <span class="nw">物流运输</span></td><td><span class="tag">两个纸箱比容量</span></td><td>长方体纸箱从里面量长 40 厘米、宽 30 厘米、高 25 厘米；正方体纸箱从里面量棱长 30 厘米。哪个装得多？各是多少升？</td></tr>
+<tr><td class="n">ex10</td><td><span class="o">金融理财</span> → <span class="nw">工程建造</span></td><td><span class="tag">浇筑混凝土墩</span></td><td>墩子长 2 米、宽 1.5 米、高 0.8 米。需要多少立方米混凝土？每立方米混凝土约重 2.4 吨，这个墩子约重多少吨？</td></tr>
+<tr><td class="n">ex12</td><td><span class="o">计量与估算</span> → <span class="nw">工程建造</span></td><td><span class="tag">游泳池蓄水量</span></td><td>一个长方体游泳池，长 25 米、宽 12 米、平均深 1.6 米。注满水需要多少立方米？合多少升？水重约多少吨（1 升水约 1 千克）？</td></tr>
+</table>
+<h3>体积和体积单位与不规则物体的体积 <em>m2-02-04-volume-and-irregular-volume · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">科学课排水实验</span></td><td>这个石块的体积是多少立方厘米？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">饮食与配比</span> → <span class="nw">校园生活</span></td><td><span class="tag">大收纳箱装小盒</span></td><td>最多能装多少个小收纳盒？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">自然现象</span></td><td><span class="tag">雨花石体积</span></td><td>一个长方体水槽，从里面量长 20 厘米、宽 15 厘米，水深 10 厘米。放入一块雨花石并完全浸没后，水深变成 12 厘米。这块石头的体积是多少？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">物流运输</span> → <span class="nw">计量与估算</span></td><td><span class="tag">量杯读土豆体积</span></td><td>一个量杯里原来有水 300 毫升，放入一个土豆并完全浸没后，水面升到 380 毫升。这个土豆的体积是多少立方厘米？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">行程出行</span> → <span class="nw">校园生活</span></td><td><span class="tag">溢水法量石块</span></td><td>小组把一只装满水的水桶放在空盆里，把一块石块轻轻放进去，桶里溢出的水正好 150 毫升。石块的体积是多少？如果把这些水倒进底面积 30 平方厘米的量筒，水面会有多高？</td></tr>
+</table>
+<h3>圆柱和圆锥的认识与圆柱的表面积 <em>m2-02-05-cylinder-cone-and-surface · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">计量与估算</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">冰淇淋蛋筒形状</span></td><td>一个圆锥形蛋筒，它有几个面？几条高？侧面展开是什么图形？如果底面直径 6 厘米，展开后扇形那条弯边的长是多少？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">卡纸卷笔筒</span></td><td>卡纸长 31.4 厘米、宽 10 厘米，卷成圆柱形笔筒（接口处不计），底面直径是多少？笔筒的高是多少？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">自然现象</span> → <span class="nw">工程建造</span></td><td><span class="tag">铁皮通风管</span></td><td>一节圆柱形铁皮通风管，底面直径 0.6 米，长 2 米。做 10 节这样的通风管至少需要多少平方米铁皮？（接口处忽略不计）</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">硬卡纸做笔筒</span></td><td>用硬卡纸做一个圆柱形笔筒，底面半径 4 厘米、高 12 厘米，没有盖子。至少要用多少平方厘米卡纸？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">物流运输</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">蛋糕盒装饰带</span></td><td>一个圆柱形蛋糕盒，底面直径 20 厘米，高 15 厘米。在它的侧面围一圈宽 15 厘米的装饰纸带，正好盖满整个侧面，需要多少平方厘米纸？</td></tr>
+</table>
+<h3>圆柱和圆锥的体积 <em>m2-02-06-cylinder-and-cone-volume · 6 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">农业生产</span> → <span class="nw">工程建造</span></td><td><span class="tag">圆柱形水泥柱</span></td><td>一根圆柱形水泥柱，底面直径 0.8 米，高 3 米。浇一根这样的柱子需要多少立方米混凝土？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">物流运输</span> → <span class="nw">农业生产</span></td><td><span class="tag">圆柱形粮囤</span></td><td>一个圆柱形粮囤，底面周长 6.28 米，高 2 米。它能装多少立方米粮食？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">购物消费</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">易拉罐净含量</span></td><td>一个圆柱形易拉罐，底面直径 6 厘米，高 12 厘米，标签上写着「净含量 330 毫升」。这个标注合理吗？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">工程建造</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">蛋筒装冰淇淋</span></td><td>一个圆锥形蛋筒，底面直径 6 厘米，高 10 厘米。装满冰淇淋大约能装多少立方厘米？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">上学日常</span> → <span class="nw">工程建造</span></td><td><span class="tag">圆锥形沙堆</span></td><td>一堆沙呈圆锥形，底面周长 12.56 米，高 1.5 米。这堆沙有多少立方米？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">行程出行</span> → <span class="nw">农业生产</span></td><td><span class="tag">圆锥形麦堆</span></td><td>一个圆锥形麦堆，底面半径 3 米，高 2 米。每立方米小麦约重 700 千克，这堆小麦大约重多少千克？</td></tr>
+</table>
+<h3>轴对称、平移和旋转 <em>m2-03-01-axis-symmetry-translation-rotation · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td><span class="tag">剪窗花</span></td><td>把一张长方形纸对折一次，沿折痕边剪出半个爱心，展开后是什么图案？这条折痕叫什么？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">数对称轴条数</span></td><td>正方形、长方形、等边三角形、等腰三角形、菱形、圆各有几条对称轴？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">工程建造</span> → <span class="nw">上学日常</span></td><td><span class="tag">补全轴对称图</span></td><td>给出了一个轴对称标志的左半边和对称轴，右半边怎么画？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">自然现象</span> → <span class="nw">校园生活</span></td><td><span class="tag">教室墙上的钟</span></td><td>钟面上的分针从指向 12 走到指向 3。这是什么运动？请把三个要素说全。</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">物流运输</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">乘电梯上楼</span></td><td>小明从 1 楼乘电梯到 7 楼，电梯门始终朝着同一面。电梯轿厢做了什么运动？移动了多少？</td></tr>
+</table>
+<h3>图形的放大与缩小和图形密铺 <em>m2-03-02-scale-enlarge-and-tessellation · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">饮食与配比</span> → <span class="nw">校园生活</span></td><td><span class="tag">课件投影放大</span></td><td>课件上一个长方形长 4 厘米、宽 3 厘米，按 $5:1$ 投影到幕布上，幕布上的长和宽各是多少？面积是原来的几倍？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">计量与估算</span> → <span class="nw">工程建造</span></td><td><span class="tag">画户型图</span></td><td>一个房间实际长 5 米、宽 4 米，按 $1:100$ 画在图纸上，图纸上的长宽各是多少厘米？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">判断是不是放大</span></td><td>把一个 $3\times2$ 的长方形按 $2:1$「放大」，有人画成了 $6\times2$。这是放大吗？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">工程建造</span></td><td><span class="tag">地砖密铺</span></td><td>这箱地砖每 6 块能围成一个完整的正六边形。一箱有 48 块砖，能围出多少个正六边形？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">物流运输</span> → <span class="nw">上学日常</span></td><td><span class="tag">正三角形拼六边形</span></td><td>要用完全一样的正三角形纸片拼成一个正六边形，至少需要多少片？</td></tr>
+</table>
+<h3>方向与位置、用数对确定位置和描述路线 <em>m2-04-01-position-and-route · 7 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">上学日常</span> → <span class="nw">行程出行</span></td><td><span class="tag">描述相对位置</span></td><td>已知「图书馆在学校的北偏东 $40\degree$ 方向」，那么学校在图书馆的什么方向？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">教室座位表</span></td><td>小青坐在第 4 列第 3 行，用数对怎么表示？数对 $(5, 2)$ 指的是第几列第几行的位置？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">工程建造</span> → <span class="nw">校园生活</span></td><td><span class="tag">图书角书架</span></td><td>书架从左往右分 5 列、从下往上分 4 层。一本《昆虫记》放在第 2 列第 4 层，数对是多少？数对 $(4, 2)$ 那一格放的是第几列第几层的书？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">绿化照明</span> → <span class="nw">上学日常</span></td><td><span class="tag">方格纸描点</span></td><td>方格图从 0 起编号。点 A 在 $(1, 4)$，点 B 在 $(4, 1)$，它们是同一个点吗？和 A 在同一列的点，数对有什么共同点？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">家庭与年龄</span> → <span class="nw">行程出行</span></td><td><span class="tag">给家长指路</span></td><td>从校门到图书馆：先向北走 200 米到教学楼，再向东偏北 $20\degree$ 走 150 米到花坛，最后向北走 100 米。请把路线完整描述出来。</td></tr>
+<tr><td class="n">ex10</td><td><span class="o">饮食与配比</span> → <span class="nw">行程出行</span></td><td><span class="tag">写回程路线</span></td><td>去程是「从家向南偏东 $40\degree$ 走 300 米到车站，再向东走 200 米到学校」。回程怎么走？</td></tr>
+<tr><td class="n">ex12</td><td><span class="o">计量与估算</span> → <span class="nw">行程出行</span></td><td><span class="tag">比例尺画路线</span></td><td>比例尺是 $1:5000$，实际要走 400 米的一段路，图上应画多长？</td></tr>
+</table>
+<h3>数据的收集、整理与统计表 <em>m3-01-01-data-collect-and-table · 3 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td><span class="tag">全班视力普查</span></td><td>四(1)班 40 人查视力，结果是：5.0 及以上 22 人，4.8~4.9 有 12 人，4.8 以下 6 人。这三类的人数合起来是多少？和全班人数对得上吗？能提出什么建议？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">饮食与配比</span> → <span class="nw">校园生活</span></td><td><span class="tag">食堂剩饭量</span></td><td>学校食堂周一到周五的剩饭量分别是 12、15、11、18、9 千克。哪一天剩得最多？在得出结论之前，还应该再收集什么数据？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">计量与估算</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">体温记录表</span></td><td>小舟发烧，妈妈把体温记成一张表：8 时 36.5℃、12 时 37.2℃、16 时 36.9℃、20 时 36.4℃。这一天最高体温是多少？出现在什么时候？从 12 时到 20 时降了多少？</td></tr>
+</table>
+<h3>条形统计图与折线统计图 <em>m3-02-01-bar-and-line-chart · 2 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">行程出行</span> → <span class="nw">校园生活</span></td><td><span class="tag">本班上学方式</span></td><td>看图 1：四(1)班 40 人的上学方式，步行 12 人、公交 15 人、家长开车 9 人、骑车 4 人。哪种方式人最多？最多的比最少的多多少人？四类加起来对不对？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">计量与估算</span> → <span class="nw">校园生活</span></td><td><span class="tag">跳绳测试折线图</span></td><td>小舟四次一分钟跳绳的成绩是 118、124、121、136 下。把这四次画成折线图，总体是进步还是退步？哪一次掉了？从第一次到第四次一共提高了多少下？</td></tr>
+</table>
+<h3>扇形统计图与统计图的选择 <em>m3-02-02-pie-chart-and-choice · 6 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex2</td><td><span class="o">购物消费</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">家庭月支出构成</span></td><td>小宇家一个月支出 6000 元，扇形图显示：餐饮 35%、房租 30%、交通 15%、其他 20%。餐饮和房租各花多少元？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">计量与估算</span> → <span class="nw">自然现象</span></td><td><span class="tag">垃圾分类扇形图</span></td><td>某小区一天产生垃圾 20 千克，扇形图显示厨余垃圾 55%、可回收物 25%、其他垃圾 20%。厨余垃圾有多少千克？如果每千克厨余垃圾能堆肥 0.3 千克，能堆出多少千克肥料？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">两张一样的扇形图</span></td><td>全校 400 人的上学方式扇形图里，步行占 40%；六(1)班 40 人的扇形图里，步行也占 40%。两处「步行 40%」各是多少人？能得出什么结论？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">加装饮水机</span></td><td>调查到一天四个时段的接水人次：7:30 有 40 人次、10:00 有 60 人次、12:00 有 300 人次、15:00 有 90 人次。要说服校长「午休太挤，需要加机器」，该用哪种图？为什么？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">自然现象</span> → <span class="nw">购物消费</span></td><td><span class="tag">小店文具销售额</span></td><td>文具店一个月卖出笔记本 45%、铅笔 20%、橡皮 15%、其他 20%（按金额算）。老板想知道「钱主要靠哪一类赚来的」，该用哪种图？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">物流运输</span> → <span class="nw">自然现象</span></td><td><span class="tag">垃圾分类四类重量</span></td><td>某小区一天产生垃圾：厨余 9.5 千克、可回收物 3 千克、有害垃圾 0.5 千克、其他垃圾 7 千克。要说明「厨余最多、有害最少」，该用哪种图？</td></tr>
+</table>
+<h3>数字编码 <em>m3-04-01-digital-code · 1 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">家庭与年龄</span> → <span class="nw">校园生活</span></td><td><span class="tag">图书馆索书号</span></td><td>图书馆的索书号共 8 位：前 2 位表示大类（01 文学、02 科技、03 儿童），中间 3 位表示作者序号，最后 3 位表示这本书在大类里的出版顺序。一本科技类图书，作者序号是 015，在科技类里排第 8 本，它的索书号是多少？</td></tr>
+</table>
+<h3>确定事件与可能性的大小 <em>m3-04-02-certainty-and-possibility · 6 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">购物消费</span> → <span class="nw">校园生活</span></td><td><span class="tag">掷骰子决定先后</span></td><td>两人一组玩游戏，掷一个普通的正方体骰子（六个面分别是 1 到 6 点）决定谁先。下面三件事分别是什么事件：①掷出的点数在 1 到 6 之间；②掷出 7 点；③掷出偶数点。</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">饮食与配比</span> → <span class="nw">购物消费</span></td><td><span class="tag">一箱盲盒</span></td><td>一箱盲盒 12 个，其中只有 1 个是隐藏款。小舟买 1 个，下面两件事分别是什么事件：①买到的是隐藏款；②买到的不是隐藏款。能说「一定买不到隐藏款」吗？</td></tr>
+<tr><td class="n">ex3</td><td><span class="o">计量与估算</span> → <span class="nw">农业生产</span></td><td><span class="tag">种子发芽率</span></td><td>一包种子 100 粒，包装上写发芽率约 95%。种下一粒，下面三件事分别是什么事件：①一定发芽；②一定不发芽；③可能发芽，也可能不发芽。哪个说法对？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">摸球决定开球</span></td><td>两队比赛，用一个袋子摸球决定谁先开球：袋里 4 个红球、2 个黄球，摸到红球甲队先，摸到黄球乙队先。这个规则公平吗？怎样改才公平？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">物流运输</span> → <span class="nw">购物消费</span></td><td><span class="tag">抽奖转盘</span></td><td>转盘平均分成 10 格：8 格「谢谢参与」、1 格一等奖、1 格二等奖。转一次，「中奖」和「不中奖」哪个可能性大？能说「转 10 次一定中一次」吗？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">上学日常</span> → <span class="nw">行程出行</span></td><td><span class="tag">信号灯配时</span></td><td>一个路口的信号灯这样循环：红灯亮 40 秒、绿灯亮 35 秒、黄灯亮 3 秒。小舟随机赶到路口，遇到哪种灯的可能性最大？遇到黄灯的可能性比遇到红灯大吗？</td></tr>
+</table>
+<h3>常用的数学思想和方法 <em>m4-01-01-thinking-methods · 1 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex4</td><td><span class="o">计量与估算</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">阶梯水价</span></td><td>每月 15 吨以内每吨 3 元，超过 15 吨的部分每吨 5 元。某户用了 22 吨，要交多少元？</td></tr>
+</table>
+<h3>算式、数列与周期中的规律 <em>m4-02-01-pattern-arith-sequence-cycle · 4 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">数学节速算</span></td><td>屏幕跳出 $1111 \times 1111$，要求 3 秒内报出答案，怎么算？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">饮食与配比</span> → <span class="nw">上学日常</span></td><td><span class="tag">折纸折多厚</span></td><td>一张纸厚 0.08 毫米，对折 20 次以后有多厚？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">轮流擦黑板</span></td><td>4 个人轮流擦黑板，1 号先擦。第 37 天轮到几号？</td></tr>
+<tr><td class="n">ex12</td><td><span class="o">家庭与年龄</span> → <span class="nw">物流运输</span></td><td><span class="tag">快递分拣格口</span></td><td>快递按 1、2、3 号格口循环分拣。第 1000 件去几号格口？</td></tr>
+</table>
+<h3>数图形中的规律与推理 <em>m4-02-02-pattern-figure-and-reasoning · 1 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex5</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">赛跑排名推理</span></td><td>甲、乙、丙三人赛跑。甲说「我不是第一」，乙说「我是第二」，丙说「我不是第三」。谁是第一，谁是第三？</td></tr>
+</table>
+<h3>加法原理与乘法原理 <em>m4-03-01-addition-multiplication-principle · 4 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex3</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">图书馆借一本书</span></td><td>图书馆的故事书有 8 本、科普书有 6 本、漫画有 5 本。只借一本，有多少种挑法？</td></tr>
+<tr><td class="n">ex6</td><td><span class="o">购物消费</span> → <span class="nw">饮食与配比</span></td><td><span class="tag">食堂配套餐</span></td><td>食堂套餐要 1 荤 1 素 1 汤。荤菜 4 种、素菜 3 种、汤 2 种，一共有多少种搭配？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">物流运输</span> → <span class="nw">行程出行</span></td><td><span class="tag">共享单车借还</span></td><td>共享单车有 3 个借车点、4 个还车点。从任意一个点借、到任意一个点还，有多少种借还组合？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">农业生产</span> → <span class="nw">上学日常</span></td><td><span class="tag">校服搭配</span></td><td>校服有 3 种上衣、2 种裤子、2 种运动鞋，各穿一件（双），有多少种搭配？</td></tr>
+</table>
+<h3>排列与组合、集合与重叠问题 <em>m4-03-02-permutation-and-set-overlap · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">班干部竞选</span></td><td>班里要从 4 名同学中选 3 人，分别担任班长、学习委员、体育委员，有多少种选法？</td></tr>
+<tr><td class="n">ex4</td><td><span class="o">行程出行</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">拍全家福</span></td><td>一家四口拍全家福，四个人站成一排，有多少种站法？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">家庭与年龄</span> → <span class="nw">购物消费</span></td><td><span class="tag">超市买水果的顾客</span></td><td>超市里有 25 位顾客买了苹果，20 位顾客买了梨，其中 8 位两种都买了。一共有多少位顾客在这家超市买了水果？</td></tr>
+<tr><td class="n">ex8</td><td><span class="o">自然现象</span> → <span class="nw">校园生活</span></td><td><span class="tag">调查全班本领</span></td><td>三(2)班有 60 人。会游泳的有 30 人，会骑车的有 25 人，其中 12 人两样都会。两样都不会的有多少人？</td></tr>
+<tr><td class="n">ex9</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">课外小组重叠</span></td><td>小美和邻居小伙伴一起参加课外小组：18 人参加书法小组，14 人参加合唱小组，其中 6 人两个小组都参加。两个小组一共有多少人？</td></tr>
+</table>
+<h3>抽屉原理与最不利原则 <em>m4-04-01-pigeonhole-and-worst-case · 5 处</em></h3>
+<table><tr><th style="width:52px">例</th><th style="width:190px">场景修正</th><th style="width:150px">依据</th><th>题目</th></tr>
+<tr><td class="n">ex1</td><td><span class="o">上学日常</span> → <span class="nw">校园生活</span></td><td><span class="tag">班里的生日月份</span></td><td>班里 40 人，一年 12 个月。至少有多少人在同一个月过生日？</td></tr>
+<tr><td class="n">ex2</td><td><span class="o">农业生产</span> → <span class="nw">校园生活</span></td><td><span class="tag">全校同一天生日</span></td><td>某小学有 367 名学生，一年按 365 天算。至少有几名学生在同一天过生日？</td></tr>
+<tr><td class="n">ex5</td><td><span class="o">工程建造</span> → <span class="nw">上学日常</span></td><td><span class="tag">笔袋里的彩笔</span></td><td>笔袋里的彩笔只有红、蓝、黑、绿 4 种颜色，共有 26 支。至少有多少支笔同色？</td></tr>
+<tr><td class="n">ex7</td><td><span class="o">行程出行</span> → <span class="nw">校园生活</span></td><td><span class="tag">同一天生日</span></td><td>一年按 365 天算，至少要多少人，才能保证有 2 人同一天过生日？</td></tr>
+<tr><td class="n">ex10</td><td><span class="o">绿化照明</span> → <span class="nw">家庭与年龄</span></td><td><span class="tag">自行车密码锁</span></td><td>自行车密码锁是 4 位数字，前 3 位记得，最后一位忘了。最多试几次才能保证打开？</td></tr>
+</table>
+</div></body></html>
