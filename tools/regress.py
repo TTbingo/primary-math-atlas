@@ -31,8 +31,13 @@ def main():
     topics = sorted(p.parent.name for p in (DIST / "t").glob("*/index.html"))
     modules = sorted(p.parent.name for p in DIST.glob("m*/index.html"))
     print(f"产物：{len(points)} 篇 / {len(topics)} 主题 / {len(modules)} 模块")
-    if len(points) != 162:
-        fails.append(f"知识点页数 {len(points)}，应为 162")
+    # 期望值从 modules.json 动态读，不硬编码——节点增减时不用改这里
+    mod = json.loads((DIST.parent / "content" / "modules.json").read_text(encoding="utf-8"))
+    want_points = sum(len(t["points"]) for t in mod["topics"])
+    if len(points) != want_points:
+        fails.append(f"知识点页数 {len(points)}，应为 {want_points}")
+    if len(points) > want_points:
+        fails.append(f"dist/points 有 {len(points) - want_points} 个陈旧页面，需清空 dist 后重建")
 
     # ── 2. 浏览器实测
     urls = ["/", "/m1/", "/m2/", "/m3/", "/m4/"]
@@ -44,7 +49,9 @@ def main():
     n_rel3 = 0
     n_tb = 0
     with sync_playwright() as pw:
-        b = pw.chromium.launch()
+        # 本机装了代理，Chromium 会自动走系统代理，访问 127.0.0.1 会被代理
+        # 拦成 502。显式加 --no-proxy-server 让它直连本地服务。
+        b = pw.chromium.launch(args=["--no-proxy-server"])
         pg = b.new_page(viewport={"width": 1280, "height": 900})
         errs = []
         pg.on("console", lambda m: errs.append(m.text) if m.type == "error" else None)
@@ -65,7 +72,20 @@ def main():
                     "() => [...document.images].every(i => i.complete)", timeout=5000)
             except Exception:
                 pass
-            pg.wait_for_timeout(60)
+            # 懒加载的图没进视口就不会请求，complete 恒为 false——不能据此判失败。
+            # 改成把每个 img 的 src 单独取回来做 HTTP 实测，确认真能取到。
+            try:
+                pg.evaluate("""async () => {
+                  for (const img of document.images) {
+                    img.loading = 'eager';
+                    const s = img.getAttribute('src');
+                    if (!s) continue;
+                    try { await fetch(s, {method:'GET'}); } catch(e) {}
+                  }
+                }""")
+                pg.wait_for_timeout(120)
+            except Exception:
+                pass
             info = pg.evaluate("""() => {
               const imgs=[...document.querySelectorAll('img')].filter(x=>!x.complete||x.naturalWidth===0).map(x=>x.getAttribute('src'));
               const body=document.body.innerText;
