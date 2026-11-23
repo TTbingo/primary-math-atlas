@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ttbingo.github.io/primary-math-atlas/sitemap.xml
