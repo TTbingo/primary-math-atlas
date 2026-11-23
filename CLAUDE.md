@@ -41,6 +41,7 @@ python tools/verify_online.py [BASE] [CODE]   # Playwright 线上冒烟（含配
 16. **「常见的量」是数与代数的第 10 节（m1-10），不从图形模块里讲**：时间、人民币、质量、温度、速度 + 单位/进率/名数总纲四篇归 m1-10。质量单位不再跟着「认识平面图形」走（原 m2-01-01 已剥离，改名 plane-shapes）。长度留在图形（测量起点），面积、体积也留在图形。新增量类内容先看这节有没有位置，别再往图形篇里塞。
 17. **节内序号必须从 01 连续**：删一篇就会触发整节重编号（m1-07 删 02 后 03..14 全前移）。改名时要同步 `id` 字段、文件名、modules.json 清单、全站 related/prerequisites、guides 的 `[[短ID]]`，并把引用按「同 slug 前移一号」修正——不要二次全局替换，会把已改过的引用再挪一格。
 18. **related 禁止指向自己**：合并多篇为一篇时，必须剔除「目标在本合并组内」的 related 条目——A 的关联指向合并兄弟 B，合并后就是自引用（语义已内化为页内关系，直接删）。删除后若三类缺一，用 `ext:` 站外延伸补位（先例：m1-01-01 / m2-01-03 / m4-04-01 / m2-02-06），不要硬找站内页面凑关联。2026-11-06 清理 51 处遗留（`tools/fix_self_refs.py`，报告见 `content/_reference/self-ref-fix-report.md`）。
+19. **gh-pages 部署走 SSH**：`tools/deploy_ghpages.py` 的 `.tmp/ghpages` 工作目录可能残留 HTTPS remote（443 被挡，报 `schannel: server closed abruptly`）。脚本已改为每次无条件 `git remote set-url origin REMOTE`（默认 SSH，可用 `GHP_REMOTE` 覆盖）；若仍失败，先 `git -C .tmp/ghpages remote -v` 核对，再手动 set-url 后 `git push -f origin gh-pages`。发布后用 `git ls-remote origin refs/heads/gh-pages` 与线上 curl 双重确认，Pages 构建有约 25 秒延迟。
 
 ## 环境陷阱（已踩过，别重犯）
 
