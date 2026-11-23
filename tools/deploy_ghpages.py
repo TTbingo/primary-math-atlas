@@ -63,11 +63,10 @@ def main():
         run(["git", "init", "-q", "-b", BRANCH], WORK)
         run(["git", "remote", "add", "origin", REMOTE], WORK)
     else:
-        # 远端若是 SSH 地址（沙箱可能禁读 ~/.ssh），自动改为 HTTPS
-        url = subprocess.run(["git", "remote", "get-url", "origin"], cwd=WORK,
-                             capture_output=True, text=True).stdout.strip()
-        if url.startswith("git@"):
-            run(["git", "remote", "set-url", "origin", REMOTE], WORK)
+        # 每次都把远端重置为 REMOTE（默认 SSH；可用 GHP_REMOTE 覆盖）。
+        # 不能只在 URL 是 git@ 时才改——否则工作目录残留的 HTTPS 永远得不到纠正，
+        # 而 HTTPS/443 被防火墙挡时会报 schannel: server closed abruptly。
+        run(["git", "remote", "set-url", "origin", REMOTE], WORK)
     run(["git", "config", "user.name", "TTbingo"], WORK)
     run(["git", "config", "user.email", "TTbingo@users.noreply.github.com"], WORK)
     run(["git", "add", "-A"], WORK)
