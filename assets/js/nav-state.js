@@ -92,15 +92,17 @@
 
   // ---- 还原 ----
   var savedOpen = read(K_OPEN, null);
-  if (savedOpen) {
-    groups.forEach(function (d) { d.open = savedOpen.indexOf(groupKey(d)) >= 0; });
-  }
-  // 当前页所在分组一定展开，否则落地后看不见自己在哪
-  groups.forEach(function (d) {
-    if (d.querySelector('a[aria-current="page"]')) d.open = true;
-  });
-
   var pos = read(K_POS, null);
+  // 只恢复与本次落地相关的分组：当前页所在分组必开；其余分组仅在旧位置
+  // 本来就落在它里面时才展开，避免跨页累积成一整屏目录。
+  groups.forEach(function (d) {
+    var isCur = !!d.querySelector('a[aria-current="page"]');
+    var wasAt = !!(pos && pos.key && [].some.call(
+      d.querySelectorAll('a[href]'),
+      function (a) { return keyOfHref(a.getAttribute('href')) === pos.key; }
+    ));
+    d.open = isCur || (wasAt && savedOpen && savedOpen.indexOf(groupKey(d)) >= 0);
+  });
   if (read(K_KEEP, false) && pos) {
     write(K_KEEP, false);
     // 分项 → 主题 → 模块，逐级退到还存在的最近地标

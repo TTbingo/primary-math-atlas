@@ -6,7 +6,7 @@
 
 .pt-no { font-size: var(--fs-sm); color: var(--text-sub); margin-left: .5rem; font-weight: 400; }
 .point-summary { color: var(--text-sub); margin: .75rem 0 0; font-size: var(--fs-body); }
-.home-sub, .grade-sub { color: var(--text-sub); margin: .5rem 0 0; font-size: var(--fs-aux); }
+.home-sub, .grade-sub { color: var(--text-sub); margin: .5rem 0 0; font-size: var(--fs-desc); }
 
 .block { margin-top: var(--block-gap); }
 .block > h2 { font-size: var(--fs-h2); margin: 0 0 .75rem; }
@@ -65,7 +65,7 @@
   display: block; font-family: var(--font-title); font-weight: 700;
   font-size: var(--fs-aux); color: var(--title);
 }
-.card-d { display: block; margin: .4rem 0 0; font-size: var(--fs-sm); color: var(--text-sub); line-height: 1.65; }
+.card-d { display: block; margin: .4rem 0 0; font-size: var(--fs-desc); color: var(--text-sub); line-height: 1.65; }
 .card-m { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center;
           margin: .75rem 0 0; font-size: var(--fs-xs); color: var(--text-sub); }
 
@@ -149,7 +149,8 @@ ul.items li { margin: .25rem 0; }
 .point-embed { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line-weak); }
 .pe-h { font-size: var(--fs-h2); margin: 0 0 .5rem; }
 .pe-sum { color: var(--text-sub); margin: 0 0 1rem; }
-.sec-h { font-size: var(--fs-h3); margin: 1.25rem 0 .5rem; }
+/* 特异性须压过 .block > h2，否则小节标题会被拉成 h2 的 40px */
+.block > h2.sec-h { font-size: var(--fs-h3); margin: 1.25rem 0 .5rem; }
 .note { color: var(--text-sub); font-size: var(--fs-sm); }
 
 /* ---------- 上下页 ---------- */
@@ -420,13 +421,14 @@ ul.pending { color: var(--text-faint); }
   padding-left: .5rem; border-left: 3px solid var(--accent);
 }
 
-/* 正文内的知识点跳转链接 */
+/* 正文内的知识点跳转链接：默认墨色 + 虚线提示可点，hover 才上强调色。
+   导读/出处一列常连续出现几十处，全用红色会让强调语义失效。 */
 .ptref {
-  color: var(--accent); text-decoration: none;
-  border-bottom: 1px dashed var(--accent-soft);
+  color: var(--text); text-decoration: none;
+  border-bottom: 1px dashed var(--line-strong);
   padding-bottom: 1px; white-space: nowrap;
 }
-.ptref:hover { border-bottom-style: solid; background: var(--accent-soft); }
+.ptref:hover { color: var(--accent); border-bottom-color: var(--accent); border-bottom-style: solid; background: var(--accent-soft); }
 .ptref-dead { color: var(--text-faint); }
 
 /* ---------- 窄屏：导读表格堆叠成带小标签的卡片 ---------- */
@@ -444,12 +446,11 @@ ul.pending { color: var(--text-faint); }
     content: ""; display: block;
   }
   .gd-content, .gd-where { border-bottom: none; padding: .45rem 0 0; }
-  .gd-content::before, .gd-where::before {
+  .gd-table td[data-label]::before {
     display: block; font-size: var(--fs-sm); font-weight: 700;
     letter-spacing: .05em; color: var(--text-faint); margin-bottom: .15rem;
+    content: attr(data-label);
   }
-  .gd-content::before { content: "内容"; }
-  .gd-where::before { content: "在后面哪里用"; }
   .gd-where { padding-bottom: .2rem; }
 }
 
