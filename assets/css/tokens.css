@@ -8,7 +8,7 @@
   --line-weak: #e9dfce;
   --text: #353841;
   --text-sub: #555962;
-  --text-faint: #9a948c;
+  --text-faint: #736d63;
   --title: #17181c;
   --accent: #c0392b;
   --accent-soft: #f5ddd8;
@@ -18,7 +18,7 @@
   --warn: #a8742a;
   --rel-pre: #b3372a;
   --rel-post: #2f7d55;
-  --rel-together: #a8742a;
+  --rel-together: #946320;
 }
 
 [data-theme="dark"] {
@@ -29,7 +29,7 @@
   --line-weak: #353841;
   --text: #c1c3c8;
   --text-sub: #888c96;
-  --text-faint: #6a6d76;
+  --text-faint: #80848e;
   --title: #ffffff;
   --accent: #e05a4b;
   --accent-soft: #4a1a15;
@@ -50,13 +50,14 @@
   --fs-body: 16px;
   --lh-body: 1.75;
   --lh-title: 1.2;
-  --fs-h1: 42px;
-  --fs-h2: 35px;
+  --fs-h1: 48px;
+  --fs-h2: 40px;
   --fs-h3: 29px;
   --fs-h4: 24px;
   --fs-side: 18px;
   --fs-toc: 13px;
   --fs-aux: 14px;
+  --fs-desc: 15px;
   --fs-sm: 14px;
   --fs-xs: 13px;
 
@@ -80,5 +81,14 @@
   :root {
     --sidebar-w: 16rem;
     --content-w: clamp(45rem, calc(100vw - 36rem), 62rem);
+  }
+}
+
+/* 窄屏整档收一级，并随视口缩放：固定 40px 在 390px 仍会把站名折成两行 */
+@media (max-width: 30em) {
+  :root {
+    --fs-h1: clamp(30px, 9.5vw, 38px);
+    --fs-h2: clamp(28px, 8vw, 34px);
+    --fs-h3: clamp(22px, 6.4vw, 27px);
   }
 }

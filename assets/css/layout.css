@@ -145,6 +145,11 @@ a:hover { color: var(--title); }
   font-size: var(--fs-xs); color: var(--text-sub);
   letter-spacing: .08em; margin: .5rem 0 .15rem; padding-left: .5rem;
 }
+.side-term a { color: var(--text-sub); }
+.side-term a:hover { color: var(--accent); background: var(--accent-soft); }
+.side-term a[aria-current="page"] {
+  color: var(--accent-deep); background: var(--accent-soft); font-weight: 600;
+}
 .side-item a {
   display: block; padding: .22rem .5rem; font-size: var(--fs-sm);
   color: var(--text-sub); border-radius: var(--radius);
@@ -182,7 +187,7 @@ a:hover { color: var(--title); }
 /* ---------- 侧栏：模块树的二级与计数 ---------- */
 .side-n {
   float: right; margin-left: .4rem; font-size: var(--fs-xs, .78rem);
-  color: var(--text-faint); font-weight: 400;
+  color: var(--text-sub); font-weight: 500;
 }
 .side-sub { list-style: none; margin: .15rem 0 .4rem; padding-left: .85rem; border-left: 1px solid var(--line-weak); }
 .side-sub .side-item a { font-size: var(--fs-sm); }
@@ -191,7 +196,7 @@ a:hover { color: var(--title); }
 /* ---------- 侧栏：模块树的二级与计数 ---------- */
 .side-n {
   float: right; margin-left: .4rem; font-size: var(--fs-xs, .78rem);
-  color: var(--text-faint); font-weight: 400;
+  color: var(--text-sub); font-weight: 500;
 }
 .side-sub { list-style: none; margin: .15rem 0 .4rem; padding-left: .85rem; border-left: 1px solid var(--line-weak); }
 .side-sub .side-item a { font-size: var(--fs-sm); }

@@ -689,7 +689,7 @@ def render_standards(p, depth, idx):
                     f"<td>{render_text(s['text'])}<div class=\"std-loc\">{esc(loc)}&#12288;行为动词：{badge(s.get('verb',''))}</div></td></tr>")
     if not rows:
         return ""
-    return ('<section class="block std"><h2>课标要求</h2>'
+    return ('<section class="block std" id="std"><h2>课标要求</h2>'
             '<table class="kv"><tbody>' + "".join(rows) + "</tbody></table></section>")
 
 
@@ -1115,8 +1115,8 @@ def render_guide(idx, mid, depth):
         where = render_inline(r.get("where", ""))
         rows.append(
             f'<tr><th scope="row"><a href="{idx.rel_topic(tid, depth)}">{esc(t["title"])}</a></th>'
-            f'<td class="gd-content">{esc(content)}</td>'
-            f'<td class="gd-where">{where}</td></tr>')
+            f'<td class="gd-content" data-label="内容">{esc(content)}</td>'
+            f'<td class="gd-where" data-label="在后面哪里用">{where}</td></tr>')
     if not rows:
         return ""
     parts = ['<section class="block guide" id="guide"><h2>导读</h2>']
@@ -1222,8 +1222,8 @@ def emit_ax_formulas(idx, depth=1):
             formula = render_inline(r["f"]) if "$" in r["f"] else esc(r["f"])
             rows.append(
                 f'<tr><th scope="row">{formula}</th>'
-                f'<td class="gd-content">{esc(r["cond"])}</td>'
-                f'<td class="gd-where">{_ax_point_link(idx, r["pid"], depth)}</td></tr>')
+                f'<td class="gd-content" data-label="使用条件">{esc(r["cond"])}</td>'
+                f'<td class="gd-where" data-label="出处">{_ax_point_link(idx, r["pid"], depth)}</td></tr>')
         body.append(f'<section class="block guide" id="{anchor}">'
                     f'<h2>{esc(g["title"])}</h2><p class="gd-intro">{esc(g["intro"])}</p>'
                     '<div class="gd-table-wrap"><table class="gd-table">'
@@ -1257,8 +1257,8 @@ def emit_ax_terms(idx, depth=1):
         for t in buckets[py]:
             rows.append(
                 f'<tr><th scope="row">{esc(t["t"])}</th>'
-                f'<td class="gd-content"><em>{esc(t["en"])}</em><br>{esc(t["def"])}</td>'
-                f'<td class="gd-where">{_ax_point_link(idx, t["pid"], depth)}</td></tr>')
+                f'<td class="gd-content" data-label="英文 / 含义"><em>{esc(t["en"])}</em><br>{esc(t["def"])}</td>'
+                f'<td class="gd-where" data-label="出处">{_ax_point_link(idx, t["pid"], depth)}</td></tr>')
         body.append(f'<section class="block guide" id="{anchor}">'
                     f'<h2>{esc(py)}</h2>'
                     '<div class="gd-table-wrap"><table class="gd-table">'
@@ -1559,6 +1559,10 @@ def verify_output():
         base = str(fp.parent)
         html = fp.read_text(encoding="utf-8")
         rel = str(fp.relative_to(D)).replace("\\", "/")
+        ids = set(re.findall(r'\bid="([^"]+)"', html))
+        for a in re.findall(r'href="#([^"]+)"', html):
+            if a not in ids:
+                bad.append(f"{rel}: 页内锚点 #{a} 无对应 id")
         for u in re.findall(r'(?:href|src)="([^"]+)"', html):
             if u.startswith(("http", "#", "mailto:", "data:", "javascript:")):
                 continue
@@ -1583,7 +1587,7 @@ def verify_output():
         for b in bad[:30]:
             print("  !", b)
         return 1
-    print("✓ 产物自检通过：链接全通、公式全渲染、九板块齐全、无禁用词")
+    print("✓ 产物自检通过：链接全通、页内锚点齐全、公式全渲染、九板块齐全、无禁用词")
     return 0
 
 
