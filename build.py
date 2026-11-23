@@ -56,7 +56,8 @@ def load_all():
     points = {p.stem: read_json(p) for p in sorted((C / "points").glob("*.json"))}
     tb = read_json(C / "textbook.json")
     guides = read_json(C / "guides.json").get("guides", {})
-    return tax, site, std, mod, points, tb, guides
+    fw = read_json(C / "framework.json")
+    return tax, site, std, mod, points, tb, guides, fw
 
 # --------------------------------------------------------------- markdown
 MATH_FALLBACK = [
@@ -427,14 +428,54 @@ def validate(tax, std, mod, points, tb):
         err(f"以下篇目未登记进知识点清单: {sorted(missing)}")
 
 
+def validate_framework(fw, points):
+    """体系导览配置：短 id 必须唯一命中一篇已写知识点，页 id 不得重复。"""
+    seen_pages = set()
+    for g in fw.get("groups", []):
+        gid = g.get("id")
+        if not gid or not ID_RE.match(gid):
+            err(f"framework.json: 组 id 不合法 {gid}")
+        for it in g.get("items", []):
+            iid = it.get("id")
+            key = f"{gid}/{iid}"
+            if not iid or not ID_RE.match(iid or ""):
+                err(f"framework.json: 页 id 不合法 {key}")
+            if key in seen_pages:
+                err(f"framework.json: 页 id 重复 {key}")
+            seen_pages.add(key)
+            for field in ("title", "lead", "middle"):
+                if not it.get(field):
+                    err(f"framework.json: {key} 缺字段 {field}")
+            for s in it.get("stages", []):
+                if not s.get("name") or not s.get("note"):
+                    err(f"framework.json: {key} 阶段缺 name/note")
+                for short in s.get("points", []):
+                    hits = [p for p in points if p.startswith(short + "-")]
+                    if len(hits) != 1:
+                        err(f"framework.json: {key} 短 id {short} 命中 {len(hits)} 篇（应为 1）")
+    # 反向：配置组必须覆盖全部声明的组
+    if not fw.get("groups"):
+        err("framework.json: 没有任何 groups")
+
+
 # --------------------------------------------------------------- index
 class Index:
     """按「模块 → 节 → 知识点」组织。清单里已写和待写都在，只是待写的不出现在页面链接里。"""
 
-    def __init__(self, tax, std, mod, points, guides=None, tb=None):
+    def __init__(self, tax, std, mod, points, guides=None, tb=None, fw=None):
         self.tax, self.std, self.mod, self.points = tax, std, mod, points
         self.guides = guides or {}
         self.tb = tb or {}
+        self.fw = fw or {}
+        self.fw_short = {}
+        for p in points:
+            m = re.match(r"(m\d-\d\d-\d\d)", p)
+            if m:
+                self.fw_short.setdefault(m.group(1), p)
+        self.fw_titles = {}
+        for g in self.fw.get("groups", []):
+            for it in g.get("items", []):
+                self.fw_titles[f"{g['id']}/{it['id']}"] = it["title"]
         self.modules = {m["id"]: m for m in mod["modules"]}
         self.module_order = [m["id"] for m in mod["modules"]]
         self.topics = {t["id"]: t for t in mod["topics"]}
@@ -484,6 +525,10 @@ class Index:
 
     def rel_module(self, mid, depth):
         return f"{self.root_for(depth)}/{mid}/index.html"
+
+    def rel_fw(self, gid, iid, depth):
+        tail = f"/{iid}" if iid else ""
+        return f"{self.root_for(depth)}/framework/{gid}{tail}/index.html"
 
 # --------------------------------------------------------------- render bits
 def plain(s):
@@ -754,6 +799,26 @@ def build_sidebar(idx, current=None, depth=0):
     if cur_mod is None and cur_topic:
         cur_mod = cur_topic.split("-")[0]
     parts = ['<nav class="side-nav" aria-label="模块目录">']
+    # 体系导览：独立分组，跨模块的素养主线与思维暗线
+    if idx.fw.get("groups"):
+        fwcur = current if isinstance(current, str) and current.startswith("fw:") else ""
+        parts.append(f'<details class="side-group side-framework" {"open" if fwcur else ""}>')
+        parts.append('<summary><span>体系导览</span><span class="side-n">导览</span></summary>')
+        parts.append('<ul>')
+        for g in idx.fw["groups"]:
+            gid = g["id"]
+            gcur = (fwcur == f"fw:{gid}")
+            parts.append(f'<li class="side-term"><a href="{idx.rel_fw(gid, None, depth)}"'
+                         f'{" aria-current=\"page\"" if gcur else ""}>{esc(g["title"])}</a></li>')
+            if gcur or (fwcur.startswith(f"fw:{gid}/")):
+                parts.append('<li><ul class="side-sub">')
+                for it in g["items"]:
+                    key = f"fw:{gid}/{it['id']}"
+                    c = ' aria-current="page"' if fwcur == key else ""
+                    parts.append(f'<li class="side-item"><a href="{idx.rel_fw(gid, it["id"], depth)}"{c}>'
+                                 f'{esc(it["title"])}</a></li>')
+                parts.append('</ul></li>')
+        parts.append('</ul></details>')
     for mid in idx.module_order:
         m = idx.modules[mid]
         open_ = "open" if cur_mod == mid else ""
@@ -972,6 +1037,71 @@ def render_guide(idx, mid, depth):
     return "".join(parts)
 
 
+def _fw_point_link(idx, short, depth):
+    full = idx.fw_short.get(short)
+    if not full:
+        return ""
+    return (f'<a href="{idx.rel(full, depth)}" data-id="{full}">'
+            f'{esc(idx.points[full]["title"])}</a>')
+
+
+def emit_fw_group(idx, gid, depth=2):
+    """体系导览总览页：一组（素养主线 / 思维暗线）的入口。"""
+    set_render_ctx(idx, depth)
+    g = next(x for x in idx.fw["groups"] if x["id"] == gid)
+    body = [f'<div class="panel panel-h1"><h1 id="_top">{esc(g["title"])}</h1>'
+            f'<p class="home-sub">{esc(g["intro"])}</p></div>',
+            '<div class="panel panel-body">']
+    cards = []
+    for it in g["items"]:
+        n = sum(len(s.get("points", [])) for s in it.get("stages", []))
+        cards.append(f'<a class="card" href="{idx.rel_fw(gid, it["id"], depth)}">'
+                     f'<span class="card-t">{esc(it["title"])}</span>'
+                     f'<span class="card-d">{esc(it["lead"])}</span>'
+                     f'<span class="card-m">{n} 个知识点 · {len(it["stages"])} 段</span></a>')
+    body.append(f'<div class="card-grid mod-grid">{"".join(cards)}</div></div>')
+    return tmpl("base.html", page_vars(idx, {
+        "TITLE": g["title"], "DESC": g["intro"][:120], "MAIN": "".join(body),
+        "SIDEBAR": build_sidebar(idx, f"fw:{gid}", depth), "TOC": "",
+        "ROOT": idx.root_for(depth), "DEPTH": str(depth), "BODY_CLASS": "page-framework",
+    }))
+
+
+def emit_fw_item(idx, gid, iid, depth=3):
+    """体系导览子页：一段主线用 N 个阶段串起已有知识点。"""
+    set_render_ctx(idx, depth)
+    g = next(x for x in idx.fw["groups"] if x["id"] == gid)
+    it = next(x for x in g["items"] if x["id"] == iid)
+    body = [f'<div class="panel panel-h1"><a class="crumb" href="{idx.rel_fw(gid, None, depth)}">'
+            f'← {esc(g["title"])}</a><h1 id="_top">{esc(it["title"])}</h1>'
+            f'<p class="home-sub">{esc(it["lead"])}</p></div>',
+            '<div class="panel panel-body">']
+    entries = []
+    for n, s in enumerate(it.get("stages", []), 1):
+        anchor = f"stage-{n}"
+        entries.append((2, s["name"], anchor))
+        links = "".join(f'<li>{_fw_point_link(idx, p, depth)}</li>'
+                        for p in s.get("points", []))
+        body.append(f'<section class="block" id="{anchor}">'
+                    f'<h2>{esc(s["name"])}</h2><p>{esc(s["note"])}</p>'
+                    f'<ul class="items point-items">{links}</ul></section>')
+    if it.get("example"):
+        body.append(f'<section class="block"><h2>一个贯穿的例子</h2>'
+                    f'<p>{esc(it["example"])}</p></section>')
+    if it.get("back"):
+        body.append(f'<section class="block"><h2>卡住时回看</h2>'
+                    f'<p>{esc(it["back"])}</p></section>')
+    body.append(f'<section class="block"><h2>初中落点</h2>'
+                f'<p class="fw-middle">{esc(it["middle"])}</p></section>')
+    body.append('</div>')
+    return tmpl("base.html", page_vars(idx, {
+        "TITLE": it["title"], "DESC": it["lead"][:120], "MAIN": "".join(body),
+        "SIDEBAR": build_sidebar(idx, f"fw:{gid}/{iid}", depth),
+        "TOC": build_toc(entries), "ROOT": idx.root_for(depth),
+        "DEPTH": str(depth), "BODY_CLASS": "page-framework",
+    }))
+
+
 def emit_module(idx, mid, depth=1):
     set_render_ctx(idx, depth)
     """模块页：这个模块由哪些主题组成。"""
@@ -1159,8 +1289,9 @@ def copy_assets():
 
 
 def build():
-    tax, site, std, mod, points, tb, guides = load_all()
+    tax, site, std, mod, points, tb, guides, fw = load_all()
     validate(tax, std, mod, points, tb)
+    validate_framework(fw, points)
     if errors:
         print(f"校验失败：{len(errors)} 个错误")
         for e in errors[:60]:
@@ -1168,7 +1299,7 @@ def build():
         if len(errors) > 60:
             print(f"  … 另有 {len(errors)-60} 条")
         return 1
-    idx = Index(tax, std, mod, points, guides, tb)
+    idx = Index(tax, std, mod, points, guides, tb, fw)
     idx.site_title_sub = site.get("subtitle", "")
 
     safe_rebuild()
@@ -1182,14 +1313,20 @@ def build():
         write(D / "t" / tid / "index.html", emit_topic(idx, tid, 2))
     for pid in idx.point_order:
         write(D / "points" / pid / "index.html", emit_point(idx, pid, 2))
+    for g in idx.fw.get("groups", []):
+        write(D / "framework" / g["id"] / "index.html", emit_fw_group(idx, g["id"], 2))
+        for it in g["items"]:
+            write(D / "framework" / g["id"] / it["id"] / "index.html",
+                  emit_fw_item(idx, g["id"], it["id"], 3))
     write(D / "assets" / "js" / "search-index.js", build_search_index(idx))
 
     if warnings:
         print(f"警告 {len(warnings)} 条：")
         for w in warnings[:20]:
             print("  !", w)
+    fw_pages = sum(1 + len(g["items"]) for g in idx.fw.get("groups", []))
     print(f"构建完成：{len(idx.point_order)} 篇知识点 / {len(idx.topic_order)} 个主题"
-          f" / {len(idx.module_order)} 个模块 → dist/")
+          f" / {len(idx.module_order)} 个模块 / {fw_pages} 个体系导览页 → dist/")
     return verify_output()
 
 def verify_output():
@@ -1229,8 +1366,9 @@ def verify_output():
 
 
 def check():
-    tax, site, std, mod, points, tb, guides = load_all()
+    tax, site, std, mod, points, tb, guides, fw = load_all()
     validate(tax, std, mod, points, tb)
+    validate_framework(fw, points)
     if errors:
         print(f"✗ {len(errors)} 个错误")
         for e in errors[:80]:
