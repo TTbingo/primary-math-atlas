@@ -22,14 +22,30 @@
   var cur = [];
 
   function score(item, q) {
-    var t = item.t || '', s = item.s || '', k = (item.k || []).join(' '), b = item.b || '';
+    var t = item.t || '', s = item.s || '', k = (item.k || []).join(' ');
     var n = 0;
     if (t.indexOf(q) >= 0) n += 5;
     if (k.indexOf(q) >= 0) n += 3;
     if ((item.d || '').indexOf(q) >= 0 || (item.c || '').indexOf(q) >= 0) n += 2;
     if (s.indexOf(q) >= 0) n += 2;
-    if (b.indexOf(q) >= 0) n += 1;
+    var bl = item.bl || [];
+    for (var i = 0; i < bl.length; i++) {
+      if (bl[i].t.indexOf(q) >= 0) { n += 1; break; }
+    }
     return n;
+  }
+
+  // 在全文分块里定位第一次命中，返回「板块名 + 前后文」，让结果可解释
+  function snippet(item, q) {
+    var blocks = item.bl || [];
+    for (var i = 0; i < blocks.length; i++) {
+      var pos = blocks[i].t.indexOf(q);
+      if (pos < 0) continue;
+      var text = blocks[i].t;
+      var from = Math.max(0, pos - 22), to = Math.min(text.length, pos + q.length + 34);
+      return blocks[i].s + ' · …' + (from > 0 ? '…' : '') + text.slice(from, to) + '…';
+    }
+    return null;
   }
 
   function run() {
@@ -49,8 +65,8 @@
       a.href = url(x.i.id, x.i.ty);
       a.innerHTML = '<span class="sr-t"></span><span class="sr-s"></span><span class="sr-m"></span>';
       a.querySelector('.sr-t').textContent = x.i.t;
-      // 摘要里的公式只去掉 $ 定界符，搜索列表不排版公式
-      a.querySelector('.sr-s').textContent = (x.i.s || '').replace(/\$/g, '');
+      // 正文命中时显示「板块名 + 上下文」，否则退回知识点摘要
+      a.querySelector('.sr-s').textContent = snippet(x.i, q) || (x.i.s || '').replace(/\$/g, '');
       a.querySelector('.sr-m').textContent = [TYPE_LABEL[x.i.ty || 'p'],
         x.i.d, x.i.c].filter(Boolean).join(' · ');
       li.appendChild(a);

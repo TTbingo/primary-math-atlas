@@ -43,9 +43,54 @@ def read_json(p):
     return json.loads(p.read_text(encoding="utf-8-sig"))
 
 
+SEO_PAGES = []
+SEO_BASE = ""
+
+
+def inject_seo(html, rel):
+    """统一注入 canonical 与 Open Graph；规范域名取 site.json 的 canonical_base。"""
+    if not SEO_BASE or "<html" not in html:
+        return html
+    path = "" if rel == "index.html" else rel[:-len("/index.html")] if rel.endswith("/index.html") else rel
+    url = SEO_BASE + path
+    tm = re.search(r"<title>(.*?)</title>", html, re.S)
+    dm = re.search(r'<meta name="description" content="([^"]*)">', html)
+    title = esc(re.sub(r"<[^>]+>", "", tm.group(1))) if tm else ""
+    desc = esc(dm.group(1)) if dm else ""
+    tags = (f'<link rel="canonical" href="{url}">\n'
+            '<meta property="og:type" content="website">\n'
+            f'<meta property="og:url" content="{url}">\n'
+            f'<meta property="og:title" content="{title}">\n'
+            f'<meta property="og:description" content="{desc}">')
+    return html.replace("</head>", tags + "\n</head>", 1)
+
+
 def write(p, s):
     p.parent.mkdir(parents=True, exist_ok=True)
+    if p.suffix == ".html" and p.is_relative_to(D):
+        rel = p.relative_to(D).as_posix()
+        SEO_PAGES.append(rel)
+        s = inject_seo(s, rel)
     p.write_text(s, encoding="utf-8", newline="\n")
+
+
+def write_seo_files():
+    """生成 sitemap.xml 与 robots.txt；404 页不进站点地图。"""
+    if not SEO_BASE:
+        return
+    urls = []
+    for rel in sorted(set(SEO_PAGES)):
+        if rel == "404.html" or not rel.endswith(".html"):
+            continue
+        path = "" if rel == "index.html" else rel[:-len("/index.html")] if rel.endswith("/index.html") else rel
+        urls.append(f"  <url><loc>{SEO_BASE}{path}</loc></url>")
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+           + "\n".join(urls) + "\n</urlset>\n")
+    (D / "sitemap.xml").write_text(xml, encoding="utf-8", newline="\n")
+    (D / "robots.txt").write_text(
+        "User-agent: *\nAllow: /\nSitemap: " + SEO_BASE + "sitemap.xml\n",
+        encoding="utf-8", newline="\n")
 
 
 def load_all():
@@ -57,7 +102,8 @@ def load_all():
     tb = read_json(C / "textbook.json")
     guides = read_json(C / "guides.json").get("guides", {})
     fw = read_json(C / "framework.json")
-    return tax, site, std, mod, points, tb, guides, fw
+    ax = read_json(C / "appendix.json")
+    return tax, site, std, mod, points, tb, guides, fw, ax
 
 # --------------------------------------------------------------- markdown
 MATH_FALLBACK = [
@@ -458,15 +504,52 @@ def validate_framework(fw, points):
         err("framework.json: 没有任何 groups")
 
 
+def validate_appendix(ax, points):
+    """附录配置：每条公式/术语的出处短 id 必须唯一命中一篇已写知识点。"""
+    seen_groups = set()
+    for g in ax.get("formula_groups", []):
+        gid = g.get("id")
+        if not gid or gid in seen_groups:
+            err(f"appendix.json: 公式分组 id 缺失或重复 {gid}")
+        seen_groups.add(gid)
+        for field in ("title", "intro"):
+            if not g.get(field):
+                err(f"appendix.json: 公式组 {gid} 缺字段 {field}")
+        for row in g.get("rows", []):
+            for field in ("f", "cond", "pid"):
+                if not row.get(field):
+                    err(f"appendix.json: 公式组 {gid} 条目缺字段 {field}")
+            short = row.get("pid", "")
+            hits = [p for p in points if p.startswith(short + "-")]
+            if len(hits) != 1:
+                err(f"appendix.json: 公式组 {gid} 短 id {short} 命中 {len(hits)} 篇（应为 1）")
+    seen_terms = set()
+    for t in ax.get("terms", []):
+        name = t.get("t")
+        if not name or name in seen_terms:
+            err(f"appendix.json: 术语名缺失或重复 {name}")
+        seen_terms.add(name)
+        for field in ("py", "en", "def", "pid"):
+            if not t.get(field):
+                err(f"appendix.json: 术语「{name}」缺字段 {field}")
+        short = t.get("pid", "")
+        hits = [p for p in points if p.startswith(short + "-")]
+        if len(hits) != 1:
+            err(f"appendix.json: 术语「{name}」短 id {short} 命中 {len(hits)} 篇（应为 1）")
+    if not ax.get("formula_groups") or not ax.get("terms"):
+        err("appendix.json: 公式分组或术语表为空")
+
+
 # --------------------------------------------------------------- index
 class Index:
     """按「模块 → 节 → 知识点」组织。清单里已写和待写都在，只是待写的不出现在页面链接里。"""
 
-    def __init__(self, tax, std, mod, points, guides=None, tb=None, fw=None):
+    def __init__(self, tax, std, mod, points, guides=None, tb=None, fw=None, ax=None):
         self.tax, self.std, self.mod, self.points = tax, std, mod, points
         self.guides = guides or {}
         self.tb = tb or {}
         self.fw = fw or {}
+        self.ax = ax or {}
         self.fw_short = {}
         for p in points:
             m = re.match(r"(m\d-\d\d-\d\d)", p)
@@ -529,6 +612,9 @@ class Index:
     def rel_fw(self, gid, iid, depth):
         tail = f"/{iid}" if iid else ""
         return f"{self.root_for(depth)}/framework/{gid}{tail}/index.html"
+
+    def rel_ax(self, page, depth):
+        return f"{self.root_for(depth)}/appendix/{page}/index.html"
 
 # --------------------------------------------------------------- render bits
 def plain(s):
@@ -819,6 +905,16 @@ def build_sidebar(idx, current=None, depth=0):
                                  f'{esc(it["title"])}</a></li>')
                 parts.append('</ul></li>')
         parts.append('</ul></details>')
+    # 速查附录：公式速查与术语表，独立分组
+    if idx.ax.get("formula_groups") and idx.ax.get("terms"):
+        axcur = current if isinstance(current, str) and current.startswith("ax:") else ""
+        parts.append(f'<details class="side-group side-appendix" {"open" if axcur else ""}>')
+        parts.append('<summary><span>速查附录</span><span class="side-n">附录</span></summary>')
+        parts.append('<ul>')
+        for key, label in (("formulas", "公式速查"), ("terms", "术语表")):
+            c = ' aria-current="page"' if axcur == f"ax:{key}" else ""
+            parts.append(f'<li class="side-term"><a href="{idx.rel_ax(key, depth)}"{c}>{label}</a></li>')
+        parts.append('</ul></details>')
     for mid in idx.module_order:
         m = idx.modules[mid]
         open_ = "open" if cur_mod == mid else ""
@@ -1102,6 +1198,81 @@ def emit_fw_item(idx, gid, iid, depth=3):
     }))
 
 
+def _ax_point_link(idx, short, depth):
+    """附录出处：短 id → 知识点链接（唯一命中由 validate_appendix 保证）。"""
+    pid = next(p for p in idx.point_order if p.startswith(short + "-"))
+    return f'<a class="ptref" href="{idx.rel(pid, depth)}">{esc(idx.points[pid]["title"])}</a>'
+
+
+def emit_ax_formulas(idx, depth=1):
+    """公式速查：按主题分组，每行「公式 / 条件 / 出处」。"""
+    set_render_ctx(idx, depth)
+    groups = idx.ax.get("formula_groups", [])
+    total = sum(len(g.get("rows", [])) for g in groups)
+    body = ['<div class="panel panel-h1"><h1 id="_top">公式速查表</h1>'
+            f'<p class="home-sub">{total} 条小学阶段通用关系式，按主题分组。'
+            '每条都标明使用条件，并链回讲解它的知识点。</p></div>',
+            '<div class="panel panel-body">']
+    entries = []
+    for n, g in enumerate(groups, 1):
+        anchor = f"ax-f-{n}"
+        entries.append((2, g["title"], anchor))
+        rows = []
+        for r in g.get("rows", []):
+            formula = render_inline(r["f"]) if "$" in r["f"] else esc(r["f"])
+            rows.append(
+                f'<tr><th scope="row">{formula}</th>'
+                f'<td class="gd-content">{esc(r["cond"])}</td>'
+                f'<td class="gd-where">{_ax_point_link(idx, r["pid"], depth)}</td></tr>')
+        body.append(f'<section class="block guide" id="{anchor}">'
+                    f'<h2>{esc(g["title"])}</h2><p class="gd-intro">{esc(g["intro"])}</p>'
+                    '<div class="gd-table-wrap"><table class="gd-table">'
+                    '<thead><tr><th>公式 / 规律</th><th>使用条件</th><th>出处</th></tr></thead>'
+                    '<tbody>' + "".join(rows) + '</tbody></table></div></section>')
+    body.append('</div>')
+    return tmpl("base.html", page_vars(idx, {
+        "TITLE": "公式速查表", "DESC": f"小学阶段 {total} 条通用关系式，按主题分组并回链知识点",
+        "MAIN": "".join(body), "SIDEBAR": build_sidebar(idx, "ax:formulas", depth),
+        "TOC": build_toc(entries), "ROOT": idx.root_for(depth),
+        "DEPTH": str(depth), "BODY_CLASS": "page-framework",
+    }))
+
+
+def emit_ax_terms(idx, depth=1):
+    """术语表：按拼音首字母分组，每条中英对照、释义与出处。"""
+    set_render_ctx(idx, depth)
+    terms = idx.ax.get("terms", [])
+    body = ['<div class="panel panel-h1"><h1 id="_top">术语表</h1>'
+            f'<p class="home-sub">{len(terms)} 条小学常用数学术语，按拼音首字母分组，'
+            '给出中英对照与最早讲清它的知识点。</p></div>',
+            '<div class="panel panel-body">']
+    buckets = {}
+    for t in terms:
+        buckets.setdefault(t["py"], []).append(t)
+    entries = []
+    for py in sorted(buckets):
+        anchor = f"ax-t-{py}"
+        entries.append((2, py, anchor))
+        rows = []
+        for t in buckets[py]:
+            rows.append(
+                f'<tr><th scope="row">{esc(t["t"])}</th>'
+                f'<td class="gd-content"><em>{esc(t["en"])}</em><br>{esc(t["def"])}</td>'
+                f'<td class="gd-where">{_ax_point_link(idx, t["pid"], depth)}</td></tr>')
+        body.append(f'<section class="block guide" id="{anchor}">'
+                    f'<h2>{esc(py)}</h2>'
+                    '<div class="gd-table-wrap"><table class="gd-table">'
+                    '<thead><tr><th>术语</th><th>英文 / 含义</th><th>出处</th></tr></thead>'
+                    '<tbody>' + "".join(rows) + '</tbody></table></div></section>')
+    body.append('</div>')
+    return tmpl("base.html", page_vars(idx, {
+        "TITLE": "术语表", "DESC": f"小学常用数学术语 {len(terms)} 条，按拼音分组，中英对照并回链知识点",
+        "MAIN": "".join(body), "SIDEBAR": build_sidebar(idx, "ax:terms", depth),
+        "TOC": build_toc(entries), "ROOT": idx.root_for(depth),
+        "DEPTH": str(depth), "BODY_CLASS": "page-framework",
+    }))
+
+
 def emit_module(idx, mid, depth=1):
     set_render_ctx(idx, depth)
     """模块页：这个模块由哪些主题组成。"""
@@ -1235,6 +1406,49 @@ def page_vars(idx, v):
 
 
 # --------------------------------------------------------------- search index
+def search_plain(s):
+    """搜索索引用：把公式还原成可读文字，去掉 Markdown 记号。"""
+    s = s or ""
+    s = re.sub(r"\\(?:d?frac)\{([^{}]*)\}\{([^{}]*)\}", r"\1/\2", s)
+    s = re.sub(r"\$+", "", s)
+    s = re.sub(r"\\[a-zA-Z]+\b", " ", s)
+    s = re.sub(r"[{}*_`#>@]", "", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def search_blocks(p):
+    """把九板块正文按板块分块，供全文检索并定位命中板块。每块上限 800 字。"""
+    sec = p.get("sections", {})
+    out = []
+    def add(name, text):
+        t = search_plain(text)
+        if t:
+            out.append({"s": name, "t": t[:800]})
+
+    for key, label in (("explanation", "说明"), ("scenarios", "使用场景"),
+                       ("cautions", "注意点"), ("inferences", "常用推论"),
+                       ("intuition", "直观理解"), ("rhyme", "口诀")):
+        v = sec.get(key)
+        if isinstance(v, list):
+            for x in v:
+                add(label, x if isinstance(x, str) else json.dumps(x, ensure_ascii=False))
+        elif isinstance(v, str):
+            add(label, v)
+    why = sec.get("why")
+    if isinstance(why, dict):
+        add("为什么是这样", " ".join(str(x) for x in why.get("steps", [])))
+        if why.get("experiment"):
+            add("为什么是这样", why["experiment"])
+    for e in sec.get("examples", []) or []:
+        add("按场景的例题", " ".join(str(e.get(k, "")) for k in ("scene", "context", "question", "solution", "answer")))
+    for x in sec.get("pitfalls", []) or []:
+        if isinstance(x, dict):
+            add("易错点", " ".join(str(x.get(k, "")) for k in ("wrong", "why", "right")))
+        else:
+            add("易错点", str(x))
+    return out
+
+
 def build_search_index(idx):
     arr = []
     for mid in idx.module_order:
@@ -1248,13 +1462,12 @@ def build_search_index(idx):
                     "b": t.get("desc", "")})
     for pid in idx.point_order:
         p = idx.points[pid]
-        body = json.dumps(p.get("sections", {}), ensure_ascii=False)
-        body = re.sub(r'[\"]', " ", body)
+        blocks = search_blocks(p)
         arr.append({
             "id": pid, "ty": "p", "t": p["title"], "s": p.get("summary", ""),
             "k": p.get("keywords", []), "d": p.get("domain", ""),
             "c": idx.topics[idx.topic_of[pid]]["title"],
-            "b": body[:1200],
+            "bl": blocks,
         })
     js = "window.__SEARCH_INDEX__=" + json.dumps(arr, ensure_ascii=False) + ";"
     return js.replace("</", "<\\/")
@@ -1289,9 +1502,10 @@ def copy_assets():
 
 
 def build():
-    tax, site, std, mod, points, tb, guides, fw = load_all()
+    tax, site, std, mod, points, tb, guides, fw, ax = load_all()
     validate(tax, std, mod, points, tb)
     validate_framework(fw, points)
+    validate_appendix(ax, points)
     if errors:
         print(f"校验失败：{len(errors)} 个错误")
         for e in errors[:60]:
@@ -1299,8 +1513,11 @@ def build():
         if len(errors) > 60:
             print(f"  … 另有 {len(errors)-60} 条")
         return 1
-    idx = Index(tax, std, mod, points, guides, tb, fw)
+    idx = Index(tax, std, mod, points, guides, tb, fw, ax)
     idx.site_title_sub = site.get("subtitle", "")
+    global SEO_BASE, SEO_PAGES
+    SEO_BASE = site.get("canonical_base", "").rstrip("/") + "/"
+    SEO_PAGES = []
 
     safe_rebuild()
     copy_assets()
@@ -1318,15 +1535,20 @@ def build():
         for it in g["items"]:
             write(D / "framework" / g["id"] / it["id"] / "index.html",
                   emit_fw_item(idx, g["id"], it["id"], 3))
+    write(D / "appendix" / "formulas" / "index.html", emit_ax_formulas(idx, 2))
+    write(D / "appendix" / "terms" / "index.html", emit_ax_terms(idx, 2))
     write(D / "assets" / "js" / "search-index.js", build_search_index(idx))
+    write_seo_files()
 
     if warnings:
         print(f"警告 {len(warnings)} 条：")
         for w in warnings[:20]:
             print("  !", w)
     fw_pages = sum(1 + len(g["items"]) for g in idx.fw.get("groups", []))
+    ax_n = sum(len(g["rows"]) for g in idx.ax.get("formula_groups", [])) + len(idx.ax.get("terms", []))
     print(f"构建完成：{len(idx.point_order)} 篇知识点 / {len(idx.topic_order)} 个主题"
-          f" / {len(idx.module_order)} 个模块 / {fw_pages} 个体系导览页 → dist/")
+          f" / {len(idx.module_order)} 个模块 / {fw_pages} 个体系导览页"
+          f" / 2 个附录页（{ax_n} 条）→ dist/")
     return verify_output()
 
 def verify_output():
@@ -1366,9 +1588,10 @@ def verify_output():
 
 
 def check():
-    tax, site, std, mod, points, tb, guides, fw = load_all()
+    tax, site, std, mod, points, tb, guides, fw, ax = load_all()
     validate(tax, std, mod, points, tb)
     validate_framework(fw, points)
+    validate_appendix(ax, points)
     if errors:
         print(f"✗ {len(errors)} 个错误")
         for e in errors[:80]:

@@ -2,6 +2,7 @@
   "schema": 1,
   "title": "小学数学知识点图谱",
   "subtitle": "按义务教育数学课程标准（2022年版）梳理，配套人教版 2024 新教材",
+  "canonical_base": "https://ttbingo.github.io/primary-math-atlas/",
   "nav": [
     {
       "label": "全部知识点",
