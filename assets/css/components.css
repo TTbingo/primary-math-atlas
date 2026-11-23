@@ -18,11 +18,11 @@
 /* ---------- 徽标 ---------- */
 .badge {
   display: inline-block;
-  border-radius: var(--radius-pill);
+  border-radius: 6px;
   padding: .1rem .65rem;
   font-size: var(--fs-sm);
   font-weight: 600;
-  letter-spacing: .08em;
+  letter-spacing: .04em;
   color: var(--accent-deep);
   background: var(--accent-soft);
   white-space: nowrap;
@@ -50,7 +50,7 @@
 .card {
   position: relative;
   display: block;
-  padding: 1rem 1.15rem 1rem 1.4rem;
+  padding: 24px;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   background: var(--card);
@@ -60,9 +60,11 @@
   content: ""; position: absolute; inset: .9rem auto .9rem 0;
   width: 3px; border-radius: 2px; background: var(--accent);
 }
+/* 模块卡：分组标识，不是「需要判读」，竖线收敛为细灰 */
+.mod-card::before { background: var(--line-strong); width: 2px; }
 .card:hover { border-color: var(--accent); box-shadow: var(--shadow-hover); }
 .card-t {
-  display: block; font-family: var(--font-title); font-weight: 700;
+  display: block; font-family: var(--font-title); font-weight: 600;
   font-size: var(--fs-aux); color: var(--title);
 }
 .card-d { display: block; margin: .4rem 0 0; font-size: var(--fs-desc); color: var(--text-sub); line-height: 1.65; }
@@ -82,7 +84,7 @@
 
 /* ---------- 统计 ---------- */
 .stats { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; font-size: var(--fs-sm); color: var(--text-sub); }
-.stats b { font-family: var(--font-title); font-size: 1.25rem; color: var(--accent); }
+.stats b { font-family: var(--font-title); font-size: 1.25rem; color: var(--text); }
 
 /* ---------- 为什么是这样 ---------- */
 .why { border: 1px solid var(--line-weak); border-radius: var(--radius); background: var(--card); padding: 1rem 1.15rem; }
@@ -264,11 +266,12 @@ blockquote { margin: 0; padding: .25rem 0 .25rem 1rem; border-left: 2px solid va
 
 /* 首页四张模块大卡 */
 .mod-grid { grid-template-columns: 1fr; }
-@media (min-width: 46em) { .mod-grid { grid-template-columns: repeat(2, 1fr); } }
-.mod-card { padding-top: 1.15rem; }
+@media (min-width: 46em) { .mod-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 64em) { .mod-grid { grid-template-columns: 1.35fr 1fr; } }
+.mod-card { padding-top: 24px; }
 .mod-no {
   display: block; margin-bottom: .5rem; font-size: var(--fs-xs, .78rem);
-  letter-spacing: .12em; color: var(--accent); font-weight: 600;
+  letter-spacing: .12em; color: var(--text-sub); font-weight: 600;
 }
 .mod-card .card-t { font-size: 1.22rem; }
 .mod-card .card-d { min-height: 3.2em; }
@@ -322,11 +325,12 @@ ul.pending { color: var(--text-faint); }
 
 /* 首页四张模块大卡 */
 .mod-grid { grid-template-columns: 1fr; }
-@media (min-width: 46em) { .mod-grid { grid-template-columns: repeat(2, 1fr); } }
-.mod-card { padding-top: 1.15rem; }
+@media (min-width: 46em) { .mod-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 64em) { .mod-grid { grid-template-columns: 1.35fr 1fr; } }
+.mod-card { padding-top: 24px; }
 .mod-no {
   display: block; margin-bottom: .5rem; font-size: var(--fs-xs, .78rem);
-  letter-spacing: .12em; color: var(--accent); font-weight: 600;
+  letter-spacing: .12em; color: var(--text-sub); font-weight: 600;
 }
 .mod-card .card-t { font-size: 1.22rem; }
 .mod-card .card-d { min-height: 3.2em; }
