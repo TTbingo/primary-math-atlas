@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>思维暗线 · 小学数学知识点图谱</title>
+<meta name="description" content="有些东西不写在章节标题里，却贯穿整个小学甚至更久。这十条暗线是数学的隐形主线：认出它们，零散的知识点就连成了一棵树。每条只写小学三站和一句初中去向，不做链接。">
+<script>(function () {
+  try {
+    var s = localStorage.getItem('mathsite:theme') || 'auto';
+    var t = (s === 'auto')
+      ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      : s;
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+</script>
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/print.css">
+<link rel="stylesheet" href="../../assets/katex/katex.min.css">
+
+</head>
+<body class="page-framework" data-depth="2">
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <button class="drawer-btn" id="drawer-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+  <a class="site-title" href="../../index.html">小学数学知识点图谱</a>
+  <div class="topbar-right">
+    <button class="search-btn" id="search-btn" aria-label="搜索">搜索 <kbd>Ctrl K</kbd></button>
+    <button class="theme-btn" id="theme-btn" aria-label="切换主题" title="切换主题">◐</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-inner"><nav class="side-nav" aria-label="模块目录"><details class="side-group side-framework" open><summary><span>体系导览</span><span class="side-n">导览</span></summary><ul><li class="side-term"><a href="../../framework/literacy/index.html">素养主线</a></li><li class="side-term"><a href="../../framework/threads/index.html" aria-current="page">思维暗线</a></li><li><ul class="side-sub"><li class="side-item"><a href="../../framework/threads/function-thread/index.html">函数主线</a></li><li class="side-item"><a href="../../framework/threads/operation-to-function/index.html">运算 → 运算律 → 函数</a></li><li class="side-item"><a href="../../framework/threads/number-system/index.html">数系扩充</a></li><li class="side-item"><a href="../../framework/threads/symbol-system/index.html">符号系统渐进</a></li><li class="side-item"><a href="../../framework/threads/geometry-path/index.html">几何：从画到证到算</a></li><li class="side-item"><a href="../../framework/threads/statistics-path/index.html">统计：从猜到推断</a></li><li class="side-item"><a href="../../framework/threads/compare-thread/index.html">比较大小</a></li><li class="side-item"><a href="../../framework/threads/model-spiral/index.html">模型螺旋上升</a></li><li class="side-item"><a href="../../framework/threads/research-paradigm/index.html">研究范式形成</a></li><li class="side-item"><a href="../../framework/threads/uncertainty-thread/index.html">从确定到不确定</a></li></ul></li></ul></details><details class="side-group" ><summary><a href="../../m1/index.html">数与代数</a><span class="side-n">58</span></summary><ul><li class="side-term"><a href="../../t/m1-01/index.html">数的意义和性质</a></li><li class="side-term"><a href="../../t/m1-02/index.html">数的读写</a></li><li class="side-term"><a href="../../t/m1-03/index.html">数的改写与近似数</a></li><li class="side-term"><a href="../../t/m1-04/index.html">比较大小</a></li><li class="side-term"><a href="../../t/m1-05/index.html">因数、倍数、质数、合数</a></li><li class="side-term"><a href="../../t/m1-06/index.html">数的运算</a></li><li class="side-term"><a href="../../t/m1-07/index.html">解决问题</a></li><li class="side-term"><a href="../../t/m1-08/index.html">式与方程</a></li><li class="side-term"><a href="../../t/m1-09/index.html">比和比例</a></li><li class="side-term"><a href="../../t/m1-10/index.html">常见的量</a></li></ul></details><details class="side-group" ><summary><a href="../../m2/index.html">图形与几何</a><span class="side-n">20</span></summary><ul><li class="side-term"><a href="../../t/m2-01/index.html">图形的认识与测量</a></li><li class="side-term"><a href="../../t/m2-02/index.html">立体图形</a></li><li class="side-term"><a href="../../t/m2-03/index.html">图形的变换与运动</a></li><li class="side-term"><a href="../../t/m2-04/index.html">图形与位置</a></li></ul></details><details class="side-group" ><summary><a href="../../m3/index.html">统计与概率</a><span class="side-n">6</span></summary><ul><li class="side-term"><a href="../../t/m3-01/index.html">数据的收集与整理</a></li><li class="side-term"><a href="../../t/m3-02/index.html">统计图</a></li><li class="side-term"><a href="../../t/m3-03/index.html">平均数</a></li><li class="side-term"><a href="../../t/m3-04/index.html">可能性</a></li></ul></details><details class="side-group" ><summary><a href="../../m4/index.html">数学思考</a><span class="side-n">6</span></summary><ul><li class="side-term"><a href="../../t/m4-01/index.html">数学思想和方法</a></li><li class="side-term"><a href="../../t/m4-02/index.html">探索规律</a></li><li class="side-term"><a href="../../t/m4-03/index.html">计数方法</a></li><li class="side-term"><a href="../../t/m4-04/index.html">抽屉原理</a></li></ul></details></nav></div>
+  </aside>
+  <!-- 紧跟侧栏执行：首帧前把滚动位置与展开状态还原，避免先画到顶部再跳 -->
+  <script src="../../assets/js/nav-state.js"></script>
+  <div class="sidebar-mask" id="sidebar-mask" hidden></div>
+
+  <div class="main-pane">
+    <main id="main"><div class="panel panel-h1"><h1 id="_top">思维暗线</h1><p class="home-sub">有些东西不写在章节标题里，却贯穿整个小学甚至更久。这十条暗线是数学的隐形主线：认出它们，零散的知识点就连成了一棵树。每条只写小学三站和一句初中去向，不做链接。</p></div><div class="panel panel-body"><div class="card-grid mod-grid"><a class="card" href="../../framework/threads/function-thread/index.html"><span class="card-t">函数主线</span><span class="card-d">不变量：输入变化，输出跟着按某种规则变化——这是「关系」而非「一个答案」。</span><span class="card-m">3 个知识点 · 3 段</span></a><a class="card" href="../../framework/threads/operation-to-function/index.html"><span class="card-t">运算 → 运算律 → 函数</span><span class="card-d">不变量：运算有规律，规律可以推广到更大的对象上。</span><span class="card-m">3 个知识点 · 3 段</span></a><a class="card" href="../../framework/threads/number-system/index.html"><span class="card-t">数系扩充</span><span class="card-d">不变量：旧数系不够用了就扩充，但原有运算律尽量保留。</span><span class="card-m">5 个知识点 · 3 段</span></a><a class="card" href="../../framework/threads/symbol-system/index.html"><span class="card-t">符号系统渐进</span><span class="card-d">不变量：表达越来越简洁、越来越精确。</span><span class="card-m">5 个知识点 · 3 段</span></a><a class="card" href="../../framework/threads/geometry-path/index.html"><span class="card-t">几何：从画到证到算</span><span class="card-d">不变量：同一图形可以用操作、推理、计算三种方式研究。</span><span class="card-m">4 个知识点 · 3 段</span></a><a class="card" href="../../framework/threads/statistics-path/index.html"><span class="card-t">统计：从猜到推断</span><span class="card-d">不变量：用数据代替直觉做判断。</span><span class="card-m">4 个知识点 · 3 段</span></a><a class="card" href="../../framework/threads/compare-thread/index.html"><span class="card-t">比较大小</span><span class="card-d">不变量：先化成同一种形式，再比较。</span><span class="card-m">4 个知识点 · 3 段</span></a><a class="card" href="../../framework/threads/model-spiral/index.html"><span class="card-t">模型螺旋上升</span><span class="card-d">不变量：同一个模型可以描述完全不同的现实情境。</span><span class="card-m">4 个知识点 · 3 段</span></a><a class="card" href="../../framework/threads/research-paradigm/index.html"><span class="card-t">研究范式形成</span><span class="card-d">不变量：观察 → 尝试 → 归纳 → 验证，这套方法比结论更重要。</span><span class="card-m">3 个知识点 · 3 段</span></a><a class="card" href="../../framework/threads/uncertainty-thread/index.html"><span class="card-t">从确定到不确定</span><span class="card-d">不变量：答案可以不是一个固定值，而是有大小的可能性。</span><span class="card-m">4 个知识点 · 3 段</span></a></div></div></main>
+  </div>
+
+  <aside class="rightbar" id="rightbar"></aside>
+</div>
+
+<div class="search-modal" id="search-modal" hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索">
+    <div class="search-head">
+      <input type="search" id="search-input" placeholder="搜索知识点、关键词…" autocomplete="off">
+      <button class="search-close" id="search-close" aria-label="关闭">✕</button>
+    </div>
+    <ul class="search-results" id="search-results"></ul>
+    <p class="search-tip">输入关键词，回车打开第一条</p>
+  </div>
+</div>
+
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/katex/katex.min.js"></script>
+<script src="../../assets/js/katex-render.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/drawer.js"></script>
+<script src="../../assets/js/toc.js"></script>
+<script src="../../assets/js/search.js"></script>
+<script src="../../assets/js/progress.js"></script>
+</body>
+</html>

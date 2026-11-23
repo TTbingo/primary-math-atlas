@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数感 · 小学数学知识点图谱</title>
+<meta name="description" content="对数的大小、单位、相对关系有直觉，不靠死记。">
+<script>(function () {
+  try {
+    var s = localStorage.getItem('mathsite:theme') || 'auto';
+    var t = (s === 'auto')
+      ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      : s;
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+</script>
+<link rel="stylesheet" href="../../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../../assets/css/layout.css">
+<link rel="stylesheet" href="../../../assets/css/components.css">
+<link rel="stylesheet" href="../../../assets/css/print.css">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+
+</head>
+<body class="page-framework" data-depth="3">
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <button class="drawer-btn" id="drawer-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+  <a class="site-title" href="../../../index.html">小学数学知识点图谱</a>
+  <div class="topbar-right">
+    <button class="search-btn" id="search-btn" aria-label="搜索">搜索 <kbd>Ctrl K</kbd></button>
+    <button class="theme-btn" id="theme-btn" aria-label="切换主题" title="切换主题">◐</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-inner"><nav class="side-nav" aria-label="模块目录"><details class="side-group side-framework" open><summary><span>体系导览</span><span class="side-n">导览</span></summary><ul><li class="side-term"><a href="../../../framework/literacy/index.html">素养主线</a></li><li><ul class="side-sub"><li class="side-item"><a href="../../../framework/literacy/number-sense/index.html" aria-current="page">数感</a></li><li class="side-item"><a href="../../../framework/literacy/operation/index.html">运算能力</a></li><li class="side-item"><a href="../../../framework/literacy/symbol/index.html">符号意识</a></li><li class="side-item"><a href="../../../framework/literacy/space/index.html">空间观念</a></li><li class="side-item"><a href="../../../framework/literacy/data/index.html">数据意识</a></li><li class="side-item"><a href="../../../framework/literacy/application/index.html">应用意识</a></li><li class="side-item"><a href="../../../framework/literacy/model/index.html">模型意识</a></li><li class="side-item"><a href="../../../framework/literacy/geometry-intuition/index.html">几何直观</a></li><li class="side-item"><a href="../../../framework/literacy/quantity/index.html">量感</a></li></ul></li><li class="side-term"><a href="../../../framework/threads/index.html">思维暗线</a></li></ul></details><details class="side-group" ><summary><a href="../../../m1/index.html">数与代数</a><span class="side-n">58</span></summary><ul><li class="side-term"><a href="../../../t/m1-01/index.html">数的意义和性质</a></li><li class="side-term"><a href="../../../t/m1-02/index.html">数的读写</a></li><li class="side-term"><a href="../../../t/m1-03/index.html">数的改写与近似数</a></li><li class="side-term"><a href="../../../t/m1-04/index.html">比较大小</a></li><li class="side-term"><a href="../../../t/m1-05/index.html">因数、倍数、质数、合数</a></li><li class="side-term"><a href="../../../t/m1-06/index.html">数的运算</a></li><li class="side-term"><a href="../../../t/m1-07/index.html">解决问题</a></li><li class="side-term"><a href="../../../t/m1-08/index.html">式与方程</a></li><li class="side-term"><a href="../../../t/m1-09/index.html">比和比例</a></li><li class="side-term"><a href="../../../t/m1-10/index.html">常见的量</a></li></ul></details><details class="side-group" ><summary><a href="../../../m2/index.html">图形与几何</a><span class="side-n">20</span></summary><ul><li class="side-term"><a href="../../../t/m2-01/index.html">图形的认识与测量</a></li><li class="side-term"><a href="../../../t/m2-02/index.html">立体图形</a></li><li class="side-term"><a href="../../../t/m2-03/index.html">图形的变换与运动</a></li><li class="side-term"><a href="../../../t/m2-04/index.html">图形与位置</a></li></ul></details><details class="side-group" ><summary><a href="../../../m3/index.html">统计与概率</a><span class="side-n">6</span></summary><ul><li class="side-term"><a href="../../../t/m3-01/index.html">数据的收集与整理</a></li><li class="side-term"><a href="../../../t/m3-02/index.html">统计图</a></li><li class="side-term"><a href="../../../t/m3-03/index.html">平均数</a></li><li class="side-term"><a href="../../../t/m3-04/index.html">可能性</a></li></ul></details><details class="side-group" ><summary><a href="../../../m4/index.html">数学思考</a><span class="side-n">6</span></summary><ul><li class="side-term"><a href="../../../t/m4-01/index.html">数学思想和方法</a></li><li class="side-term"><a href="../../../t/m4-02/index.html">探索规律</a></li><li class="side-term"><a href="../../../t/m4-03/index.html">计数方法</a></li><li class="side-term"><a href="../../../t/m4-04/index.html">抽屉原理</a></li></ul></details></nav></div>
+  </aside>
+  <!-- 紧跟侧栏执行：首帧前把滚动位置与展开状态还原，避免先画到顶部再跳 -->
+  <script src="../../../assets/js/nav-state.js"></script>
+  <div class="sidebar-mask" id="sidebar-mask" hidden></div>
+
+  <div class="main-pane">
+    <main id="main"><div class="panel panel-h1"><a class="crumb" href="../../../framework/literacy/index.html">← 素养主线</a><h1 id="_top">数感</h1><p class="home-sub">对数的大小、单位、相对关系有直觉，不靠死记。</p></div><div class="panel panel-body"><section class="block" id="stage-1"><h2>启蒙 · 1~2 年级</h2><p>先建立「一个对一个」和十进制位值的感觉。</p><ul class="items point-items"><li><a href="../../../points/m1-01-01-number-classify/index.html" data-id="m1-01-01-number-classify">数的分类与意义</a></li><li><a href="../../../points/m1-01-02-num-1-to-20/index.html" data-id="m1-01-02-num-1-to-20">1~20 的认识</a></li><li><a href="../../../points/m1-01-05-decimal-position/index.html" data-id="m1-01-05-decimal-position">十进制计数法与数位顺序表</a></li></ul></section><section class="block" id="stage-2"><h2>发展 · 3~4 年级</h2><p>把数的家族从整数扩到分数、小数，学会估。</p><ul class="items point-items"><li><a href="../../../points/m1-01-07-decimal-intro-and-meaning/index.html" data-id="m1-01-07-decimal-intro-and-meaning">小数的认识与意义</a></li><li><a href="../../../points/m1-01-09-fraction-meaning-and-property/index.html" data-id="m1-01-09-fraction-meaning-and-property">分数的意义与基本性质</a></li><li><a href="../../../points/m1-03-02-rounding-and-rewrite/index.html" data-id="m1-03-02-rounding-and-rewrite">近似数与大数的改写</a></li></ul></section><section class="block" id="stage-3"><h2>成熟 · 5~6 年级</h2><p>百分数、负数、大数、互化与比较，数感变成可操作的判断。</p><ul class="items point-items"><li><a href="../../../points/m1-01-10-percentage-meaning/index.html" data-id="m1-01-10-percentage-meaning">百分数的意义</a></li><li><a href="../../../points/m1-01-11-positive-negative/index.html" data-id="m1-01-11-positive-negative">正数和负数</a></li><li><a href="../../../points/m1-01-08-big-number/index.html" data-id="m1-01-08-big-number">亿以内数的认识与读写</a></li><li><a href="../../../points/m1-04-01-compare-numbers/index.html" data-id="m1-04-01-compare-numbers">整数、小数、分数与正负数的比较大小</a></li></ul></section><section class="block"><h2>一个贯穿的例子</h2><p>「3 个苹果分给 4 人」：一年级说「不够分」，四年级说每人 3/4 个，六年级说 75%——同一件事，数的表达方式在升级。</p></section><section class="block"><h2>初中落点</h2><p class="fw-middle">初中把数系扩到有理数、实数，数感体现为对运算结果数量级的预判。</p></section></div></main>
+  </div>
+
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#stage-1">启蒙 · 1~2 年级</a></li><li class="toc-l2"><a href="#stage-2">发展 · 3~4 年级</a></li><li class="toc-l2"><a href="#stage-3">成熟 · 5~6 年级</a></li></ul></nav></aside>
+</div>
+
+<div class="search-modal" id="search-modal" hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索">
+    <div class="search-head">
+      <input type="search" id="search-input" placeholder="搜索知识点、关键词…" autocomplete="off">
+      <button class="search-close" id="search-close" aria-label="关闭">✕</button>
+    </div>
+    <ul class="search-results" id="search-results"></ul>
+    <p class="search-tip">输入关键词，回车打开第一条</p>
+  </div>
+</div>
+
+<script src="../../../assets/js/search-index.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../assets/js/katex-render.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/drawer.js"></script>
+<script src="../../../assets/js/toc.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/progress.js"></script>
+</body>
+</html>

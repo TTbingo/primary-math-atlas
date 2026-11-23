@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>量感 · 小学数学知识点图谱</title>
+<meta name="description" content="对单位大小、进率、实际量级有感觉，不用死背换算。">
+<script>(function () {
+  try {
+    var s = localStorage.getItem('mathsite:theme') || 'auto';
+    var t = (s === 'auto')
+      ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      : s;
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+</script>
+<link rel="stylesheet" href="../../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../../assets/css/layout.css">
+<link rel="stylesheet" href="../../../assets/css/components.css">
+<link rel="stylesheet" href="../../../assets/css/print.css">
+<link rel="stylesheet" href="../../../assets/katex/katex.min.css">
+
+</head>
+<body class="page-framework" data-depth="3">
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <button class="drawer-btn" id="drawer-btn" aria-label="打开目录" aria-expanded="false">☰</button>
+  <a class="site-title" href="../../../index.html">小学数学知识点图谱</a>
+  <div class="topbar-right">
+    <button class="search-btn" id="search-btn" aria-label="搜索">搜索 <kbd>Ctrl K</kbd></button>
+    <button class="theme-btn" id="theme-btn" aria-label="切换主题" title="切换主题">◐</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-inner"><nav class="side-nav" aria-label="模块目录"><details class="side-group side-framework" open><summary><span>体系导览</span><span class="side-n">导览</span></summary><ul><li class="side-term"><a href="../../../framework/literacy/index.html">素养主线</a></li><li><ul class="side-sub"><li class="side-item"><a href="../../../framework/literacy/number-sense/index.html">数感</a></li><li class="side-item"><a href="../../../framework/literacy/operation/index.html">运算能力</a></li><li class="side-item"><a href="../../../framework/literacy/symbol/index.html">符号意识</a></li><li class="side-item"><a href="../../../framework/literacy/space/index.html">空间观念</a></li><li class="side-item"><a href="../../../framework/literacy/data/index.html">数据意识</a></li><li class="side-item"><a href="../../../framework/literacy/application/index.html">应用意识</a></li><li class="side-item"><a href="../../../framework/literacy/model/index.html">模型意识</a></li><li class="side-item"><a href="../../../framework/literacy/geometry-intuition/index.html">几何直观</a></li><li class="side-item"><a href="../../../framework/literacy/quantity/index.html" aria-current="page">量感</a></li></ul></li><li class="side-term"><a href="../../../framework/threads/index.html">思维暗线</a></li></ul></details><details class="side-group" ><summary><a href="../../../m1/index.html">数与代数</a><span class="side-n">58</span></summary><ul><li class="side-term"><a href="../../../t/m1-01/index.html">数的意义和性质</a></li><li class="side-term"><a href="../../../t/m1-02/index.html">数的读写</a></li><li class="side-term"><a href="../../../t/m1-03/index.html">数的改写与近似数</a></li><li class="side-term"><a href="../../../t/m1-04/index.html">比较大小</a></li><li class="side-term"><a href="../../../t/m1-05/index.html">因数、倍数、质数、合数</a></li><li class="side-term"><a href="../../../t/m1-06/index.html">数的运算</a></li><li class="side-term"><a href="../../../t/m1-07/index.html">解决问题</a></li><li class="side-term"><a href="../../../t/m1-08/index.html">式与方程</a></li><li class="side-term"><a href="../../../t/m1-09/index.html">比和比例</a></li><li class="side-term"><a href="../../../t/m1-10/index.html">常见的量</a></li></ul></details><details class="side-group" ><summary><a href="../../../m2/index.html">图形与几何</a><span class="side-n">20</span></summary><ul><li class="side-term"><a href="../../../t/m2-01/index.html">图形的认识与测量</a></li><li class="side-term"><a href="../../../t/m2-02/index.html">立体图形</a></li><li class="side-term"><a href="../../../t/m2-03/index.html">图形的变换与运动</a></li><li class="side-term"><a href="../../../t/m2-04/index.html">图形与位置</a></li></ul></details><details class="side-group" ><summary><a href="../../../m3/index.html">统计与概率</a><span class="side-n">6</span></summary><ul><li class="side-term"><a href="../../../t/m3-01/index.html">数据的收集与整理</a></li><li class="side-term"><a href="../../../t/m3-02/index.html">统计图</a></li><li class="side-term"><a href="../../../t/m3-03/index.html">平均数</a></li><li class="side-term"><a href="../../../t/m3-04/index.html">可能性</a></li></ul></details><details class="side-group" ><summary><a href="../../../m4/index.html">数学思考</a><span class="side-n">6</span></summary><ul><li class="side-term"><a href="../../../t/m4-01/index.html">数学思想和方法</a></li><li class="side-term"><a href="../../../t/m4-02/index.html">探索规律</a></li><li class="side-term"><a href="../../../t/m4-03/index.html">计数方法</a></li><li class="side-term"><a href="../../../t/m4-04/index.html">抽屉原理</a></li></ul></details></nav></div>
+  </aside>
+  <!-- 紧跟侧栏执行：首帧前把滚动位置与展开状态还原，避免先画到顶部再跳 -->
+  <script src="../../../assets/js/nav-state.js"></script>
+  <div class="sidebar-mask" id="sidebar-mask" hidden></div>
+
+  <div class="main-pane">
+    <main id="main"><div class="panel panel-h1"><a class="crumb" href="../../../framework/literacy/index.html">← 素养主线</a><h1 id="_top">量感</h1><p class="home-sub">对单位大小、进率、实际量级有感觉，不用死背换算。</p></div><div class="panel panel-body"><section class="block" id="stage-1"><h2>启蒙 · 1~2 年级</h2><p>人民币、长度单位——从生活里的「多长、多少钱」开始。</p><ul class="items point-items"><li><a href="../../../points/m1-10-04-rmb/index.html" data-id="m1-10-04-rmb">人民币</a></li><li><a href="../../../points/m2-01-02-length-units/index.html" data-id="m2-01-02-length-units">长度单位：厘米、米、毫米、分米与千米</a></li></ul></section><section class="block" id="stage-2"><h2>发展 · 3~4 年级</h2><p>量与计量、时间、面积单位，建立单位体系与进率。</p><ul class="items point-items"><li><a href="../../../points/m1-10-01-measure-units-and-denominate/index.html" data-id="m1-10-01-measure-units-and-denominate">量与计量：单位、进率与名数</a></li><li><a href="../../../points/m1-10-02-time-units-and-24h/index.html" data-id="m1-10-02-time-units-and-24h">时间：秒、分、时与年月日</a></li><li><a href="../../../points/m2-01-05-area-and-rect-area/index.html" data-id="m2-01-05-area-and-rect-area">面积、面积单位与长方形正方形的面积</a></li></ul></section><section class="block" id="stage-3"><h2>成熟 · 5~6 年级</h2><p>体积、容积、质量温度速度，多类量统一到名数改写。</p><ul class="items point-items"><li><a href="../../../points/m2-02-04-volume-and-irregular-volume/index.html" data-id="m2-02-04-volume-and-irregular-volume">体积和体积单位与不规则物体的体积</a></li><li><a href="../../../points/m2-02-06-cylinder-and-cone-volume/index.html" data-id="m2-02-06-cylinder-and-cone-volume">圆柱和圆锥的体积</a></li><li><a href="../../../points/m1-10-03-mass-temperature-speed/index.html" data-id="m1-10-03-mass-temperature-speed">质量、温度与速度</a></li></ul></section><section class="block"><h2>一个贯穿的例子</h2><p>1 厘米、1 平方米、1 立方米各有多大——量感就是能对单位有身体记忆，换算时才不会乱乘乱除。</p></section><section class="block"><h2>初中落点</h2><p class="fw-middle">初中的物理量、科学计数法，都建立在稳定的量感之上。</p></section></div></main>
+  </div>
+
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#stage-1">启蒙 · 1~2 年级</a></li><li class="toc-l2"><a href="#stage-2">发展 · 3~4 年级</a></li><li class="toc-l2"><a href="#stage-3">成熟 · 5~6 年级</a></li></ul></nav></aside>
+</div>
+
+<div class="search-modal" id="search-modal" hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索">
+    <div class="search-head">
+      <input type="search" id="search-input" placeholder="搜索知识点、关键词…" autocomplete="off">
+      <button class="search-close" id="search-close" aria-label="关闭">✕</button>
+    </div>
+    <ul class="search-results" id="search-results"></ul>
+    <p class="search-tip">输入关键词，回车打开第一条</p>
+  </div>
+</div>
+
+<script src="../../../assets/js/search-index.js"></script>
+<script src="../../../assets/katex/katex.min.js"></script>
+<script src="../../../assets/js/katex-render.js"></script>
+<script src="../../../assets/js/theme.js"></script>
+<script src="../../../assets/js/drawer.js"></script>
+<script src="../../../assets/js/toc.js"></script>
+<script src="../../../assets/js/search.js"></script>
+<script src="../../../assets/js/progress.js"></script>
+</body>
+</html>
