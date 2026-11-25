@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../assets/css/layout.css">
 <link rel="stylesheet" href="../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><h1 id="_top">数的意义和性质</h1><p class="grade-sub">小学六年会遇到的所有数：整数、小数、分数、百分数、正负数。搞清楚它们各自表示什么、怎么数位、有什么性质。</p></div><div class="panel panel-body"><section class="block overview"><table class="kv"><tbody><tr><th>所属模块</th><td><a href="../../m1/index.html">数与代数</a></td></tr><tr><th>课标学段</th><td>第一学段（1~2年级）、第二学段（3~4年级）、第三学段（5~6年级）</td></tr><tr><th>知识点</th><td>11 篇</td></tr><tr><th>课标要求</th><td class="std-text"><details class="std-fold"><summary>共 6 条，点开查看</summary>在实际情境中感悟并理解万以内数的意义，理解数位的含义，知道用算盘可以表示多位数（例1）。；在具体情境中，认识万以上的数，了解十进制计数法；探索并掌握多位数的乘除法，感悟从未知到已知的转化（例8）。；结合具体情境，初步认识小数和分数，感悟分数单位（例9）；会同分母分数的加减法和一位小数的加减法。；知道 2，3，5 的倍数的特征，了解公倍数和最小公倍数，了解公因数和最大公因数，了解奇数、偶数、质数（或素数）和合数。；结合具体情境探索并理解小数和分数的意义，感悟计数单位；会进行小数、分数的转化，进一步发展数感和符号意识。；在熟悉的情境中了解具有相反意义的数量，知道负数在情境中表达的具体意义，感悟这些负数可以表达与正数意义相反的量，进一步发展数感（例59）。</details></td></tr></tbody></table></section><section class="block"><h2 id="list">知识点</h2><ul class="topic-list"><li><a href="../../points/m1-01-01-number-classify/index.html"><span class="tl-t">数的分类与意义</span><span class="tl-s">整数、小数、分数、百分数、负数不是五个孤立的定义，而是同一批数在不同场合的几种写法。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-01-02-num-1-to-20/index.html"><span class="tl-t">1~20 的认识</span><span class="tl-s">数东西要一个对着一个数：点一个，数一个。数到最后一个是几，这一堆就是几个。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-01-03-num-composition-100/index.html"><span class="tl-t">100 以内数的组成与数位</span><span class="tl-s">一个两位数是几个十和几个一合起来的；个位、十位、百位各有各的位置，满十就向高位搬家。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-01-04-num-10000-rw/index.html"><span class="tl-t">万以内数的读写与组成</span><span class="tl-s">10 个一是十、10 个十是百、10 个百是千、10 个千是万。读数时末尾的 0 不读，中间的 0 只读一个零。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-01-05-decimal-position/index.html"><span class="tl-t">十进制计数法与数位顺序表</span><span class="tl-s">满十进一、位值制：同一个数字站在不同数位上，表示的大小就相差十倍、百倍。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-01-06-fraction-intro-and-division/index.html"><span class="tl-t">分数的初步认识与分数和除法的关系</span><span class="tl-s">把一个整体平均分成几份，取其中一份或几份就是分数；分母记份数、分子记几份，同分母加减只动分子。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-01-07-decimal-intro-and-meaning/index.html"><span class="tl-t">小数的认识与意义</span><span class="tl-s">小数是「不够 1 的部分」用十进分数记下来的写法：数位越往右越小，末尾添 0 去 0 大小不变，小数点一移大小就变。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-01-08-big-number/index.html"><span class="tl-t">亿以内数的认识与读写</span><span class="tl-s">十万、百万、千万还是「满十进一」长出来的；数位从右边起每四位一级，分好级再读，中间末尾的 0 才不会读错。</span><span class="tl-m"><span class="badge">掌握</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-01-09-fraction-meaning-and-property/index.html"><span class="tl-t">分数的意义与基本性质</span><span class="tl-s">把单位「1」平均分成若干份，表示一份或几份的数就是分数；分数单位是其中的一份，分数和除法是一回事。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-01-10-percentage-meaning/index.html"><span class="tl-t">百分数的意义</span><span class="tl-s">百分数表示一个数是另一个数的百分之几，只表示倍比关系、不带单位；它与分数、小数可以互相改写。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-01-11-positive-negative/index.html"><span class="tl-t">正数和负数</span><span class="tl-s">比 0 大的数是正数，比 0 小的数是负数。负数是为了记录「相反意义的量」才被发明出来的。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li></ul></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#list">知识点</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="list"><a href="#list">知识点</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

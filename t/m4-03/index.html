@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../assets/css/layout.css">
 <link rel="stylesheet" href="../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><h1 id="_top">计数方法</h1><p class="grade-sub">分类用加法，分步用乘法，排队讲顺序，选人不讲顺序。四句话管住小学所有数数问题。</p></div><div class="panel panel-body"><section class="block overview"><table class="kv"><tbody><tr><th>所属模块</th><td><a href="../../m4/index.html">数学思考</a></td></tr><tr><th>课标学段</th><td>第二学段（3~4年级）、第三学段（5~6年级）</td></tr><tr><th>知识点</th><td>2 篇</td></tr><tr><th>课标要求</th><td class="std-text"><details class="std-fold"><summary>共 1 条，点开查看</summary>能解决生活中的简单问题，并能对结果的实际意义作出解释，经历探索简单规律的过程（例14），形成初步的模型意识和应用意识。</details></td></tr></tbody></table></section><section class="block"><h2 id="list">知识点</h2><ul class="topic-list"><li><a href="../../points/m4-03-01-addition-multiplication-principle/index.html"><span class="tl-t">加法原理与乘法原理</span><span class="tl-s">做完一件事有几种办法？如果这些办法能分成互不重叠的几类，而每一类单独就能把事做完，那么总办法数就是把各类的办法数加起来。</span><span class="tl-m"><span class="badge">掌握</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m4-03-02-permutation-and-set-overlap/index.html"><span class="tl-t">排列与组合、集合与重叠问题</span><span class="tl-s">同样是从几个人里挑出几个：顺序算数的叫排列，用连乘；顺序不算数的叫组合，连乘之后还要除掉同一组人自己排队的次数。</span><span class="tl-m"><span class="badge">掌握</span><span class="badge">课标必达</span></span></a></li></ul></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#list">知识点</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="list"><a href="#list">知识点</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

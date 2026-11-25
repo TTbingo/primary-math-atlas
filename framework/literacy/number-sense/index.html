@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../../assets/css/layout.css">
 <link rel="stylesheet" href="../../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><a class="crumb" href="../../../framework/literacy/index.html">← 素养主线</a><h1 id="_top">数感</h1><p class="home-sub">对数的大小、单位、相对关系有直觉，不靠死记。</p></div><div class="panel panel-body"><section class="block" id="stage-1"><h2>启蒙 · 1~2 年级</h2><p>先建立「一个对一个」和十进制位值的感觉。</p><ul class="items point-items"><li><a href="../../../points/m1-01-01-number-classify/index.html" data-id="m1-01-01-number-classify">数的分类与意义</a></li><li><a href="../../../points/m1-01-02-num-1-to-20/index.html" data-id="m1-01-02-num-1-to-20">1~20 的认识</a></li><li><a href="../../../points/m1-01-05-decimal-position/index.html" data-id="m1-01-05-decimal-position">十进制计数法与数位顺序表</a></li></ul></section><section class="block" id="stage-2"><h2>发展 · 3~4 年级</h2><p>把数的家族从整数扩到分数、小数，学会估。</p><ul class="items point-items"><li><a href="../../../points/m1-01-07-decimal-intro-and-meaning/index.html" data-id="m1-01-07-decimal-intro-and-meaning">小数的认识与意义</a></li><li><a href="../../../points/m1-01-09-fraction-meaning-and-property/index.html" data-id="m1-01-09-fraction-meaning-and-property">分数的意义与基本性质</a></li><li><a href="../../../points/m1-03-02-rounding-and-rewrite/index.html" data-id="m1-03-02-rounding-and-rewrite">近似数与大数的改写</a></li></ul></section><section class="block" id="stage-3"><h2>成熟 · 5~6 年级</h2><p>百分数、负数、大数、互化与比较，数感变成可操作的判断。</p><ul class="items point-items"><li><a href="../../../points/m1-01-10-percentage-meaning/index.html" data-id="m1-01-10-percentage-meaning">百分数的意义</a></li><li><a href="../../../points/m1-01-11-positive-negative/index.html" data-id="m1-01-11-positive-negative">正数和负数</a></li><li><a href="../../../points/m1-01-08-big-number/index.html" data-id="m1-01-08-big-number">亿以内数的认识与读写</a></li><li><a href="../../../points/m1-04-01-compare-numbers/index.html" data-id="m1-04-01-compare-numbers">整数、小数、分数与正负数的比较大小</a></li></ul></section><section class="block"><h2>一个贯穿的例子</h2><p>「3 个苹果分给 4 人」：一年级说「不够分」，四年级说每人 3/4 个，六年级说 75%——同一件事，数的表达方式在升级。</p></section><section class="block"><h2>初中落点</h2><p class="fw-middle">初中把数系扩到有理数、实数，数感体现为对运算结果数量级的预判。</p></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#stage-1">启蒙 · 1~2 年级</a></li><li class="toc-l2"><a href="#stage-2">发展 · 3~4 年级</a></li><li class="toc-l2"><a href="#stage-3">成熟 · 5~6 年级</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="stage-1"><a href="#stage-1">启蒙 · 1~2 年级</a></li><li class="toc-l2" data-anchor="stage-2"><a href="#stage-2">发展 · 3~4 年级</a></li><li class="toc-l2" data-anchor="stage-3"><a href="#stage-3">成熟 · 5~6 年级</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

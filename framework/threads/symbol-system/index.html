@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../../assets/css/layout.css">
 <link rel="stylesheet" href="../../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><a class="crumb" href="../../../framework/threads/index.html">← 思维暗线</a><h1 id="_top">符号系统渐进</h1><p class="home-sub">不变量：表达越来越简洁、越来越精确。</p></div><div class="panel panel-body"><section class="block" id="stage-1"><h2>起点</h2><p>认识运算符号与读写规则。</p><ul class="items point-items"><li><a href="../../../points/m1-06-01-meaning-of-operations/index.html" data-id="m1-06-01-meaning-of-operations">四则运算的意义</a></li><li><a href="../../../points/m1-02-01-number-read-write/index.html" data-id="m1-02-01-number-read-write">整数、小数、分数与百分数的读写</a></li></ul></section><section class="block" id="stage-2"><h2>发展</h2><p>用字母表示数、用比表示关系。</p><ul class="items point-items"><li><a href="../../../points/m1-08-01-letters-and-equation/index.html" data-id="m1-08-01-letters-and-equation">用字母表示数与方程的意义</a></li></ul></section><section class="block" id="stage-3"><h2>成熟</h2><p>方程、比例尺，符号成为解题工具。</p><ul class="items point-items"><li><a href="../../../points/m1-08-02-equation-word-problem/index.html" data-id="m1-08-02-equation-word-problem">列方程解应用题</a></li><li><a href="../../../points/m1-09-02-scale-allocation-lever/index.html" data-id="m1-09-02-scale-allocation-lever">比例尺、按比例分配与杠杆平衡</a></li></ul></section><section class="block"><h2>卡住时回看</h2><p>看不懂式子时，回看「用字母表示数」。</p></section><section class="block"><h2>初中落点</h2><p class="fw-middle">初中落点：变量、函数符号、集合与逻辑符号。</p></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#stage-1">起点</a></li><li class="toc-l2"><a href="#stage-2">发展</a></li><li class="toc-l2"><a href="#stage-3">成熟</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="stage-1"><a href="#stage-1">起点</a></li><li class="toc-l2" data-anchor="stage-2"><a href="#stage-2">发展</a></li><li class="toc-l2" data-anchor="stage-3"><a href="#stage-3">成熟</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

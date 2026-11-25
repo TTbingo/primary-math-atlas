@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../assets/css/layout.css">
 <link rel="stylesheet" href="../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><h1 id="_top">平均数</h1><p class="grade-sub">移多补少得到的那个数。它代表整体水平，但会被极端数据带偏。</p></div><div class="panel panel-body"><section class="block overview"><table class="kv"><tbody><tr><th>所属模块</th><td><a href="../../m3/index.html">统计与概率</a></td></tr><tr><th>课标学段</th><td>第二学段（3~4年级）</td></tr><tr><th>知识点</th><td>1 篇</td></tr><tr><th>课标要求</th><td class="std-text"><details class="std-fold"><summary>共 2 条，点开查看</summary>探索平均数的意义，能解决有关的简单实际问题（例40）。；能在简单的实际情境中，合理应用统计图表和平均数（例41），形成初步的数据意识和应用意识。</details></td></tr></tbody></table></section><section class="block"><h2 id="list">知识点</h2><ul class="topic-list"><li><a href="../../points/m3-03-01-average-meaning/index.html"><span class="tl-t">平均数的意义与求法</span><span class="tl-s">平均数就是把总数重新分配成同样多以后每份的数，用总数 ÷ 份数求。它代表一组数据的整体水平，不是其中某一个。</span><span class="tl-m"><span class="badge">探索</span><span class="badge">课标必达</span></span></a></li></ul></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#list">知识点</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="list"><a href="#list">知识点</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

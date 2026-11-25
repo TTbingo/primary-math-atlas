@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../assets/css/layout.css">
 <link rel="stylesheet" href="../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><h1 id="_top">数的读写</h1><p class="grade-sub">多位数要分级读，小数要一位一位读，分数先读分母再读分子。规则不同，底层都是「这个数字在第几位、表示几个几」。</p></div><div class="panel panel-body"><section class="block overview"><table class="kv"><tbody><tr><th>所属模块</th><td><a href="../../m1/index.html">数与代数</a></td></tr><tr><th>课标学段</th><td>第二学段（3~4年级）</td></tr><tr><th>知识点</th><td>1 篇</td></tr><tr><th>课标要求</th><td class="std-text"><details class="std-fold"><summary>共 2 条，点开查看</summary>在实际情境中感悟并理解万以内数的意义，理解数位的含义，知道用算盘可以表示多位数（例1）。；在具体情境中，认识万以上的数，了解十进制计数法；探索并掌握多位数的乘除法，感悟从未知到已知的转化（例8）。</details></td></tr></tbody></table></section><section class="block"><h2 id="list">知识点</h2><ul class="topic-list"><li><a href="../../points/m1-02-01-number-read-write/index.html"><span class="tl-t">整数、小数、分数与百分数的读写</span><span class="tl-s">读多位数只有一招：从右往左四位一级分开，万级像个数级那样读，再添一个「万」或「亿」字。</span><span class="tl-m"><span class="badge">掌握</span><span class="badge">课标必达</span></span></a></li></ul></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#list">知识点</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="list"><a href="#list">知识点</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

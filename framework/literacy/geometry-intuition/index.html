@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../../assets/css/layout.css">
 <link rel="stylesheet" href="../../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><a class="crumb" href="../../../framework/literacy/index.html">← 素养主线</a><h1 id="_top">几何直观</h1><p class="home-sub">把看不见的数量关系画成图，用图形帮推理。</p></div><div class="panel panel-body"><section class="block" id="stage-1"><h2>启蒙 · 1~2 年级</h2><p>认图形、画线角，先能「看见」。</p><ul class="items point-items"><li><a href="../../../points/m2-01-01-plane-shapes/index.html" data-id="m2-01-01-plane-shapes">认识平面图形</a></li><li><a href="../../../points/m2-01-03-lines-and-angles/index.html" data-id="m2-01-03-lines-and-angles">线段、射线、直线与角的认识</a></li></ul></section><section class="block" id="stage-2"><h2>发展 · 3~4 年级</h2><p>三角形、面积、组合图形，用画图解决计算问题。</p><ul class="items point-items"><li><a href="../../../points/m2-01-07-triangle/index.html" data-id="m2-01-07-triangle">三角形的认识、内角和与三边关系</a></li><li><a href="../../../points/m2-01-08-polygon-area/index.html" data-id="m2-01-08-polygon-area">平行四边形、三角形与梯形的面积</a></li><li><a href="../../../points/m2-01-09-composite-irregular-area/index.html" data-id="m2-01-09-composite-irregular-area">组合图形与不规则图形的面积</a></li></ul></section><section class="block" id="stage-3"><h2>成熟 · 5~6 年级</h2><p>圆、长方体、线段图解应用题，图成为思考工具。</p><ul class="items point-items"><li><a href="../../../points/m2-01-11-circle-circumference-and-area/index.html" data-id="m2-01-11-circle-circumference-and-area">圆的周长与圆的面积</a></li><li><a href="../../../points/m2-02-03-cuboid/index.html" data-id="m2-02-03-cuboid">长方体和正方体的认识、表面积与体积</a></li><li><a href="../../../points/m1-07-10-meeting-and-chasing/index.html" data-id="m1-07-10-meeting-and-chasing">相遇问题与追及问题</a></li></ul></section><section class="block"><h2>一个贯穿的例子</h2><p>相遇问题画一条线段，鸡兔同笼画假设图——数量关系一画出来，思路自己就出现了。</p></section><section class="block"><h2>初中落点</h2><p class="fw-middle">初中的数轴、函数图象，是几何直观在代数领域的延伸。</p></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#stage-1">启蒙 · 1~2 年级</a></li><li class="toc-l2"><a href="#stage-2">发展 · 3~4 年级</a></li><li class="toc-l2"><a href="#stage-3">成熟 · 5~6 年级</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="stage-1"><a href="#stage-1">启蒙 · 1~2 年级</a></li><li class="toc-l2" data-anchor="stage-2"><a href="#stage-2">发展 · 3~4 年级</a></li><li class="toc-l2" data-anchor="stage-3"><a href="#stage-3">成熟 · 5~6 年级</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

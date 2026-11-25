@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../assets/css/layout.css">
 <link rel="stylesheet" href="../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><h1 id="_top">可能性</h1><p class="grade-sub">有些事情一定发生，有些事情不可能发生，有些事情说不准——说不准的那些，也有大小之分。</p></div><div class="panel panel-body"><section class="block overview"><table class="kv"><tbody><tr><th>所属模块</th><td><a href="../../m3/index.html">统计与概率</a></td></tr><tr><th>课标学段</th><td>第二学段（3~4年级）、第三学段（5~6年级）</td></tr><tr><th>知识点</th><td>2 篇</td></tr><tr><th>课标要求</th><td class="std-text"><details class="std-fold"><summary>共 2 条，点开查看</summary>通过实例感受简单的随机现象及其结果发生的可能性。；在实际情境中，对一些简单随机现象发生可能性的大小作出定性描述。</details></td></tr></tbody></table></section><section class="block"><h2 id="list">知识点</h2><ul class="topic-list"><li><a href="../../points/m3-04-01-digital-code/index.html"><span class="tl-t">数字编码</span><span class="tl-s">用一组符号唯一地表示一件事，就是编码。编得好要满足两条：唯一、不重复；再用「位数够、好记、有含义」把它做得更实用。</span><span class="tl-m"><span class="badge">经历</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m3-04-02-certainty-and-possibility/index.html"><span class="tl-t">确定事件与可能性的大小</span><span class="tl-s">一件事会不会发生，分三种：一定、不可能、可能。判断的依据不是「我见过没有」，而是「在这个条件下，所有可能的结果里有几种」。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li></ul></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#list">知识点</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="list"><a href="#list">知识点</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

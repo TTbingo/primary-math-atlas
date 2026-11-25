@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../../assets/css/layout.css">
 <link rel="stylesheet" href="../../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><a class="crumb" href="../../../framework/literacy/index.html">← 素养主线</a><h1 id="_top">应用意识</h1><p class="home-sub">遇到实际情境能想起用数学，并且知道该用哪块知识。</p></div><div class="panel panel-body"><section class="block" id="stage-1"><h2>启蒙 · 1~2 年级</h2><p>生活里的加减倍关系、买卖找零。</p><ul class="items point-items"><li><a href="../../../points/m1-07-01-quantity-relations-basic/index.html" data-id="m1-07-01-quantity-relations-basic">数量间的加减关系与倍的关系</a></li><li><a href="../../../points/m1-10-04-rmb/index.html" data-id="m1-10-04-rmb">人民币</a></li></ul></section><section class="block" id="stage-2"><h2>发展 · 3~4 年级</h2><p>总价路程、和差倍、归一归总——典型数量关系成型。</p><ul class="items point-items"><li><a href="../../../points/m1-07-02-quantity-relations/index.html" data-id="m1-07-02-quantity-relations">常见数量关系（总价、路程）</a></li><li><a href="../../../points/m1-07-03-sum-difference-multiple-problems/index.html" data-id="m1-07-03-sum-difference-multiple-problems">和差、和倍与差倍问题</a></li><li><a href="../../../points/m1-07-04-normalization-problems/index.html" data-id="m1-07-04-normalization-problems">归一问题与归总问题</a></li></ul></section><section class="block" id="stage-3"><h2>成熟 · 5~6 年级</h2><p>相遇、工程、按比例分配、速度——综合情境建模。</p><ul class="items point-items"><li><a href="../../../points/m1-07-10-meeting-and-chasing/index.html" data-id="m1-07-10-meeting-and-chasing">相遇问题与追及问题</a></li><li><a href="../../../points/m1-07-11-engineering/index.html" data-id="m1-07-11-engineering">工程问题</a></li><li><a href="../../../points/m1-09-02-scale-allocation-lever/index.html" data-id="m1-09-02-scale-allocation-lever">比例尺、按比例分配与杠杆平衡</a></li><li><a href="../../../points/m1-10-03-mass-temperature-speed/index.html" data-id="m1-10-03-mass-temperature-speed">质量、温度与速度</a></li></ul></section><section class="block"><h2>一个贯穿的例子</h2><p>「一辆车 2 小时行 120 千米」：低年级比多少，中年级求单价速度，高年级放进相遇问题里——同一个情境的三次升级。</p></section><section class="block"><h2>初中落点</h2><p class="fw-middle">初中的应用题与函数建模，把小学的数量关系写成式子。</p></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#stage-1">启蒙 · 1~2 年级</a></li><li class="toc-l2"><a href="#stage-2">发展 · 3~4 年级</a></li><li class="toc-l2"><a href="#stage-3">成熟 · 5~6 年级</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="stage-1"><a href="#stage-1">启蒙 · 1~2 年级</a></li><li class="toc-l2" data-anchor="stage-2"><a href="#stage-2">发展 · 3~4 年级</a></li><li class="toc-l2" data-anchor="stage-3"><a href="#stage-3">成熟 · 5~6 年级</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

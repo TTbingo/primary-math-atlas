@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../../assets/css/layout.css">
 <link rel="stylesheet" href="../../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><a class="crumb" href="../../../framework/threads/index.html">← 思维暗线</a><h1 id="_top">研究范式形成</h1><p class="home-sub">不变量：观察 → 尝试 → 归纳 → 验证，这套方法比结论更重要。</p></div><div class="panel panel-body"><section class="block" id="stage-1"><h2>起点</h2><p>数图形中的规律，先找再说。</p><ul class="items point-items"><li><a href="../../../points/m4-02-02-pattern-figure-and-reasoning/index.html" data-id="m4-02-02-pattern-figure-and-reasoning">数图形中的规律与推理</a></li></ul></section><section class="block" id="stage-2"><h2>发展</h2><p>三角形内角和：量一量、拼一拼、讲道理。</p><ul class="items point-items"><li><a href="../../../points/m2-01-07-triangle/index.html" data-id="m2-01-07-triangle">三角形的认识、内角和与三边关系</a></li></ul></section><section class="block" id="stage-3"><h2>成熟</h2><p>把常用思想方法明确说出来。</p><ul class="items point-items"><li><a href="../../../points/m4-01-01-thinking-methods/index.html" data-id="m4-01-01-thinking-methods">常用的数学思想和方法</a></li></ul></section><section class="block"><h2>卡住时回看</h2><p>不知道从哪里下手时，回看「常用的数学思想和方法」。</p></section><section class="block"><h2>初中落点</h2><p class="fw-middle">初中落点：猜想—验证—结论的探究套路。</p></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#stage-1">起点</a></li><li class="toc-l2"><a href="#stage-2">发展</a></li><li class="toc-l2"><a href="#stage-3">成熟</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="stage-1"><a href="#stage-1">起点</a></li><li class="toc-l2" data-anchor="stage-2"><a href="#stage-2">发展</a></li><li class="toc-l2" data-anchor="stage-3"><a href="#stage-3">成熟</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

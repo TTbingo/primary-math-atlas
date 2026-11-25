@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../assets/css/layout.css">
 <link rel="stylesheet" href="../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><h1 id="_top">统计图</h1><p class="grade-sub">条形图比多少，折线图看变化，扇形图看占比。选错图，数据就说错话。</p></div><div class="panel panel-body"><section class="block overview"><table class="kv"><tbody><tr><th>所属模块</th><td><a href="../../m3/index.html">统计与概率</a></td></tr><tr><th>课标学段</th><td>第二学段（3~4年级）、第三学段（5~6年级）</td></tr><tr><th>知识点</th><td>2 篇</td></tr><tr><th>课标要求</th><td class="std-text"><details class="std-fold"><summary>共 4 条，点开查看</summary>认识条形统计图，会用条形统计图合理表示和分析数据。；能读懂报纸、电视、互联网等媒体中的简单统计图表。；认识折线统计图、扇形统计图；会用条形统计图、折线统计图呈现相关数据，解释所表达的意义。；能从各种媒体中获得所需要的数据，读懂其中的简单统计图表（例44）。</details></td></tr></tbody></table></section><section class="block"><h2 id="list">知识点</h2><ul class="topic-list"><li><a href="../../points/m3-02-01-bar-and-line-chart/index.html"><span class="tl-t">条形统计图与折线统计图</span><span class="tl-s">用直条的长短表示数量的多少。四条直条一样宽、间隔一样、都从 0 出发，长短才当得了尺子；读图第一步，是看清一格代表几。</span><span class="tl-m"><span class="badge">掌握</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m3-02-02-pie-chart-and-choice/index.html"><span class="tl-t">扇形统计图与统计图的选择</span><span class="tl-s">用整个圆表示总数、用扇形表示各部分占总数的百分比；它只看得出占比，看不出具体数量，要算人数还得乘总数。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li></ul></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#list">知识点</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="list"><a href="#list">知识点</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../assets/css/layout.css">
 <link rel="stylesheet" href="../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><h1 id="_top">数的改写与近似数</h1><p class="grade-sub">为了读写方便把大数改写成「万」「亿」，为了实际需要取近似值；分数、小数、百分数之间还要能自由互化。</p></div><div class="panel panel-body"><section class="block overview"><table class="kv"><tbody><tr><th>所属模块</th><td><a href="../../m1/index.html">数与代数</a></td></tr><tr><th>课标学段</th><td>第一学段（1~2年级）、第二学段（3~4年级）、第三学段（5~6年级）</td></tr><tr><th>知识点</th><td>3 篇</td></tr><tr><th>课标要求</th><td class="std-text"><details class="std-fold"><summary>共 2 条，点开查看</summary>在具体情境中，认识万以上的数，了解十进制计数法；探索并掌握多位数的乘除法，感悟从未知到已知的转化（例8）。；结合具体情境探索并理解小数和分数的意义，感悟计数单位；会进行小数、分数的转化，进一步发展数感和符号意识。</details></td></tr></tbody></table></section><section class="block"><h2 id="list">知识点</h2><ul class="topic-list"><li><a href="../../points/m1-03-01-hundred-thousand/index.html"><span class="tl-t">整百整千数的加减</span><span class="tl-s">整百数、整千数相加减，先看成「几个百」「几个千」来算：份数相加减，末尾的 0 不用数。</span><span class="tl-m"><span class="badge">掌握</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-03-02-rounding-and-rewrite/index.html"><span class="tl-t">近似数与大数的改写</span><span class="tl-s">近似数离准确数很近但不是它；四舍五入到哪一位，就看它的下一位，五入要进一、四舍全去掉。</span><span class="tl-m"><span class="badge">掌握</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-03-03-fraction-decimal-percent-convert/index.html"><span class="tl-t">分数、小数与百分数的互化</span><span class="tl-s">真分数小于 1，假分数不小于 1，带分数是整数加真分数；分子除以分母，商是整饼数、余数是零块数。</span><span class="tl-m"><span class="badge">掌握</span><span class="badge">课标必达</span></span></a></li></ul></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#list">知识点</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="list"><a href="#list">知识点</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

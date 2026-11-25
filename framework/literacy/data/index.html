@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../../assets/css/layout.css">
 <link rel="stylesheet" href="../../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><a class="crumb" href="../../../framework/literacy/index.html">← 素养主线</a><h1 id="_top">数据意识</h1><p class="home-sub">看到数据先想它从哪来、能说明什么、不能说明什么。</p></div><div class="panel panel-body"><section class="block" id="stage-1"><h2>启蒙 · 1~2 年级</h2><p>学会分类、整理、用简单编码表示信息。</p><ul class="items point-items"><li><a href="../../../points/m3-01-01-data-collect-and-table/index.html" data-id="m3-01-01-data-collect-and-table">数据的收集、整理与统计表</a></li><li><a href="../../../points/m3-04-01-digital-code/index.html" data-id="m3-04-01-digital-code">数字编码</a></li></ul></section><section class="block" id="stage-2"><h2>发展 · 3~4 年级</h2><p>条形图、折线图、平均数——用图和代表数读数据。</p><ul class="items point-items"><li><a href="../../../points/m3-02-01-bar-and-line-chart/index.html" data-id="m3-02-01-bar-and-line-chart">条形统计图与折线统计图</a></li><li><a href="../../../points/m3-03-01-average-meaning/index.html" data-id="m3-03-01-average-meaning">平均数的意义与求法</a></li></ul></section><section class="block" id="stage-3"><h2>成熟 · 5~6 年级</h2><p>扇形统计图与可能性，知道数据能支持什么程度的结论。</p><ul class="items point-items"><li><a href="../../../points/m3-02-02-pie-chart-and-choice/index.html" data-id="m3-02-02-pie-chart-and-choice">扇形统计图与统计图的选择</a></li><li><a href="../../../points/m3-04-02-certainty-and-possibility/index.html" data-id="m3-04-02-certainty-and-possibility">确定事件与可能性的大小</a></li></ul></section><section class="block"><h2>一个贯穿的例子</h2><p>两个班的平均分相同，一个班分数很齐、一个班两极分化——平均数一样，结论不一样，这就是数据意识。</p></section><section class="block"><h2>初中落点</h2><p class="fw-middle">初中的统计图表与概率，从「读数据」走向「用样本推断总体」。</p></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#stage-1">启蒙 · 1~2 年级</a></li><li class="toc-l2"><a href="#stage-2">发展 · 3~4 年级</a></li><li class="toc-l2"><a href="#stage-3">成熟 · 5~6 年级</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="stage-1"><a href="#stage-1">启蒙 · 1~2 年级</a></li><li class="toc-l2" data-anchor="stage-2"><a href="#stage-2">发展 · 3~4 年级</a></li><li class="toc-l2" data-anchor="stage-3"><a href="#stage-3">成熟 · 5~6 年级</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

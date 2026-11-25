@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../../assets/css/layout.css">
 <link rel="stylesheet" href="../../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><a class="crumb" href="../../../framework/threads/index.html">← 思维暗线</a><h1 id="_top">从确定到不确定</h1><p class="home-sub">不变量：答案可以不是一个固定值，而是有大小的可能性。</p></div><div class="panel panel-body"><section class="block" id="stage-1"><h2>起点</h2><p>「一定」「可能」「不可能」的分类。</p><ul class="items point-items"><li><a href="../../../points/m3-04-02-certainty-and-possibility/index.html" data-id="m3-04-02-certainty-and-possibility">确定事件与可能性的大小</a></li></ul></section><section class="block" id="stage-2"><h2>发展</h2><p>用数据、编码、图表描述不确定的现象。</p><ul class="items point-items"><li><a href="../../../points/m3-01-01-data-collect-and-table/index.html" data-id="m3-01-01-data-collect-and-table">数据的收集、整理与统计表</a></li><li><a href="../../../points/m3-04-01-digital-code/index.html" data-id="m3-04-01-digital-code">数字编码</a></li></ul></section><section class="block" id="stage-3"><h2>成熟</h2><p>平均数代表一组数据的整体水平，但不是每个值。</p><ul class="items point-items"><li><a href="../../../points/m3-03-01-average-meaning/index.html" data-id="m3-03-01-average-meaning">平均数的意义与求法</a></li></ul></section><section class="block"><h2>卡住时回看</h2><p>觉得「答案怎么不唯一」时，回看「确定事件与可能性」。</p></section><section class="block"><h2>初中落点</h2><p class="fw-middle">初中落点：古典概率、随机变量、概率分布。</p></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#stage-1">起点</a></li><li class="toc-l2"><a href="#stage-2">发展</a></li><li class="toc-l2"><a href="#stage-3">成熟</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="stage-1"><a href="#stage-1">起点</a></li><li class="toc-l2" data-anchor="stage-2"><a href="#stage-2">发展</a></li><li class="toc-l2" data-anchor="stage-3"><a href="#stage-3">成熟</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

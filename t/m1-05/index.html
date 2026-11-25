@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../assets/css/layout.css">
 <link rel="stylesheet" href="../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><h1 id="_top">因数、倍数、质数、合数</h1><p class="grade-sub">研究一个数能被谁整除。2、5、3 的倍数有特征可循，最大公因数和最小公倍数是约分与通分的底座。</p></div><div class="panel panel-body"><section class="block overview"><table class="kv"><tbody><tr><th>所属模块</th><td><a href="../../m1/index.html">数与代数</a></td></tr><tr><th>课标学段</th><td>第三学段（5~6年级）</td></tr><tr><th>知识点</th><td>2 篇</td></tr><tr><th>课标要求</th><td class="std-text"><details class="std-fold"><summary>共 1 条，点开查看</summary>知道 2，3，5 的倍数的特征，了解公倍数和最小公倍数，了解公因数和最大公因数，了解奇数、偶数、质数（或素数）和合数。</details></td></tr></tbody></table></section><section class="block"><h2 id="list">知识点</h2><ul class="topic-list"><li><a href="../../points/m1-05-01-factors-multiples-and-gcd-lcm/index.html"><span class="tl-t">因数、倍数与最大公因数、最小公倍数</span><span class="tl-s">在非零自然数里，<span class="math" data-tex="a \times b = c">a × b = c</span> 中的 <span class="math" data-tex="a">a</span>、<span class="math" data-tex="b">b</span> 是 <span class="math" data-tex="c">c</span> 的因数，<span class="math" data-tex="c">c</span> 是 <span class="math" data-tex="a">a</span>、<span class="math" data-tex="b">b</span> 的倍数。因数个数有限，倍数个数无限。</span><span class="tl-m"><span class="badge">了解</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-05-02-divisibility-and-prime/index.html"><span class="tl-t">2、3、5 的倍数特征与质数、合数</span><span class="tl-s">2 和 5 的倍数只看个位，3 的倍数要看各位数字之和；按因数个数，自然数分成质数、合数和单独的 1。</span><span class="tl-m"><span class="badge">了解</span><span class="badge">课标必达</span></span></a></li></ul></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#list">知识点</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="list"><a href="#list">知识点</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

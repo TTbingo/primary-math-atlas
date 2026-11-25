@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../assets/css/layout.css">
 <link rel="stylesheet" href="../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><h1 id="_top">探索规律</h1><p class="grade-sub">算式里有规律，数列里有规律，周期里有规律，图形里也有规律。找规律就是找「下一个为什么是它」。</p></div><div class="panel panel-body"><section class="block overview"><table class="kv"><tbody><tr><th>所属模块</th><td><a href="../../m4/index.html">数学思考</a></td></tr><tr><th>课标学段</th><td>第一学段（1~2年级）、第三学段（5~6年级）</td></tr><tr><th>知识点</th><td>2 篇</td></tr><tr><th>课标要求</th><td class="std-text"><details class="std-fold"><summary>共 2 条，点开查看</summary>探索用数或符号表达简单情境中的变化规律（例4和例5）。；能解决生活中的简单问题，并能对结果的实际意义作出解释，经历探索简单规律的过程（例14），形成初步的模型意识和应用意识。</details></td></tr></tbody></table></section><section class="block"><h2 id="list">知识点</h2><ul class="topic-list"><li><a href="../../points/m4-02-01-pattern-arith-sequence-cycle/index.html"><span class="tl-t">算式、数列与周期中的规律</span><span class="tl-s">1×1、11×11、111×111 的结果排成一座山——算式也有规律，但规律有边界，一进位就变样。</span><span class="tl-m"><span class="badge">探索</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m4-02-02-pattern-figure-and-reasoning/index.html"><span class="tl-t">数图形中的规律与推理</span><span class="tl-s">线段、角、三角形，数法其实是同一套：固定一个起点，按顺序配对——不重不漏靠顺序，不靠眼力。</span><span class="tl-m"><span class="badge">探索</span><span class="badge">课标必达</span></span></a></li></ul></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#list">知识点</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="list"><a href="#list">知识点</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

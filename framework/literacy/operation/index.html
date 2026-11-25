@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../../assets/css/layout.css">
 <link rel="stylesheet" href="../../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><a class="crumb" href="../../../framework/literacy/index.html">← 素养主线</a><h1 id="_top">运算能力</h1><p class="home-sub">不只是算得快，而是知道为什么这样算、什么时候可以这样算。</p></div><div class="panel panel-body"><section class="block" id="stage-1"><h2>启蒙 · 1~2 年级</h2><p>四则意义与口诀，先懂「加、减、乘、除各在解决什么」。</p><ul class="items point-items"><li><a href="../../../points/m1-06-01-meaning-of-operations/index.html" data-id="m1-06-01-meaning-of-operations">四则运算的意义</a></li><li><a href="../../../points/m1-06-03-add-sub-within-20/index.html" data-id="m1-06-03-add-sub-within-20">20 以内的进位加法与退位减法</a></li><li><a href="../../../points/m1-06-05-multiplication-intro-and-table/index.html" data-id="m1-06-05-multiplication-intro-and-table">乘法的初步认识与 1~9 的乘法口诀</a></li></ul></section><section class="block" id="stage-2"><h2>发展 · 3~4 年级</h2><p>多位数笔算、运算律、估算——从算对到算巧。</p><ul class="items point-items"><li><a href="../../../points/m1-06-12-division-multi-digit/index.html" data-id="m1-06-12-division-multi-digit">除数是一位数与除数是两位数的除法</a></li><li><a href="../../../points/m1-06-14-operation-laws/index.html" data-id="m1-06-14-operation-laws">加法、乘法的运算律与减法、除法的性质</a></li><li><a href="../../../points/m1-06-13-estimation/index.html" data-id="m1-06-13-estimation">估算</a></li></ul></section><section class="block" id="stage-3"><h2>成熟 · 5~6 年级</h2><p>小数、分数四则与运算顺序，算理一致、形式不同。</p><ul class="items point-items"><li><a href="../../../points/m1-06-17-decimal-mult-and-div/index.html" data-id="m1-06-17-decimal-mult-and-div">小数乘法与小数除法的算理</a></li><li><a href="../../../points/m1-06-19-fraction-mult-and-div/index.html" data-id="m1-06-19-fraction-mult-and-div">分数乘法与分数除法的算理</a></li><li><a href="../../../points/m1-06-11-mixed-operation-order/index.html" data-id="m1-06-11-mixed-operation-order">混合运算的顺序</a></li></ul></section><section class="block"><h2>一个贯穿的例子</h2><p>25×4=100 在整数里是口算，到小数 2.5×0.4 和分数 5/2×2/5，仍是「先凑整」的同一套道理。</p></section><section class="block"><h2>初中落点</h2><p class="fw-middle">初中的整式运算、幂运算律，本质还是这套运算律换了对象。</p></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#stage-1">启蒙 · 1~2 年级</a></li><li class="toc-l2"><a href="#stage-2">发展 · 3~4 年级</a></li><li class="toc-l2"><a href="#stage-3">成熟 · 5~6 年级</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="stage-1"><a href="#stage-1">启蒙 · 1~2 年级</a></li><li class="toc-l2" data-anchor="stage-2"><a href="#stage-2">发展 · 3~4 年级</a></li><li class="toc-l2" data-anchor="stage-3"><a href="#stage-3">成熟 · 5~6 年级</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

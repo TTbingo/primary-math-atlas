@@ -17,6 +17,19 @@
   }
 })();
 </script>
+<script>(function () {
+  // full 由 build.py 按本篇学段注入：1/2 段 simple，3 段 full；非知识点页恒为 full
+  var def = 'full';
+  try {
+    var pref = localStorage.getItem('mathsite:view') || 'auto';
+    document.documentElement.setAttribute('data-view', pref === 'auto' ? def : (pref === 'simple' ? 'simple' : 'full'));
+    document.documentElement.setAttribute('data-view-pref', pref);
+  } catch (e) {
+    document.documentElement.setAttribute('data-view', def);
+    document.documentElement.setAttribute('data-view-pref', 'auto');
+  }
+})();
+</script>
 <link rel="stylesheet" href="../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../assets/css/layout.css">
 <link rel="stylesheet" href="../../assets/css/components.css">
@@ -53,7 +66,7 @@
     <main id="main"><div class="panel panel-h1"><h1 id="_top">比和比例</h1><p class="grade-sub">比是两个量相除，比例是两个比相等。比例尺、按比例分配、正反比例都从这里长出来。</p></div><div class="panel panel-body"><section class="block overview"><table class="kv"><tbody><tr><th>所属模块</th><td><a href="../../m1/index.html">数与代数</a></td></tr><tr><th>课标学段</th><td>第三学段（5~6年级）</td></tr><tr><th>知识点</th><td>2 篇</td></tr><tr><th>课标要求</th><td class="std-text"><details class="std-fold"><summary>共 2 条，点开查看</summary>在实际情境中理解比和比例以及按比例分配的含义，能解决简单的问题。；通过具体情境，认识成正比的量（如 y/x＝5）（例20）；能探索规律或变化趋势（如 y＝5x）（例21）。</details></td></tr></tbody></table></section><section class="block"><h2 id="list">知识点</h2><ul class="topic-list"><li><a href="../../points/m1-09-01-ratio-and-proportion/index.html"><span class="tl-t">比的意义、化简与正反比例</span><span class="tl-s">两个数相除又叫两个数的比，比表示两个量的倍比关系而不是一个数；用比的基本性质可以把比化成最简整数比。</span><span class="tl-m"><span class="badge">理解</span><span class="badge">课标必达</span></span></a></li><li><a href="../../points/m1-09-02-scale-allocation-lever/index.html"><span class="tl-t">比例尺、按比例分配与杠杆平衡</span><span class="tl-s">图上距离与实际距离的比就是比例尺；前项为 1 是缩小，后项为 1 是放大，动笔之前先把单位统一成厘米。</span><span class="tl-m"><span class="badge">掌握</span><span class="badge">课标必达</span></span></a></li></ul></section></div></main>
   </div>
 
-  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2"><a href="#list">知识点</a></li></ul></nav></aside>
+  <aside class="rightbar" id="rightbar"><nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul><li class="toc-l2" data-anchor="list"><a href="#list">知识点</a></li></ul></nav></aside>
 </div>
 
 <div class="search-modal" id="search-modal" hidden>

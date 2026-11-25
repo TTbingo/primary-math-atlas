@@ -35,6 +35,29 @@
     return n;
   }
 
+  // 问句预处理：剥掉口语疑问词，用核心词再搜一遍。不做拼音、不做同义词表、
+  // 不做模糊容错——实测短核心词（鸡兔/相遇/植树）命中率已够，失效的主要是问句式。
+  function coreQuery(q) {
+    var s = q.replace(/^(请问|请|我想知道|想知道|帮忙)\s*/, '');
+    s = s.replace(/^(什么是|什么叫|怎么|怎样|如何|为什么|求一下|求)\s*/, '');
+    s = s.replace(/(是什么意思|的意思|是什么|怎么算|怎么求|怎么做|怎么算的|如何计算|如何求|为什么)\s*$/, '');
+    return s.trim();
+  }
+  function queries(q) {
+    var c = coreQuery(q);
+    return c && c !== q ? [q, c] : [q];
+  }
+  function scoreAny(item, qs, orig) {
+    var best = 0;
+    for (var i = 0; i < qs.length; i++) {
+      var n = score(item, qs[i]);
+      // 核心词命中时略降权，避免「通分怎么算」压过直接搜「通分」的结果
+      if (i > 0 && n) n = Math.max(1, n - 1);
+      if (n > best) best = n;
+    }
+    return best;
+  }
+
   // 在全文分块里定位第一次命中，返回「板块名 + 前后文」，让结果可解释
   function snippet(item, q) {
     var blocks = item.bl || [];
@@ -53,7 +76,8 @@
     list.innerHTML = '';
     sel = -1;
     if (!q) { cur = []; modal.querySelector('.search-tip').textContent = '输入关键词，回车打开第一条'; return; }
-    var hit = IDX.map(function (i) { return { i: i, n: score(i, q.toLowerCase()) }; })
+    var qs = queries(q);
+    var hit = IDX.map(function (i) { return { i: i, n: scoreAny(i, qs, q) }; })
       .filter(function (x) { return x.n > 0; })
       .sort(function (a, b) { return b.n - a.n; })
       .slice(0, 20);
@@ -66,7 +90,9 @@
       a.innerHTML = '<span class="sr-t"></span><span class="sr-s"></span><span class="sr-m"></span>';
       a.querySelector('.sr-t').textContent = x.i.t;
       // 正文命中时显示「板块名 + 上下文」，否则退回知识点摘要
-      a.querySelector('.sr-s').textContent = snippet(x.i, q) || (x.i.s || '').replace(/\$/g, '');
+      var sn = null;
+      for (var k = 0; k < qs.length && !sn; k++) sn = snippet(x.i, qs[k]);
+      a.querySelector('.sr-s').textContent = sn || (x.i.s || '').replace(/\$/g, '');
       a.querySelector('.sr-m').textContent = [TYPE_LABEL[x.i.ty || 'p'],
         x.i.d, x.i.c].filter(Boolean).join(' · ');
       li.appendChild(a);
