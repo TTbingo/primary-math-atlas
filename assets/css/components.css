@@ -166,12 +166,56 @@ ul.items li { margin: .25rem 0; }
 .pager-dir { display: block; font-size: var(--fs-xs); color: var(--text-sub); }
 .pager-t { display: block; font-family: var(--font-title); font-size: var(--fs-h4); color: var(--title); }
 
-/* ---------- 已学打勾 ---------- */
-.done-bar { margin-top: 2rem; }
-.done-toggle { display: inline-flex; align-items: center; gap: .5rem; cursor: pointer; font-size: var(--fs-sm); color: var(--text-sub); }
-.done-cb { width: 1.1rem; height: 1.1rem; accent-color: var(--accent); cursor: pointer; }
-body.done-checked .panel-h1 h1::after { content: " ✓"; color: var(--accent); }
-.done-checked .done-toggle { color: var(--accent-deep); }
+/* ---------- 学习状态：未学 / 需复习 / 已掌握 ---------- */
+.done-bar { margin-top: 2rem; display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
+.state-label { font-size: var(--fs-sm); color: var(--text-sub); }
+.state-picker { display: inline-flex; border: 1px solid var(--line-strong); border-radius: var(--radius); overflow: hidden; }
+.state-btn {
+  font-family: var(--font-body); font-size: var(--fs-sm); color: var(--text-sub);
+  background: var(--card); border: 0; border-right: 1px solid var(--line-weak);
+  padding: .35rem .8rem; cursor: pointer;
+}
+.state-btn:last-child { border-right: 0; }
+.state-btn:hover { background: var(--accent-soft); color: var(--accent-deep); }
+.state-btn.state-on { background: var(--accent); color: #fff; font-weight: 600; }
+.state-btn[data-state="review"].state-on { background: var(--rel-together); }
+body.state-review .panel-h1 h1::after { content: " · 需复习"; color: var(--rel-together); font-size: .55em; }
+body.state-mastered .panel-h1 h1::after { content: " ✓"; color: var(--accent); }
+.items li.is-mastered > a { color: var(--text-sub); }
+.items li.is-mastered > a::after { content: " · 已掌握"; font-size: var(--fs-xs); color: var(--rel-post); }
+.items li.is-review > a::after { content: " · 需复习"; font-size: var(--fs-xs); color: var(--rel-together); }
+.progress-tools { display: flex; gap: .5rem; margin-top: 1rem; }
+.progress-btn {
+  font-family: var(--font-body); font-size: var(--fs-sm); color: var(--text-sub);
+  background: transparent; border: 1px solid var(--line-strong);
+  border-radius: var(--radius); padding: .3rem .7rem; cursor: pointer;
+}
+.progress-btn:hover { color: var(--accent-deep); border-color: var(--accent); }
+.stat-review b { color: var(--rel-together); }
+
+/* ---------- 伴读一句话与精简视图 ---------- */
+.plain-talk {
+  border-left: 3px solid var(--rel-post);
+  background: var(--card); border-radius: var(--radius);
+  padding: .7rem 1rem; margin: .9rem 0 1rem;
+}
+.pt-label {
+  display: block; font-size: var(--fs-xs); font-weight: 600;
+  letter-spacing: .08em; color: var(--rel-post); margin-bottom: .25rem;
+}
+.plain-talk p { margin: 0; font-size: var(--fs-aux); color: var(--text); line-height: 1.7; }
+.view-switch { display: inline-flex; gap: .3rem; margin-top: .5rem; flex-wrap: wrap; }
+.view-btn {
+  font-family: var(--font-body); font-size: var(--fs-xs); color: var(--text-sub);
+  background: transparent; border: 1px solid var(--line-weak);
+  border-radius: var(--radius); padding: .2rem .6rem; cursor: pointer;
+}
+.view-btn:hover { color: var(--accent-deep); border-color: var(--accent); }
+.view-btn.view-on { color: #fff; background: var(--accent); border-color: var(--accent); }
+html[data-view="simple"] .page-point .block:not(.sec-explanation):not(.sec-why):not(.sec-intuition):not(.sec-examples) { display: none; }
+html[data-view="simple"] .page-point .toc li[data-anchor]:not([data-anchor="explanation"]):not([data-anchor="why"]):not([data-anchor="intuition"]):not([data-anchor="examples"]):not(.toc-l1) { display: none; }
+html[data-view="simple"] .page-point .plain-talk { border-left-color: var(--accent); }
+html[data-view="simple"] .page-point .plain-talk .pt-label { color: var(--accent-deep); }
 
 /* ---------- 顶栏按钮 ---------- */
 .search-btn, .theme-btn {
@@ -487,3 +531,23 @@ ul.pending { color: var(--text-faint); }
 .rel-前置 { border-left-color: var(--rel-pre); }
 .rel-后续 { border-left-color: var(--rel-post); }
 .rel-常一起考 { border-left-color: var(--rel-together); }
+
+/* ---------- 先思后看：解答与易错点折叠 ---------- */
+.fold-tools { display: flex; justify-content: flex-end; margin: 0 0 .75rem; }
+.fold-all {
+  font-family: var(--font-body); font-size: var(--fs-sm); color: var(--text-sub);
+  background: var(--card); border: 1px solid var(--line-strong);
+  border-radius: var(--radius); padding: .3rem .7rem; cursor: pointer;
+}
+.fold-all:hover { color: var(--accent-deep); border-color: var(--accent); }
+.ex-answer { margin-top: .5rem; border-top: 1px dashed var(--line-weak); padding-top: .45rem; }
+.ex-answer > summary, .pitfall > summary {
+  cursor: pointer; list-style: none; font-size: var(--fs-sm);
+  color: var(--text-sub); padding: .15rem 0;
+}
+.ex-answer > summary::-webkit-details-marker, .pitfall > summary::-webkit-details-marker { display: none; }
+.ex-answer > summary::before, .pitfall > summary::before { content: "▸ "; color: var(--text-faint); }
+.ex-answer[open] > summary::before, .pitfall[open] > summary::before { content: "▾ "; }
+.ex-answer > summary:hover, .pitfall > summary:hover { color: var(--accent-deep); }
+.ex-answer[open] > summary { margin-bottom: .5rem; }
+.pitfall[open] > summary { margin-bottom: .55rem; }

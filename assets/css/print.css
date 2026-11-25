@@ -7,7 +7,11 @@
     --accent: #b03a2e; --accent-soft: #f2e6e3; --accent-deep: #7b241c;
   }
   .topbar, .sidebar, .rightbar, .search-modal, .pager, .done-bar,
-  .chips, .drawer-btn, .skip-link, .sidebar-mask { display: none !important; }
+  .chips, .drawer-btn, .skip-link, .sidebar-mask, .fold-tools, .view-switch { display: none !important; }
+  /* 打印永远是完整工具书视图，不受屏幕精简模式影响 */
+  html[data-view="simple"] .page-point .block { display: block !important; }
+  details.ex-answer > summary, details.pitfall > summary { color: #000; margin-bottom: .35rem; }
+  details.ex-answer > *, details.pitfall > * { display: block !important; }
   .layout { display: block; }
   main { max-width: none; }
   .panel { padding: 0 0 1rem; }

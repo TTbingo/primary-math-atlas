@@ -707,34 +707,43 @@ def render_why(why, p, depth, idx):
 
 
 def render_examples(items, depth, idx):
+    """题目常显；解/答默认折叠，形成「先想后看」微自测。"""
     if not items:
         return ""
-    out = []
+    out = ['<div class="fold-tools"><button type="button" class="fold-all" '
+           'data-fold-all>展开全部解答</button></div>']
     for i, e in enumerate(items, 1):
         out.append('<div class="example">')
         out.append(f'<p class="ex-head"><strong>例 {i}（场景：{esc(e.get("scene",""))}）</strong>'
                    + (f'&#12288;<span class="ex-ctx">{render_inline(e.get("context",""))}</span>' if e.get("context") else "") + "</p>")
         out.append(f'<p class="ex-q">{render_inline(e.get("question",""))}</p>')
-        out.append(f'<p class="ex-s"><strong>解：</strong>{render_inline(e.get("solution",""))}</p>')
-        out.append(f'<p class="ex-a"><strong>答：</strong>{render_inline(e.get("answer",""))}</p>')
         m = e.get("media")
         if m:
             for slot in (m if isinstance(m, list) else [m]):
                 out.append(f'<div class="ex-fig" data-fig-slot="{esc(slot)}"></div>')
+        ans = []
+        if e.get("solution"):
+            ans.append(f'<p class="ex-s"><strong>解：</strong>{render_inline(e["solution"])}</p>')
+        if e.get("answer"):
+            ans.append(f'<p class="ex-a"><strong>答：</strong>{render_inline(e["answer"])}</p>')
+        if ans:
+            out.append('<details class="ex-answer"><summary>解与答 · 先想后看</summary>'
+                       + "".join(ans) + "</details>")
         out.append("</div>")
     return "".join(out)
 
 
 def render_pitfalls(items):
+    """易错点默认折叠，避免先入为主地看到错误解法。"""
     if not items:
         return ""
     out = []
-    for x in items:
-        out.append('<div class="pitfall">')
+    for i, x in enumerate(items, 1):
+        out.append(f'<details class="pitfall"><summary>易错点 {i} · 点开看解析</summary>')
         out.append(f'<p class="pf-w"><span class="pf-tag">错</span>{render_inline(x.get("wrong",""))}</p>')
         out.append(f'<p class="pf-y"><span class="pf-tag">为什么错</span>{render_inline(x.get("why",""))}</p>')
         out.append(f'<p class="pf-r"><span class="pf-tag">正确</span>{render_inline(x.get("right",""))}</p>')
-        out.append("</div>")
+        out.append("</details>")
     return "".join(out)
 
 
@@ -946,7 +955,7 @@ def build_toc(entries):
         return ""
     lis = []
     for lvl, text, anchor in entries:
-        lis.append(f'<li class="toc-l{lvl}"><a href="#{anchor}">{esc(text)}</a></li>')
+        lis.append(f'<li class="toc-l{lvl}" data-anchor="{esc(anchor)}"><a href="#{anchor}">{esc(text)}</a></li>')
     return '<nav class="toc" aria-label="本页内容"><h2 class="toc-h">本页内容</h2><ul>' + "".join(lis) + "</ul></nav>"
 
 
@@ -962,6 +971,14 @@ def emit_point(idx, pid, depth=2):
                  badge(f'课标：{p.get("verb_level","")}'), badge(scope_label, "badge badge-scope")]
     head = (f'<div class="point-meta">{"".join(meta_bits)}</div>'
             f'<p class="point-summary">{render_inline(p.get("summary",""))}</p>')
+    plain_talk = p.get("plain_talk", "")
+    plain_html = (f'<div class="plain-talk"><span class="pt-label">讲给孩子听</span>'
+                  f'<p>{render_inline(plain_talk)}</p></div>') if plain_talk else ""
+    view_switch = ('<div class="view-switch" role="group" aria-label="阅读视图">'
+                   '<button type="button" class="view-btn" data-view-set="simple">精简</button>'
+                   '<button type="button" class="view-btn" data-view-set="full">完整</button>'
+                   '<button type="button" class="view-btn" data-view-set="auto">跟随学段</button>'
+                   '</div>')
     overview = '<table class="kv"><tbody>'
     if tid:
         mid = idx.topics[tid]["module"]
@@ -981,7 +998,7 @@ def emit_point(idx, pid, depth=2):
     overview += "</tbody></table>"
 
     body = [f'<div class="panel panel-h1"><h1 id="_top">{esc(p["title"])}'
-            '</h1>' + head + '</div>',
+            '</h1>' + plain_html + head + view_switch + '</div>',
             '<div class="panel panel-body">',
             f'<section class="block overview">{overview}</section>']
     body.append(render_textbook(p, depth, idx))
@@ -1017,8 +1034,12 @@ def emit_point(idx, pid, depth=2):
             body.append(f'<a class="pager-link pager-next" href="{idx.rel(nxt, depth)}">'
                         f'<span class="pager-dir">下一页</span><span class="pager-t">{esc(idx.points[nxt]["title"])}</span></a>')
         body.append("</div></nav>")
-    body.append(f'<div class="done-bar"><label class="done-toggle">'
-                f'<input type="checkbox" class="done-cb" data-id="{pid}"> 标记为已学</label></div>')
+    body.append(f'<div class="done-bar"><span class="state-label">我的学习状态</span>'
+                f'<div class="state-picker" data-state-id="{pid}" role="group" aria-label="学习状态">'
+                '<button type="button" class="state-btn" data-state="" aria-pressed="true">未学</button>'
+                '<button type="button" class="state-btn" data-state="review" aria-pressed="false">需复习</button>'
+                '<button type="button" class="state-btn" data-state="mastered" aria-pressed="false">已掌握</button>'
+                '</div></div>')
     body.append("</div>")
 
     main = "".join(body)
@@ -1027,12 +1048,16 @@ def emit_point(idx, pid, depth=2):
 
     entries = [(2, s["title"], s["key"]) for s in tax["sections"] if s["key"] in p.get("sections", {})]
     extra = [(2, "课标要求", "std")] if p.get("standard_ids") else []
+    default_view = "full" if p.get("segment") == 3 else "simple"
+    view_boot = (A / "js" / "view-boot.js").read_text(encoding="utf-8") \
+        .replace("__DEFAULT_VIEW__", default_view)
     return tmpl("base.html", page_vars(idx, {
         "TITLE": p["title"], "DESC": plain(p.get("summary", "")), "MAIN": main,
         "SIDEBAR": build_sidebar(idx, pid, depth),
         "TOC": build_toc(extra + entries),
         "ROOT": idx.root_for(depth), "DEPTH": str(depth),
-        "BODY_CLASS": "page-point",
+        "BODY_CLASS": f"page-point seg-{p.get('segment', 3)}",
+        "VIEW_BOOT": view_boot,
     }))
 
 
@@ -1330,7 +1355,14 @@ def emit_home(idx, depth=0):
              f'<span><b>{len(idx.module_order)}</b> 大模块</span>'
              f'<span><b>{n_topics}</b> 个主题</span>'
              f'<span><b>{n_written}</b> 篇知识点</span>'
-             f'<span class="stat-done">已学 <b class="done-count">0</b> 篇</span></div>')
+             f'<span class="stat-done">已掌握 <b class="done-count">0</b> 篇</span>'
+             f'<span class="stat-review">需复习 <b class="review-count">0</b> 篇</span>'
+             f'</div>'
+             '<div class="progress-tools">'
+             '<button type="button" class="progress-btn" data-progress-export>导出进度</button>'
+             '<button type="button" class="progress-btn" data-progress-import>导入进度</button>'
+             '<input type="file" class="progress-file" accept="application/json,.json" hidden>'
+             '</div>')
 
     cards = []
     for mid in idx.module_order:
@@ -1392,6 +1424,8 @@ def page_vars(idx, v):
     v.setdefault("TITLE_SUFFIX", " · " + idx.tax["site_title"])
     v.setdefault("TITLE_SUFFIX", " · " + idx.tax["site_title"])
     v.setdefault("THEME_BOOT", (A / "js" / "theme-boot.js").read_text(encoding="utf-8"))
+    v.setdefault("VIEW_BOOT", (A / "js" / "view-boot.js").read_text(encoding="utf-8")
+                 .replace("__DEFAULT_VIEW__", "full"))
     v.setdefault("HEAD_EXTRA", "")
     v.setdefault("SCRIPTS", (f'<script src="{v["ROOT"]}/assets/js/search-index.js"></script>\n'
                              f'<script src="{v["ROOT"]}/assets/katex/katex.min.js"></script>\n'

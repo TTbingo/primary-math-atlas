@@ -180,5 +180,6 @@
       }
     ]
   },
-  "prerequisites": []
+  "prerequisites": [],
+  "plain_talk": "数位像一栋楼：个位是 1 楼住几个一，十位是 10 楼住几个十，满十就往楼上搬家。"
 }

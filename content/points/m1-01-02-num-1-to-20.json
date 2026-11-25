@@ -431,5 +431,6 @@
   "prerequisites": [
     "m1-01-01-number-classify",
     "m1-01-03-num-composition-100"
-  ]
+  ],
+  "plain_talk": "数东西要一个对着一个数，点一个、数一个；数到最后一个是几，这一堆就是几个。"
 }
